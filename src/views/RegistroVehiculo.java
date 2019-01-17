@@ -23,6 +23,7 @@ public class RegistroVehiculo extends javax.swing.JDialog {
      * @param parent
      * @param modal
      */
+    public int puesto;
     public RegistroVehiculo(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
