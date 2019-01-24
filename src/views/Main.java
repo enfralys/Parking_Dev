@@ -38,7 +38,8 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        btgFiltrado = new javax.swing.ButtonGroup();
+        btgFiltradoVehiculo = new javax.swing.ButtonGroup();
         pnlTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
@@ -174,23 +175,44 @@ public class Main extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         pnlHistorialdeIngreso = new javax.swing.JPanel();
-        lblHistorial = new javax.swing.JLabel();
-        pnlFiltrado = new javax.swing.JPanel();
-        rbDel = new javax.swing.JRadioButton();
-        txtFechaInicial = new javax.swing.JFormattedTextField();
-        txtFechaFinal = new javax.swing.JFormattedTextField();
-        rbRango = new javax.swing.JRadioButton();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        cmbDia = new javax.swing.JComboBox<>();
+        blackTabbedPane1 = new org.matrix.BlackTabbedPane();
+        jPanel7 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tlbHistorial = new javax.swing.JTable();
+        pnlFiltrado = new javax.swing.JPanel();
+        rbFiltradoDelVehiculo = new javax.swing.JRadioButton();
+        txtFiltradoFechaInicialVehiculo = new javax.swing.JFormattedTextField();
+        txtFiltradoFechaFinalVehiculo = new javax.swing.JFormattedTextField();
+        rbFiltradoRangoVehiculo = new javax.swing.JRadioButton();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        cmbFiltradoDiaVehiculo = new javax.swing.JComboBox<>();
+        lblHistorialVehiculos = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        lblHistorialPeatones = new javax.swing.JLabel();
+        pnlFiltrado1 = new javax.swing.JPanel();
+        rbFiltradoDelPeaton = new javax.swing.JRadioButton();
+        txtFiltradoFechaInicialPeaton = new javax.swing.JFormattedTextField();
+        txtFiltradoFechaFinalPeaton = new javax.swing.JFormattedTextField();
+        rbFiltradoTipoPeaton = new javax.swing.JRadioButton();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        cmbFiltradoTipoPeaton = new javax.swing.JComboBox<>();
+        rbFiltradoRangoPeaton = new javax.swing.JRadioButton();
+        cmbFiltradoDiaPeaton = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tlbHistorialPeaton = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -1050,7 +1072,7 @@ public class Main extends javax.swing.JFrame {
         pnlConsulta.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 90, -1, 20));
 
         jTextField1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        pnlConsulta.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, 280, -1));
+        pnlConsulta.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 170, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Century Gothic", 1, 14), new java.awt.Color(204, 255, 0))); // NOI18N
@@ -1165,6 +1187,31 @@ public class Main extends javax.swing.JFrame {
         jLabel20.setText("Placa:");
         jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
+        jLabel21.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel21.setText("DATO");
+        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 120, -1));
+
+        jLabel22.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel22.setText("DATO");
+        jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 120, -1));
+
+        jLabel23.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel23.setText("DATO");
+        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 120, -1));
+
+        jLabel24.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel24.setText("DATO");
+        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 120, -1));
+
+        jLabel25.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel25.setText("DATO");
+        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 120, -1));
+
         pnlConsulta.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 420, 240));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -1201,36 +1248,71 @@ public class Main extends javax.swing.JFrame {
         pnlHistorialdeIngreso.setBackground(new java.awt.Color(255, 255, 255));
         pnlHistorialdeIngreso.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHistorial.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lblHistorial.setForeground(new java.awt.Color(153, 153, 0));
-        lblHistorial.setText("Historial General");
-        pnlHistorialdeIngreso.add(lblHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tlbHistorial.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        tlbHistorial.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Tarjeta", "Tipo", "Placa", "Apartamento", "Estado", "Fecha"
+            }
+        ));
+        tlbHistorial.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(tlbHistorial);
+
+        jPanel7.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 890, 374));
 
         pnlFiltrado.setBackground(new java.awt.Color(255, 255, 255));
         pnlFiltrado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "> Filtrado <", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
         pnlFiltrado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonGroup1.add(rbDel);
-        rbDel.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        rbDel.setText("Del");
-        pnlFiltrado.add(rbDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+        btgFiltradoVehiculo.add(rbFiltradoDelVehiculo);
+        rbFiltradoDelVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        rbFiltradoDelVehiculo.setText("Del");
+        pnlFiltrado.add(rbFiltradoDelVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
-        txtFechaInicial.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-        txtFechaInicial.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFechaInicial.setText("01/01/2019");
-        txtFechaInicial.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        pnlFiltrado.add(txtFechaInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 100, -1));
+        txtFiltradoFechaInicialVehiculo.setEditable(false);
+        txtFiltradoFechaInicialVehiculo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        txtFiltradoFechaInicialVehiculo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFiltradoFechaInicialVehiculo.setText("01/01/2019");
+        txtFiltradoFechaInicialVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        pnlFiltrado.add(txtFiltradoFechaInicialVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 100, -1));
 
-        txtFechaFinal.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-        txtFechaFinal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFechaFinal.setText("01/01/2019");
-        txtFechaFinal.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        pnlFiltrado.add(txtFechaFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 100, -1));
+        txtFiltradoFechaFinalVehiculo.setEditable(false);
+        txtFiltradoFechaFinalVehiculo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        txtFiltradoFechaFinalVehiculo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFiltradoFechaFinalVehiculo.setText("01/01/2019");
+        txtFiltradoFechaFinalVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        pnlFiltrado.add(txtFiltradoFechaFinalVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 100, -1));
 
-        buttonGroup1.add(rbRango);
-        rbRango.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        rbRango.setText("Por Rango");
-        pnlFiltrado.add(rbRango, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        btgFiltradoVehiculo.add(rbFiltradoRangoVehiculo);
+        rbFiltradoRangoVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        rbFiltradoRangoVehiculo.setText("Por Rango");
+        pnlFiltrado.add(rbFiltradoRangoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jLabel53.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel53.setText("Desde:");
@@ -1240,49 +1322,114 @@ public class Main extends javax.swing.JFrame {
         jLabel54.setText("Hasta:");
         pnlFiltrado.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
 
-        cmbDia.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        cmbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día", "Día Anterior", "Mes", "Mes Anterior" }));
-        pnlFiltrado.add(cmbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 90, -1));
+        cmbFiltradoDiaVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        cmbFiltradoDiaVehiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día", "Día Anterior", "Mes", "Mes Anterior" }));
+        pnlFiltrado.add(cmbFiltradoDiaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 90, -1));
 
-        pnlHistorialdeIngreso.add(pnlFiltrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 800, 120));
+        jPanel7.add(pnlFiltrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 800, 120));
 
-        tlbHistorial.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        tlbHistorial.setModel(new javax.swing.table.DefaultTableModel(
+        lblHistorialVehiculos.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblHistorialVehiculos.setForeground(new java.awt.Color(153, 153, 0));
+        lblHistorialVehiculos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHistorialVehiculos.setText("Historial General de Vehículos");
+        jPanel7.add(lblHistorialVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 958, -1));
+
+        blackTabbedPane1.addTab("Vehículos", new javax.swing.ImageIcon(getClass().getResource("/images/042-parking-area-tab.png")), jPanel7); // NOI18N
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblHistorialPeatones.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblHistorialPeatones.setForeground(new java.awt.Color(153, 153, 0));
+        lblHistorialPeatones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHistorialPeatones.setText("Historial General de Peatones");
+        jPanel8.add(lblHistorialPeatones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 958, -1));
+
+        pnlFiltrado1.setBackground(new java.awt.Color(255, 255, 255));
+        pnlFiltrado1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "> Filtrado <", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
+        pnlFiltrado1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btgFiltrado.add(rbFiltradoDelPeaton);
+        rbFiltradoDelPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        rbFiltradoDelPeaton.setText("Del");
+        pnlFiltrado1.add(rbFiltradoDelPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+
+        txtFiltradoFechaInicialPeaton.setEditable(false);
+        txtFiltradoFechaInicialPeaton.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        txtFiltradoFechaInicialPeaton.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFiltradoFechaInicialPeaton.setText("01/01/2019");
+        txtFiltradoFechaInicialPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        pnlFiltrado1.add(txtFiltradoFechaInicialPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 100, -1));
+
+        txtFiltradoFechaFinalPeaton.setEditable(false);
+        txtFiltradoFechaFinalPeaton.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        txtFiltradoFechaFinalPeaton.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFiltradoFechaFinalPeaton.setText("01/01/2019");
+        txtFiltradoFechaFinalPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        pnlFiltrado1.add(txtFiltradoFechaFinalPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 100, -1));
+
+        btgFiltrado.add(rbFiltradoTipoPeaton);
+        rbFiltradoTipoPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        rbFiltradoTipoPeaton.setText("Por Tipo");
+        pnlFiltrado1.add(rbFiltradoTipoPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+
+        jLabel55.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel55.setText("Desde:");
+        pnlFiltrado1.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
+
+        jLabel56.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel56.setText("Hasta:");
+        pnlFiltrado1.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
+
+        cmbFiltradoTipoPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        cmbFiltradoTipoPeaton.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Visitante", "Trabajador" }));
+        pnlFiltrado1.add(cmbFiltradoTipoPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 130, -1));
+
+        btgFiltrado.add(rbFiltradoRangoPeaton);
+        rbFiltradoRangoPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        rbFiltradoRangoPeaton.setText("Por Rango");
+        pnlFiltrado1.add(rbFiltradoRangoPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        cmbFiltradoDiaPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        cmbFiltradoDiaPeaton.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día", "Día Anterior", "Mes", "Mes Anterior" }));
+        pnlFiltrado1.add(cmbFiltradoDiaPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 90, -1));
+
+        jPanel8.add(pnlFiltrado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 800, 150));
+
+        tlbHistorialPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        tlbHistorialPeaton.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Fecha", "Apartamento", "Placa", "Estado", "Tarjeta"
+                "Tipo de Peatón", "Cédula", "Nombres", "Apellidos", "Apartamento", "Fecha"
             }
         ));
-        tlbHistorial.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(tlbHistorial);
+        tlbHistorialPeaton.getTableHeader().setReorderingAllowed(false);
+        jScrollPane3.setViewportView(tlbHistorialPeaton);
 
-        pnlHistorialdeIngreso.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 800, -1));
+        jPanel8.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 890, 310));
+
+        blackTabbedPane1.addTab("Peatones", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), jPanel8); // NOI18N
+
+        pnlHistorialdeIngreso.add(blackTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 670));
 
         tbpMain.addTab("Historial General", new javax.swing.ImageIcon(getClass().getResource("/images/043-parking-4.png")), pnlHistorialdeIngreso); // NOI18N
 
@@ -1299,6 +1446,9 @@ public class Main extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.matrix.BlackTabbedPane blackTabbedPane1;
+    private javax.swing.ButtonGroup btgFiltrado;
+    private javax.swing.ButtonGroup btgFiltradoVehiculo;
     public javax.swing.JButton btnPuesto1;
     private javax.swing.JButton btnPuesto10;
     private javax.swing.JButton btnPuesto11;
@@ -1350,8 +1500,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnPuesto8;
     private javax.swing.JButton btnPuesto9;
     private javax.swing.JButton btnSalir;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> cmbDia;
+    private javax.swing.JComboBox<String> cmbFiltradoDiaPeaton;
+    private javax.swing.JComboBox<String> cmbFiltradoDiaVehiculo;
+    private javax.swing.JComboBox<String> cmbFiltradoTipoPeaton;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1366,11 +1517,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1381,13 +1539,17 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lblConsulta;
-    private javax.swing.JLabel lblHistorial;
+    private javax.swing.JLabel lblHistorialPeatones;
+    private javax.swing.JLabel lblHistorialVehiculos;
     private javax.swing.JLabel lblPuesto1;
     private javax.swing.JLabel lblPuesto10;
     private javax.swing.JLabel lblPuesto11;
@@ -1441,17 +1603,24 @@ public class Main extends javax.swing.JFrame {
     private plugins.CustomPanelAuto pnlAuto;
     private javax.swing.JPanel pnlConsulta;
     private javax.swing.JPanel pnlFiltrado;
+    private javax.swing.JPanel pnlFiltrado1;
     private javax.swing.JPanel pnlHistorialdeIngreso;
     private javax.swing.JPanel pnlIngreso;
     private javax.swing.JPanel pnlMain;
     private javax.swing.JPanel pnlTitle;
-    private javax.swing.JRadioButton rbDel;
-    private javax.swing.JRadioButton rbRango;
+    private javax.swing.JRadioButton rbFiltradoDelPeaton;
+    private javax.swing.JRadioButton rbFiltradoDelVehiculo;
+    private javax.swing.JRadioButton rbFiltradoRangoPeaton;
+    private javax.swing.JRadioButton rbFiltradoRangoVehiculo;
+    private javax.swing.JRadioButton rbFiltradoTipoPeaton;
     private org.matrix.BlackTabbedPane tbdPaneVehicles;
     private org.matrix.BlackTabbedPane tbpMain;
     private javax.swing.JTable tlbHistorial;
-    private javax.swing.JFormattedTextField txtFechaFinal;
-    private javax.swing.JFormattedTextField txtFechaInicial;
+    private javax.swing.JTable tlbHistorialPeaton;
+    private javax.swing.JFormattedTextField txtFiltradoFechaFinalPeaton;
+    private javax.swing.JFormattedTextField txtFiltradoFechaFinalVehiculo;
+    private javax.swing.JFormattedTextField txtFiltradoFechaInicialPeaton;
+    private javax.swing.JFormattedTextField txtFiltradoFechaInicialVehiculo;
     // End of variables declaration//GEN-END:variables
 
     public JButton getBtnPuesto1() {
@@ -1863,11 +2032,11 @@ public class Main extends javax.swing.JFrame {
     }
 
     public JComboBox<String> getCmbDia() {
-        return cmbDia;
+        return cmbFiltradoDiaVehiculo;
     }
 
     public void setCmbDia(JComboBox<String> cmbDia) {
-        this.cmbDia = cmbDia;
+        this.cmbFiltradoDiaVehiculo = cmbDia;
     }
 
     public JLabel getLblPuesto1() {
@@ -2279,19 +2448,19 @@ public class Main extends javax.swing.JFrame {
     }
 
     public JRadioButton getRbDel() {
-        return rbDel;
+        return rbFiltradoDelVehiculo;
     }
 
     public void setRbDel(JRadioButton rbDel) {
-        this.rbDel = rbDel;
+        this.rbFiltradoDelVehiculo = rbDel;
     }
 
     public JRadioButton getRbRango() {
-        return rbRango;
+        return rbFiltradoRangoVehiculo;
     }
 
     public void setRbRango(JRadioButton rbRango) {
-        this.rbRango = rbRango;
+        this.rbFiltradoRangoVehiculo = rbRango;
     }
 
     public BlackTabbedPane getTbdPaneVehicles() {
@@ -2319,19 +2488,19 @@ public class Main extends javax.swing.JFrame {
     }
 
     public JFormattedTextField getTxtFechaFinal() {
-        return txtFechaFinal;
+        return txtFiltradoFechaFinalVehiculo;
     }
 
     public void setTxtFechaFinal(JFormattedTextField txtFechaFinal) {
-        this.txtFechaFinal = txtFechaFinal;
+        this.txtFiltradoFechaFinalVehiculo = txtFechaFinal;
     }
 
     public JFormattedTextField getTxtFechaInicial() {
-        return txtFechaInicial;
+        return txtFiltradoFechaInicialVehiculo;
     }
 
     public void setTxtFechaInicial(JFormattedTextField txtFechaInicial) {
-        this.txtFechaInicial = txtFechaInicial;
+        this.txtFiltradoFechaInicialVehiculo = txtFechaInicial;
     }
     
     // Metodo creado para cambiar imagen de jbutton cuando un vehiculo esta estacionado en el puesto

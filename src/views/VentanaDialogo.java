@@ -56,8 +56,9 @@ public class VentanaDialogo extends javax.swing.JDialog {
         jPanel1.add(pnlTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 50));
 
         lblTextoDialogo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lblTextoDialogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTextoDialogo.setText("TEXTO EXPLICATIVO");
-        jPanel1.add(lblTextoDialogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+        jPanel1.add(lblTextoDialogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 430, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,7 +68,7 @@ public class VentanaDialogo extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
         );
 
         pack();

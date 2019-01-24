@@ -138,7 +138,7 @@ public class RegistroVehiculo extends javax.swing.JDialog {
 
         btn_save.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btn_save.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/right 4.png"))); // NOI18N
-        btn_save.setText("Guardar");
+        btn_save.setText("Registrar");
         btn_save.setBorder(null);
         btn_save.setBorderPainted(false);
         btn_save.setContentAreaFilled(false);
