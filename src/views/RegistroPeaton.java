@@ -5,6 +5,10 @@
  */
 package views;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Ris3TwO
@@ -34,23 +38,23 @@ public class RegistroPeaton extends javax.swing.JDialog {
         jSeparator1 = new javax.swing.JSeparator();
         lblPlacaIcono = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        lblPlaca = new javax.swing.JLabel();
+        lblTipoPeaton = new javax.swing.JLabel();
         lblPuestoNumero = new javax.swing.JLabel();
-        lblPlaca1 = new javax.swing.JLabel();
+        lblCedulaPeaton = new javax.swing.JLabel();
         lblPlacaIcono1 = new javax.swing.JLabel();
         txtCedulaPeaton = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         txtNombrePeaton = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         lblPlacaIcono2 = new javax.swing.JLabel();
-        lblPlaca2 = new javax.swing.JLabel();
-        lblPlaca3 = new javax.swing.JLabel();
+        lblNombrePeaton = new javax.swing.JLabel();
+        lblApellidoPeaton = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         txtApellidoPeaton = new javax.swing.JTextField();
         lblPlacaIcono3 = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
         txtAptoAVisitar = new javax.swing.JTextField();
-        lblPlaca4 = new javax.swing.JLabel();
+        lblAptoPeaton = new javax.swing.JLabel();
         lblPlacaIcono4 = new javax.swing.JLabel();
         cmbTipoPeaton = new javax.swing.JComboBox<>();
         btn_save = new javax.swing.JButton();
@@ -70,7 +74,7 @@ public class RegistroPeaton extends javax.swing.JDialog {
         btnCerrar.setContentAreaFilled(false);
         btnCerrar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Multiply._32px.png"))); // NOI18N
         btnCerrar.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Multiply_32px.png"))); // NOI18N
-        jPanel1.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 40, 40));
+        jPanel1.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 0, 40, 40));
 
         lblTitulo.setBackground(new java.awt.Color(0, 0, 0));
         lblTitulo.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -85,10 +89,10 @@ public class RegistroPeaton extends javax.swing.JDialog {
         jSeparator2.setOpaque(true);
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 230, 10));
 
-        lblPlaca.setBackground(new java.awt.Color(0, 0, 0));
-        lblPlaca.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lblPlaca.setText("Tipo de Peatón:");
-        jPanel1.add(lblPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, -1));
+        lblTipoPeaton.setBackground(new java.awt.Color(0, 0, 0));
+        lblTipoPeaton.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblTipoPeaton.setText("Tipo de Peatón:");
+        jPanel1.add(lblTipoPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, -1));
 
         lblPuestoNumero.setBackground(new java.awt.Color(0, 0, 0));
         lblPuestoNumero.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -96,10 +100,10 @@ public class RegistroPeaton extends javax.swing.JDialog {
         lblPuestoNumero.setText("DATOS DEL PEATÓN");
         jPanel1.add(lblPuestoNumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 687, -1));
 
-        lblPlaca1.setBackground(new java.awt.Color(0, 0, 0));
-        lblPlaca1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lblPlaca1.setText("Cédula:");
-        jPanel1.add(lblPlaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
+        lblCedulaPeaton.setBackground(new java.awt.Color(0, 0, 0));
+        lblCedulaPeaton.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblCedulaPeaton.setText("Cédula:");
+        jPanel1.add(lblCedulaPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
 
         lblPlacaIcono1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/id-card-3.png"))); // NOI18N
         jPanel1.add(lblPlacaIcono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, -1));
@@ -123,15 +127,15 @@ public class RegistroPeaton extends javax.swing.JDialog {
         lblPlacaIcono2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/resume.png"))); // NOI18N
         jPanel1.add(lblPlacaIcono2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
-        lblPlaca2.setBackground(new java.awt.Color(0, 0, 0));
-        lblPlaca2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lblPlaca2.setText("Nombres:");
-        jPanel1.add(lblPlaca2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
+        lblNombrePeaton.setBackground(new java.awt.Color(0, 0, 0));
+        lblNombrePeaton.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblNombrePeaton.setText("Nombres:");
+        jPanel1.add(lblNombrePeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
-        lblPlaca3.setBackground(new java.awt.Color(0, 0, 0));
-        lblPlaca3.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lblPlaca3.setText("Apellidos:");
-        jPanel1.add(lblPlaca3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
+        lblApellidoPeaton.setBackground(new java.awt.Color(0, 0, 0));
+        lblApellidoPeaton.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblApellidoPeaton.setText("Apellidos:");
+        jPanel1.add(lblApellidoPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
 
         jSeparator5.setOpaque(true);
         jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 230, 10));
@@ -152,10 +156,10 @@ public class RegistroPeaton extends javax.swing.JDialog {
         txtAptoAVisitar.setBorder(null);
         jPanel1.add(txtAptoAVisitar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 180, 30));
 
-        lblPlaca4.setBackground(new java.awt.Color(0, 0, 0));
-        lblPlaca4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lblPlaca4.setText("Nº de Apto a Visitar:");
-        jPanel1.add(lblPlaca4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
+        lblAptoPeaton.setBackground(new java.awt.Color(0, 0, 0));
+        lblAptoPeaton.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblAptoPeaton.setText("Nº de Apto a Visitar:");
+        jPanel1.add(lblAptoPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
 
         lblPlacaIcono4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/house.png"))); // NOI18N
         jPanel1.add(lblPlacaIcono4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, -1, -1));
@@ -254,21 +258,87 @@ public class RegistroPeaton extends javax.swing.JDialog {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JLabel lblPlaca;
-    private javax.swing.JLabel lblPlaca1;
-    private javax.swing.JLabel lblPlaca2;
-    private javax.swing.JLabel lblPlaca3;
-    private javax.swing.JLabel lblPlaca4;
+    private javax.swing.JLabel lblApellidoPeaton;
+    private javax.swing.JLabel lblAptoPeaton;
+    private javax.swing.JLabel lblCedulaPeaton;
+    private javax.swing.JLabel lblNombrePeaton;
     private javax.swing.JLabel lblPlacaIcono;
     private javax.swing.JLabel lblPlacaIcono1;
     private javax.swing.JLabel lblPlacaIcono2;
     private javax.swing.JLabel lblPlacaIcono3;
     private javax.swing.JLabel lblPlacaIcono4;
     private javax.swing.JLabel lblPuestoNumero;
+    private javax.swing.JLabel lblTipoPeaton;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JTextField txtApellidoPeaton;
     private javax.swing.JTextField txtAptoAVisitar;
     private javax.swing.JTextField txtCedulaPeaton;
     private javax.swing.JTextField txtNombrePeaton;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnCerrar() {
+        return btnCerrar;
+    }
+
+    public void setBtnCerrar(JButton btnCerrar) {
+        this.btnCerrar = btnCerrar;
+    }
+
+    public JButton getBtn_save() {
+        return btn_save;
+    }
+
+    public void setBtn_save(JButton btn_save) {
+        this.btn_save = btn_save;
+    }
+
+    public JComboBox<String> getCmbTipoPeaton() {
+        return cmbTipoPeaton;
+    }
+
+    public void setCmbTipoPeaton(JComboBox<String> cmbTipoPeaton) {
+        this.cmbTipoPeaton = cmbTipoPeaton;
+    }
+
+    public JTextField getTxtApellidoPeaton() {
+        return txtApellidoPeaton;
+    }
+
+    public void setTxtApellidoPeaton(JTextField txtApellidoPeaton) {
+        this.txtApellidoPeaton = txtApellidoPeaton;
+    }
+
+    public JTextField getTxtAptoAVisitar() {
+        return txtAptoAVisitar;
+    }
+
+    public void setTxtAptoAVisitar(JTextField txtAptoAVisitar) {
+        this.txtAptoAVisitar = txtAptoAVisitar;
+    }
+
+    public JTextField getTxtCedulaPeaton() {
+        return txtCedulaPeaton;
+    }
+
+    public void setTxtCedulaPeaton(JTextField txtCedulaPeaton) {
+        this.txtCedulaPeaton = txtCedulaPeaton;
+    }
+
+    public JTextField getTxtNombrePeaton() {
+        return txtNombrePeaton;
+    }
+
+    public void setTxtNombrePeaton(JTextField txtNombrePeaton) {
+        this.txtNombrePeaton = txtNombrePeaton;
+    }
+
+    
 }

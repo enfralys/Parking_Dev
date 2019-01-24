@@ -5,7 +5,7 @@
  */
 package views;
 
-import java.net.URL;
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import org.matrix.BlackTabbedPane;
 
 /**
@@ -150,23 +151,23 @@ public class Main extends javax.swing.JFrame {
         btnPuesto14 = new javax.swing.JButton();
         pnlConsulta = new javax.swing.JPanel();
         lblConsulta = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        btnBuscarDatos = new javax.swing.JButton();
+        txtBuscarDatos = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblDatosApartamento = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        lblDatosTorre = new javax.swing.JLabel();
+        lblDatosNombre = new javax.swing.JLabel();
+        lblDatosApellido = new javax.swing.JLabel();
+        lblDatosTarjeta = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtDatosCodigoUsuario = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -175,21 +176,21 @@ public class Main extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
+        lblDatosEstado = new javax.swing.JLabel();
+        lblDatosMarca = new javax.swing.JLabel();
+        lblDatosModelo = new javax.swing.JLabel();
+        lblDatosColor = new javax.swing.JLabel();
+        lblDatosPlaca = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tlbHistorialDatos = new javax.swing.JTable();
         pnlHistorialdeIngreso = new javax.swing.JPanel();
         blackTabbedPane1 = new org.matrix.BlackTabbedPane();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tlbHistorial = new javax.swing.JTable();
+        tlbHistorialVehiculos = new javax.swing.JTable();
         pnlFiltrado = new javax.swing.JPanel();
         rbFiltradoDelVehiculo = new javax.swing.JRadioButton();
         txtFiltradoFechaInicialVehiculo = new javax.swing.JFormattedTextField();
@@ -1067,12 +1068,12 @@ public class Main extends javax.swing.JFrame {
         lblConsulta.setText("Consulta de Datos");
         pnlConsulta.add(lblConsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButton1.setText("Buscar");
-        pnlConsulta.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 90, -1, 20));
+        btnBuscarDatos.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        btnBuscarDatos.setText("Buscar");
+        pnlConsulta.add(btnBuscarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 90, -1, 20));
 
-        jTextField1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        pnlConsulta.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 170, -1));
+        txtBuscarDatos.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        pnlConsulta.add(txtBuscarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 170, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Century Gothic", 1, 14), new java.awt.Color(204, 255, 0))); // NOI18N
@@ -1086,10 +1087,10 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 360, 30));
 
-        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("00");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 80, -1));
+        lblDatosApartamento.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosApartamento.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDatosApartamento.setText("00");
+        jPanel1.add(lblDatosApartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 80, -1));
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 0));
@@ -1118,35 +1119,35 @@ public class Main extends javax.swing.JFrame {
         jLabel10.setText("Torre");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 80, -1));
 
-        jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("1");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 80, -1));
+        lblDatosTorre.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosTorre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDatosTorre.setText("1");
+        jPanel1.add(lblDatosTorre, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 80, -1));
 
-        jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel12.setText("DATO");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 160, -1));
+        lblDatosNombre.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosNombre.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDatosNombre.setText("DATO");
+        jPanel1.add(lblDatosNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 160, -1));
 
-        jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel13.setText("DATO");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 160, -1));
+        lblDatosApellido.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosApellido.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDatosApellido.setText("DATO");
+        jPanel1.add(lblDatosApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 160, -1));
 
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel14.setText("DATO");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 160, -1));
+        lblDatosTarjeta.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosTarjeta.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDatosTarjeta.setText("DATO");
+        jPanel1.add(lblDatosTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 160, -1));
 
         jLabel15.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(102, 102, 0));
         jLabel15.setText("Tarjeta Nº:");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
-        jTextField2.setEditable(false);
-        jTextField2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 90, -1));
+        txtDatosCodigoUsuario.setEditable(false);
+        txtDatosCodigoUsuario.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        txtDatosCodigoUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel1.add(txtDatosCodigoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 90, -1));
 
         pnlConsulta.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 420, 240));
 
@@ -1187,30 +1188,30 @@ public class Main extends javax.swing.JFrame {
         jLabel20.setText("Placa:");
         jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
-        jLabel21.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel21.setText("DATO");
-        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 120, -1));
+        lblDatosEstado.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosEstado.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDatosEstado.setText("DATO");
+        jPanel2.add(lblDatosEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 120, -1));
 
-        jLabel22.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel22.setText("DATO");
-        jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 120, -1));
+        lblDatosMarca.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosMarca.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDatosMarca.setText("DATO");
+        jPanel2.add(lblDatosMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 120, -1));
 
-        jLabel23.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel23.setText("DATO");
-        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 120, -1));
+        lblDatosModelo.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosModelo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDatosModelo.setText("DATO");
+        jPanel2.add(lblDatosModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 120, -1));
 
-        jLabel24.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel24.setText("DATO");
-        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 120, -1));
+        lblDatosColor.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosColor.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDatosColor.setText("DATO");
+        jPanel2.add(lblDatosColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 120, -1));
 
-        jLabel25.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel25.setText("DATO");
-        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 120, -1));
+        lblDatosPlaca.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblDatosPlaca.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblDatosPlaca.setText("DATO");
+        jPanel2.add(lblDatosPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 120, -1));
 
         pnlConsulta.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 420, 240));
 
@@ -1226,7 +1227,7 @@ public class Main extends javax.swing.JFrame {
 
         jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 820, 30));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tlbHistorialDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1237,7 +1238,7 @@ public class Main extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(tlbHistorialDatos);
 
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 880, 180));
 
@@ -1251,8 +1252,8 @@ public class Main extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tlbHistorial.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        tlbHistorial.setModel(new javax.swing.table.DefaultTableModel(
+        tlbHistorialVehiculos.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        tlbHistorialVehiculos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -1281,8 +1282,8 @@ public class Main extends javax.swing.JFrame {
                 "Tarjeta", "Tipo", "Placa", "Apartamento", "Estado", "Fecha"
             }
         ));
-        tlbHistorial.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(tlbHistorial);
+        tlbHistorialVehiculos.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(tlbHistorialVehiculos);
 
         jPanel7.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 890, 374));
 
@@ -1449,6 +1450,7 @@ public class Main extends javax.swing.JFrame {
     private org.matrix.BlackTabbedPane blackTabbedPane1;
     private javax.swing.ButtonGroup btgFiltrado;
     private javax.swing.ButtonGroup btgFiltradoVehiculo;
+    private javax.swing.JButton btnBuscarDatos;
     public javax.swing.JButton btnPuesto1;
     private javax.swing.JButton btnPuesto10;
     private javax.swing.JButton btnPuesto11;
@@ -1503,13 +1505,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbFiltradoDiaPeaton;
     private javax.swing.JComboBox<String> cmbFiltradoDiaVehiculo;
     private javax.swing.JComboBox<String> cmbFiltradoTipoPeaton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -1517,14 +1514,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
@@ -1544,10 +1535,17 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lblConsulta;
+    private javax.swing.JLabel lblDatosApartamento;
+    private javax.swing.JLabel lblDatosApellido;
+    private javax.swing.JLabel lblDatosColor;
+    private javax.swing.JLabel lblDatosEstado;
+    private javax.swing.JLabel lblDatosMarca;
+    private javax.swing.JLabel lblDatosModelo;
+    private javax.swing.JLabel lblDatosNombre;
+    private javax.swing.JLabel lblDatosPlaca;
+    private javax.swing.JLabel lblDatosTarjeta;
+    private javax.swing.JLabel lblDatosTorre;
     private javax.swing.JLabel lblHistorialPeatones;
     private javax.swing.JLabel lblHistorialVehiculos;
     private javax.swing.JLabel lblPuesto1;
@@ -1615,429 +1613,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbFiltradoTipoPeaton;
     private org.matrix.BlackTabbedPane tbdPaneVehicles;
     private org.matrix.BlackTabbedPane tbpMain;
-    private javax.swing.JTable tlbHistorial;
+    private javax.swing.JTable tlbHistorialDatos;
     private javax.swing.JTable tlbHistorialPeaton;
+    private javax.swing.JTable tlbHistorialVehiculos;
+    private javax.swing.JTextField txtBuscarDatos;
+    private javax.swing.JTextField txtDatosCodigoUsuario;
     private javax.swing.JFormattedTextField txtFiltradoFechaFinalPeaton;
     private javax.swing.JFormattedTextField txtFiltradoFechaFinalVehiculo;
     private javax.swing.JFormattedTextField txtFiltradoFechaInicialPeaton;
     private javax.swing.JFormattedTextField txtFiltradoFechaInicialVehiculo;
     // End of variables declaration//GEN-END:variables
 
-    public JButton getBtnPuesto1() {
-        return btnPuesto1;
-    }
 
-    public void setBtnPuesto1(JButton btnPuesto1) {
-        this.btnPuesto1 = btnPuesto1;
-    }
-
-    public JButton getBtnPuesto10() {
-        return btnPuesto10;
-    }
-
-    public void setBtnPuesto10(JButton btnPuesto10) {
-        this.btnPuesto10 = btnPuesto10;
-    }
-
-    public JButton getBtnPuesto11() {
-        return btnPuesto11;
-    }
-
-    public void setBtnPuesto11(JButton btnPuesto11) {
-        this.btnPuesto11 = btnPuesto11;
-    }
-
-    public JButton getBtnPuesto12() {
-        return btnPuesto12;
-    }
-
-    public void setBtnPuesto12(JButton btnPuesto12) {
-        this.btnPuesto12 = btnPuesto12;
-    }
-
-    public JButton getBtnPuesto13() {
-        return btnPuesto13;
-    }
-
-    public void setBtnPuesto13(JButton btnPuesto13) {
-        this.btnPuesto13 = btnPuesto13;
-    }
-
-    public JButton getBtnPuesto14() {
-        return btnPuesto14;
-    }
-
-    public void setBtnPuesto14(JButton btnPuesto14) {
-        this.btnPuesto14 = btnPuesto14;
-    }
-
-    public JButton getBtnPuesto15() {
-        return btnPuesto15;
-    }
-
-    public void setBtnPuesto15(JButton btnPuesto15) {
-        this.btnPuesto15 = btnPuesto15;
-    }
-
-    public JButton getBtnPuesto16() {
-        return btnPuesto16;
-    }
-
-    public void setBtnPuesto16(JButton btnPuesto16) {
-        this.btnPuesto16 = btnPuesto16;
-    }
-
-    public JButton getBtnPuesto17() {
-        return btnPuesto17;
-    }
-
-    public void setBtnPuesto17(JButton btnPuesto17) {
-        this.btnPuesto17 = btnPuesto17;
-    }
-
-    public JButton getBtnPuesto18() {
-        return btnPuesto18;
-    }
-
-    public void setBtnPuesto18(JButton btnPuesto18) {
-        this.btnPuesto18 = btnPuesto18;
-    }
-
-    public JButton getBtnPuesto19() {
-        return btnPuesto19;
-    }
-
-    public void setBtnPuesto19(JButton btnPuesto19) {
-        this.btnPuesto19 = btnPuesto19;
-    }
-
-    public JButton getBtnPuesto2() {
-        return btnPuesto2;
-    }
-
-    public void setBtnPuesto2(JButton btnPuesto2) {
-        this.btnPuesto2 = btnPuesto2;
-    }
-
-    public JButton getBtnPuesto20() {
-        return btnPuesto20;
-    }
-
-    public void setBtnPuesto20(JButton btnPuesto20) {
-        this.btnPuesto20 = btnPuesto20;
-    }
-
-    public JButton getBtnPuesto21() {
-        return btnPuesto21;
-    }
-
-    public void setBtnPuesto21(JButton btnPuesto21) {
-        this.btnPuesto21 = btnPuesto21;
-    }
-
-    public JButton getBtnPuesto22() {
-        return btnPuesto22;
-    }
-
-    public void setBtnPuesto22(JButton btnPuesto22) {
-        this.btnPuesto22 = btnPuesto22;
-    }
-
-    public JButton getBtnPuesto23() {
-        return btnPuesto23;
-    }
-
-    public void setBtnPuesto23(JButton btnPuesto23) {
-        this.btnPuesto23 = btnPuesto23;
-    }
-
-    public JButton getBtnPuesto24() {
-        return btnPuesto24;
-    }
-
-    public void setBtnPuesto24(JButton btnPuesto24) {
-        this.btnPuesto24 = btnPuesto24;
-    }
-
-    public JButton getBtnPuesto25() {
-        return btnPuesto25;
-    }
-
-    public void setBtnPuesto25(JButton btnPuesto25) {
-        this.btnPuesto25 = btnPuesto25;
-    }
-
-    public JButton getBtnPuesto26() {
-        return btnPuesto26;
-    }
-
-    public void setBtnPuesto26(JButton btnPuesto26) {
-        this.btnPuesto26 = btnPuesto26;
-    }
-
-    public JButton getBtnPuesto27() {
-        return btnPuesto27;
-    }
-
-    public void setBtnPuesto27(JButton btnPuesto27) {
-        this.btnPuesto27 = btnPuesto27;
-    }
-
-    public JButton getBtnPuesto28() {
-        return btnPuesto28;
-    }
-
-    public void setBtnPuesto28(JButton btnPuesto28) {
-        this.btnPuesto28 = btnPuesto28;
-    }
-
-    public JButton getBtnPuesto29() {
-        return btnPuesto29;
-    }
-
-    public void setBtnPuesto29(JButton btnPuesto29) {
-        this.btnPuesto29 = btnPuesto29;
-    }
-
-    public JButton getBtnPuesto3() {
-        return btnPuesto3;
-    }
-
-    public void setBtnPuesto3(JButton btnPuesto3) {
-        this.btnPuesto3 = btnPuesto3;
-    }
-
-    public JButton getBtnPuesto30() {
-        return btnPuesto30;
-    }
-
-    public void setBtnPuesto30(JButton btnPuesto30) {
-        this.btnPuesto30 = btnPuesto30;
-    }
-
-    public JButton getBtnPuesto31() {
-        return btnPuesto31;
-    }
-
-    public void setBtnPuesto31(JButton btnPuesto31) {
-        this.btnPuesto31 = btnPuesto31;
-    }
-
-    public JButton getBtnPuesto32() {
-        return btnPuesto32;
-    }
-
-    public void setBtnPuesto32(JButton btnPuesto32) {
-        this.btnPuesto32 = btnPuesto32;
-    }
-
-    public JButton getBtnPuesto33() {
-        return btnPuesto33;
-    }
-
-    public void setBtnPuesto33(JButton btnPuesto33) {
-        this.btnPuesto33 = btnPuesto33;
-    }
-
-    public JButton getBtnPuesto34() {
-        return btnPuesto34;
-    }
-
-    public void setBtnPuesto34(JButton btnPuesto34) {
-        this.btnPuesto34 = btnPuesto34;
-    }
-
-    public JButton getBtnPuesto35() {
-        return btnPuesto35;
-    }
-
-    public void setBtnPuesto35(JButton btnPuesto35) {
-        this.btnPuesto35 = btnPuesto35;
-    }
-
-    public JButton getBtnPuesto36() {
-        return btnPuesto36;
-    }
-
-    public void setBtnPuesto36(JButton btnPuesto36) {
-        this.btnPuesto36 = btnPuesto36;
-    }
-
-    public JButton getBtnPuesto37() {
-        return btnPuesto37;
-    }
-
-    public void setBtnPuesto37(JButton btnPuesto37) {
-        this.btnPuesto37 = btnPuesto37;
-    }
-
-    public JButton getBtnPuesto38() {
-        return btnPuesto38;
-    }
-
-    public void setBtnPuesto38(JButton btnPuesto38) {
-        this.btnPuesto38 = btnPuesto38;
-    }
-
-    public JButton getBtnPuesto39() {
-        return btnPuesto39;
-    }
-
-    public void setBtnPuesto39(JButton btnPuesto39) {
-        this.btnPuesto39 = btnPuesto39;
-    }
-
-    public JButton getBtnPuesto4() {
-        return btnPuesto4;
-    }
-
-    public void setBtnPuesto4(JButton btnPuesto4) {
-        this.btnPuesto4 = btnPuesto4;
-    }
-
-    public JButton getBtnPuesto40() {
-        return btnPuesto40;
-    }
-
-    public void setBtnPuesto40(JButton btnPuesto40) {
-        this.btnPuesto40 = btnPuesto40;
-    }
-
-    public JButton getBtnPuesto41() {
-        return btnPuesto41;
-    }
-
-    public void setBtnPuesto41(JButton btnPuesto41) {
-        this.btnPuesto41 = btnPuesto41;
-    }
-
-    public JButton getBtnPuesto42() {
-        return btnPuesto42;
-    }
-
-    public void setBtnPuesto42(JButton btnPuesto42) {
-        this.btnPuesto42 = btnPuesto42;
-    }
-
-    public JButton getBtnPuesto43() {
-        return btnPuesto43;
-    }
-
-    public void setBtnPuesto43(JButton btnPuesto43) {
-        this.btnPuesto43 = btnPuesto43;
-    }
-
-    public JButton getBtnPuesto44() {
-        return btnPuesto44;
-    }
-
-    public void setBtnPuesto44(JButton btnPuesto44) {
-        this.btnPuesto44 = btnPuesto44;
-    }
-
-    public JButton getBtnPuesto45() {
-        return btnPuesto45;
-    }
-
-    public void setBtnPuesto45(JButton btnPuesto45) {
-        this.btnPuesto45 = btnPuesto45;
-    }
-
-    public JButton getBtnPuesto46() {
-        return btnPuesto46;
-    }
-
-    public void setBtnPuesto46(JButton btnPuesto46) {
-        this.btnPuesto46 = btnPuesto46;
-    }
-
-    public JButton getBtnPuesto47() {
-        return btnPuesto47;
-    }
-
-    public void setBtnPuesto47(JButton btnPuesto47) {
-        this.btnPuesto47 = btnPuesto47;
-    }
-
-    public JButton getBtnPuesto48() {
-        return btnPuesto48;
-    }
-
-    public void setBtnPuesto48(JButton btnPuesto48) {
-        this.btnPuesto48 = btnPuesto48;
-    }
-
-    public JButton getBtnPuesto49() {
-        return btnPuesto49;
-    }
-
-    public void setBtnPuesto49(JButton btnPuesto49) {
-        this.btnPuesto49 = btnPuesto49;
-    }
-
-    public JButton getBtnPuesto5() {
-        return btnPuesto5;
-    }
-
-    public void setBtnPuesto5(JButton btnPuesto5) {
-        this.btnPuesto5 = btnPuesto5;
-    }
-
-    public JButton getBtnPuesto50() {
-        return btnPuesto50;
-    }
-
-    public void setBtnPuesto50(JButton btnPuesto50) {
-        this.btnPuesto50 = btnPuesto50;
-    }
-
-    public JButton getBtnPuesto6() {
-        return btnPuesto6;
-    }
-
-    public void setBtnPuesto6(JButton btnPuesto6) {
-        this.btnPuesto6 = btnPuesto6;
-    }
-
-    public JButton getBtnPuesto7() {
-        return btnPuesto7;
-    }
-
-    public void setBtnPuesto7(JButton btnPuesto7) {
-        this.btnPuesto7 = btnPuesto7;
-    }
-
-    public JButton getBtnPuesto8() {
-        return btnPuesto8;
-    }
-
-    public void setBtnPuesto8(JButton btnPuesto8) {
-        this.btnPuesto8 = btnPuesto8;
-    }
-
-    public JButton getBtnPuesto9() {
-        return btnPuesto9;
-    }
-
-    public void setBtnPuesto9(JButton btnPuesto9) {
-        this.btnPuesto9 = btnPuesto9;
-    }
-
-    public JButton getBtnSalir() {
-        return btnSalir;
-    }
-
-    public void setBtnSalir(JButton btnSalir) {
-        this.btnSalir = btnSalir;
-    }
-
-    public JComboBox<String> getCmbDia() {
-        return cmbFiltradoDiaVehiculo;
-    }
-
-    public void setCmbDia(JComboBox<String> cmbDia) {
-        this.cmbFiltradoDiaVehiculo = cmbDia;
-    }
 
     public JLabel getLblPuesto1() {
         return lblPuesto1;
@@ -2480,11 +2067,11 @@ public class Main extends javax.swing.JFrame {
     }
 
     public JTable getTlbHistorial() {
-        return tlbHistorial;
+        return tlbHistorialVehiculos;
     }
 
     public void setTlbHistorial(JTable tlbHistorial) {
-        this.tlbHistorial = tlbHistorial;
+        this.tlbHistorialVehiculos = tlbHistorial;
     }
 
     public JFormattedTextField getTxtFechaFinal() {
@@ -2502,6 +2089,640 @@ public class Main extends javax.swing.JFrame {
     public void setTxtFechaInicial(JFormattedTextField txtFechaInicial) {
         this.txtFiltradoFechaInicialVehiculo = txtFechaInicial;
     }
+
+    public JButton getBtnPuesto1() {
+        return btnPuesto1;
+    }
+
+    public void setBtnPuesto1(JButton btnPuesto1) {
+        this.btnPuesto1 = btnPuesto1;
+    }
+
+    public JButton getBtnPuesto10() {
+        return btnPuesto10;
+    }
+
+    public void setBtnPuesto10(JButton btnPuesto10) {
+        this.btnPuesto10 = btnPuesto10;
+    }
+
+    public JButton getBtnPuesto11() {
+        return btnPuesto11;
+    }
+
+    public void setBtnPuesto11(JButton btnPuesto11) {
+        this.btnPuesto11 = btnPuesto11;
+    }
+
+    public JButton getBtnPuesto12() {
+        return btnPuesto12;
+    }
+
+    public void setBtnPuesto12(JButton btnPuesto12) {
+        this.btnPuesto12 = btnPuesto12;
+    }
+
+    public JButton getBtnPuesto13() {
+        return btnPuesto13;
+    }
+
+    public void setBtnPuesto13(JButton btnPuesto13) {
+        this.btnPuesto13 = btnPuesto13;
+    }
+
+    public JButton getBtnPuesto14() {
+        return btnPuesto14;
+    }
+
+    public void setBtnPuesto14(JButton btnPuesto14) {
+        this.btnPuesto14 = btnPuesto14;
+    }
+
+    public JButton getBtnPuesto15() {
+        return btnPuesto15;
+    }
+
+    public void setBtnPuesto15(JButton btnPuesto15) {
+        this.btnPuesto15 = btnPuesto15;
+    }
+
+    public JButton getBtnPuesto16() {
+        return btnPuesto16;
+    }
+
+    public void setBtnPuesto16(JButton btnPuesto16) {
+        this.btnPuesto16 = btnPuesto16;
+    }
+
+    public JButton getBtnPuesto17() {
+        return btnPuesto17;
+    }
+
+    public void setBtnPuesto17(JButton btnPuesto17) {
+        this.btnPuesto17 = btnPuesto17;
+    }
+
+    public JButton getBtnPuesto18() {
+        return btnPuesto18;
+    }
+
+    public void setBtnPuesto18(JButton btnPuesto18) {
+        this.btnPuesto18 = btnPuesto18;
+    }
+
+    public JButton getBtnPuesto19() {
+        return btnPuesto19;
+    }
+
+    public void setBtnPuesto19(JButton btnPuesto19) {
+        this.btnPuesto19 = btnPuesto19;
+    }
+
+    public JButton getBtnPuesto2() {
+        return btnPuesto2;
+    }
+
+    public void setBtnPuesto2(JButton btnPuesto2) {
+        this.btnPuesto2 = btnPuesto2;
+    }
+
+    public JButton getBtnPuesto20() {
+        return btnPuesto20;
+    }
+
+    public void setBtnPuesto20(JButton btnPuesto20) {
+        this.btnPuesto20 = btnPuesto20;
+    }
+
+    public JButton getBtnPuesto21() {
+        return btnPuesto21;
+    }
+
+    public void setBtnPuesto21(JButton btnPuesto21) {
+        this.btnPuesto21 = btnPuesto21;
+    }
+
+    public JButton getBtnPuesto22() {
+        return btnPuesto22;
+    }
+
+    public void setBtnPuesto22(JButton btnPuesto22) {
+        this.btnPuesto22 = btnPuesto22;
+    }
+
+    public JButton getBtnPuesto23() {
+        return btnPuesto23;
+    }
+
+    public void setBtnPuesto23(JButton btnPuesto23) {
+        this.btnPuesto23 = btnPuesto23;
+    }
+
+    public JButton getBtnPuesto24() {
+        return btnPuesto24;
+    }
+
+    public void setBtnPuesto24(JButton btnPuesto24) {
+        this.btnPuesto24 = btnPuesto24;
+    }
+
+    public JButton getBtnPuesto25() {
+        return btnPuesto25;
+    }
+
+    public void setBtnPuesto25(JButton btnPuesto25) {
+        this.btnPuesto25 = btnPuesto25;
+    }
+
+    public JButton getBtnPuesto26() {
+        return btnPuesto26;
+    }
+
+    public void setBtnPuesto26(JButton btnPuesto26) {
+        this.btnPuesto26 = btnPuesto26;
+    }
+
+    public JButton getBtnPuesto27() {
+        return btnPuesto27;
+    }
+
+    public void setBtnPuesto27(JButton btnPuesto27) {
+        this.btnPuesto27 = btnPuesto27;
+    }
+
+    public JButton getBtnPuesto28() {
+        return btnPuesto28;
+    }
+
+    public void setBtnPuesto28(JButton btnPuesto28) {
+        this.btnPuesto28 = btnPuesto28;
+    }
+
+    public JButton getBtnPuesto29() {
+        return btnPuesto29;
+    }
+
+    public void setBtnPuesto29(JButton btnPuesto29) {
+        this.btnPuesto29 = btnPuesto29;
+    }
+
+    public JButton getBtnPuesto3() {
+        return btnPuesto3;
+    }
+
+    public void setBtnPuesto3(JButton btnPuesto3) {
+        this.btnPuesto3 = btnPuesto3;
+    }
+
+    public JButton getBtnPuesto30() {
+        return btnPuesto30;
+    }
+
+    public void setBtnPuesto30(JButton btnPuesto30) {
+        this.btnPuesto30 = btnPuesto30;
+    }
+
+    public JButton getBtnPuesto31() {
+        return btnPuesto31;
+    }
+
+    public void setBtnPuesto31(JButton btnPuesto31) {
+        this.btnPuesto31 = btnPuesto31;
+    }
+
+    public JButton getBtnPuesto32() {
+        return btnPuesto32;
+    }
+
+    public void setBtnPuesto32(JButton btnPuesto32) {
+        this.btnPuesto32 = btnPuesto32;
+    }
+
+    public JButton getBtnPuesto33() {
+        return btnPuesto33;
+    }
+
+    public void setBtnPuesto33(JButton btnPuesto33) {
+        this.btnPuesto33 = btnPuesto33;
+    }
+
+    public JButton getBtnPuesto34() {
+        return btnPuesto34;
+    }
+
+    public void setBtnPuesto34(JButton btnPuesto34) {
+        this.btnPuesto34 = btnPuesto34;
+    }
+
+    public JButton getBtnPuesto35() {
+        return btnPuesto35;
+    }
+
+    public void setBtnPuesto35(JButton btnPuesto35) {
+        this.btnPuesto35 = btnPuesto35;
+    }
+
+    public JButton getBtnPuesto36() {
+        return btnPuesto36;
+    }
+
+    public void setBtnPuesto36(JButton btnPuesto36) {
+        this.btnPuesto36 = btnPuesto36;
+    }
+
+    public JButton getBtnPuesto37() {
+        return btnPuesto37;
+    }
+
+    public void setBtnPuesto37(JButton btnPuesto37) {
+        this.btnPuesto37 = btnPuesto37;
+    }
+
+    public JButton getBtnPuesto38() {
+        return btnPuesto38;
+    }
+
+    public void setBtnPuesto38(JButton btnPuesto38) {
+        this.btnPuesto38 = btnPuesto38;
+    }
+
+    public JButton getBtnPuesto39() {
+        return btnPuesto39;
+    }
+
+    public void setBtnPuesto39(JButton btnPuesto39) {
+        this.btnPuesto39 = btnPuesto39;
+    }
+
+    public JButton getBtnPuesto4() {
+        return btnPuesto4;
+    }
+
+    public void setBtnPuesto4(JButton btnPuesto4) {
+        this.btnPuesto4 = btnPuesto4;
+    }
+
+    public JButton getBtnPuesto40() {
+        return btnPuesto40;
+    }
+
+    public void setBtnPuesto40(JButton btnPuesto40) {
+        this.btnPuesto40 = btnPuesto40;
+    }
+
+    public JButton getBtnPuesto41() {
+        return btnPuesto41;
+    }
+
+    public void setBtnPuesto41(JButton btnPuesto41) {
+        this.btnPuesto41 = btnPuesto41;
+    }
+
+    public JButton getBtnPuesto42() {
+        return btnPuesto42;
+    }
+
+    public void setBtnPuesto42(JButton btnPuesto42) {
+        this.btnPuesto42 = btnPuesto42;
+    }
+
+    public JButton getBtnPuesto43() {
+        return btnPuesto43;
+    }
+
+    public void setBtnPuesto43(JButton btnPuesto43) {
+        this.btnPuesto43 = btnPuesto43;
+    }
+
+    public JButton getBtnPuesto44() {
+        return btnPuesto44;
+    }
+
+    public void setBtnPuesto44(JButton btnPuesto44) {
+        this.btnPuesto44 = btnPuesto44;
+    }
+
+    public JButton getBtnPuesto45() {
+        return btnPuesto45;
+    }
+
+    public void setBtnPuesto45(JButton btnPuesto45) {
+        this.btnPuesto45 = btnPuesto45;
+    }
+
+    public JButton getBtnPuesto46() {
+        return btnPuesto46;
+    }
+
+    public void setBtnPuesto46(JButton btnPuesto46) {
+        this.btnPuesto46 = btnPuesto46;
+    }
+
+    public JButton getBtnPuesto47() {
+        return btnPuesto47;
+    }
+
+    public void setBtnPuesto47(JButton btnPuesto47) {
+        this.btnPuesto47 = btnPuesto47;
+    }
+
+    public JButton getBtnPuesto48() {
+        return btnPuesto48;
+    }
+
+    public void setBtnPuesto48(JButton btnPuesto48) {
+        this.btnPuesto48 = btnPuesto48;
+    }
+
+    public JButton getBtnPuesto49() {
+        return btnPuesto49;
+    }
+
+    public void setBtnPuesto49(JButton btnPuesto49) {
+        this.btnPuesto49 = btnPuesto49;
+    }
+
+    public JButton getBtnPuesto5() {
+        return btnPuesto5;
+    }
+
+    public void setBtnPuesto5(JButton btnPuesto5) {
+        this.btnPuesto5 = btnPuesto5;
+    }
+
+    public JButton getBtnPuesto50() {
+        return btnPuesto50;
+    }
+
+    public void setBtnPuesto50(JButton btnPuesto50) {
+        this.btnPuesto50 = btnPuesto50;
+    }
+
+    public JButton getBtnPuesto6() {
+        return btnPuesto6;
+    }
+
+    public void setBtnPuesto6(JButton btnPuesto6) {
+        this.btnPuesto6 = btnPuesto6;
+    }
+
+    public JButton getBtnPuesto7() {
+        return btnPuesto7;
+    }
+
+    public void setBtnPuesto7(JButton btnPuesto7) {
+        this.btnPuesto7 = btnPuesto7;
+    }
+
+    public JButton getBtnPuesto8() {
+        return btnPuesto8;
+    }
+
+    public void setBtnPuesto8(JButton btnPuesto8) {
+        this.btnPuesto8 = btnPuesto8;
+    }
+
+    public JButton getBtnPuesto9() {
+        return btnPuesto9;
+    }
+
+    public void setBtnPuesto9(JButton btnPuesto9) {
+        this.btnPuesto9 = btnPuesto9;
+    }
+
+    public JButton getBtnSalir() {
+        return btnSalir;
+    }
+
+    public void setBtnSalir(JButton btnSalir) {
+        this.btnSalir = btnSalir;
+    }
+
+    public JComboBox<String> getCmbFiltradoDiaPeaton() {
+        return cmbFiltradoDiaPeaton;
+    }
+
+    public void setCmbFiltradoDiaPeaton(JComboBox<String> cmbFiltradoDiaPeaton) {
+        this.cmbFiltradoDiaPeaton = cmbFiltradoDiaPeaton;
+    }
+
+    public JComboBox<String> getCmbFiltradoDiaVehiculo() {
+        return cmbFiltradoDiaVehiculo;
+    }
+
+    public void setCmbFiltradoDiaVehiculo(JComboBox<String> cmbFiltradoDiaVehiculo) {
+        this.cmbFiltradoDiaVehiculo = cmbFiltradoDiaVehiculo;
+    }
+
+    public JComboBox<String> getCmbFiltradoTipoPeaton() {
+        return cmbFiltradoTipoPeaton;
+    }
+
+    public void setCmbFiltradoTipoPeaton(JComboBox<String> cmbFiltradoTipoPeaton) {
+        this.cmbFiltradoTipoPeaton = cmbFiltradoTipoPeaton;
+    }
+
+    public JRadioButton getRbFiltradoDelPeaton() {
+        return rbFiltradoDelPeaton;
+    }
+
+    public void setRbFiltradoDelPeaton(JRadioButton rbFiltradoDelPeaton) {
+        this.rbFiltradoDelPeaton = rbFiltradoDelPeaton;
+    }
+
+    public JRadioButton getRbFiltradoDelVehiculo() {
+        return rbFiltradoDelVehiculo;
+    }
+
+    public void setRbFiltradoDelVehiculo(JRadioButton rbFiltradoDelVehiculo) {
+        this.rbFiltradoDelVehiculo = rbFiltradoDelVehiculo;
+    }
+
+    public JRadioButton getRbFiltradoRangoPeaton() {
+        return rbFiltradoRangoPeaton;
+    }
+
+    public void setRbFiltradoRangoPeaton(JRadioButton rbFiltradoRangoPeaton) {
+        this.rbFiltradoRangoPeaton = rbFiltradoRangoPeaton;
+    }
+
+    public JRadioButton getRbFiltradoRangoVehiculo() {
+        return rbFiltradoRangoVehiculo;
+    }
+
+    public void setRbFiltradoRangoVehiculo(JRadioButton rbFiltradoRangoVehiculo) {
+        this.rbFiltradoRangoVehiculo = rbFiltradoRangoVehiculo;
+    }
+
+    public JRadioButton getRbFiltradoTipoPeaton() {
+        return rbFiltradoTipoPeaton;
+    }
+
+    public void setRbFiltradoTipoPeaton(JRadioButton rbFiltradoTipoPeaton) {
+        this.rbFiltradoTipoPeaton = rbFiltradoTipoPeaton;
+    }
+
+    public JTable getTlbHistorialPeaton() {
+        return tlbHistorialPeaton;
+    }
+
+    public void setTlbHistorialPeaton(JTable tlbHistorialPeaton) {
+        this.tlbHistorialPeaton = tlbHistorialPeaton;
+    }
+
+    public JTable getTlbHistorialVehiculos() {
+        return tlbHistorialVehiculos;
+    }
+
+    public void setTlbHistorialVehiculos(JTable tlbHistorialVehiculos) {
+        this.tlbHistorialVehiculos = tlbHistorialVehiculos;
+    }
+
+    public JFormattedTextField getTxtFiltradoFechaFinalPeaton() {
+        return txtFiltradoFechaFinalPeaton;
+    }
+
+    public void setTxtFiltradoFechaFinalPeaton(JFormattedTextField txtFiltradoFechaFinalPeaton) {
+        this.txtFiltradoFechaFinalPeaton = txtFiltradoFechaFinalPeaton;
+    }
+
+    public JFormattedTextField getTxtFiltradoFechaFinalVehiculo() {
+        return txtFiltradoFechaFinalVehiculo;
+    }
+
+    public void setTxtFiltradoFechaFinalVehiculo(JFormattedTextField txtFiltradoFechaFinalVehiculo) {
+        this.txtFiltradoFechaFinalVehiculo = txtFiltradoFechaFinalVehiculo;
+    }
+
+    public JFormattedTextField getTxtFiltradoFechaInicialPeaton() {
+        return txtFiltradoFechaInicialPeaton;
+    }
+
+    public void setTxtFiltradoFechaInicialPeaton(JFormattedTextField txtFiltradoFechaInicialPeaton) {
+        this.txtFiltradoFechaInicialPeaton = txtFiltradoFechaInicialPeaton;
+    }
+
+    public JFormattedTextField getTxtFiltradoFechaInicialVehiculo() {
+        return txtFiltradoFechaInicialVehiculo;
+    }
+
+    public void setTxtFiltradoFechaInicialVehiculo(JFormattedTextField txtFiltradoFechaInicialVehiculo) {
+        this.txtFiltradoFechaInicialVehiculo = txtFiltradoFechaInicialVehiculo;
+    }
+
+    public JButton getBtnBuscarDatos() {
+        return btnBuscarDatos;
+    }
+
+    public void setBtnBuscarDatos(JButton btnBuscarDatos) {
+        this.btnBuscarDatos = btnBuscarDatos;
+    }
+
+    public JLabel getLblDatosApartamento() {
+        return lblDatosApartamento;
+    }
+
+    public void setLblDatosApartamento(JLabel lblDatosApartamento) {
+        this.lblDatosApartamento = lblDatosApartamento;
+    }
+
+    public JLabel getLblDatosApellido() {
+        return lblDatosApellido;
+    }
+
+    public void setLblDatosApellido(JLabel lblDatosApellido) {
+        this.lblDatosApellido = lblDatosApellido;
+    }
+
+    public JLabel getLblDatosColor() {
+        return lblDatosColor;
+    }
+
+    public void setLblDatosColor(JLabel lblDatosColor) {
+        this.lblDatosColor = lblDatosColor;
+    }
+
+    public JLabel getLblDatosEstado() {
+        return lblDatosEstado;
+    }
+
+    public void setLblDatosEstado(JLabel lblDatosEstado) {
+        this.lblDatosEstado = lblDatosEstado;
+    }
+
+    public JLabel getLblDatosMarca() {
+        return lblDatosMarca;
+    }
+
+    public void setLblDatosMarca(JLabel lblDatosMarca) {
+        this.lblDatosMarca = lblDatosMarca;
+    }
+
+    public JLabel getLblDatosModelo() {
+        return lblDatosModelo;
+    }
+
+    public void setLblDatosModelo(JLabel lblDatosModelo) {
+        this.lblDatosModelo = lblDatosModelo;
+    }
+
+    public JLabel getLblDatosNombre() {
+        return lblDatosNombre;
+    }
+
+    public void setLblDatosNombre(JLabel lblDatosNombre) {
+        this.lblDatosNombre = lblDatosNombre;
+    }
+
+    public JLabel getLblDatosPlaca() {
+        return lblDatosPlaca;
+    }
+
+    public void setLblDatosPlaca(JLabel lblDatosPlaca) {
+        this.lblDatosPlaca = lblDatosPlaca;
+    }
+
+    public JLabel getLblDatosTarjeta() {
+        return lblDatosTarjeta;
+    }
+
+    public void setLblDatosTarjeta(JLabel lblDatosTarjeta) {
+        this.lblDatosTarjeta = lblDatosTarjeta;
+    }
+
+    public JLabel getLblDatosTorre() {
+        return lblDatosTorre;
+    }
+
+    public void setLblDatosTorre(JLabel lblDatosTorre) {
+        this.lblDatosTorre = lblDatosTorre;
+    }
+
+    public JTable getTlbHistorialDatos() {
+        return tlbHistorialDatos;
+    }
+
+    public void setTlbHistorialDatos(JTable tlbHistorialDatos) {
+        this.tlbHistorialDatos = tlbHistorialDatos;
+    }
+
+    public JTextField getTxtBuscarDatos() {
+        return txtBuscarDatos;
+    }
+
+    public void setTxtBuscarDatos(JTextField txtBuscarDatos) {
+        this.txtBuscarDatos = txtBuscarDatos;
+    }
+
+    public JTextField getTxtDatosCodigoUsuario() {
+        return txtDatosCodigoUsuario;
+    }
+
+    public void setTxtDatosCodigoUsuario(JTextField txtDatosCodigoUsuario) {
+        this.txtDatosCodigoUsuario = txtDatosCodigoUsuario;
+    }
+    
+    
     
     // Metodo creado para cambiar imagen de jbutton cuando un vehiculo esta estacionado en el puesto
     public void ocupado(int puesto) {
