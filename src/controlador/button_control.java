@@ -9,26 +9,30 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.ImageIcon;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 import mvc.conex;
 import mvc.registro;
 import views.Main;
+import views.RegistroPeaton;
 import views.RegistroVehiculo;
 
-public class button_control implements ActionListener{
+public class button_control implements ActionListener, MouseListener{
     
     private Main vista = new Main();
     private registro model;
     private RegistroVehiculo reg;
+    private RegistroPeaton regPea;
     private int contador = 0;
-    private conex conn;
+    private final conex conn;
     
     @SuppressWarnings("LeakingThisInConstructor")
-    public button_control(Main vista, RegistroVehiculo reg){
+    public button_control(Main vista, RegistroVehiculo reg, RegistroPeaton regPea){
         this.model=new registro();
         this.vista = vista;
         this.reg = reg;
+        this.regPea = regPea;
         this.conn= new conex();
 
         //Botones de vista Main
@@ -83,9 +87,13 @@ public class button_control implements ActionListener{
         this.vista.getBtnPuesto48().addActionListener(this);
         this.vista.getBtnPuesto49().addActionListener(this);
         this.vista.getBtnPuesto50().addActionListener(this);
+        
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
+        
+        //MouseListener vista Main
+        this.vista.getTbdPaneVehicles().addMouseListener(this);
     }
     
     public void Inicio(){
@@ -96,13 +104,17 @@ public class button_control implements ActionListener{
                 if (model.getPuesto()==i){vista.ocupado(i);  }
             }
         conn.desconectar();
-                
-         
+              
         contador = 0;
     }
     
     public void InicioReg(){
         reg.setLocationRelativeTo(vista);
+        contador++;
+    }
+    
+    public void InicioRegPea(){
+        regPea.setLocationRelativeTo(vista);
         contador++;
     }
     
@@ -178,14 +190,50 @@ public class button_control implements ActionListener{
         if (e.getSource() == reg.getBtnCancelar()){
             if (contador != 0){ reg.dispose(); } 
         }
+        
+        if (e.getSource() == regPea.getBtnCancelar()){
+            if (contador != 0){ regPea.dispose(); } 
+        }
     }  
     
     // Meotdo creado para registrar los datos de los visitabtes de todos los puestos
     public void actPuesto(int p){
         reg = new RegistroVehiculo(vista, true);
-        button_control control = new button_control(vista,reg);
+        button_control control = new button_control(vista,reg,regPea);
         reg.puesto=p;
         control.InicioReg();
         reg.setVisible(true);
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        if (e.getSource() == vista.getTbdPaneVehicles()){
+            if (vista.getTbdPaneVehicles().getSelectedIndex() == 2) {
+                regPea = new RegistroPeaton(vista, true);
+                button_control control = new button_control(vista,reg,regPea);
+                control.InicioRegPea();
+                regPea.setVisible(true);
+            }
+        }
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        
     }
 }

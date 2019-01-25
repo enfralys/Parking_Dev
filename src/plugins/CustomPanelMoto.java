@@ -17,7 +17,7 @@ import javax.swing.*;
  */
 public class CustomPanelMoto extends JPanel{ 
     //Creo una URL personalizada obteniendo la imagen
-    private URL url = getClass().getResource("/images/background_moto.jpg");
+    private URL url = getClass().getResource("/images/background.jpg");
     //Creo una nueva propiedad imagen y le asigno la que obtengo por URL
     Image image = new ImageIcon(url).getImage();
  
