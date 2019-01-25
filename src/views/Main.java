@@ -5,7 +5,6 @@
  */
 package views;
 
-import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -30,6 +29,7 @@ public class Main extends javax.swing.JFrame {
         initComponents();
     }
 
+    ImageIcon icon_tab = new ImageIcon(getClass().getResource("/images/user-20.png"));
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -149,6 +149,107 @@ public class Main extends javax.swing.JFrame {
         lblPuesto14 = new javax.swing.JLabel();
         lblPuesto13 = new javax.swing.JLabel();
         btnPuesto14 = new javax.swing.JButton();
+        pnlMoto = new plugins.CustomPanelMoto();
+        btnPuesto51 = new javax.swing.JButton();
+        lblPuesto51 = new javax.swing.JLabel();
+        lblPuesto52 = new javax.swing.JLabel();
+        btnPuesto52 = new javax.swing.JButton();
+        btnPuesto53 = new javax.swing.JButton();
+        lblPuesto53 = new javax.swing.JLabel();
+        lblPuesto54 = new javax.swing.JLabel();
+        btnPuesto54 = new javax.swing.JButton();
+        btnPuesto55 = new javax.swing.JButton();
+        lblPuesto55 = new javax.swing.JLabel();
+        lblPuesto56 = new javax.swing.JLabel();
+        btnPuesto56 = new javax.swing.JButton();
+        btnPuesto57 = new javax.swing.JButton();
+        lblPuesto57 = new javax.swing.JLabel();
+        lblPuesto58 = new javax.swing.JLabel();
+        btnPuesto58 = new javax.swing.JButton();
+        btnPuesto59 = new javax.swing.JButton();
+        lblPuesto59 = new javax.swing.JLabel();
+        lblPuesto60 = new javax.swing.JLabel();
+        btnPuesto60 = new javax.swing.JButton();
+        btnPuesto61 = new javax.swing.JButton();
+        lblPuesto61 = new javax.swing.JLabel();
+        lblPuesto62 = new javax.swing.JLabel();
+        btnPuesto62 = new javax.swing.JButton();
+        btnPuesto63 = new javax.swing.JButton();
+        lblPuesto63 = new javax.swing.JLabel();
+        lblPuesto64 = new javax.swing.JLabel();
+        btnPuesto64 = new javax.swing.JButton();
+        lblPuesto65 = new javax.swing.JLabel();
+        btnPuesto65 = new javax.swing.JButton();
+        lblPuesto66 = new javax.swing.JLabel();
+        btnPuesto66 = new javax.swing.JButton();
+        lblPuesto67 = new javax.swing.JLabel();
+        btnPuesto67 = new javax.swing.JButton();
+        lblPuesto68 = new javax.swing.JLabel();
+        btnPuesto68 = new javax.swing.JButton();
+        btnPuesto69 = new javax.swing.JButton();
+        lblPuesto69 = new javax.swing.JLabel();
+        btnPuesto70 = new javax.swing.JButton();
+        lblPuesto70 = new javax.swing.JLabel();
+        btnPuesto71 = new javax.swing.JButton();
+        lblPuesto71 = new javax.swing.JLabel();
+        lblPuesto72 = new javax.swing.JLabel();
+        btnPuesto72 = new javax.swing.JButton();
+        btnPuesto73 = new javax.swing.JButton();
+        lblPuesto73 = new javax.swing.JLabel();
+        lblPuesto74 = new javax.swing.JLabel();
+        btnPuesto74 = new javax.swing.JButton();
+        btnPuesto75 = new javax.swing.JButton();
+        lblPuesto75 = new javax.swing.JLabel();
+        lblPuesto76 = new javax.swing.JLabel();
+        btnPuesto76 = new javax.swing.JButton();
+        btnPuesto77 = new javax.swing.JButton();
+        lblPuesto77 = new javax.swing.JLabel();
+        lblPuesto78 = new javax.swing.JLabel();
+        btnPuesto78 = new javax.swing.JButton();
+        btnPuesto79 = new javax.swing.JButton();
+        lblPuesto79 = new javax.swing.JLabel();
+        lblPuesto80 = new javax.swing.JLabel();
+        btnPuesto80 = new javax.swing.JButton();
+        btnPuesto81 = new javax.swing.JButton();
+        lblPuesto81 = new javax.swing.JLabel();
+        lblPuesto82 = new javax.swing.JLabel();
+        btnPuesto82 = new javax.swing.JButton();
+        btnPuesto83 = new javax.swing.JButton();
+        lblPuesto83 = new javax.swing.JLabel();
+        btnPuesto84 = new javax.swing.JButton();
+        lblPuesto84 = new javax.swing.JLabel();
+        btnPuesto85 = new javax.swing.JButton();
+        lblPuesto85 = new javax.swing.JLabel();
+        lblPuesto86 = new javax.swing.JLabel();
+        btnPuesto86 = new javax.swing.JButton();
+        btnPuesto87 = new javax.swing.JButton();
+        lblPuesto87 = new javax.swing.JLabel();
+        lblPuesto88 = new javax.swing.JLabel();
+        btnPuesto88 = new javax.swing.JButton();
+        btnPuesto89 = new javax.swing.JButton();
+        lblPuesto89 = new javax.swing.JLabel();
+        lblPuesto90 = new javax.swing.JLabel();
+        btnPuesto90 = new javax.swing.JButton();
+        lblPuesto91 = new javax.swing.JLabel();
+        btnPuesto91 = new javax.swing.JButton();
+        btnPuesto92 = new javax.swing.JButton();
+        lblPuesto92 = new javax.swing.JLabel();
+        btnPuesto93 = new javax.swing.JButton();
+        lblPuesto93 = new javax.swing.JLabel();
+        btnPuesto94 = new javax.swing.JButton();
+        lblPuesto94 = new javax.swing.JLabel();
+        btnPuesto95 = new javax.swing.JButton();
+        lblPuesto95 = new javax.swing.JLabel();
+        lblPuesto96 = new javax.swing.JLabel();
+        btnPuesto96 = new javax.swing.JButton();
+        btnPuesto97 = new javax.swing.JButton();
+        lblPuesto97 = new javax.swing.JLabel();
+        lblPuesto98 = new javax.swing.JLabel();
+        btnPuesto98 = new javax.swing.JButton();
+        btnPuesto99 = new javax.swing.JButton();
+        lblPuesto99 = new javax.swing.JLabel();
+        lblPuesto100 = new javax.swing.JLabel();
+        btnPuesto100 = new javax.swing.JButton();
         pnlConsulta = new javax.swing.JPanel();
         lblConsulta = new javax.swing.JLabel();
         btnBuscarDatos = new javax.swing.JButton();
@@ -1056,7 +1157,813 @@ public class Main extends javax.swing.JFrame {
 
         tbdPaneVehicles.addTab("Automóviles", new javax.swing.ImageIcon(getClass().getResource("/images/042-parking-area-tab.png")), pnlAuto); // NOI18N
 
+        pnlMoto.setOpaque(false);
+        pnlMoto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnPuesto51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto51.setBorder(null);
+        btnPuesto51.setBorderPainted(false);
+        btnPuesto51.setContentAreaFilled(false);
+        btnPuesto51.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto51.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto51.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto51, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 50, -1, -1));
+
+        lblPuesto51.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto51.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto51.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto51.setLabelFor(btnPuesto8);
+        lblPuesto51.setText("01");
+        pnlMoto.add(lblPuesto51, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
+
+        lblPuesto52.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto52.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto52.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto52.setLabelFor(btnPuesto8);
+        lblPuesto52.setText("02");
+        pnlMoto.add(lblPuesto52, new org.netbeans.lib.awtextra.AbsoluteConstraints(758, 20, -1, -1));
+
+        btnPuesto52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto52.setBorder(null);
+        btnPuesto52.setBorderPainted(false);
+        btnPuesto52.setContentAreaFilled(false);
+        btnPuesto52.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto52.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto52.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto52, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 50, -1, -1));
+
+        btnPuesto53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto53.setBorder(null);
+        btnPuesto53.setBorderPainted(false);
+        btnPuesto53.setContentAreaFilled(false);
+        btnPuesto53.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto53.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto53.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto53, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 50, -1, -1));
+
+        lblPuesto53.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto53.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto53.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto53.setLabelFor(btnPuesto8);
+        lblPuesto53.setText("03");
+        pnlMoto.add(lblPuesto53, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 20, -1, -1));
+
+        lblPuesto54.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto54.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto54.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto54.setLabelFor(btnPuesto8);
+        lblPuesto54.setText("04");
+        pnlMoto.add(lblPuesto54, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 20, -1, -1));
+
+        btnPuesto54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto54.setBorder(null);
+        btnPuesto54.setBorderPainted(false);
+        btnPuesto54.setContentAreaFilled(false);
+        btnPuesto54.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto54.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto54.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto54, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 50, -1, -1));
+
+        btnPuesto55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto55.setBorder(null);
+        btnPuesto55.setBorderPainted(false);
+        btnPuesto55.setContentAreaFilled(false);
+        btnPuesto55.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto55.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto55.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto55, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 50, -1, -1));
+
+        lblPuesto55.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto55.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto55.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto55.setLabelFor(btnPuesto8);
+        lblPuesto55.setText("05");
+        pnlMoto.add(lblPuesto55, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 20, -1, -1));
+
+        lblPuesto56.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto56.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto56.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto56.setLabelFor(btnPuesto8);
+        lblPuesto56.setText("06");
+        pnlMoto.add(lblPuesto56, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, -1, -1));
+
+        btnPuesto56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto56.setBorder(null);
+        btnPuesto56.setBorderPainted(false);
+        btnPuesto56.setContentAreaFilled(false);
+        btnPuesto56.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto56.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto56.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto56, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
+
+        btnPuesto57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto57.setBorder(null);
+        btnPuesto57.setBorderPainted(false);
+        btnPuesto57.setContentAreaFilled(false);
+        btnPuesto57.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto57.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto57.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto57, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 50, -1, -1));
+
+        lblPuesto57.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto57.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto57.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto57.setLabelFor(btnPuesto8);
+        lblPuesto57.setText("07");
+        pnlMoto.add(lblPuesto57, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 20, -1, -1));
+
+        lblPuesto58.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto58.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto58.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto58.setLabelFor(btnPuesto8);
+        lblPuesto58.setText("08");
+        pnlMoto.add(lblPuesto58, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 20, -1, -1));
+
+        btnPuesto58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto58.setBorder(null);
+        btnPuesto58.setBorderPainted(false);
+        btnPuesto58.setContentAreaFilled(false);
+        btnPuesto58.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto58.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto58.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto58, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 50, -1, -1));
+
+        btnPuesto59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto59.setBorder(null);
+        btnPuesto59.setBorderPainted(false);
+        btnPuesto59.setContentAreaFilled(false);
+        btnPuesto59.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto59.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto59.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto59, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 50, -1, -1));
+
+        lblPuesto59.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto59.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto59.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto59.setLabelFor(btnPuesto8);
+        lblPuesto59.setText("09");
+        pnlMoto.add(lblPuesto59, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 20, -1, -1));
+
+        lblPuesto60.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto60.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto60.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto60.setLabelFor(btnPuesto8);
+        lblPuesto60.setText("10");
+        pnlMoto.add(lblPuesto60, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 20, -1, -1));
+
+        btnPuesto60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto60.setBorder(null);
+        btnPuesto60.setBorderPainted(false);
+        btnPuesto60.setContentAreaFilled(false);
+        btnPuesto60.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto60.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto60.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto60, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
+
+        btnPuesto61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto61.setBorder(null);
+        btnPuesto61.setBorderPainted(false);
+        btnPuesto61.setContentAreaFilled(false);
+        btnPuesto61.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto61.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto61.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto61, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 50, -1, -1));
+
+        lblPuesto61.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto61.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto61.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto61.setLabelFor(btnPuesto8);
+        lblPuesto61.setText("11");
+        pnlMoto.add(lblPuesto61, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 20, -1, -1));
+
+        lblPuesto62.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto62.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto62.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto62.setLabelFor(btnPuesto8);
+        lblPuesto62.setText("12");
+        pnlMoto.add(lblPuesto62, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 20, -1, -1));
+
+        btnPuesto62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto62.setBorder(null);
+        btnPuesto62.setBorderPainted(false);
+        btnPuesto62.setContentAreaFilled(false);
+        btnPuesto62.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto62.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto62.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto62, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 50, -1, -1));
+
+        btnPuesto63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto63.setBorder(null);
+        btnPuesto63.setBorderPainted(false);
+        btnPuesto63.setContentAreaFilled(false);
+        btnPuesto63.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto63.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto63.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto63, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 122, -1, 60));
+
+        lblPuesto63.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto63.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto63.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto63.setLabelFor(btnPuesto8);
+        lblPuesto63.setText("13");
+        pnlMoto.add(lblPuesto63, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 140, -1, -1));
+
+        lblPuesto64.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto64.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto64.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto64.setLabelFor(btnPuesto8);
+        lblPuesto64.setText("14");
+        pnlMoto.add(lblPuesto64, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 202, -1, -1));
+
+        btnPuesto64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto64.setBorder(null);
+        btnPuesto64.setBorderPainted(false);
+        btnPuesto64.setContentAreaFilled(false);
+        btnPuesto64.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto64.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto64.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto64, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 184, -1, 60));
+
+        lblPuesto65.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto65.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto65.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto65.setLabelFor(btnPuesto8);
+        lblPuesto65.setText("15");
+        pnlMoto.add(lblPuesto65, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 266, -1, -1));
+
+        btnPuesto65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto65.setBorder(null);
+        btnPuesto65.setBorderPainted(false);
+        btnPuesto65.setContentAreaFilled(false);
+        btnPuesto65.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto65.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto65.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto65, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 246, -1, 60));
+
+        lblPuesto66.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto66.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto66.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto66.setLabelFor(btnPuesto8);
+        lblPuesto66.setText("16");
+        pnlMoto.add(lblPuesto66, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 326, -1, -1));
+
+        btnPuesto66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto66.setBorder(null);
+        btnPuesto66.setBorderPainted(false);
+        btnPuesto66.setContentAreaFilled(false);
+        btnPuesto66.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto66.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto66.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto66, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, 60));
+
+        lblPuesto67.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto67.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto67.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto67.setLabelFor(btnPuesto8);
+        lblPuesto67.setText("17");
+        pnlMoto.add(lblPuesto67, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 390, -1, -1));
+
+        btnPuesto67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto67.setBorder(null);
+        btnPuesto67.setBorderPainted(false);
+        btnPuesto67.setContentAreaFilled(false);
+        btnPuesto67.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto67.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto67.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto67, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 372, -1, 60));
+
+        lblPuesto68.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto68.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto68.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto68.setLabelFor(btnPuesto8);
+        lblPuesto68.setText("18");
+        pnlMoto.add(lblPuesto68, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 450, -1, -1));
+
+        btnPuesto68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto68.setBorder(null);
+        btnPuesto68.setBorderPainted(false);
+        btnPuesto68.setContentAreaFilled(false);
+        btnPuesto68.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto68.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto68.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto68, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 435, -1, 60));
+
+        btnPuesto69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto69.setBorder(null);
+        btnPuesto69.setBorderPainted(false);
+        btnPuesto69.setContentAreaFilled(false);
+        btnPuesto69.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto69.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto69.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto69, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 500, -1, -1));
+
+        lblPuesto69.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto69.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto69.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto69.setLabelFor(btnPuesto8);
+        lblPuesto69.setText("19");
+        pnlMoto.add(lblPuesto69, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 570, -1, -1));
+
+        btnPuesto70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto70.setBorder(null);
+        btnPuesto70.setBorderPainted(false);
+        btnPuesto70.setContentAreaFilled(false);
+        btnPuesto70.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto70.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto70.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto70, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 500, 60, -1));
+
+        lblPuesto70.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto70.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto70.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto70.setLabelFor(btnPuesto8);
+        lblPuesto70.setText("20");
+        pnlMoto.add(lblPuesto70, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 570, -1, -1));
+
+        btnPuesto71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto71.setBorder(null);
+        btnPuesto71.setBorderPainted(false);
+        btnPuesto71.setContentAreaFilled(false);
+        btnPuesto71.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto71.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto71.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto71, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 500, -1, -1));
+
+        lblPuesto71.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto71.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto71.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto71.setLabelFor(btnPuesto8);
+        lblPuesto71.setText("21");
+        pnlMoto.add(lblPuesto71, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 570, -1, -1));
+
+        lblPuesto72.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto72.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto72.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto72.setLabelFor(btnPuesto8);
+        lblPuesto72.setText("22");
+        pnlMoto.add(lblPuesto72, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 570, -1, -1));
+
+        btnPuesto72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto72.setBorder(null);
+        btnPuesto72.setBorderPainted(false);
+        btnPuesto72.setContentAreaFilled(false);
+        btnPuesto72.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto72.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto72.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto72, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 500, -1, -1));
+
+        btnPuesto73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto73.setBorder(null);
+        btnPuesto73.setBorderPainted(false);
+        btnPuesto73.setContentAreaFilled(false);
+        btnPuesto73.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto73.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto73.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto73, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 500, -1, -1));
+
+        lblPuesto73.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto73.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto73.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto73.setLabelFor(btnPuesto8);
+        lblPuesto73.setText("23");
+        pnlMoto.add(lblPuesto73, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 570, -1, -1));
+
+        lblPuesto74.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto74.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto74.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto74.setLabelFor(btnPuesto8);
+        lblPuesto74.setText("24");
+        pnlMoto.add(lblPuesto74, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 570, -1, -1));
+
+        btnPuesto74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto74.setBorder(null);
+        btnPuesto74.setBorderPainted(false);
+        btnPuesto74.setContentAreaFilled(false);
+        btnPuesto74.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto74.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto74.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto74, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 500, -1, -1));
+
+        btnPuesto75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto75.setBorder(null);
+        btnPuesto75.setBorderPainted(false);
+        btnPuesto75.setContentAreaFilled(false);
+        btnPuesto75.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto75.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto75.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto75, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, -1, -1));
+
+        lblPuesto75.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto75.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto75.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto75.setLabelFor(btnPuesto8);
+        lblPuesto75.setText("25");
+        pnlMoto.add(lblPuesto75, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 570, -1, -1));
+
+        lblPuesto76.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto76.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto76.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto76.setLabelFor(btnPuesto8);
+        lblPuesto76.setText("26");
+        pnlMoto.add(lblPuesto76, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 570, -1, -1));
+
+        btnPuesto76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto76.setBorder(null);
+        btnPuesto76.setBorderPainted(false);
+        btnPuesto76.setContentAreaFilled(false);
+        btnPuesto76.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto76.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto76.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto76, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, -1, -1));
+
+        btnPuesto77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto77.setBorder(null);
+        btnPuesto77.setBorderPainted(false);
+        btnPuesto77.setContentAreaFilled(false);
+        btnPuesto77.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto77.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto77.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto77, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 500, -1, -1));
+
+        lblPuesto77.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto77.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto77.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto77.setLabelFor(btnPuesto8);
+        lblPuesto77.setText("27");
+        pnlMoto.add(lblPuesto77, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 570, -1, -1));
+
+        lblPuesto78.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto78.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto78.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto78.setLabelFor(btnPuesto8);
+        lblPuesto78.setText("28");
+        pnlMoto.add(lblPuesto78, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 570, -1, -1));
+
+        btnPuesto78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto78.setBorder(null);
+        btnPuesto78.setBorderPainted(false);
+        btnPuesto78.setContentAreaFilled(false);
+        btnPuesto78.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto78.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto78.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto78, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 500, -1, -1));
+
+        btnPuesto79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto79.setBorder(null);
+        btnPuesto79.setBorderPainted(false);
+        btnPuesto79.setContentAreaFilled(false);
+        btnPuesto79.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto79.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto79.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto79, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 500, -1, -1));
+
+        lblPuesto79.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto79.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto79.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto79.setLabelFor(btnPuesto8);
+        lblPuesto79.setText("29");
+        pnlMoto.add(lblPuesto79, new org.netbeans.lib.awtextra.AbsoluteConstraints(758, 570, -1, -1));
+
+        lblPuesto80.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto80.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto80.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto80.setLabelFor(btnPuesto8);
+        lblPuesto80.setText("30");
+        pnlMoto.add(lblPuesto80, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 570, -1, -1));
+
+        btnPuesto80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto80.setBorder(null);
+        btnPuesto80.setBorderPainted(false);
+        btnPuesto80.setContentAreaFilled(false);
+        btnPuesto80.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto80.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto80.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto80, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 500, -1, -1));
+
+        btnPuesto81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto81.setBorder(null);
+        btnPuesto81.setBorderPainted(false);
+        btnPuesto81.setContentAreaFilled(false);
+        btnPuesto81.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto81.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto81.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto81, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, -1, -1));
+
+        lblPuesto81.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto81.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto81.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto81.setLabelFor(btnPuesto8);
+        lblPuesto81.setText("41");
+        pnlMoto.add(lblPuesto81, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 328, -1, -1));
+
+        lblPuesto82.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto82.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto82.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto82.setLabelFor(btnPuesto8);
+        lblPuesto82.setText("42");
+        pnlMoto.add(lblPuesto82, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 328, -1, -1));
+
+        btnPuesto82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto82.setBorder(null);
+        btnPuesto82.setBorderPainted(false);
+        btnPuesto82.setContentAreaFilled(false);
+        btnPuesto82.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto82.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto82.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto82, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 360, -1, -1));
+
+        btnPuesto83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto83.setBorder(null);
+        btnPuesto83.setBorderPainted(false);
+        btnPuesto83.setContentAreaFilled(false);
+        btnPuesto83.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto83.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto83.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto83, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 360, -1, -1));
+
+        lblPuesto83.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto83.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto83.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto83.setLabelFor(btnPuesto8);
+        lblPuesto83.setText("43");
+        pnlMoto.add(lblPuesto83, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 328, -1, -1));
+
+        btnPuesto84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto84.setBorder(null);
+        btnPuesto84.setBorderPainted(false);
+        btnPuesto84.setContentAreaFilled(false);
+        btnPuesto84.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto84.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto84.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto84, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 360, -1, -1));
+
+        lblPuesto84.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto84.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto84.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto84.setLabelFor(btnPuesto8);
+        lblPuesto84.setText("44");
+        pnlMoto.add(lblPuesto84, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 328, -1, -1));
+
+        btnPuesto85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto85.setBorder(null);
+        btnPuesto85.setBorderPainted(false);
+        btnPuesto85.setContentAreaFilled(false);
+        btnPuesto85.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto85.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto85.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto85, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, -1));
+
+        lblPuesto85.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto85.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto85.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto85.setLabelFor(btnPuesto8);
+        lblPuesto85.setText("45");
+        pnlMoto.add(lblPuesto85, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 328, -1, -1));
+
+        lblPuesto86.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto86.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto86.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto86.setLabelFor(btnPuesto8);
+        lblPuesto86.setText("46");
+        pnlMoto.add(lblPuesto86, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 328, -1, -1));
+
+        btnPuesto86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto86.setBorder(null);
+        btnPuesto86.setBorderPainted(false);
+        btnPuesto86.setContentAreaFilled(false);
+        btnPuesto86.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto86.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto86.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto86, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 360, -1, -1));
+
+        btnPuesto87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto87.setBorder(null);
+        btnPuesto87.setBorderPainted(false);
+        btnPuesto87.setContentAreaFilled(false);
+        btnPuesto87.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto87.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto87.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto87, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 360, -1, -1));
+
+        lblPuesto87.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto87.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto87.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto87.setLabelFor(btnPuesto8);
+        lblPuesto87.setText("47");
+        pnlMoto.add(lblPuesto87, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 328, -1, -1));
+
+        lblPuesto88.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto88.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto88.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto88.setLabelFor(btnPuesto8);
+        lblPuesto88.setText("48");
+        pnlMoto.add(lblPuesto88, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 328, -1, -1));
+
+        btnPuesto88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto88.setBorder(null);
+        btnPuesto88.setBorderPainted(false);
+        btnPuesto88.setContentAreaFilled(false);
+        btnPuesto88.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto88.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto88.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto88, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 360, -1, -1));
+
+        btnPuesto89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto89.setBorder(null);
+        btnPuesto89.setBorderPainted(false);
+        btnPuesto89.setContentAreaFilled(false);
+        btnPuesto89.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto89.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto89.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto89, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 360, -1, -1));
+
+        lblPuesto89.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto89.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto89.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto89.setLabelFor(btnPuesto8);
+        lblPuesto89.setText("49");
+        pnlMoto.add(lblPuesto89, new org.netbeans.lib.awtextra.AbsoluteConstraints(758, 328, -1, -1));
+
+        lblPuesto90.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto90.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto90.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto90.setLabelFor(btnPuesto8);
+        lblPuesto90.setText("50");
+        pnlMoto.add(lblPuesto90, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 328, -1, -1));
+
+        btnPuesto90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto90.setBorder(null);
+        btnPuesto90.setBorderPainted(false);
+        btnPuesto90.setContentAreaFilled(false);
+        btnPuesto90.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto90.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto90.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto90, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 360, -1, -1));
+
+        lblPuesto91.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto91.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto91.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto91.setLabelFor(btnPuesto8);
+        lblPuesto91.setText("31");
+        pnlMoto.add(lblPuesto91, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 250, -1, -1));
+
+        btnPuesto91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto91.setBorder(null);
+        btnPuesto91.setBorderPainted(false);
+        btnPuesto91.setContentAreaFilled(false);
+        btnPuesto91.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto91.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto91.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto91, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 180, -1, -1));
+
+        btnPuesto92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto92.setBorder(null);
+        btnPuesto92.setBorderPainted(false);
+        btnPuesto92.setContentAreaFilled(false);
+        btnPuesto92.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto92.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto92.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto92, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 180, -1, -1));
+
+        lblPuesto92.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto92.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto92.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto92.setLabelFor(btnPuesto8);
+        lblPuesto92.setText("32");
+        pnlMoto.add(lblPuesto92, new org.netbeans.lib.awtextra.AbsoluteConstraints(758, 250, -1, -1));
+
+        btnPuesto93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto93.setBorder(null);
+        btnPuesto93.setBorderPainted(false);
+        btnPuesto93.setContentAreaFilled(false);
+        btnPuesto93.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto93.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto93.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto93, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 180, -1, -1));
+
+        lblPuesto93.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto93.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto93.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto93.setLabelFor(btnPuesto8);
+        lblPuesto93.setText("33");
+        pnlMoto.add(lblPuesto93, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 250, -1, -1));
+
+        btnPuesto94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto94.setBorder(null);
+        btnPuesto94.setBorderPainted(false);
+        btnPuesto94.setContentAreaFilled(false);
+        btnPuesto94.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto94.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto94.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto94, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 180, -1, -1));
+
+        lblPuesto94.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto94.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto94.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto94.setLabelFor(btnPuesto8);
+        lblPuesto94.setText("34");
+        pnlMoto.add(lblPuesto94, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 250, -1, -1));
+
+        btnPuesto95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto95.setBorder(null);
+        btnPuesto95.setBorderPainted(false);
+        btnPuesto95.setContentAreaFilled(false);
+        btnPuesto95.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto95.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto95.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto95, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 180, -1, -1));
+
+        lblPuesto95.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto95.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto95.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto95.setLabelFor(btnPuesto8);
+        lblPuesto95.setText("35");
+        pnlMoto.add(lblPuesto95, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 250, -1, -1));
+
+        lblPuesto96.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto96.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto96.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto96.setLabelFor(btnPuesto8);
+        lblPuesto96.setText("36");
+        pnlMoto.add(lblPuesto96, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, -1, -1));
+
+        btnPuesto96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto96.setBorder(null);
+        btnPuesto96.setBorderPainted(false);
+        btnPuesto96.setContentAreaFilled(false);
+        btnPuesto96.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto96.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto96.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto96, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, -1));
+
+        btnPuesto97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto97.setBorder(null);
+        btnPuesto97.setBorderPainted(false);
+        btnPuesto97.setContentAreaFilled(false);
+        btnPuesto97.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto97.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto97.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto97, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 180, -1, -1));
+
+        lblPuesto97.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto97.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto97.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto97.setLabelFor(btnPuesto8);
+        lblPuesto97.setText("37");
+        pnlMoto.add(lblPuesto97, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 250, -1, -1));
+
+        lblPuesto98.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto98.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto98.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto98.setLabelFor(btnPuesto8);
+        lblPuesto98.setText("38");
+        pnlMoto.add(lblPuesto98, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 250, -1, -1));
+
+        btnPuesto98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto98.setBorder(null);
+        btnPuesto98.setBorderPainted(false);
+        btnPuesto98.setContentAreaFilled(false);
+        btnPuesto98.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto98.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto98.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto98, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 180, -1, -1));
+
+        btnPuesto99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto99.setBorder(null);
+        btnPuesto99.setBorderPainted(false);
+        btnPuesto99.setContentAreaFilled(false);
+        btnPuesto99.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto99.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto99.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto99, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 180, -1, -1));
+
+        lblPuesto99.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto99.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto99.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto99.setLabelFor(btnPuesto8);
+        lblPuesto99.setText("39");
+        pnlMoto.add(lblPuesto99, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 250, -1, -1));
+
+        lblPuesto100.setBackground(new java.awt.Color(255, 255, 255));
+        lblPuesto100.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblPuesto100.setForeground(new java.awt.Color(255, 255, 255));
+        lblPuesto100.setLabelFor(btnPuesto8);
+        lblPuesto100.setText("40");
+        pnlMoto.add(lblPuesto100, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 250, -1, -1));
+
+        btnPuesto100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto100.setBorder(null);
+        btnPuesto100.setBorderPainted(false);
+        btnPuesto100.setContentAreaFilled(false);
+        btnPuesto100.setPreferredSize(new java.awt.Dimension(58, 65));
+        btnPuesto100.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto100.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        pnlMoto.add(btnPuesto100, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, -1, -1));
+
+        tbdPaneVehicles.addTab("Motocicletas", new javax.swing.ImageIcon(getClass().getResource("/images/001-motorcycle-tab.png")), pnlMoto); // NOI18N
+
         pnlIngreso.add(tbdPaneVehicles, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 664));
+        tbdPaneVehicles.insertTab("Registrar Peatón", icon_tab, null, "Registrar Peatón", 2);
 
         tbpMain.addTab("Panel de Ingreso", new javax.swing.ImageIcon(getClass().getResource("/images/005-parking-sign.png")), pnlIngreso); // NOI18N
 
@@ -1453,6 +2360,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarDatos;
     public javax.swing.JButton btnPuesto1;
     private javax.swing.JButton btnPuesto10;
+    private javax.swing.JButton btnPuesto100;
     private javax.swing.JButton btnPuesto11;
     private javax.swing.JButton btnPuesto12;
     private javax.swing.JButton btnPuesto13;
@@ -1497,10 +2405,59 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnPuesto49;
     private javax.swing.JButton btnPuesto5;
     private javax.swing.JButton btnPuesto50;
+    public javax.swing.JButton btnPuesto51;
+    private javax.swing.JButton btnPuesto52;
+    private javax.swing.JButton btnPuesto53;
+    private javax.swing.JButton btnPuesto54;
+    private javax.swing.JButton btnPuesto55;
+    private javax.swing.JButton btnPuesto56;
+    private javax.swing.JButton btnPuesto57;
+    private javax.swing.JButton btnPuesto58;
+    private javax.swing.JButton btnPuesto59;
     private javax.swing.JButton btnPuesto6;
+    private javax.swing.JButton btnPuesto60;
+    private javax.swing.JButton btnPuesto61;
+    private javax.swing.JButton btnPuesto62;
+    private javax.swing.JButton btnPuesto63;
+    private javax.swing.JButton btnPuesto64;
+    private javax.swing.JButton btnPuesto65;
+    private javax.swing.JButton btnPuesto66;
+    private javax.swing.JButton btnPuesto67;
+    private javax.swing.JButton btnPuesto68;
+    private javax.swing.JButton btnPuesto69;
     private javax.swing.JButton btnPuesto7;
+    private javax.swing.JButton btnPuesto70;
+    private javax.swing.JButton btnPuesto71;
+    private javax.swing.JButton btnPuesto72;
+    private javax.swing.JButton btnPuesto73;
+    private javax.swing.JButton btnPuesto74;
+    private javax.swing.JButton btnPuesto75;
+    private javax.swing.JButton btnPuesto76;
+    private javax.swing.JButton btnPuesto77;
+    private javax.swing.JButton btnPuesto78;
+    private javax.swing.JButton btnPuesto79;
     private javax.swing.JButton btnPuesto8;
+    private javax.swing.JButton btnPuesto80;
+    private javax.swing.JButton btnPuesto81;
+    private javax.swing.JButton btnPuesto82;
+    private javax.swing.JButton btnPuesto83;
+    private javax.swing.JButton btnPuesto84;
+    private javax.swing.JButton btnPuesto85;
+    private javax.swing.JButton btnPuesto86;
+    private javax.swing.JButton btnPuesto87;
+    private javax.swing.JButton btnPuesto88;
+    private javax.swing.JButton btnPuesto89;
     private javax.swing.JButton btnPuesto9;
+    private javax.swing.JButton btnPuesto90;
+    private javax.swing.JButton btnPuesto91;
+    private javax.swing.JButton btnPuesto92;
+    private javax.swing.JButton btnPuesto93;
+    private javax.swing.JButton btnPuesto94;
+    private javax.swing.JButton btnPuesto95;
+    private javax.swing.JButton btnPuesto96;
+    private javax.swing.JButton btnPuesto97;
+    private javax.swing.JButton btnPuesto98;
+    private javax.swing.JButton btnPuesto99;
     private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox<String> cmbFiltradoDiaPeaton;
     private javax.swing.JComboBox<String> cmbFiltradoDiaVehiculo;
@@ -1550,6 +2507,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lblHistorialVehiculos;
     private javax.swing.JLabel lblPuesto1;
     private javax.swing.JLabel lblPuesto10;
+    private javax.swing.JLabel lblPuesto100;
     private javax.swing.JLabel lblPuesto11;
     private javax.swing.JLabel lblPuesto12;
     private javax.swing.JLabel lblPuesto13;
@@ -1594,10 +2552,59 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lblPuesto49;
     private javax.swing.JLabel lblPuesto5;
     private javax.swing.JLabel lblPuesto50;
+    private javax.swing.JLabel lblPuesto51;
+    private javax.swing.JLabel lblPuesto52;
+    private javax.swing.JLabel lblPuesto53;
+    private javax.swing.JLabel lblPuesto54;
+    private javax.swing.JLabel lblPuesto55;
+    private javax.swing.JLabel lblPuesto56;
+    private javax.swing.JLabel lblPuesto57;
+    private javax.swing.JLabel lblPuesto58;
+    private javax.swing.JLabel lblPuesto59;
     private javax.swing.JLabel lblPuesto6;
+    private javax.swing.JLabel lblPuesto60;
+    private javax.swing.JLabel lblPuesto61;
+    private javax.swing.JLabel lblPuesto62;
+    private javax.swing.JLabel lblPuesto63;
+    private javax.swing.JLabel lblPuesto64;
+    private javax.swing.JLabel lblPuesto65;
+    private javax.swing.JLabel lblPuesto66;
+    private javax.swing.JLabel lblPuesto67;
+    private javax.swing.JLabel lblPuesto68;
+    private javax.swing.JLabel lblPuesto69;
     private javax.swing.JLabel lblPuesto7;
+    private javax.swing.JLabel lblPuesto70;
+    private javax.swing.JLabel lblPuesto71;
+    private javax.swing.JLabel lblPuesto72;
+    private javax.swing.JLabel lblPuesto73;
+    private javax.swing.JLabel lblPuesto74;
+    private javax.swing.JLabel lblPuesto75;
+    private javax.swing.JLabel lblPuesto76;
+    private javax.swing.JLabel lblPuesto77;
+    private javax.swing.JLabel lblPuesto78;
+    private javax.swing.JLabel lblPuesto79;
     private javax.swing.JLabel lblPuesto8;
+    private javax.swing.JLabel lblPuesto80;
+    private javax.swing.JLabel lblPuesto81;
+    private javax.swing.JLabel lblPuesto82;
+    private javax.swing.JLabel lblPuesto83;
+    private javax.swing.JLabel lblPuesto84;
+    private javax.swing.JLabel lblPuesto85;
+    private javax.swing.JLabel lblPuesto86;
+    private javax.swing.JLabel lblPuesto87;
+    private javax.swing.JLabel lblPuesto88;
+    private javax.swing.JLabel lblPuesto89;
     private javax.swing.JLabel lblPuesto9;
+    private javax.swing.JLabel lblPuesto90;
+    private javax.swing.JLabel lblPuesto91;
+    private javax.swing.JLabel lblPuesto92;
+    private javax.swing.JLabel lblPuesto93;
+    private javax.swing.JLabel lblPuesto94;
+    private javax.swing.JLabel lblPuesto95;
+    private javax.swing.JLabel lblPuesto96;
+    private javax.swing.JLabel lblPuesto97;
+    private javax.swing.JLabel lblPuesto98;
+    private javax.swing.JLabel lblPuesto99;
     private plugins.CustomPanelAuto pnlAuto;
     private javax.swing.JPanel pnlConsulta;
     private javax.swing.JPanel pnlFiltrado;
@@ -1605,6 +2612,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel pnlHistorialdeIngreso;
     private javax.swing.JPanel pnlIngreso;
     private javax.swing.JPanel pnlMain;
+    private plugins.CustomPanelMoto pnlMoto;
     private javax.swing.JPanel pnlTitle;
     private javax.swing.JRadioButton rbFiltradoDelPeaton;
     private javax.swing.JRadioButton rbFiltradoDelVehiculo;
@@ -2720,6 +3728,806 @@ public class Main extends javax.swing.JFrame {
 
     public void setTxtDatosCodigoUsuario(JTextField txtDatosCodigoUsuario) {
         this.txtDatosCodigoUsuario = txtDatosCodigoUsuario;
+    }
+
+    public JButton getBtnPuesto100() {
+        return btnPuesto100;
+    }
+
+    public void setBtnPuesto100(JButton btnPuesto100) {
+        this.btnPuesto100 = btnPuesto100;
+    }
+
+    public JButton getBtnPuesto51() {
+        return btnPuesto51;
+    }
+
+    public void setBtnPuesto51(JButton btnPuesto51) {
+        this.btnPuesto51 = btnPuesto51;
+    }
+
+    public JButton getBtnPuesto52() {
+        return btnPuesto52;
+    }
+
+    public void setBtnPuesto52(JButton btnPuesto52) {
+        this.btnPuesto52 = btnPuesto52;
+    }
+
+    public JButton getBtnPuesto53() {
+        return btnPuesto53;
+    }
+
+    public void setBtnPuesto53(JButton btnPuesto53) {
+        this.btnPuesto53 = btnPuesto53;
+    }
+
+    public JButton getBtnPuesto54() {
+        return btnPuesto54;
+    }
+
+    public void setBtnPuesto54(JButton btnPuesto54) {
+        this.btnPuesto54 = btnPuesto54;
+    }
+
+    public JButton getBtnPuesto55() {
+        return btnPuesto55;
+    }
+
+    public void setBtnPuesto55(JButton btnPuesto55) {
+        this.btnPuesto55 = btnPuesto55;
+    }
+
+    public JButton getBtnPuesto56() {
+        return btnPuesto56;
+    }
+
+    public void setBtnPuesto56(JButton btnPuesto56) {
+        this.btnPuesto56 = btnPuesto56;
+    }
+
+    public JButton getBtnPuesto57() {
+        return btnPuesto57;
+    }
+
+    public void setBtnPuesto57(JButton btnPuesto57) {
+        this.btnPuesto57 = btnPuesto57;
+    }
+
+    public JButton getBtnPuesto58() {
+        return btnPuesto58;
+    }
+
+    public void setBtnPuesto58(JButton btnPuesto58) {
+        this.btnPuesto58 = btnPuesto58;
+    }
+
+    public JButton getBtnPuesto59() {
+        return btnPuesto59;
+    }
+
+    public void setBtnPuesto59(JButton btnPuesto59) {
+        this.btnPuesto59 = btnPuesto59;
+    }
+
+    public JButton getBtnPuesto60() {
+        return btnPuesto60;
+    }
+
+    public void setBtnPuesto60(JButton btnPuesto60) {
+        this.btnPuesto60 = btnPuesto60;
+    }
+
+    public JButton getBtnPuesto61() {
+        return btnPuesto61;
+    }
+
+    public void setBtnPuesto61(JButton btnPuesto61) {
+        this.btnPuesto61 = btnPuesto61;
+    }
+
+    public JButton getBtnPuesto62() {
+        return btnPuesto62;
+    }
+
+    public void setBtnPuesto62(JButton btnPuesto62) {
+        this.btnPuesto62 = btnPuesto62;
+    }
+
+    public JButton getBtnPuesto63() {
+        return btnPuesto63;
+    }
+
+    public void setBtnPuesto63(JButton btnPuesto63) {
+        this.btnPuesto63 = btnPuesto63;
+    }
+
+    public JButton getBtnPuesto64() {
+        return btnPuesto64;
+    }
+
+    public void setBtnPuesto64(JButton btnPuesto64) {
+        this.btnPuesto64 = btnPuesto64;
+    }
+
+    public JButton getBtnPuesto65() {
+        return btnPuesto65;
+    }
+
+    public void setBtnPuesto65(JButton btnPuesto65) {
+        this.btnPuesto65 = btnPuesto65;
+    }
+
+    public JButton getBtnPuesto66() {
+        return btnPuesto66;
+    }
+
+    public void setBtnPuesto66(JButton btnPuesto66) {
+        this.btnPuesto66 = btnPuesto66;
+    }
+
+    public JButton getBtnPuesto67() {
+        return btnPuesto67;
+    }
+
+    public void setBtnPuesto67(JButton btnPuesto67) {
+        this.btnPuesto67 = btnPuesto67;
+    }
+
+    public JButton getBtnPuesto68() {
+        return btnPuesto68;
+    }
+
+    public void setBtnPuesto68(JButton btnPuesto68) {
+        this.btnPuesto68 = btnPuesto68;
+    }
+
+    public JButton getBtnPuesto69() {
+        return btnPuesto69;
+    }
+
+    public void setBtnPuesto69(JButton btnPuesto69) {
+        this.btnPuesto69 = btnPuesto69;
+    }
+
+    public JButton getBtnPuesto70() {
+        return btnPuesto70;
+    }
+
+    public void setBtnPuesto70(JButton btnPuesto70) {
+        this.btnPuesto70 = btnPuesto70;
+    }
+
+    public JButton getBtnPuesto71() {
+        return btnPuesto71;
+    }
+
+    public void setBtnPuesto71(JButton btnPuesto71) {
+        this.btnPuesto71 = btnPuesto71;
+    }
+
+    public JButton getBtnPuesto72() {
+        return btnPuesto72;
+    }
+
+    public void setBtnPuesto72(JButton btnPuesto72) {
+        this.btnPuesto72 = btnPuesto72;
+    }
+
+    public JButton getBtnPuesto73() {
+        return btnPuesto73;
+    }
+
+    public void setBtnPuesto73(JButton btnPuesto73) {
+        this.btnPuesto73 = btnPuesto73;
+    }
+
+    public JButton getBtnPuesto74() {
+        return btnPuesto74;
+    }
+
+    public void setBtnPuesto74(JButton btnPuesto74) {
+        this.btnPuesto74 = btnPuesto74;
+    }
+
+    public JButton getBtnPuesto75() {
+        return btnPuesto75;
+    }
+
+    public void setBtnPuesto75(JButton btnPuesto75) {
+        this.btnPuesto75 = btnPuesto75;
+    }
+
+    public JButton getBtnPuesto76() {
+        return btnPuesto76;
+    }
+
+    public void setBtnPuesto76(JButton btnPuesto76) {
+        this.btnPuesto76 = btnPuesto76;
+    }
+
+    public JButton getBtnPuesto77() {
+        return btnPuesto77;
+    }
+
+    public void setBtnPuesto77(JButton btnPuesto77) {
+        this.btnPuesto77 = btnPuesto77;
+    }
+
+    public JButton getBtnPuesto78() {
+        return btnPuesto78;
+    }
+
+    public void setBtnPuesto78(JButton btnPuesto78) {
+        this.btnPuesto78 = btnPuesto78;
+    }
+
+    public JButton getBtnPuesto79() {
+        return btnPuesto79;
+    }
+
+    public void setBtnPuesto79(JButton btnPuesto79) {
+        this.btnPuesto79 = btnPuesto79;
+    }
+
+    public JButton getBtnPuesto80() {
+        return btnPuesto80;
+    }
+
+    public void setBtnPuesto80(JButton btnPuesto80) {
+        this.btnPuesto80 = btnPuesto80;
+    }
+
+    public JButton getBtnPuesto81() {
+        return btnPuesto81;
+    }
+
+    public void setBtnPuesto81(JButton btnPuesto81) {
+        this.btnPuesto81 = btnPuesto81;
+    }
+
+    public JButton getBtnPuesto82() {
+        return btnPuesto82;
+    }
+
+    public void setBtnPuesto82(JButton btnPuesto82) {
+        this.btnPuesto82 = btnPuesto82;
+    }
+
+    public JButton getBtnPuesto83() {
+        return btnPuesto83;
+    }
+
+    public void setBtnPuesto83(JButton btnPuesto83) {
+        this.btnPuesto83 = btnPuesto83;
+    }
+
+    public JButton getBtnPuesto84() {
+        return btnPuesto84;
+    }
+
+    public void setBtnPuesto84(JButton btnPuesto84) {
+        this.btnPuesto84 = btnPuesto84;
+    }
+
+    public JButton getBtnPuesto85() {
+        return btnPuesto85;
+    }
+
+    public void setBtnPuesto85(JButton btnPuesto85) {
+        this.btnPuesto85 = btnPuesto85;
+    }
+
+    public JButton getBtnPuesto86() {
+        return btnPuesto86;
+    }
+
+    public void setBtnPuesto86(JButton btnPuesto86) {
+        this.btnPuesto86 = btnPuesto86;
+    }
+
+    public JButton getBtnPuesto87() {
+        return btnPuesto87;
+    }
+
+    public void setBtnPuesto87(JButton btnPuesto87) {
+        this.btnPuesto87 = btnPuesto87;
+    }
+
+    public JButton getBtnPuesto88() {
+        return btnPuesto88;
+    }
+
+    public void setBtnPuesto88(JButton btnPuesto88) {
+        this.btnPuesto88 = btnPuesto88;
+    }
+
+    public JButton getBtnPuesto89() {
+        return btnPuesto89;
+    }
+
+    public void setBtnPuesto89(JButton btnPuesto89) {
+        this.btnPuesto89 = btnPuesto89;
+    }
+
+    public JButton getBtnPuesto90() {
+        return btnPuesto90;
+    }
+
+    public void setBtnPuesto90(JButton btnPuesto90) {
+        this.btnPuesto90 = btnPuesto90;
+    }
+
+    public JButton getBtnPuesto91() {
+        return btnPuesto91;
+    }
+
+    public void setBtnPuesto91(JButton btnPuesto91) {
+        this.btnPuesto91 = btnPuesto91;
+    }
+
+    public JButton getBtnPuesto92() {
+        return btnPuesto92;
+    }
+
+    public void setBtnPuesto92(JButton btnPuesto92) {
+        this.btnPuesto92 = btnPuesto92;
+    }
+
+    public JButton getBtnPuesto93() {
+        return btnPuesto93;
+    }
+
+    public void setBtnPuesto93(JButton btnPuesto93) {
+        this.btnPuesto93 = btnPuesto93;
+    }
+
+    public JButton getBtnPuesto94() {
+        return btnPuesto94;
+    }
+
+    public void setBtnPuesto94(JButton btnPuesto94) {
+        this.btnPuesto94 = btnPuesto94;
+    }
+
+    public JButton getBtnPuesto95() {
+        return btnPuesto95;
+    }
+
+    public void setBtnPuesto95(JButton btnPuesto95) {
+        this.btnPuesto95 = btnPuesto95;
+    }
+
+    public JButton getBtnPuesto96() {
+        return btnPuesto96;
+    }
+
+    public void setBtnPuesto96(JButton btnPuesto96) {
+        this.btnPuesto96 = btnPuesto96;
+    }
+
+    public JButton getBtnPuesto97() {
+        return btnPuesto97;
+    }
+
+    public void setBtnPuesto97(JButton btnPuesto97) {
+        this.btnPuesto97 = btnPuesto97;
+    }
+
+    public JButton getBtnPuesto98() {
+        return btnPuesto98;
+    }
+
+    public void setBtnPuesto98(JButton btnPuesto98) {
+        this.btnPuesto98 = btnPuesto98;
+    }
+
+    public JButton getBtnPuesto99() {
+        return btnPuesto99;
+    }
+
+    public void setBtnPuesto99(JButton btnPuesto99) {
+        this.btnPuesto99 = btnPuesto99;
+    }
+
+    public JLabel getLblPuesto100() {
+        return lblPuesto100;
+    }
+
+    public void setLblPuesto100(JLabel lblPuesto100) {
+        this.lblPuesto100 = lblPuesto100;
+    }
+
+    public JLabel getLblPuesto51() {
+        return lblPuesto51;
+    }
+
+    public void setLblPuesto51(JLabel lblPuesto51) {
+        this.lblPuesto51 = lblPuesto51;
+    }
+
+    public JLabel getLblPuesto52() {
+        return lblPuesto52;
+    }
+
+    public void setLblPuesto52(JLabel lblPuesto52) {
+        this.lblPuesto52 = lblPuesto52;
+    }
+
+    public JLabel getLblPuesto53() {
+        return lblPuesto53;
+    }
+
+    public void setLblPuesto53(JLabel lblPuesto53) {
+        this.lblPuesto53 = lblPuesto53;
+    }
+
+    public JLabel getLblPuesto54() {
+        return lblPuesto54;
+    }
+
+    public void setLblPuesto54(JLabel lblPuesto54) {
+        this.lblPuesto54 = lblPuesto54;
+    }
+
+    public JLabel getLblPuesto55() {
+        return lblPuesto55;
+    }
+
+    public void setLblPuesto55(JLabel lblPuesto55) {
+        this.lblPuesto55 = lblPuesto55;
+    }
+
+    public JLabel getLblPuesto56() {
+        return lblPuesto56;
+    }
+
+    public void setLblPuesto56(JLabel lblPuesto56) {
+        this.lblPuesto56 = lblPuesto56;
+    }
+
+    public JLabel getLblPuesto57() {
+        return lblPuesto57;
+    }
+
+    public void setLblPuesto57(JLabel lblPuesto57) {
+        this.lblPuesto57 = lblPuesto57;
+    }
+
+    public JLabel getLblPuesto58() {
+        return lblPuesto58;
+    }
+
+    public void setLblPuesto58(JLabel lblPuesto58) {
+        this.lblPuesto58 = lblPuesto58;
+    }
+
+    public JLabel getLblPuesto59() {
+        return lblPuesto59;
+    }
+
+    public void setLblPuesto59(JLabel lblPuesto59) {
+        this.lblPuesto59 = lblPuesto59;
+    }
+
+    public JLabel getLblPuesto60() {
+        return lblPuesto60;
+    }
+
+    public void setLblPuesto60(JLabel lblPuesto60) {
+        this.lblPuesto60 = lblPuesto60;
+    }
+
+    public JLabel getLblPuesto61() {
+        return lblPuesto61;
+    }
+
+    public void setLblPuesto61(JLabel lblPuesto61) {
+        this.lblPuesto61 = lblPuesto61;
+    }
+
+    public JLabel getLblPuesto62() {
+        return lblPuesto62;
+    }
+
+    public void setLblPuesto62(JLabel lblPuesto62) {
+        this.lblPuesto62 = lblPuesto62;
+    }
+
+    public JLabel getLblPuesto63() {
+        return lblPuesto63;
+    }
+
+    public void setLblPuesto63(JLabel lblPuesto63) {
+        this.lblPuesto63 = lblPuesto63;
+    }
+
+    public JLabel getLblPuesto64() {
+        return lblPuesto64;
+    }
+
+    public void setLblPuesto64(JLabel lblPuesto64) {
+        this.lblPuesto64 = lblPuesto64;
+    }
+
+    public JLabel getLblPuesto65() {
+        return lblPuesto65;
+    }
+
+    public void setLblPuesto65(JLabel lblPuesto65) {
+        this.lblPuesto65 = lblPuesto65;
+    }
+
+    public JLabel getLblPuesto66() {
+        return lblPuesto66;
+    }
+
+    public void setLblPuesto66(JLabel lblPuesto66) {
+        this.lblPuesto66 = lblPuesto66;
+    }
+
+    public JLabel getLblPuesto67() {
+        return lblPuesto67;
+    }
+
+    public void setLblPuesto67(JLabel lblPuesto67) {
+        this.lblPuesto67 = lblPuesto67;
+    }
+
+    public JLabel getLblPuesto68() {
+        return lblPuesto68;
+    }
+
+    public void setLblPuesto68(JLabel lblPuesto68) {
+        this.lblPuesto68 = lblPuesto68;
+    }
+
+    public JLabel getLblPuesto69() {
+        return lblPuesto69;
+    }
+
+    public void setLblPuesto69(JLabel lblPuesto69) {
+        this.lblPuesto69 = lblPuesto69;
+    }
+
+    public JLabel getLblPuesto70() {
+        return lblPuesto70;
+    }
+
+    public void setLblPuesto70(JLabel lblPuesto70) {
+        this.lblPuesto70 = lblPuesto70;
+    }
+
+    public JLabel getLblPuesto71() {
+        return lblPuesto71;
+    }
+
+    public void setLblPuesto71(JLabel lblPuesto71) {
+        this.lblPuesto71 = lblPuesto71;
+    }
+
+    public JLabel getLblPuesto72() {
+        return lblPuesto72;
+    }
+
+    public void setLblPuesto72(JLabel lblPuesto72) {
+        this.lblPuesto72 = lblPuesto72;
+    }
+
+    public JLabel getLblPuesto73() {
+        return lblPuesto73;
+    }
+
+    public void setLblPuesto73(JLabel lblPuesto73) {
+        this.lblPuesto73 = lblPuesto73;
+    }
+
+    public JLabel getLblPuesto74() {
+        return lblPuesto74;
+    }
+
+    public void setLblPuesto74(JLabel lblPuesto74) {
+        this.lblPuesto74 = lblPuesto74;
+    }
+
+    public JLabel getLblPuesto75() {
+        return lblPuesto75;
+    }
+
+    public void setLblPuesto75(JLabel lblPuesto75) {
+        this.lblPuesto75 = lblPuesto75;
+    }
+
+    public JLabel getLblPuesto76() {
+        return lblPuesto76;
+    }
+
+    public void setLblPuesto76(JLabel lblPuesto76) {
+        this.lblPuesto76 = lblPuesto76;
+    }
+
+    public JLabel getLblPuesto77() {
+        return lblPuesto77;
+    }
+
+    public void setLblPuesto77(JLabel lblPuesto77) {
+        this.lblPuesto77 = lblPuesto77;
+    }
+
+    public JLabel getLblPuesto78() {
+        return lblPuesto78;
+    }
+
+    public void setLblPuesto78(JLabel lblPuesto78) {
+        this.lblPuesto78 = lblPuesto78;
+    }
+
+    public JLabel getLblPuesto79() {
+        return lblPuesto79;
+    }
+
+    public void setLblPuesto79(JLabel lblPuesto79) {
+        this.lblPuesto79 = lblPuesto79;
+    }
+
+    public JLabel getLblPuesto80() {
+        return lblPuesto80;
+    }
+
+    public void setLblPuesto80(JLabel lblPuesto80) {
+        this.lblPuesto80 = lblPuesto80;
+    }
+
+    public JLabel getLblPuesto81() {
+        return lblPuesto81;
+    }
+
+    public void setLblPuesto81(JLabel lblPuesto81) {
+        this.lblPuesto81 = lblPuesto81;
+    }
+
+    public JLabel getLblPuesto82() {
+        return lblPuesto82;
+    }
+
+    public void setLblPuesto82(JLabel lblPuesto82) {
+        this.lblPuesto82 = lblPuesto82;
+    }
+
+    public JLabel getLblPuesto83() {
+        return lblPuesto83;
+    }
+
+    public void setLblPuesto83(JLabel lblPuesto83) {
+        this.lblPuesto83 = lblPuesto83;
+    }
+
+    public JLabel getLblPuesto84() {
+        return lblPuesto84;
+    }
+
+    public void setLblPuesto84(JLabel lblPuesto84) {
+        this.lblPuesto84 = lblPuesto84;
+    }
+
+    public JLabel getLblPuesto85() {
+        return lblPuesto85;
+    }
+
+    public void setLblPuesto85(JLabel lblPuesto85) {
+        this.lblPuesto85 = lblPuesto85;
+    }
+
+    public JLabel getLblPuesto86() {
+        return lblPuesto86;
+    }
+
+    public void setLblPuesto86(JLabel lblPuesto86) {
+        this.lblPuesto86 = lblPuesto86;
+    }
+
+    public JLabel getLblPuesto87() {
+        return lblPuesto87;
+    }
+
+    public void setLblPuesto87(JLabel lblPuesto87) {
+        this.lblPuesto87 = lblPuesto87;
+    }
+
+    public JLabel getLblPuesto88() {
+        return lblPuesto88;
+    }
+
+    public void setLblPuesto88(JLabel lblPuesto88) {
+        this.lblPuesto88 = lblPuesto88;
+    }
+
+    public JLabel getLblPuesto89() {
+        return lblPuesto89;
+    }
+
+    public void setLblPuesto89(JLabel lblPuesto89) {
+        this.lblPuesto89 = lblPuesto89;
+    }
+
+    public JLabel getLblPuesto90() {
+        return lblPuesto90;
+    }
+
+    public void setLblPuesto90(JLabel lblPuesto90) {
+        this.lblPuesto90 = lblPuesto90;
+    }
+
+    public JLabel getLblPuesto91() {
+        return lblPuesto91;
+    }
+
+    public void setLblPuesto91(JLabel lblPuesto91) {
+        this.lblPuesto91 = lblPuesto91;
+    }
+
+    public JLabel getLblPuesto92() {
+        return lblPuesto92;
+    }
+
+    public void setLblPuesto92(JLabel lblPuesto92) {
+        this.lblPuesto92 = lblPuesto92;
+    }
+
+    public JLabel getLblPuesto93() {
+        return lblPuesto93;
+    }
+
+    public void setLblPuesto93(JLabel lblPuesto93) {
+        this.lblPuesto93 = lblPuesto93;
+    }
+
+    public JLabel getLblPuesto94() {
+        return lblPuesto94;
+    }
+
+    public void setLblPuesto94(JLabel lblPuesto94) {
+        this.lblPuesto94 = lblPuesto94;
+    }
+
+    public JLabel getLblPuesto95() {
+        return lblPuesto95;
+    }
+
+    public void setLblPuesto95(JLabel lblPuesto95) {
+        this.lblPuesto95 = lblPuesto95;
+    }
+
+    public JLabel getLblPuesto96() {
+        return lblPuesto96;
+    }
+
+    public void setLblPuesto96(JLabel lblPuesto96) {
+        this.lblPuesto96 = lblPuesto96;
+    }
+
+    public JLabel getLblPuesto97() {
+        return lblPuesto97;
+    }
+
+    public void setLblPuesto97(JLabel lblPuesto97) {
+        this.lblPuesto97 = lblPuesto97;
+    }
+
+    public JLabel getLblPuesto98() {
+        return lblPuesto98;
+    }
+
+    public void setLblPuesto98(JLabel lblPuesto98) {
+        this.lblPuesto98 = lblPuesto98;
+    }
+
+    public JLabel getLblPuesto99() {
+        return lblPuesto99;
+    }
+
+    public void setLblPuesto99(JLabel lblPuesto99) {
+        this.lblPuesto99 = lblPuesto99;
     }
     
     
