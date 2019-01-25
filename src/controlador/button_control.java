@@ -9,8 +9,6 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 import mvc.conex;
 import mvc.registro;
@@ -18,7 +16,7 @@ import views.Main;
 import views.RegistroPeaton;
 import views.RegistroVehiculo;
 
-public class button_control implements ActionListener, MouseListener{
+public class button_control implements ActionListener{
     
     private Main vista = new Main();
     private registro model;
@@ -87,13 +85,12 @@ public class button_control implements ActionListener, MouseListener{
         this.vista.getBtnPuesto48().addActionListener(this);
         this.vista.getBtnPuesto49().addActionListener(this);
         this.vista.getBtnPuesto50().addActionListener(this);
+        this.vista.getBtnRegistroPeaton().addActionListener(this);
         
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
         
-        //MouseListener vista Main
-        this.vista.getTbdPaneVehicles().addMouseListener(this);
     }
     
     public void Inicio(){
@@ -177,6 +174,13 @@ public class button_control implements ActionListener, MouseListener{
             
         }
         
+        if (e.getSource() == vista.getBtnRegistroPeaton()){
+            regPea = new RegistroPeaton(vista, true);
+            button_control control = new button_control(vista,reg,regPea);
+            control.InicioRegPea();
+            regPea.setVisible(true);
+        }
+        
         if (e.getSource() == reg.getBtn_save()) {
             int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
             if (a==0){ // Si se presiona si se guardan los datos
@@ -203,37 +207,5 @@ public class button_control implements ActionListener, MouseListener{
         reg.puesto=p;
         control.InicioReg();
         reg.setVisible(true);
-    }
-
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-        if (e.getSource() == vista.getTbdPaneVehicles()){
-            if (vista.getTbdPaneVehicles().getSelectedIndex() == 2) {
-                regPea = new RegistroPeaton(vista, true);
-                button_control control = new button_control(vista,reg,regPea);
-                control.InicioRegPea();
-                regPea.setVisible(true);
-            }
-        }
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-        
     }
 }
