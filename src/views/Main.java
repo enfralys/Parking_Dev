@@ -2305,7 +2305,7 @@ public class Main extends javax.swing.JFrame {
         jPanel11.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 820, 30));
 
         lblNombrePeaton.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblNombrePeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         lblNombrePeaton.setText("Tipo:");
         jPanel11.add(lblNombrePeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
@@ -2315,7 +2315,7 @@ public class Main extends javax.swing.JFrame {
         jPanel11.add(txtNombrePeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 180, 30));
 
         lblNombrePeaton1.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblNombrePeaton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         lblNombrePeaton1.setText("Cédula:");
         lblNombrePeaton1.setToolTipText("");
         jPanel11.add(lblNombrePeaton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
@@ -2326,7 +2326,7 @@ public class Main extends javax.swing.JFrame {
         jPanel11.add(txtNombrePeaton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 180, 30));
 
         lblNombrePeaton2.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblNombrePeaton2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         lblNombrePeaton2.setText("Apellidos:");
         jPanel11.add(lblNombrePeaton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, -1, -1));
 
@@ -2336,7 +2336,7 @@ public class Main extends javax.swing.JFrame {
         jPanel11.add(txtNombrePeaton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 180, 30));
 
         lblNombrePeaton3.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton3.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblNombrePeaton3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         lblNombrePeaton3.setText("Nombres:");
         jPanel11.add(lblNombrePeaton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
 
@@ -2346,7 +2346,7 @@ public class Main extends javax.swing.JFrame {
         jPanel11.add(txtNombrePeaton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 180, 30));
 
         lblNombrePeaton5.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblNombrePeaton5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         lblNombrePeaton5.setText("Nº de Apartamento:");
         jPanel11.add(lblNombrePeaton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, -1, -1));
 
@@ -2355,7 +2355,7 @@ public class Main extends javax.swing.JFrame {
         txtNombrePeaton5.setBorder(null);
         jPanel11.add(txtNombrePeaton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
 
-        btnEditarDatosPeaton.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        btnEditarDatosPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btnEditarDatosPeaton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-32.png"))); // NOI18N
         btnEditarDatosPeaton.setText("Editar Datos");
         btnEditarDatosPeaton.setBorder(null);
@@ -2370,7 +2370,7 @@ public class Main extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         pnlPeatones.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 370, -1));
 
-        btnRegistroPeaton.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        btnRegistroPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btnRegistroPeaton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-20.png"))); // NOI18N
         btnRegistroPeaton.setText("Registrar Peatón");
         btnRegistroPeaton.setBorder(null);
@@ -2378,11 +2378,11 @@ public class Main extends javax.swing.JFrame {
         btnRegistroPeaton.setContentAreaFilled(false);
         btnRegistroPeaton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-30.png"))); // NOI18N
         btnRegistroPeaton.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-30.png"))); // NOI18N
-        pnlPeatones.add(btnRegistroPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 30, -1, -1));
+        pnlPeatones.add(btnRegistroPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, -1, -1));
 
-        jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel12.setText("Buscador");
-        pnlPeatones.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, -1));
+        pnlPeatones.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, -1, -1));
 
         tbpMain.addTab("   Peatones          ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones); // NOI18N
 
