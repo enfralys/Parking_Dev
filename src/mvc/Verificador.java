@@ -28,6 +28,7 @@ public  class Verificador implements Runnable {
             System.out.println("Ejecutando " + threadName );
             int a=5;
             boolean stop = true;
+            while (stop){
             d.conectarSQLITE();
             ResultSet rs= d.consultarEntradas();
             int puesto=0;
@@ -42,11 +43,12 @@ public  class Verificador implements Runnable {
                 c.desconectar();
             }
             d.desconectar();
-            try {
-                Thread.sleep(10);
+            }
+         /*   try {
+                Thread.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Verificador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
         } catch (SQLException ex) {
             Logger.getLogger(Verificador.class.getName()).log(Level.SEVERE, null, ex);
         }
