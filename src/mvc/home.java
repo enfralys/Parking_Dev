@@ -27,6 +27,8 @@ public class home {
         control.Inicio();
         
         view.setVisible(true);
+        Verificador R1 = new Verificador("Verificador");
+        R1.start();
     }
     
 }

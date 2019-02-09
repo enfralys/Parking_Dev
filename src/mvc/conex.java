@@ -23,7 +23,7 @@ public class conex {
     public void conectarMSQL() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/prg2","root","");
+            conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:17770/zkeco_db","root","");
 	} catch (Exception e) {
         	System.out.println("Error de conexion con la BD");
 		//e.printStackTrace();
@@ -55,7 +55,7 @@ public class conex {
     public void CrearTabla() {
         String sql;
         try {
-            sql="CREATE TABLE parking ( placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL)";
+            sql="CREATE TABLE parking ( placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
@@ -64,7 +64,7 @@ public class conex {
     }
     public void guardar(RegistroVehiculo reg, int puesto) {
         try {
-            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart) values (?,?,?,?)");
+            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta) values (?,?,?,?,?)");
             pstmt.setString(1, reg.getTxtPlaca().getText());
             pstmt.setString(2, reg.getTxtNombreVisitante().getText());
             pstmt.setInt(3, puesto);
