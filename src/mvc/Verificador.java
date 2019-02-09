@@ -28,22 +28,26 @@ public  class Verificador implements Runnable {
             System.out.println("Ejecutando " + threadName );
             int a=5;
             boolean stop = true;
+            c.conectarMSQL();
             while (stop){
             d.conectarSQLITE();
             ResultSet rs= d.consultarEntradas();
+            
             int puesto=0;
+            String tarjeta;
             while (rs.next()){
                 puesto=rs.getInt("puesto");
-                c.conectarMSQL();
-                if (c.salidas().equals(String.valueOf(puesto))) {
+                tarjeta=rs.getString("tarjeta");
+                if (c.salidas().equals(tarjeta)) {
                     d.salida(puesto);
                     System.out.println("Puesto:" +puesto+" cerrado " );
                     Vista.desocupado(puesto);
                 }
-                c.desconectar();
+                
             }
             d.desconectar();
             }
+            c.desconectar();
          /*   try {
                 Thread.sleep(1);
             } catch (InterruptedException ex) {

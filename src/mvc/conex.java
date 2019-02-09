@@ -69,7 +69,8 @@ public class conex {
             pstmt.setString(2, reg.getTxtNombreVisitante().getText());
             pstmt.setInt(3, puesto);
             pstmt.setString(4, reg.getTxtApartamento().getText());
-            pstmt.setString(5, String.valueOf(puesto));
+            if (puesto==1){ pstmt.setString(5, "9553448"); }
+            else {pstmt.setString(5, String.valueOf(puesto));}
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
