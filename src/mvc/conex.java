@@ -64,11 +64,23 @@ public class conex {
     }
     public void guardar(RegistroVehiculo reg, int puesto) {
         try {
-            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta) values (?,?,?,?,?)");
+            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado) values (?,?,?,?,?,'entrada')");
             pstmt.setString(1, reg.getTxtPlaca().getText());
             pstmt.setString(2, reg.getTxtNombreVisitante().getText());
             pstmt.setInt(3, puesto);
             pstmt.setString(4, reg.getTxtApartamento().getText());
+            pstmt.setString(5, String.valueOf(puesto));
+            pstmt.execute();
+        } catch (SQLException e) {  e.printStackTrace();}
+    }
+    public void salida(RegistroVehiculo reg, int puesto) {
+        try {
+            pstmt=conn.prepareStatement("update parking set estado='salida' where puesto=? and estado like 'entrada'");
+            pstmt.setString(1, reg.getTxtPlaca().getText());
+            pstmt.setString(2, reg.getTxtNombreVisitante().getText());
+            pstmt.setInt(3, puesto);
+            pstmt.setString(4, reg.getTxtApartamento().getText());
+            pstmt.setString(5, String.valueOf(puesto));
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
@@ -77,6 +89,29 @@ public class conex {
         ResultSet rs=null;
         try {
             pstmt=conn.prepareStatement("select * from  parking where puesto=?");
+            pstmt.setInt(1, puesto);
+            rs=pstmt.executeQuery();
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla();}
+           if (e.getErrorCode()==1146){this.CrearTabla();}
+            System.out.println("Error numero: "+e.getErrorCode());
+        }    
+        try {
+            while (rs.next()){
+                est.setApto(rs.getString("apart"));
+                est.setNombre_invitado(rs.getString("visitante"));
+                est.setPlaca(rs.getString("placa"));
+                est.setPuesto(rs.getInt("puesto"));
+                System.out.println("Puesto: "+rs.getInt("puesto"));
+            }
+        } catch (SQLException e) {  e.printStackTrace();}
+        return est;
+    }
+    public registro consultarEntradas(int puesto) {
+        registro est=new registro();
+        ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  parking where puesto=? and estado like 'entrada'");
             pstmt.setInt(1, puesto);
             rs=pstmt.executeQuery();
         } catch (SQLException e) {  e.printStackTrace();
