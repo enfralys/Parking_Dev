@@ -212,6 +212,20 @@ public class button_control implements ActionListener{
         button_control control = new button_control(vista,reg,regPea);
         reg.puesto=p;
         control.InicioReg();
-        reg.setVisible(true);
+        conn.conectarSQLITE();
+        model=conn.consultar(p);
+        conn.desconectar();
+        if (model.getPuesto()==p){
+            reg.getTxtPlaca().setText(model.getPlaca());
+            reg.getTxtPlaca().setEditable(false);
+            reg.getTxtNombreVisitante().setText(model.getNombre_invitado());
+            reg.getTxtNombreVisitante().setEditable(false);
+            reg.getTxtApartamento().setText(model.getApto());
+            reg.getTxtApartamento().setEditable(false);
+            reg.getBtn_save().setVisible(false);
+            
+        }
+       reg.setVisible(true);
+    
     }
 }
