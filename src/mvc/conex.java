@@ -13,6 +13,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.xml.bind.annotation.XmlElement;
 import views.RegistroVehiculo;
 
 public class conex {
@@ -36,7 +39,7 @@ public class conex {
             //Class.forName("org.sqlite.jdbc");
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection( "jdbc:sqlite:BD.sqlite");
-            System.out.print("Conexion realizada");
+          //s  System.out.print("Conexion realizada");
          } catch (Exception e) {e.printStackTrace();}        
     }
     public void desconectar() {
@@ -156,11 +159,67 @@ public class conex {
 	ResultSet rs=null;
 	try {
 	    pstmt=conn.prepareStatement("select * from  acc_monitor_log ");	          
-	    rs=pstmt.executeQuery();
-	} catch (SQLException e) {  e.printStackTrace(); }    
+	    rs=pstmt.executeQuery(); 	
+        } catch (SQLException e) {  e.printStackTrace(); }    
 	try {
             if (rs.last()){ a= rs.getString("card_no");}
 	} catch (SQLException e) {  e.printStackTrace();}
 	return a;
+    }
+    public JTable CargarTablaHistorias(JTable tabla){
+        DefaultTableModel model;
+        try {
+            String [] Titulos={"Tarjeta","Tipo","Placa","Apartamento","Estado","Fecha"};
+            String[] Registros= new String[6];
+            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada'");
+            ResultSet rs = pstmt.executeQuery(); 	
+            model = new DefaultTableModel(null,Titulos);
+            try{
+                while(rs.next()){
+                    Registros[0]=rs.getString("tarjeta");
+                    Registros[1]=rs.getString("puesto");
+                    Registros[2]=rs.getString("placa");
+                    Registros[3]=rs.getString("apart");
+                    Registros[4]=rs.getString("puesto");
+                    Registros[5]=rs.getString("visitante");
+                    model.addRow(Registros);
+                }
+            }catch(SQLException e){ 
+                System.out.print("Error:"+e.getMessage());
+                e.printStackTrace();
+            }
+            tabla.setModel(model);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return tabla;
+    }
+    public JTable CargarTablaConsulta(JTable tabla){
+        DefaultTableModel model;
+        try {
+            String [] Titulos={"Tarjeta","Tipo","Placa","Apartamento","Estado","Fecha"};
+            String[] Registros= new String[6];
+            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada'");
+            ResultSet rs = pstmt.executeQuery(); 	
+            model = new DefaultTableModel(null,Titulos);
+            try{
+                while(rs.next()){
+                    Registros[0]=rs.getString("tarjeta");
+                    Registros[1]=rs.getString("puesto");
+                    Registros[2]=rs.getString("placa");
+                    Registros[3]=rs.getString("apart");
+                    Registros[4]=rs.getString("puesto");
+                    Registros[5]=rs.getString("visitante");
+                    model.addRow(Registros);
+                }
+            }catch(SQLException e){ 
+                System.out.print("Error:"+e.getMessage());
+                e.printStackTrace();
+            }
+            tabla.setModel(model);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return tabla;
     }
 }

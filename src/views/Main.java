@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
@@ -357,6 +358,11 @@ public class Main extends javax.swing.JFrame {
         tbpMain.setBackground(new java.awt.Color(255, 255, 255));
         tbpMain.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         tbpMain.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        tbpMain.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbpMainMouseClicked(evt);
+            }
+        });
 
         pnlIngreso.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -2154,6 +2160,7 @@ public class Main extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tlbHistorialDatos.setName("TablaCD"); // NOI18N
         jScrollPane2.setViewportView(tlbHistorialDatos);
 
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 880, 180));
@@ -2198,6 +2205,7 @@ public class Main extends javax.swing.JFrame {
                 "Tarjeta", "Tipo", "Placa", "Apartamento", "Estado", "Fecha"
             }
         ));
+        tlbHistorialVehiculos.setName("TablaHG"); // NOI18N
         tlbHistorialVehiculos.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tlbHistorialVehiculos);
 
@@ -2392,6 +2400,12 @@ public class Main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tbpMainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbpMainMouseClicked
+      
+        
+    
+    }//GEN-LAST:event_tbpMainMouseClicked
 
     /**
      * @param args the command line arguments

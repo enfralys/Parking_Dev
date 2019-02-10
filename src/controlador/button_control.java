@@ -101,7 +101,13 @@ public class button_control implements ActionListener{
                 if (model.getPuesto()==i){vista.ocupado(i);  }
             }
         conn.desconectar();
-              
+        conn.conectarSQLITE();
+        vista.setTlbHistorial(conn.CargarTablaHistorias(vista.getTlbHistorial()));
+        conn.desconectar();
+        
+        conn.conectarSQLITE();
+        vista.setTlbHistorialDatos(conn.CargarTablaConsulta(vista.getTlbHistorialDatos()));
+        conn.desconectar();
         contador = 0;
     }
     
