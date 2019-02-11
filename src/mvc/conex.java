@@ -58,7 +58,7 @@ public class conex {
     public void CrearTabla() {
         String sql;
         try {
-            sql="CREATE TABLE parking ( placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL)";
+            sql="CREATE TABLE parking ( placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL, fechareg DATETIME DEFAULT CURRENT_TIMESTAMP)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
@@ -169,19 +169,20 @@ public class conex {
     public JTable CargarTablaHistorias(JTable tabla){
         DefaultTableModel model;
         try {
-            String [] Titulos={"Tarjeta","Tipo","Placa","Apartamento","Estado","Fecha"};
+            String [] Titulos={"Puesto","Tarjeta","Placa","Apartamento","Estado","Fecha"};
             String[] Registros= new String[6];
-            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada'");
+            pstmt=conn.prepareStatement("select * from  parking ");
+            //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada'");
             ResultSet rs = pstmt.executeQuery(); 	
             model = new DefaultTableModel(null,Titulos);
             try{
                 while(rs.next()){
-                    Registros[0]=rs.getString("tarjeta");
-                    Registros[1]=rs.getString("puesto");
+                    Registros[0]=rs.getString("puesto");
+                    Registros[1]=rs.getString("tarjeta");
                     Registros[2]=rs.getString("placa");
                     Registros[3]=rs.getString("apart");
-                    Registros[4]=rs.getString("puesto");
-                    Registros[5]=rs.getString("visitante");
+                    Registros[4]=rs.getString("estado");
+                    Registros[5]=rs.getString("fechareg");
                     model.addRow(Registros);
                 }
             }catch(SQLException e){ 
