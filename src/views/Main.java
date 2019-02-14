@@ -4549,7 +4549,13 @@ public class Main extends javax.swing.JFrame {
     public void setBtnRegistroPeaton(JButton btnRegistroPeaton) {
         this.btnRegistroPeaton = btnRegistroPeaton;
     }
-    
+     public JTable getTlbHistorialDatos1() {
+        return tlbHistorialDatos1;
+    }
+
+    public void setTlbHistorialDatos1(JTable tlbHistorialDatos1) {
+        this.tlbHistorialDatos1 = tlbHistorialDatos1;
+    }
     
     
     // Metodo creado para cambiar imagen de jbutton cuando un vehiculo esta estacionado en el puesto

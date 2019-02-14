@@ -50,7 +50,7 @@ public class Temporizador extends TimerTask{
           //  }
             c.desconectar();
         } catch (SQLException ex) {
-            Logger.getLogger(Verificador2.class.getName()).log(Level.SEVERE, null, ex);
+           ex.printStackTrace();
         }
     }
     

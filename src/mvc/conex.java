@@ -3,7 +3,7 @@ Clase Conexion
 Funcion: Conexion a base de datos mysql y sqlite
 Autor: William Cortez
 Creacion: 14/01/2019
-Ult Modificacion: 16/01/2019
+Ult Modificacion: 14/02/2019
 */
 package mvc;
 
@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.xml.bind.annotation.XmlElement;
-import views.RegistroVehiculo;
+import views.*;
 
 public class conex {
     private Connection conn;
@@ -67,6 +67,13 @@ public class conex {
        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
         }
+        try {
+            sql="CREATE TABLE peatones ( tipo int, cedula int, nombres varchar(25) NOT NULL, apellidos varchar(25) NOT NULL, apart varchar(12) NOT NULL,  fechareg DATETIME DEFAULT CURRENT_TIMESTAMP)";
+            pstmt= conn.prepareStatement(sql);
+            pstmt.execute();
+       } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
+        }
     }
     public void guardar(RegistroVehiculo reg, int puesto) {
         try {
@@ -77,6 +84,17 @@ public class conex {
             pstmt.setString(4, reg.getTxtApartamento().getText());
             if (puesto==1){ pstmt.setString(5, "9553448"); }
             else {pstmt.setString(5, String.valueOf(puesto));}
+            pstmt.execute();
+        } catch (SQLException e) {  e.printStackTrace();}
+    }
+    public void guardarp(RegistroPeaton reg) {
+        try {
+            pstmt=conn.prepareStatement("insert into peatones (tipo, cedula, nombres , apellidos , apart )values (?,?,?,?,?)");
+            pstmt.setInt(1, reg.getCmbTipoPeaton().getSelectedIndex());
+            pstmt.setInt(2, Integer.parseInt(reg.getTxtCedulaPeaton().getText()));
+            pstmt.setString(3, reg.getTxtNombrePeaton().getText());
+            pstmt.setString(4, reg.getTxtApellidoPeaton().getText());
+            pstmt.setString(5, reg.getTxtAptoAVisitar().getText());
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
@@ -226,7 +244,36 @@ public class conex {
         }
         return tabla;
     }
-
+    public JTable actTablaPea(JTable tabla){
+        DefaultTableModel model;
+        try {
+            String [] Titulos={"Cedula","Nombre","Apellido","Apartamento","Tipo","Fecha"};
+            String[] Registros= new String[6];
+            pstmt=conn.prepareStatement("select * from  peatones ");
+            ResultSet rs = pstmt.executeQuery(); 	
+            model = new DefaultTableModel(null,Titulos);
+            try{
+                while(rs.next()){
+                    Registros[0]=rs.getString("cedula");
+                    Registros[1]=rs.getString("nombres");
+                    Registros[2]=rs.getString("apellidos");
+                    Registros[3]=rs.getString("apart");
+                    if (rs.getInt("tipo")==0){Registros[4]="Visitante";}
+                    else{Registros[4]="Trabajador";}
+                    
+                    Registros[5]=rs.getString("fechareg");
+                    model.addRow(Registros);
+                }
+            }catch(SQLException e){ 
+                System.out.print("Error:"+e.getMessage());
+                e.printStackTrace();
+            }
+            tabla.setModel(model);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return tabla;
+    }
     public void ActTabla(int i, JTable tlbHistorialVehiculos) {
         DefaultTableModel model;
         try {

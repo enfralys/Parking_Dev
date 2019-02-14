@@ -92,6 +92,8 @@ public class button_control implements ActionListener{
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
+        this.regPea.getBtn_save().addActionListener(this);
+        this.regPea.getBtnCancelar().addActionListener(this);
         
    //     this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
         
@@ -204,8 +206,21 @@ public class button_control implements ActionListener{
                 reg.dispose(); // cierra la ventana
             } 
         }
+        if (e.getSource() == regPea.getBtn_save()) {
+            int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
+            if (a==0){ // Si se presiona si se guardan los datos
+                conn.conectarSQLITE(); // conexta a BD sqlite
+                conn.guardarp(regPea); // Llama al metodo guardar en la BD
+                vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1()));
+                conn.desconectar(); // desconexta a BD sqlite
+                regPea.dispose(); // cierra la ventana
+            } 
+        }
         if (e.getSource() == reg.getBtnCancelar()){
             if (contador != 0){ reg.dispose(); } 
+        }
+        if (e.getSource() == regPea.getBtnCancelar()){
+            if (contador != 0){ regPea.dispose(); } 
         }
         
         if (e.getSource() == regPea.getBtnCancelar()){
