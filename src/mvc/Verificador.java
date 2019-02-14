@@ -12,12 +12,12 @@ public  class Verificador implements Runnable {
     private Main Vista;
     public Verificador( String name){
         threadName = name;
-     //   System.out.println("Creando Verificador " + threadName );
+       System.out.println("Creando Verificador " + threadName );
     }
 
     Verificador(String verificador, Main view) {
         threadName = verificador;
-       // System.out.println("Creando Verificador " + threadName );
+        System.out.println("Creando Verificador " + threadName );
         this.Vista=view;
 
     }
@@ -25,11 +25,11 @@ public  class Verificador implements Runnable {
         try {
             conex c=new conex();
             conex d=new conex();
-           // System.out.println("Ejecutando " + threadName );
+            System.out.println("Ejecutando " + threadName );
             int a=5;
             boolean stop = true;
             c.conectarMSQL();
-            while (stop){
+            //while (stop){
             d.conectarSQLITE();
             ResultSet rs= d.consultarEntradas();
             
@@ -40,19 +40,24 @@ public  class Verificador implements Runnable {
                 tarjeta=rs.getString("tarjeta");
                if (c.salidas().equals(tarjeta)) {
                     d.salida(puesto);
-                   // System.out.println("Puesto:" +puesto+" cerrado " );
+                    System.out.println("Puesto:" +puesto+" cerrado " );
                     Vista.desocupado(puesto);
                 }
                 
             }
             d.desconectar();
-            }
+           // }
             c.desconectar();
-         /*   try {
+            try {
+                Thread.sleep(0);
+                /*   try {
                 Thread.sleep(1);
+                } catch (InterruptedException ex) {
+                Logger.getLogger(Verificador.class.getName()).log(Level.SEVERE, null, ex);
+                }*/
             } catch (InterruptedException ex) {
                 Logger.getLogger(Verificador.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
+            }
         } catch (SQLException ex) {
             Logger.getLogger(Verificador.class.getName()).log(Level.SEVERE, null, ex);
         }

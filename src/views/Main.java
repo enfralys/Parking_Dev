@@ -2402,8 +2402,7 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tbpMainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbpMainMouseClicked
-      
-        
+    
     
     }//GEN-LAST:event_tbpMainMouseClicked
 

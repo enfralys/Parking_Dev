@@ -25,10 +25,11 @@ public class home {
         RegistroPeaton regPea = new RegistroPeaton(null,false);
         button_control control = new button_control(view, reg, regPea);
         control.Inicio();
-        
         view.setVisible(true);
-        Verificador R1 = new Verificador("Verificador",view);
-        R1.start();
+    //    Verificador2 obj= new Verificador2(view);
+     //   obj.verifica();
+     /*   Verificador R1 = new Verificador("Verificador",view);
+        R1.start();*/
     }
     
 }

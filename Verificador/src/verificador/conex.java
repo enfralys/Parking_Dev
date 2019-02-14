@@ -5,7 +5,7 @@ Autor: William Cortez
 Creacion: 14/01/2019
 Ult Modificacion: 16/01/2019
 */
-package mvc;
+package verificador;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

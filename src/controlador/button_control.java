@@ -10,11 +10,13 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import mvc.conex;
-import mvc.registro;
+import mvc.*;
 import views.Main;
 import views.RegistroPeaton;
 import views.RegistroVehiculo;
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class button_control implements ActionListener{
     
@@ -91,9 +93,14 @@ public class button_control implements ActionListener{
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
         
+   //     this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
+        
     }
     
     public void Inicio(){
+        Temporizador timerTask = new Temporizador(this.vista);
+        Timer timer = new Timer(); 
+        timer.scheduleAtFixedRate(timerTask, 0, 3000);
         vista.setLocationRelativeTo(null);
         conn.conectarSQLITE();
             for (int i=1; i<51;i++){
@@ -204,6 +211,24 @@ public class button_control implements ActionListener{
         if (e.getSource() == regPea.getBtnCancelar()){
             if (contador != 0){ regPea.dispose(); } 
         }
+        if (e.getSource() == vista.getCmbFiltradoDiaVehiculo()){
+        
+        // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
+        
+        String valor=(String) vista.getCmbFiltradoDiaVehiculo().getSelectedItem();
+        
+        if (valor.equals("Día")){
+            conn.conectarSQLITE();
+            conn.ActTabla(1, vista.getTlbHistorialVehiculos());
+            conn.desconectar();
+        }
+        if (valor.equals("Día Anterior")){}
+        if (valor.equals("Mes")){}
+        if (valor.equals("Mes Anterior")){}
+             
+        }
+         
+
     }  
     
     // Meotdo creado para registrar los datos de los visitabtes de todos los puestos

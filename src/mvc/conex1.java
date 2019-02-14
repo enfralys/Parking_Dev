@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.xml.bind.annotation.XmlElement;
 import views.RegistroVehiculo;
 
-public class conex {
+public class conex1 {
     private Connection conn;
     private PreparedStatement pstmt;
     // Metodo para conectar a Bd
@@ -169,114 +169,6 @@ public class conex {
 	} catch (SQLException e) {  e.printStackTrace();}
 	return a;
     }
-    public JTable CargarTablaHistorias(JTable tabla){
-        DefaultTableModel model;
-        try {
-            String [] Titulos={"Puesto","Tarjeta","Placa","Apartamento","Estado","Fecha"};
-            String[] Registros= new String[6];
-            pstmt=conn.prepareStatement("select * from  parking ");
-            //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada'");
-            ResultSet rs = pstmt.executeQuery(); 	
-            model = new DefaultTableModel(null,Titulos);
-            try{
-                while(rs.next()){
-                    Registros[0]=rs.getString("puesto");
-                    Registros[1]=rs.getString("tarjeta");
-                    Registros[2]=rs.getString("placa");
-                    Registros[3]=rs.getString("apart");
-                    Registros[4]=rs.getString("estado");
-                    Registros[5]=rs.getString("fechareg");
-                    model.addRow(Registros);
-                }
-            }catch(SQLException e){ 
-                System.out.print("Error:"+e.getMessage());
-                e.printStackTrace();
-            }
-            tabla.setModel(model);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return tabla;
-    }
-    public JTable CargarTablaConsulta(JTable tabla){
-        DefaultTableModel model;
-        try {
-            String [] Titulos={"Tarjeta","Tipo","Placa","Apartamento","Estado","Fecha"};
-            String[] Registros= new String[6];
-            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada'");
-            ResultSet rs = pstmt.executeQuery(); 	
-            model = new DefaultTableModel(null,Titulos);
-            try{
-                while(rs.next()){
-                    Registros[0]=rs.getString("tarjeta");
-                    Registros[1]=rs.getString("puesto");
-                    Registros[2]=rs.getString("placa");
-                    Registros[3]=rs.getString("apart");
-                    Registros[4]=rs.getString("puesto");
-                    Registros[5]=rs.getString("visitante");
-                    model.addRow(Registros);
-                }
-            }catch(SQLException e){ 
-                System.out.print("Error:"+e.getMessage());
-                e.printStackTrace();
-            }
-            tabla.setModel(model);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return tabla;
-    }
-
-    public void ActTabla(int i, JTable tlbHistorialVehiculos) {
-        DefaultTableModel model;
-        try {
-            String [] Titulos={"Tarjeta","Tipo","Placa","Apartamento","Estado","Fecha"};
-            String[] Registros= new String[6];
-            //pstmt=conn.prepareStatement("select * from  parking where estado like 'salida'");
-            // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
-            pstmt=conn.prepareStatement("select * from  parking where fechareg>=?");
-             //Date miDate = new SimpleDateFormat("dd/MM/yyyy").parse(scanner.nextLine());
-             /*
-        
-//Caso 1: obtener la hora y salida por pantalla con formato:
-DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
-System.out.println("Hora: "+hourFormat.format(date));
-//Caso 2: obtener la fecha y salida por pantalla con formato:
-
-System.out.println("Fecha: "+dateFormat.format(date));
-//Caso 3: obtenerhora y fecha y salida por pantalla con formato:
-DateFormat hourdateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
-System.out.println("Hora y fecha: "+hourdateFormat.format(date));
-        
-        */
-           Date date = new Date();
-            //DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            DateFormat dia = new SimpleDateFormat("dd");
-            DateFormat mes = new SimpleDateFormat("MM");
-            DateFormat anio = new SimpleDateFormat("yyyy");
-            System.out.println(dateFormat.format(date));
-            pstmt.setString(1, dateFormat.format(date));
-            ResultSet rs = pstmt.executeQuery(); 	
-            model = new DefaultTableModel(null,Titulos);
-            try{
-                while(rs.next()){
-                    Registros[0]=rs.getString("tarjeta");
-                    Registros[1]=rs.getString("puesto");
-                    Registros[2]=rs.getString("placa");
-                    Registros[3]=rs.getString("apart");
-                    Registros[4]=rs.getString("puesto");
-                    Registros[5]=rs.getString("visitante");
-                    model.addRow(Registros);
-                }
-            }catch(SQLException e){ 
-                System.out.print("Error:"+e.getMessage());
-                e.printStackTrace();
-            }
-            tlbHistorialVehiculos.setModel(model);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-      //  return tabla;
-    }
+ 
+ 
 }
