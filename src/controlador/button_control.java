@@ -95,6 +95,8 @@ public class button_control implements ActionListener{
         this.regPea.getBtn_save().addActionListener(this);
         this.regPea.getBtnCancelar().addActionListener(this);
         
+        
+        
    //     this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
         
     }
