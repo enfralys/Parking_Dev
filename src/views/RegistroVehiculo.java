@@ -56,6 +56,9 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         lblNumeroAptoIcono = new javax.swing.JLabel();
         btnCancelar = new javax.swing.JButton();
         btn_save = new javax.swing.JButton();
+        lblNombreVisitante1 = new javax.swing.JLabel();
+        lblNombreVisitanteIcono1 = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -105,8 +108,8 @@ public class RegistroVehiculo extends javax.swing.JDialog {
 
         lblNombreVisitante.setBackground(new java.awt.Color(0, 0, 0));
         lblNombreVisitante.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lblNombreVisitante.setText("Nombre del Visitante:");
-        jPanel1.add(lblNombreVisitante, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+        lblNombreVisitante.setText("Numero de tarjeta");
+        jPanel1.add(lblNombreVisitante, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, -1, -1));
 
         txtNombreVisitante.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         txtNombreVisitante.setForeground(new java.awt.Color(153, 153, 153));
@@ -114,10 +117,10 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         jPanel1.add(txtNombreVisitante, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 180, 30));
 
         jSeparator4.setOpaque(true);
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 230, 10));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 230, 10));
 
         lblNombreVisitanteIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/026-parking-card-1.png"))); // NOI18N
-        jPanel1.add(lblNombreVisitanteIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, -1, -1));
+        jPanel1.add(lblNombreVisitanteIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, -1, -1));
 
         lblPlacaIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/039-key-1.png"))); // NOI18N
         jPanel1.add(lblPlacaIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, -1));
@@ -134,7 +137,7 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         btnCancelar.setContentAreaFilled(false);
         btnCancelar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/multiply 2.png"))); // NOI18N
         btnCancelar.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/multiply 2.png"))); // NOI18N
-        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, 40));
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, -1, 40));
 
         btn_save.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btn_save.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/right 4.png"))); // NOI18N
@@ -144,7 +147,23 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         btn_save.setContentAreaFilled(false);
         btn_save.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/right 3.png"))); // NOI18N
         btn_save.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/right 3.png"))); // NOI18N
-        jPanel1.add(btn_save, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, 40));
+        btn_save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_saveActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_save, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, -1, 40));
+
+        lblNombreVisitante1.setBackground(new java.awt.Color(0, 0, 0));
+        lblNombreVisitante1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lblNombreVisitante1.setText("Nombre del Visitante:");
+        jPanel1.add(lblNombreVisitante1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+
+        lblNombreVisitanteIcono1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/026-parking-card-1.png"))); // NOI18N
+        jPanel1.add(lblNombreVisitanteIcono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, -1, -1));
+
+        jSeparator5.setOpaque(true);
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 230, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -154,11 +173,17 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_saveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,8 +237,11 @@ public class RegistroVehiculo extends javax.swing.JDialog {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JLabel lblNombreVisitante;
+    private javax.swing.JLabel lblNombreVisitante1;
     private javax.swing.JLabel lblNombreVisitanteIcono;
+    private javax.swing.JLabel lblNombreVisitanteIcono1;
     private javax.swing.JLabel lblNumeroApto;
     private javax.swing.JLabel lblNumeroAptoIcono;
     private javax.swing.JLabel lblPlaca;
