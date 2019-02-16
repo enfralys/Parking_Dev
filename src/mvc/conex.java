@@ -42,7 +42,7 @@ public class conex {
             //Class.forName("org.sqlite.jdbc");
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection( "jdbc:sqlite:BD.sqlite");
-          //s  System.out.print("Conexion realizada");
+            System.out.print("Conexion realizada");
          } catch (Exception e) {e.printStackTrace();}        
     }
     public void desconectar() {
