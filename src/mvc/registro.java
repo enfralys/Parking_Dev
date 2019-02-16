@@ -1,7 +1,7 @@
 package mvc;
 
 public class registro {
-    private String placa,nombre_invitado,apto;
+    private String placa,nombre_invitado,apto, tarjeta;
     private int puesto;
 
     public String getPlaca() { return placa; }
@@ -12,4 +12,6 @@ public class registro {
     public void setApto(String apto) { this.apto = apto;  }
     public int getPuesto() { return puesto; }
     public void setPuesto(int puesto) { this.puesto = puesto; }
+    public String getTarjeta() { return tarjeta; }
+    public void setTarjeta(String Tarjeta) { this.tarjeta = Tarjeta; }
 }

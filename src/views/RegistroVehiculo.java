@@ -59,6 +59,7 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         lblNombreVisitante1 = new javax.swing.JLabel();
         lblNombreVisitanteIcono1 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
+        txtTarjeta = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -114,6 +115,11 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         txtNombreVisitante.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         txtNombreVisitante.setForeground(new java.awt.Color(153, 153, 153));
         txtNombreVisitante.setBorder(null);
+        txtNombreVisitante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreVisitanteActionPerformed(evt);
+            }
+        });
         jPanel1.add(txtNombreVisitante, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 180, 30));
 
         jSeparator4.setOpaque(true);
@@ -165,6 +171,11 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         jSeparator5.setOpaque(true);
         jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 230, 10));
 
+        txtTarjeta.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        txtTarjeta.setForeground(new java.awt.Color(153, 153, 153));
+        txtTarjeta.setBorder(null);
+        jPanel1.add(txtTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 180, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -184,6 +195,10 @@ public class RegistroVehiculo extends javax.swing.JDialog {
     private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_saveActionPerformed
+
+    private void txtNombreVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreVisitanteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreVisitanteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -251,6 +266,7 @@ public class RegistroVehiculo extends javax.swing.JDialog {
     private javax.swing.JTextField txtApartamento;
     private javax.swing.JTextField txtNombreVisitante;
     private javax.swing.JTextField txtPlaca;
+    private javax.swing.JTextField txtTarjeta;
     // End of variables declaration//GEN-END:variables
 
     public JButton getBtnCancelar() {
@@ -300,6 +316,12 @@ public class RegistroVehiculo extends javax.swing.JDialog {
     public void setTxtPlaca(JTextField txtPlaca) {
         this.txtPlaca = txtPlaca;
     }
-    
+    public JTextField getTxtTarjeta() {
+        return txtTarjeta;
+    }
+
+    public void setTxtTarjeta(JTextField txtTarjeta) {
+        this.txtTarjeta = txtTarjeta;
+    }
 
 }

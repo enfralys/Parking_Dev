@@ -264,6 +264,8 @@ public class button_control implements ActionListener{
             reg.getTxtNombreVisitante().setEditable(false);
             reg.getTxtApartamento().setText(model.getApto());
             reg.getTxtApartamento().setEditable(false);
+            reg.getTxtTarjeta().setText(model.getTarjeta());
+            reg.getTxtTarjeta().setEditable(false);
             reg.getBtn_save().setVisible(false);
             
         }

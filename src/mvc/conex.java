@@ -82,8 +82,7 @@ public class conex {
             pstmt.setString(2, reg.getTxtNombreVisitante().getText());
             pstmt.setInt(3, puesto);
             pstmt.setString(4, reg.getTxtApartamento().getText());
-            if (puesto==1){ pstmt.setString(5, "9553448"); }
-            else {pstmt.setString(5, String.valueOf(puesto));}
+            pstmt.setString(5, reg.getTxtTarjeta().getText());
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
@@ -134,7 +133,7 @@ public class conex {
                 est.setNombre_invitado(rs.getString("visitante"));
                 est.setPlaca(rs.getString("placa"));
                 est.setPuesto(rs.getInt("puesto"));
-                System.out.println("Puesto: "+rs.getInt("puesto"));
+                est.setTarjeta(rs.getString("tarjeta"));
             }
         } catch (SQLException e) {  e.printStackTrace();}
         return est;
