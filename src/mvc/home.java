@@ -31,29 +31,6 @@ public class home {
         button_control control = new button_control(view, reg, regPea);
       control.Inicio();
         view.setVisible(true);
-    //    Verificador2 obj= new Verificador2(view);
-     //   obj.verifica();
-     /*   Verificador R1 = new Verificador("Verificador",view);
-        R1.start();*/
-    /* String link_name = "parking.sqlite";
-        File dirLog= new File( link_name );
-        System.out.println("Path: " + dirLog.getPath());
-        String canonicalPath = null;
-        try {
-            canonicalPath = dirLog.getCanonicalPath();
-        } catch (IOException ex) {
-            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        System.out.println("Canonical path: " + canonicalPath);
-         System.out.println("\nAbsolute path: " + dirLog.getAbsolutePath());
-        try {
-            System.out.println("Canonical path: " + dirLog.getCanonicalPath());
-        } catch (IOException ex) {
-            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-        }
-  JOptionPane.showMessageDialog(null,"\nAbsolute path: " + dirLog.getAbsolutePath());
-  JOptionPane.showMessageDialog(null,"Canonical path: " + dirLog.getCanonicalPath());
-       */
     }
     
 }
