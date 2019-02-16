@@ -90,6 +90,7 @@ public class conex {
         try {
             pstmt=conn.prepareStatement("insert into peatones (tipo, cedula, nombres , apellidos , apart )values (?,?,?,?,?)");
             pstmt.setInt(1, reg.getCmbTipoPeaton().getSelectedIndex());
+            System.out.println("Tipo: "+reg.getCmbTipoPeaton().getSelectedIndex());
             pstmt.setInt(2, Integer.parseInt(reg.getTxtCedulaPeaton().getText()));
             pstmt.setString(3, reg.getTxtNombrePeaton().getText());
             pstmt.setString(4, reg.getTxtApellidoPeaton().getText());
@@ -258,7 +259,8 @@ public class conex {
                     Registros[2]=rs.getString("apellidos");
                     Registros[3]=rs.getString("apart");
                     if (rs.getInt("tipo")==0){Registros[4]="Visitante";}
-                    else{Registros[4]="Trabajador";}
+                    else if (rs.getInt("tipo")==1){Registros[4]="Visitante";}
+                    else if (rs.getInt("tipo")==2){Registros[4]="Trabajador";}
                     
                     Registros[5]=rs.getString("fechareg");
                     model.addRow(Registros);
