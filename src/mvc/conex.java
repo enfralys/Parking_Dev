@@ -7,6 +7,7 @@ Ult Modificacion: 14/02/2019
 */
 package mvc;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -33,8 +34,8 @@ public class conex {
             Class.forName("com.mysql.jdbc.Driver");
             conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:17770/zkeco_db","root","");
 	} catch (Exception e) {
-        	System.out.println("Error de conexion con la BD");
-		//e.printStackTrace();
+        	//System.out.println("Error de conexion con la BD");
+		e.printStackTrace();
 	}
     }
     //Metodo para cerrar conexion a BD
@@ -43,8 +44,11 @@ public class conex {
             //para sqlite
             //Class.forName("org.sqlite.jdbc");
             Class.forName("org.sqlite.JDBC");
-            conn = DriverManager.getConnection( "jdbc:sqlite:BD.sqlite");
-            System.out.print("Conexion realizada");
+            File miDir = new File (".");
+            String ruta=miDir.getCanonicalPath()+"/parking.sqlite";
+            //System.out.println ("Directorio actual: " + miDir.getCanonicalPath());
+            conn = DriverManager.getConnection( "jdbc:sqlite:"+ruta);
+            //System.out.print("Conexion realizada");
          } catch (Exception e) {e.printStackTrace();}        
     }
     public void desconectar() {
@@ -130,8 +134,8 @@ public class conex {
             pstmt.setInt(1, puesto);
             rs=pstmt.executeQuery();
         } catch (SQLException e) {  e.printStackTrace();
-           if (e.getErrorCode()==0){this.CrearTabla();}
-           if (e.getErrorCode()==1146){this.CrearTabla();}
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
             System.out.println("Error numero: "+e.getErrorCode());
         }    
         try {
@@ -153,8 +157,8 @@ public class conex {
             pstmt.setInt(1, puesto);
             rs=pstmt.executeQuery();
         } catch (SQLException e) {  e.printStackTrace();
-           if (e.getErrorCode()==0){this.CrearTabla();}
-           if (e.getErrorCode()==1146){this.CrearTabla();}
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
             System.out.println("Error numero: "+e.getErrorCode());
         }    
         try {
