@@ -2334,7 +2334,7 @@ public class Main extends javax.swing.JFrame {
 
         tbpMain.addTab("   Peatones          ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones); // NOI18N
 
-        pnlMain.add(tbpMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 12, 1140, 670));
+        pnlMain.add(tbpMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1140, 670));
 
         getContentPane().add(pnlMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1140, 684));
 
@@ -2342,8 +2342,7 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tbpMainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbpMainMouseClicked
-    
-    
+
     }//GEN-LAST:event_tbpMainMouseClicked
 
     private void txtBuscadorPersonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscadorPersonasActionPerformed
@@ -2354,10 +2353,6 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbFiltradoDiaVehiculoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void txtFiltradoFechaFinalVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFiltradoFechaFinalVehiculoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFiltradoFechaFinalVehiculoActionPerformed
@@ -2365,6 +2360,10 @@ public class Main extends javax.swing.JFrame {
     private void txtFiltradoFechaInicialVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFiltradoFechaInicialVehiculoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFiltradoFechaInicialVehiculoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2376,7 +2375,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btgFiltrado;
     private javax.swing.ButtonGroup btgFiltradoVehiculo;
     private javax.swing.JButton btnBuscarDatos;
-    public javax.swing.JButton btnPuesto1;
+    private javax.swing.JButton btnPuesto1;
     private javax.swing.JButton btnPuesto10;
     private javax.swing.JButton btnPuesto100;
     private javax.swing.JButton btnPuesto11;
@@ -2423,7 +2422,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnPuesto49;
     private javax.swing.JButton btnPuesto5;
     private javax.swing.JButton btnPuesto50;
-    public javax.swing.JButton btnPuesto51;
+    private javax.swing.JButton btnPuesto51;
     private javax.swing.JButton btnPuesto52;
     private javax.swing.JButton btnPuesto53;
     private javax.swing.JButton btnPuesto54;

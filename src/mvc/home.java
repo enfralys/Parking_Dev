@@ -24,7 +24,7 @@ public class home {
         RegistroVehiculo reg = new RegistroVehiculo(null, false);
         RegistroPeaton regPea = new RegistroPeaton(null,false);
         button_control control = new button_control(view, reg, regPea);
-        control.Inicio();
+      control.Inicio();
         view.setVisible(true);
     //    Verificador2 obj= new Verificador2(view);
      //   obj.verifica();

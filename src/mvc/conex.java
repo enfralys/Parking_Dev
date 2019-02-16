@@ -44,7 +44,7 @@ public class conex {
             //Class.forName("org.sqlite.jdbc");
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection( "jdbc:sqlite:BD.sqlite");
-          //s  System.out.print("Conexion realizada");
+            System.out.print("Conexion realizada");
          } catch (Exception e) {e.printStackTrace();}        
     }
     public void desconectar() {
@@ -99,7 +99,7 @@ public class conex {
             System.out.println("Tipo: "+reg.getCmbTipoPeaton().getSelectedIndex());
             pstmt.setInt(2, Integer.parseInt(reg.getTxtCedulaPeaton().getText()));
             pstmt.setString(3, reg.getTxtNombrePeaton().getText());
-            pstmt.setString(4, reg.getTxtApellidoPeaton().getText());
+            pstmt.setString(4, reg.getjTextArea1().getText());
             pstmt.setString(5, reg.getTxtAptoAVisitar().getText());
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
