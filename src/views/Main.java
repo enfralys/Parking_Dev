@@ -311,7 +311,7 @@ public class Main extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         txtNombrePeaton5 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        jTextField1 = new JTextFieldHint(new JTextField(),"icons8_Search_32px","Buscar peatón...");
+        txtBuscadorPersonas = new JTextFieldHint(new JTextField(),"icons8_Search_32px","Buscar peatón...");
         btnRegistroPeaton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2303,13 +2303,13 @@ public class Main extends javax.swing.JFrame {
         jLabel12.setText("Buscador");
         jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtBuscadorPersonas.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        txtBuscadorPersonas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtBuscadorPersonasActionPerformed(evt);
             }
         });
-        jPanel11.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 370, -1));
+        jPanel11.add(txtBuscadorPersonas, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 370, -1));
 
         pnlPeatones.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 880, 130));
 
@@ -2337,9 +2337,9 @@ public class Main extends javax.swing.JFrame {
     
     }//GEN-LAST:event_tbpMainMouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtBuscadorPersonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscadorPersonasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtBuscadorPersonasActionPerformed
 
     private void cmbFiltradoDiaVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbFiltradoDiaVehiculoActionPerformed
         // TODO add your handling code here:
@@ -2496,7 +2496,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblConsulta;
     private javax.swing.JLabel lblDatosApartamento;
     private javax.swing.JLabel lblDatosApellido;
@@ -2623,6 +2622,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTable tlbHistorialDatos;
     private javax.swing.JTable tlbHistorialDatos1;
     private javax.swing.JTable tlbHistorialVehiculos;
+    private javax.swing.JTextField txtBuscadorPersonas;
     private javax.swing.JTextField txtBuscarDatos;
     private javax.swing.JTextField txtDatosCodigoUsuario;
     private javax.swing.JFormattedTextField txtFiltradoFechaFinalVehiculo;
@@ -3633,6 +3633,15 @@ public class Main extends javax.swing.JFrame {
     public void setTxtDatosCodigoUsuario(JTextField txtDatosCodigoUsuario) {
         this.txtDatosCodigoUsuario = txtDatosCodigoUsuario;
     }
+    
+    public JTextField getTxtBuscadorPersona() {
+        return txtBuscadorPersonas;
+    }
+
+    public void setTxtBuscadorPersonas(JTextField txtBuscadorPersonas) {
+        this.txtBuscadorPersonas = txtBuscadorPersonas;
+    }
+    
 
     public JButton getBtnPuesto100() {
         return btnPuesto100;
@@ -4409,43 +4418,33 @@ public class Main extends javax.swing.JFrame {
     public void setLblPuesto96(JLabel lblPuesto96) {
         this.lblPuesto96 = lblPuesto96;
     }
-
     public JLabel getLblPuesto97() {
         return lblPuesto97;
     }
-
     public void setLblPuesto97(JLabel lblPuesto97) {
         this.lblPuesto97 = lblPuesto97;
     }
-
     public JLabel getLblPuesto98() {
         return lblPuesto98;
     }
-
     public void setLblPuesto98(JLabel lblPuesto98) {
         this.lblPuesto98 = lblPuesto98;
     }
-
     public JLabel getLblPuesto99() {
         return lblPuesto99;
     }
-
     public void setLblPuesto99(JLabel lblPuesto99) {
         this.lblPuesto99 = lblPuesto99;
     }
-
-
     public JButton getBtnRegistroPeaton() {
         return btnRegistroPeaton;
     }
-
     public void setBtnRegistroPeaton(JButton btnRegistroPeaton) {
         this.btnRegistroPeaton = btnRegistroPeaton;
     }
      public JTable getTlbHistorialDatos1() {
         return tlbHistorialDatos1;
     }
-
     public void setTlbHistorialDatos1(JTable tlbHistorialDatos1) {
         this.tlbHistorialDatos1 = tlbHistorialDatos1;
     }

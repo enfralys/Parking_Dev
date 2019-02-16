@@ -243,12 +243,12 @@ public class conex {
         }
         return tabla;
     }
-    public JTable actTablaPea(JTable tabla){
+    public JTable actTablaPea(JTable tabla, String sql){
         DefaultTableModel model;
         try {
             String [] Titulos={"Cedula","Nombre","Apellido","Apartamento","Tipo","Fecha"};
             String[] Registros= new String[6];
-            pstmt=conn.prepareStatement("select * from  peatones ");
+            pstmt=conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery(); 	
             model = new DefaultTableModel(null,Titulos);
             try{

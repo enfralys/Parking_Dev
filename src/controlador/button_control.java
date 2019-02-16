@@ -9,6 +9,8 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import javax.swing.JOptionPane;
 import mvc.*;
 import views.Main;
@@ -16,9 +18,10 @@ import views.RegistroPeaton;
 import views.RegistroVehiculo;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.JTextField;
 
 
-public class button_control implements ActionListener{
+public class button_control implements ActionListener, KeyListener{
     
     private Main vista = new Main();
     private registro model;
@@ -88,7 +91,7 @@ public class button_control implements ActionListener{
         this.vista.getBtnPuesto49().addActionListener(this);
         this.vista.getBtnPuesto50().addActionListener(this);
         this.vista.getBtnRegistroPeaton().addActionListener(this);
-        
+        this.vista.getTxtBuscadorPersona().addKeyListener(this);
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
@@ -119,6 +122,13 @@ public class button_control implements ActionListener{
         conn.conectarSQLITE();
         vista.setTlbHistorialDatos(conn.CargarTablaConsulta(vista.getTlbHistorialDatos()));
         conn.desconectar();
+        
+        // Actualiza tabla peatones
+        conn.conectarSQLITE(); 
+        vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones"));
+        conn.desconectar(); 
+        
+        
         contador = 0;
     }
     
@@ -213,7 +223,7 @@ public class button_control implements ActionListener{
             if (a==0){ // Si se presiona si se guardan los datos
                 conn.conectarSQLITE(); // conexta a BD sqlite
                 conn.guardarp(regPea); // Llama al metodo guardar en la BD
-                vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1()));
+                vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones"));
                 conn.desconectar(); // desconexta a BD sqlite
                 regPea.dispose(); // cierra la ventana
             } 
@@ -271,5 +281,30 @@ public class button_control implements ActionListener{
         }
        reg.setVisible(true);
     
+    }
+
+    @Override
+    public void keyTyped(KeyEvent ke) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent ke) {
+        String sql="select * from peatones";
+       if (ke.getSource().equals(this.vista.getTxtBuscadorPersona())){
+           JTextField txt= (JTextField) ke.getSource();
+           sql="select * from peatones where nombres LIKE '"+txt.getText()+"%' OR  apellidos LIKE '"+txt.getText()+"%'";
+           conn.conectarSQLITE(); 
+           vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),sql));
+           conn.desconectar(); //
+            
+       }
+       
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent ke) {
+
     }
 }
