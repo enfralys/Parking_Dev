@@ -289,6 +289,7 @@ public class conex {
             //pstmt=conn.prepareStatement("select * from  parking where estado like 'salida'");
             // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
             System.out.println("sqñ "+sql);
+            
             pstmt=conn.prepareStatement(sql);
              //Date miDate = new SimpleDateFormat("dd/MM/yyyy").parse(scanner.nextLine());
              /*

@@ -246,11 +246,17 @@ public class button_control implements ActionListener, KeyListener{
         // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
             int indice=0;
             indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
-            if (indice==0){ sql="select * from  parking "; }
-            else if (indice==1){ sql="select * from  parking where estado like 'entrada' ";  }
-            else if (indice==2){ sql="select * from  parking where estado like 'salida' ";  }
-            else if (indice==3){ sql="select * from  parking where estado like 'infractor' ";  }
-            else { sql="select * from  parking ";}
+            if (indice==0){ sql="select * from  parking where "; }
+            else if (indice==1){ sql="select * from  parking where estado like 'entrada' and  ";  }
+            else if (indice==2){ sql="select * from  parking where estado like 'salida' and  ";  }
+            else if (indice==3){ sql="select * from  parking where estado like 'infractor' and  ";  }
+            else { sql="select * from  parking where ";}
+            String fechaI[]=vista.getTxtFechaInicial().getText().split("/");
+            String fechaF[]=vista.getTxtFechaFinal().getText().split("/");
+            //sql=sql+" fechareg> '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+"'";
+           // sql=sql+" fechareg> {ts '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00.000000000' }";
+             sql=sql+" fechareg >= '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00' ";
+             sql=sql+" and fechareg <= '"+fechaF[2]+"-"+fechaF[1]+"-"+fechaF[0]+" 00:00:00' ";
             conn.conectarSQLITE();
             conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
             conn.desconectar();

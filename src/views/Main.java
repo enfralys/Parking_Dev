@@ -2212,14 +2212,17 @@ public class Main extends javax.swing.JFrame {
         pnlFiltrado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "> Filtrado <", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
         pnlFiltrado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtFiltradoFechaInicialVehiculo.setEditable(false);
         txtFiltradoFechaInicialVehiculo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
         txtFiltradoFechaInicialVehiculo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtFiltradoFechaInicialVehiculo.setText("01/01/2019");
         txtFiltradoFechaInicialVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        txtFiltradoFechaInicialVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFiltradoFechaInicialVehiculoActionPerformed(evt);
+            }
+        });
         pnlFiltrado.add(txtFiltradoFechaInicialVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 100, -1));
 
-        txtFiltradoFechaFinalVehiculo.setEditable(false);
         txtFiltradoFechaFinalVehiculo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
         txtFiltradoFechaFinalVehiculo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtFiltradoFechaFinalVehiculo.setText("01/12/2019");
@@ -2358,6 +2361,10 @@ public class Main extends javax.swing.JFrame {
     private void txtFiltradoFechaFinalVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFiltradoFechaFinalVehiculoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFiltradoFechaFinalVehiculoActionPerformed
+
+    private void txtFiltradoFechaInicialVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFiltradoFechaInicialVehiculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFiltradoFechaInicialVehiculoActionPerformed
 
     /**
      * @param args the command line arguments
