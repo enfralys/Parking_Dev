@@ -150,6 +150,7 @@ public class Main extends javax.swing.JFrame {
         lblPuesto14 = new javax.swing.JLabel();
         lblPuesto13 = new javax.swing.JLabel();
         btnPuesto14 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         pnlMoto = new plugins.CustomPanelMoto();
         btnPuesto51 = new javax.swing.JButton();
         lblPuesto51 = new javax.swing.JLabel();
@@ -294,10 +295,8 @@ public class Main extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tlbHistorialVehiculos = new javax.swing.JTable();
         pnlFiltrado = new javax.swing.JPanel();
-        rbFiltradoDelVehiculo = new javax.swing.JRadioButton();
         txtFiltradoFechaInicialVehiculo = new javax.swing.JFormattedTextField();
         txtFiltradoFechaFinalVehiculo = new javax.swing.JFormattedTextField();
-        rbFiltradoRangoVehiculo = new javax.swing.JRadioButton();
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
         cmbFiltradoDiaVehiculo = new javax.swing.JComboBox<>();
@@ -310,22 +309,10 @@ public class Main extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         tlbHistorialDatos1 = new javax.swing.JTable();
         jPanel11 = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        lblNombrePeaton = new javax.swing.JLabel();
-        txtNombrePeaton = new javax.swing.JTextField();
-        lblNombrePeaton1 = new javax.swing.JLabel();
-        txtNombrePeaton1 = new javax.swing.JTextField();
-        lblNombrePeaton2 = new javax.swing.JLabel();
-        txtNombrePeaton2 = new javax.swing.JTextField();
-        lblNombrePeaton3 = new javax.swing.JLabel();
-        txtNombrePeaton3 = new javax.swing.JTextField();
-        lblNombrePeaton5 = new javax.swing.JLabel();
         txtNombrePeaton5 = new javax.swing.JTextField();
-        btnEditarDatosPeaton = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         jTextField1 = new JTextFieldHint(new JTextField(),"icons8_Search_32px","Buscar peatón...");
         btnRegistroPeaton = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -1170,6 +1157,15 @@ public class Main extends javax.swing.JFrame {
         btnPuesto14.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
         btnPuesto14.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
         pnlAuto.add(btnPuesto14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 184, -1, 60));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/039-key-1.png"))); // NOI18N
+        jButton1.setActionCommand("Configs");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        pnlAuto.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 10, 40, -1));
 
         tbdPaneVehicles.addTab("Automóviles", new javax.swing.ImageIcon(getClass().getResource("/images/042-parking-area-tab.png")), pnlAuto); // NOI18N
 
@@ -2215,11 +2211,6 @@ public class Main extends javax.swing.JFrame {
         pnlFiltrado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "> Filtrado <", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
         pnlFiltrado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btgFiltradoVehiculo.add(rbFiltradoDelVehiculo);
-        rbFiltradoDelVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        rbFiltradoDelVehiculo.setText("Del");
-        pnlFiltrado.add(rbFiltradoDelVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
-
         txtFiltradoFechaInicialVehiculo.setEditable(false);
         txtFiltradoFechaInicialVehiculo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
         txtFiltradoFechaInicialVehiculo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2234,11 +2225,6 @@ public class Main extends javax.swing.JFrame {
         txtFiltradoFechaFinalVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         pnlFiltrado.add(txtFiltradoFechaFinalVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 100, -1));
 
-        btgFiltradoVehiculo.add(rbFiltradoRangoVehiculo);
-        rbFiltradoRangoVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        rbFiltradoRangoVehiculo.setText("Por Rango");
-        pnlFiltrado.add(rbFiltradoRangoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
-
         jLabel53.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel53.setText("Desde:");
         pnlFiltrado.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
@@ -2248,10 +2234,15 @@ public class Main extends javax.swing.JFrame {
         pnlFiltrado.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
 
         cmbFiltradoDiaVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        cmbFiltradoDiaVehiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día", "Día Anterior", "Mes", "Mes Anterior" }));
-        pnlFiltrado.add(cmbFiltradoDiaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 90, -1));
+        cmbFiltradoDiaVehiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Entrada", "Salida", "Infractores" }));
+        cmbFiltradoDiaVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbFiltradoDiaVehiculoActionPerformed(evt);
+            }
+        });
+        pnlFiltrado.add(cmbFiltradoDiaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 240, -1));
 
-        jPanel7.add(pnlFiltrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 800, 120));
+        jPanel7.add(pnlFiltrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 800, 120));
 
         lblHistorialVehiculos.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblHistorialVehiculos.setForeground(new java.awt.Color(153, 153, 0));
@@ -2268,7 +2259,7 @@ public class Main extends javax.swing.JFrame {
         pnlPeatones.setBackground(new java.awt.Color(255, 255, 255));
         pnlPeatones.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         pnlPeatones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        pnlPeatones.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 960, 10));
+        pnlPeatones.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 960, 90));
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -2295,102 +2286,42 @@ public class Main extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(tlbHistorialDatos1);
 
-        jPanel9.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 880, 240));
+        jPanel9.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 880, 320));
 
-        pnlPeatones.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 880, 300));
+        pnlPeatones.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 880, 380));
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Datos del Peatón");
-        jPanel12.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 5, 820, -1));
-
-        jPanel11.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 820, 30));
-
-        lblNombrePeaton.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        lblNombrePeaton.setText("Tipo:");
-        jPanel11.add(lblNombrePeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
-
-        txtNombrePeaton.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombrePeaton.setBorder(null);
-        jPanel11.add(txtNombrePeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 180, 30));
-
-        lblNombrePeaton1.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        lblNombrePeaton1.setText("Cédula:");
-        lblNombrePeaton1.setToolTipText("");
-        jPanel11.add(lblNombrePeaton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
-
-        txtNombrePeaton1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton1.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombrePeaton1.setBorder(null);
-        jPanel11.add(txtNombrePeaton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 180, 30));
-
-        lblNombrePeaton2.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        lblNombrePeaton2.setText("Apellidos:");
-        jPanel11.add(lblNombrePeaton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, -1, -1));
-
-        txtNombrePeaton2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton2.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombrePeaton2.setBorder(null);
-        jPanel11.add(txtNombrePeaton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 180, 30));
-
-        lblNombrePeaton3.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        lblNombrePeaton3.setText("Nombres:");
-        jPanel11.add(lblNombrePeaton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
-
-        txtNombrePeaton3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton3.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombrePeaton3.setBorder(null);
-        jPanel11.add(txtNombrePeaton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 180, 30));
-
-        lblNombrePeaton5.setBackground(new java.awt.Color(0, 0, 0));
-        lblNombrePeaton5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        lblNombrePeaton5.setText("Nº de Apartamento:");
-        jPanel11.add(lblNombrePeaton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, -1, -1));
 
         txtNombrePeaton5.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         txtNombrePeaton5.setForeground(new java.awt.Color(153, 153, 153));
         txtNombrePeaton5.setBorder(null);
         jPanel11.add(txtNombrePeaton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
 
-        btnEditarDatosPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        btnEditarDatosPeaton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-32.png"))); // NOI18N
-        btnEditarDatosPeaton.setText("Editar Datos");
-        btnEditarDatosPeaton.setBorder(null);
-        btnEditarDatosPeaton.setBorderPainted(false);
-        btnEditarDatosPeaton.setContentAreaFilled(false);
-        btnEditarDatosPeaton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-42.png"))); // NOI18N
-        btnEditarDatosPeaton.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-42.png"))); // NOI18N
-        jPanel11.add(btnEditarDatosPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, -1, -1));
-
-        pnlPeatones.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 880, 220));
+        jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel12.setText("Buscador");
+        jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
 
         jTextField1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        pnlPeatones.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 370, -1));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel11.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 370, -1));
+
+        pnlPeatones.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 880, 130));
 
         btnRegistroPeaton.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btnRegistroPeaton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-20.png"))); // NOI18N
-        btnRegistroPeaton.setText("Registrar Peatón");
+        btnRegistroPeaton.setText("Registro Nuevo");
         btnRegistroPeaton.setBorder(null);
         btnRegistroPeaton.setBorderPainted(false);
         btnRegistroPeaton.setContentAreaFilled(false);
         btnRegistroPeaton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-30.png"))); // NOI18N
         btnRegistroPeaton.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-30.png"))); // NOI18N
-        pnlPeatones.add(btnRegistroPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel12.setText("Buscador");
-        pnlPeatones.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, -1, -1));
+        pnlPeatones.add(btnRegistroPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
 
         tbpMain.addTab("   Peatones          ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones); // NOI18N
 
@@ -2406,6 +2337,18 @@ public class Main extends javax.swing.JFrame {
     
     }//GEN-LAST:event_tbpMainMouseClicked
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void cmbFiltradoDiaVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbFiltradoDiaVehiculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbFiltradoDiaVehiculoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2416,7 +2359,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btgFiltrado;
     private javax.swing.ButtonGroup btgFiltradoVehiculo;
     private javax.swing.JButton btnBuscarDatos;
-    private javax.swing.JButton btnEditarDatosPeaton;
     public javax.swing.JButton btnPuesto1;
     private javax.swing.JButton btnPuesto10;
     private javax.swing.JButton btnPuesto100;
@@ -2520,9 +2462,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnRegistroPeaton;
     private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox<String> cmbFiltradoDiaVehiculo;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -2543,7 +2485,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2568,11 +2509,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lblDatosTarjeta;
     private javax.swing.JLabel lblDatosTorre;
     private javax.swing.JLabel lblHistorialVehiculos;
-    private javax.swing.JLabel lblNombrePeaton;
-    private javax.swing.JLabel lblNombrePeaton1;
-    private javax.swing.JLabel lblNombrePeaton2;
-    private javax.swing.JLabel lblNombrePeaton3;
-    private javax.swing.JLabel lblNombrePeaton5;
     private javax.swing.JLabel lblPuesto1;
     private javax.swing.JLabel lblPuesto10;
     private javax.swing.JLabel lblPuesto100;
@@ -2682,8 +2618,6 @@ public class Main extends javax.swing.JFrame {
     private plugins.CustomPanelMoto pnlMoto;
     private javax.swing.JPanel pnlPeatones;
     private javax.swing.JPanel pnlTitle;
-    private javax.swing.JRadioButton rbFiltradoDelVehiculo;
-    private javax.swing.JRadioButton rbFiltradoRangoVehiculo;
     private org.matrix.BlackTabbedPane tbdPaneVehicles;
     private org.matrix.BlackTabbedPane tbpMain;
     private javax.swing.JTable tlbHistorialDatos;
@@ -2693,10 +2627,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField txtDatosCodigoUsuario;
     private javax.swing.JFormattedTextField txtFiltradoFechaFinalVehiculo;
     private javax.swing.JFormattedTextField txtFiltradoFechaInicialVehiculo;
-    private javax.swing.JTextField txtNombrePeaton;
-    private javax.swing.JTextField txtNombrePeaton1;
-    private javax.swing.JTextField txtNombrePeaton2;
-    private javax.swing.JTextField txtNombrePeaton3;
     private javax.swing.JTextField txtNombrePeaton5;
     // End of variables declaration//GEN-END:variables
 
@@ -3108,22 +3038,6 @@ public class Main extends javax.swing.JFrame {
 
     public void setPnlTitle(JPanel pnlTitle) {
         this.pnlTitle = pnlTitle;
-    }
-
-    public JRadioButton getRbDel() {
-        return rbFiltradoDelVehiculo;
-    }
-
-    public void setRbDel(JRadioButton rbDel) {
-        this.rbFiltradoDelVehiculo = rbDel;
-    }
-
-    public JRadioButton getRbRango() {
-        return rbFiltradoRangoVehiculo;
-    }
-
-    public void setRbRango(JRadioButton rbRango) {
-        this.rbFiltradoRangoVehiculo = rbRango;
     }
 
     public BlackTabbedPane getTbdPaneVehicles() {
@@ -3582,21 +3496,7 @@ public class Main extends javax.swing.JFrame {
         this.cmbFiltradoDiaVehiculo = cmbFiltradoDiaVehiculo;
     }
     
-    public JRadioButton getRbFiltradoDelVehiculo() {
-        return rbFiltradoDelVehiculo;
-    }
-
-    public void setRbFiltradoDelVehiculo(JRadioButton rbFiltradoDelVehiculo) {
-        this.rbFiltradoDelVehiculo = rbFiltradoDelVehiculo;
-    }
-
-    public JRadioButton getRbFiltradoRangoVehiculo() {
-        return rbFiltradoRangoVehiculo;
-    }
-
-    public void setRbFiltradoRangoVehiculo(JRadioButton rbFiltradoRangoVehiculo) {
-        this.rbFiltradoRangoVehiculo = rbFiltradoRangoVehiculo;
-    }
+ 
 
     public JTable getTlbHistorialVehiculos() {
         return tlbHistorialVehiculos;
@@ -4534,13 +4434,6 @@ public class Main extends javax.swing.JFrame {
         this.lblPuesto99 = lblPuesto99;
     }
 
-    public JButton getBtnEditarDatosPeaton() {
-        return btnEditarDatosPeaton;
-    }
-
-    public void setBtnEditarDatosPeaton(JButton btnEditarDatosPeaton) {
-        this.btnEditarDatosPeaton = btnEditarDatosPeaton;
-    }
 
     public JButton getBtnRegistroPeaton() {
         return btnRegistroPeaton;
