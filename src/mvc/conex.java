@@ -174,9 +174,9 @@ public class conex {
             pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada'");
             rs=pstmt.executeQuery();
         } catch (SQLException e) {  e.printStackTrace();
-           if (e.getErrorCode()==0){this.CrearTabla();}
-           if (e.getErrorCode()==1146){this.CrearTabla();}
-           System.out.println("Error numero: "+e.getErrorCode());
+           if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           
         }    
         return rs;
     }
