@@ -2221,8 +2221,13 @@ public class Main extends javax.swing.JFrame {
         txtFiltradoFechaFinalVehiculo.setEditable(false);
         txtFiltradoFechaFinalVehiculo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
         txtFiltradoFechaFinalVehiculo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFiltradoFechaFinalVehiculo.setText("01/01/2019");
+        txtFiltradoFechaFinalVehiculo.setText("01/12/2019");
         txtFiltradoFechaFinalVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        txtFiltradoFechaFinalVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFiltradoFechaFinalVehiculoActionPerformed(evt);
+            }
+        });
         pnlFiltrado.add(txtFiltradoFechaFinalVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 100, -1));
 
         jLabel53.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -2348,6 +2353,10 @@ public class Main extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtFiltradoFechaFinalVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFiltradoFechaFinalVehiculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFiltradoFechaFinalVehiculoActionPerformed
 
     /**
      * @param args the command line arguments

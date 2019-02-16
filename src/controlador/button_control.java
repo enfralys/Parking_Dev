@@ -92,6 +92,7 @@ public class button_control implements ActionListener, KeyListener{
         this.vista.getBtnPuesto50().addActionListener(this);
         this.vista.getBtnRegistroPeaton().addActionListener(this);
         this.vista.getTxtBuscadorPersona().addKeyListener(this);
+        this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
@@ -100,7 +101,7 @@ public class button_control implements ActionListener, KeyListener{
         
         
         
-   //     this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
+      
         
     }
     
@@ -144,7 +145,7 @@ public class button_control implements ActionListener, KeyListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        String sql;
         if (e.getSource() == vista.getBtnSalir()) { System.exit(0); }   
         
         if (contador == 0){
@@ -241,18 +242,16 @@ public class button_control implements ActionListener, KeyListener{
         if (e.getSource() == vista.getCmbFiltradoDiaVehiculo()){
         
         // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
-        
-        String valor=(String) vista.getCmbFiltradoDiaVehiculo().getSelectedItem();
-        
-        if (valor.equals("Día")){
+            int indice=0;
+            indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
+            if (indice==0){ sql="select * from  parking"; }
+            else if (indice==1){ sql="select * from  parking where estado like 'entrada' ";  }
+            else if (indice==2){ sql="select * from  parking where estado like 'salida' ";  }
+            else if (indice==3){ sql="select * from  parking where estado like 'infractor' ";  }
+            else { sql="select * from  parking";}
             conn.conectarSQLITE();
-            conn.ActTabla(1, vista.getTlbHistorialVehiculos());
+            conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
             conn.desconectar();
-        }
-        if (valor.equals("Día Anterior")){}
-        if (valor.equals("Mes")){}
-        if (valor.equals("Mes Anterior")){}
-             
         }
          
 

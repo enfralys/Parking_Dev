@@ -273,14 +273,15 @@ public class conex {
         }
         return tabla;
     }
-    public void ActTabla(int i, JTable tlbHistorialVehiculos) {
+    public void ActTabla(int i, JTable tlbHistorialVehiculos,String sql) {
         DefaultTableModel model;
         try {
             String [] Titulos={"Tarjeta","Tipo","Placa","Apartamento","Estado","Fecha"};
             String[] Registros= new String[6];
             //pstmt=conn.prepareStatement("select * from  parking where estado like 'salida'");
             // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
-            pstmt=conn.prepareStatement("select * from  parking where fechareg>=?");
+            System.out.println("sqñ "+sql);
+            pstmt=conn.prepareStatement(sql);
              //Date miDate = new SimpleDateFormat("dd/MM/yyyy").parse(scanner.nextLine());
              /*
         
@@ -295,24 +296,24 @@ DateFormat hourdateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
 System.out.println("Hora y fecha: "+hourdateFormat.format(date));
         
         */
-           Date date = new Date();
+         //  Date date = new Date();
             //DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            DateFormat dia = new SimpleDateFormat("dd");
-            DateFormat mes = new SimpleDateFormat("MM");
-            DateFormat anio = new SimpleDateFormat("yyyy");
-            System.out.println(dateFormat.format(date));
-            pstmt.setString(1, dateFormat.format(date));
+          //  DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+         //   DateFormat dia = new SimpleDateFormat("dd");
+         //   DateFormat mes = new SimpleDateFormat("MM");
+         //   DateFormat anio = new SimpleDateFormat("yyyy");
+           // System.out.println(dateFormat.format(date));
+          //  pstmt.setString(1, dateFormat.format(date));
             ResultSet rs = pstmt.executeQuery(); 	
             model = new DefaultTableModel(null,Titulos);
             try{
                 while(rs.next()){
                     Registros[0]=rs.getString("tarjeta");
-                    Registros[1]=rs.getString("puesto");
+                    Registros[1]="Vehiculo";
                     Registros[2]=rs.getString("placa");
                     Registros[3]=rs.getString("apart");
-                    Registros[4]=rs.getString("puesto");
-                    Registros[5]=rs.getString("visitante");
+                    Registros[4]=rs.getString("estado");
+                    Registros[5]=rs.getString("fechareg");
                     model.addRow(Registros);
                 }
             }catch(SQLException e){ 
