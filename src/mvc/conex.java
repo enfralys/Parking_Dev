@@ -8,6 +8,7 @@ Ult Modificacion: 14/02/2019
 package mvc;
 
 import java.io.File;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -18,6 +19,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -43,11 +46,22 @@ public class conex {
         try {
             //para sqlite
             //Class.forName("org.sqlite.jdbc");
+            String link_name = "parking.sqlite";
+        File dirLog= new File( link_name );
+    //    System.out.println("Path: " + dirLog.getPath());
+        String canonicalPath = null;
+        try {
+            canonicalPath = dirLog.getCanonicalPath();
+        } catch (IOException ex) {
+            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+ 
             Class.forName("org.sqlite.JDBC");
-            File miDir = new File (".");
-            String ruta=miDir.getCanonicalPath()+"/parking.sqlite";
+          //  File miDir = new File (".");
+          //  String ruta=miDir.getCanonicalPath()+"/parking.sqlite";
             //System.out.println ("Directorio actual: " + miDir.getCanonicalPath());
-            conn = DriverManager.getConnection( "jdbc:sqlite:"+ruta);
+            //conn = DriverManager.getConnection( "jdbc:sqlite:"+canonicalPath);
+            conn = DriverManager.getConnection( "jdbc:sqlite:parking.sqlite");
             //System.out.print("Conexion realizada");
          } catch (Exception e) {e.printStackTrace();}        
     }

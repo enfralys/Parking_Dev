@@ -106,17 +106,9 @@ public class button_control implements ActionListener, KeyListener{
     }
     
     public void Inicio(){
-     //   System.err.println("1");
-        Temporizador timerTask = new Temporizador(this.vista);
-      //  System.err.println("2");
-        Timer timer = new Timer(); 
-       // System.err.println("3");
-        timer.scheduleAtFixedRate(timerTask, 0, 3000);
-      //  System.err.println("4");
+      
         vista.setLocationRelativeTo(null);
-      //   System.err.println("5");
         conn.conectarSQLITE();
-      //   System.err.println("6");
             for (int i=1; i<51;i++){
                 model=conn.consultar(i);
                 if (model.getPuesto()==i){vista.ocupado(i);  }
@@ -137,6 +129,9 @@ public class button_control implements ActionListener, KeyListener{
         
         
         contador = 0;
+          Temporizador timerTask = new Temporizador(this.vista);
+        Timer timer = new Timer(); 
+        timer.scheduleAtFixedRate(timerTask, 0, 3000);
     }
     
     public void InicioReg(){
