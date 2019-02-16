@@ -244,11 +244,11 @@ public class button_control implements ActionListener, KeyListener{
         // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
             int indice=0;
             indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
-            if (indice==0){ sql="select * from  parking"; }
+            if (indice==0){ sql="select * from  parking "; }
             else if (indice==1){ sql="select * from  parking where estado like 'entrada' ";  }
             else if (indice==2){ sql="select * from  parking where estado like 'salida' ";  }
             else if (indice==3){ sql="select * from  parking where estado like 'infractor' ";  }
-            else { sql="select * from  parking";}
+            else { sql="select * from  parking ";}
             conn.conectarSQLITE();
             conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
             conn.desconectar();
@@ -292,7 +292,7 @@ public class button_control implements ActionListener, KeyListener{
         String sql="select * from peatones";
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona())){
            JTextField txt= (JTextField) ke.getSource();
-           sql="select * from peatones where nombres LIKE '"+txt.getText()+"%' OR  apellidos LIKE '"+txt.getText()+"%'";
+           sql="select * from peatones where apart LIKE '"+txt.getText()+"%' ";
            conn.conectarSQLITE(); 
            vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),sql));
            conn.desconectar(); //
