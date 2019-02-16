@@ -42,6 +42,7 @@ public class Main extends javax.swing.JFrame {
 
         btgFiltrado = new javax.swing.ButtonGroup();
         btgFiltradoVehiculo = new javax.swing.ButtonGroup();
+        jCalendarBeanInfo1 = new com.toedter.calendar.JCalendarBeanInfo();
         pnlTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
@@ -2211,18 +2212,26 @@ public class Main extends javax.swing.JFrame {
         pnlFiltrado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "> Filtrado <", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Century Gothic", 1, 14))); // NOI18N
         pnlFiltrado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtFiltradoFechaInicialVehiculo.setEditable(false);
         txtFiltradoFechaInicialVehiculo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
         txtFiltradoFechaInicialVehiculo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtFiltradoFechaInicialVehiculo.setText("01/01/2019");
         txtFiltradoFechaInicialVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        txtFiltradoFechaInicialVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFiltradoFechaInicialVehiculoActionPerformed(evt);
+            }
+        });
         pnlFiltrado.add(txtFiltradoFechaInicialVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 100, -1));
 
-        txtFiltradoFechaFinalVehiculo.setEditable(false);
         txtFiltradoFechaFinalVehiculo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
         txtFiltradoFechaFinalVehiculo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFiltradoFechaFinalVehiculo.setText("01/01/2019");
+        txtFiltradoFechaFinalVehiculo.setText("01/12/2019");
         txtFiltradoFechaFinalVehiculo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        txtFiltradoFechaFinalVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFiltradoFechaFinalVehiculoActionPerformed(evt);
+            }
+        });
         pnlFiltrado.add(txtFiltradoFechaFinalVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 100, -1));
 
         jLabel53.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -2325,7 +2334,7 @@ public class Main extends javax.swing.JFrame {
 
         tbpMain.addTab("   Peatones          ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones); // NOI18N
 
-        pnlMain.add(tbpMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 12, 1140, 670));
+        pnlMain.add(tbpMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1140, 670));
 
         getContentPane().add(pnlMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1140, 684));
 
@@ -2333,8 +2342,7 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tbpMainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbpMainMouseClicked
-    
-    
+
     }//GEN-LAST:event_tbpMainMouseClicked
 
     private void txtBuscadorPersonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscadorPersonasActionPerformed
@@ -2344,6 +2352,14 @@ public class Main extends javax.swing.JFrame {
     private void cmbFiltradoDiaVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbFiltradoDiaVehiculoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbFiltradoDiaVehiculoActionPerformed
+
+    private void txtFiltradoFechaFinalVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFiltradoFechaFinalVehiculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFiltradoFechaFinalVehiculoActionPerformed
+
+    private void txtFiltradoFechaInicialVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFiltradoFechaInicialVehiculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFiltradoFechaInicialVehiculoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -2359,7 +2375,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btgFiltrado;
     private javax.swing.ButtonGroup btgFiltradoVehiculo;
     private javax.swing.JButton btnBuscarDatos;
-    public javax.swing.JButton btnPuesto1;
+    private javax.swing.JButton btnPuesto1;
     private javax.swing.JButton btnPuesto10;
     private javax.swing.JButton btnPuesto100;
     private javax.swing.JButton btnPuesto11;
@@ -2406,7 +2422,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnPuesto49;
     private javax.swing.JButton btnPuesto5;
     private javax.swing.JButton btnPuesto50;
-    public javax.swing.JButton btnPuesto51;
+    private javax.swing.JButton btnPuesto51;
     private javax.swing.JButton btnPuesto52;
     private javax.swing.JButton btnPuesto53;
     private javax.swing.JButton btnPuesto54;
@@ -2463,6 +2479,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox<String> cmbFiltradoDiaVehiculo;
     private javax.swing.JButton jButton1;
+    private com.toedter.calendar.JCalendarBeanInfo jCalendarBeanInfo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
