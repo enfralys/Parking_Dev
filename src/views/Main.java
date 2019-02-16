@@ -42,6 +42,7 @@ public class Main extends javax.swing.JFrame {
 
         btgFiltrado = new javax.swing.ButtonGroup();
         btgFiltradoVehiculo = new javax.swing.ButtonGroup();
+        jCalendarBeanInfo1 = new com.toedter.calendar.JCalendarBeanInfo();
         pnlTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
@@ -2472,6 +2473,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox<String> cmbFiltradoDiaVehiculo;
     private javax.swing.JButton jButton1;
+    private com.toedter.calendar.JCalendarBeanInfo jCalendarBeanInfo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;

@@ -199,8 +199,7 @@ public class button_control implements ActionListener, KeyListener{
             if (e.getSource() == vista.getBtnPuesto48()) { this.actPuesto(48);}
             if (e.getSource() == vista.getBtnPuesto49()) { this.actPuesto(49);}
             if (e.getSource() == vista.getBtnPuesto50()) { this.actPuesto(50);}
-            
-        }
+        }    
         
         if (e.getSource() == vista.getBtnRegistroPeaton()){
             regPea = new RegistroPeaton(vista, true);
@@ -208,27 +207,30 @@ public class button_control implements ActionListener, KeyListener{
             control.InicioRegPea();
             regPea.setVisible(true);
         }
-        
-        if (e.getSource() == reg.getBtn_save()) {
-            int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
-            if (a==0){ // Si se presiona si se guardan los datos
-                conn.conectarSQLITE(); // conexta a BD sqlite
-                conn.guardar(reg,reg.puesto); // Llama al metodo guardar en la BD
-                conn.desconectar(); // desconexta a BD sqlite
-                vista.ocupado(reg.puesto); // cambia icono del puesto
-                reg.dispose(); // cierra la ventana
-            } 
-        }
-        if (e.getSource() == regPea.getBtn_save()) {
-            int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
-            if (a==0){ // Si se presiona si se guardan los datos
-                conn.conectarSQLITE(); // conexta a BD sqlite
-                conn.guardarp(regPea); // Llama al metodo guardar en la BD
-                vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones"));
-                conn.desconectar(); // desconexta a BD sqlite
-                regPea.dispose(); // cierra la ventana
-            } 
-        }
+      //  if (contador == 0){
+            if (e.getSource() == reg.getBtn_save()) {
+                int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
+                if (a==0){ // Si se presiona si se guardan los datos
+                    conn.conectarSQLITE(); // conexta a BD sqlite
+                    conn.guardar(reg,reg.puesto); // Llama al metodo guardar en la BD
+                    conn.desconectar(); // desconexta a BD sqlite
+                    vista.ocupado(reg.puesto); // cambia icono del puesto
+                    reg.dispose(); // cierra la ventana
+                } 
+            }
+       // }
+       // if (contador == 0){
+            if (e.getSource() == regPea.getBtn_save()) {
+                int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
+                if (a==0){ // Si se presiona si se guardan los datos
+                    conn.conectarSQLITE(); // conexta a BD sqlite
+                    conn.guardarp(regPea); // Llama al metodo guardar en la BD
+                    vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones"));
+                    conn.desconectar(); // desconexta a BD sqlite
+                    regPea.dispose(); // cierra la ventana
+                } 
+            }
+       // }
         if (e.getSource() == reg.getBtnCancelar()){
             if (contador != 0){ reg.dispose(); } 
         }
@@ -253,7 +255,7 @@ public class button_control implements ActionListener, KeyListener{
             conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
             conn.desconectar();
         }
-         
+        
 
     }  
     

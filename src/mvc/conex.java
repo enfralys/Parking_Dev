@@ -12,8 +12,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -61,7 +63,7 @@ public class conex {
     public void CrearTabla() {
         String sql;
         try {
-            sql="CREATE TABLE parking ( placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL, fechareg DATETIME DEFAULT CURRENT_TIMESTAMP)";
+            sql="CREATE TABLE parking ( placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
@@ -76,13 +78,17 @@ public class conex {
         }
     }
     public void guardar(RegistroVehiculo reg, int puesto) {
+        Date date = new Date();
         try {
-            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado) values (?,?,?,?,?,'entrada')");
+            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg) values (?,?,?,?,?,'entrada', datetime('now','localtime'))");
             pstmt.setString(1, reg.getTxtPlaca().getText());
             pstmt.setString(2, reg.getTxtNombreVisitante().getText());
             pstmt.setInt(3, puesto);
             pstmt.setString(4, reg.getTxtApartamento().getText());
             pstmt.setString(5, reg.getTxtTarjeta().getText());
+ //           pstmt.setTimestamp(6, date);
+           // Timestamp ts= new Timestamp();
+           // pstmt.setTimestamp(6, ));
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
@@ -100,7 +106,7 @@ public class conex {
     }
     public void salida(RegistroVehiculo reg, int puesto) {
         try {
-            pstmt=conn.prepareStatement("update parking set estado='salida' where puesto=? and estado like 'entrada'");
+            pstmt=conn.prepareStatement("update parking set estado='salida' , set fechareg=datetime('now','localtime') where puesto=? and estado like 'entrada'");
             pstmt.setString(1, reg.getTxtPlaca().getText());
             pstmt.setString(2, reg.getTxtNombreVisitante().getText());
             pstmt.setInt(3, puesto);
@@ -190,7 +196,7 @@ public class conex {
     public JTable CargarTablaHistorias(JTable tabla){
         DefaultTableModel model;
         try {
-            String [] Titulos={"Puesto","Tarjeta","Placa","Apartamento","Estado","Fecha"};
+            String [] Titulos={"Puesto","Visitante","Placa","Apartamento","Estado","Fecha"};
             String[] Registros= new String[6];
             pstmt=conn.prepareStatement("select * from  parking ");
             //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada'");
@@ -199,7 +205,7 @@ public class conex {
             try{
                 while(rs.next()){
                     Registros[0]=rs.getString("puesto");
-                    Registros[1]=rs.getString("tarjeta");
+                    Registros[1]=rs.getString("visitante");
                     Registros[2]=rs.getString("placa");
                     Registros[3]=rs.getString("apart");
                     Registros[4]=rs.getString("estado");
@@ -299,6 +305,8 @@ System.out.println("Hora y fecha: "+hourdateFormat.format(date));
         
         */
          //  Date date = new Date();
+         
+//            Timestamp TIEMPO=new Timestamp();
             //DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
           //  DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
          //   DateFormat dia = new SimpleDateFormat("dd");
