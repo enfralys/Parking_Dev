@@ -28,6 +28,7 @@ public class button_control implements ActionListener, KeyListener{
     private RegistroVehiculo reg;
     private RegistroPeaton regPea;
     private int contador = 0;
+    private String pass = "controladmin2021";
     private final conex conn;
     
     @SuppressWarnings("LeakingThisInConstructor")
@@ -293,21 +294,18 @@ public class button_control implements ActionListener, KeyListener{
 
     @Override
     public void keyPressed(KeyEvent ke) {
-        String sql="select * from peatones";
+        
+    }
+
+    @Override
+    public void keyReleased(KeyEvent ke) {
+       String sql="select * from peatones";
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona())){
            JTextField txt= (JTextField) ke.getSource();
            sql="select * from peatones where apart LIKE '"+txt.getText()+"%' ";
            conn.conectarSQLITE(); 
            vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),sql));
            conn.desconectar(); //
-            
        }
-       
-
-    }
-
-    @Override
-    public void keyReleased(KeyEvent ke) {
-
     }
 }
