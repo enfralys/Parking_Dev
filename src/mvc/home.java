@@ -15,15 +15,8 @@ import views.Main;
 import views.RegistroPeaton;
 import views.RegistroVehiculo;
 
-/**
- *
- * @author Ris3TwO
- */
+// Clase Principal
 public class home {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) throws IOException {
        Main view = new Main();
         RegistroVehiculo reg = new RegistroVehiculo(null, false);

@@ -2,8 +2,8 @@
 Clase Controladora
 Funcion: control de los botones de menu principal y registro de vehiculos
 Autor: 
-Creacion: 
-Ult Modificacion: 16/01/2019
+Creacion: 16/01/2019
+Ult Modificacion: 16/02/2019
 */
 package controlador;
 
@@ -98,11 +98,6 @@ public class button_control implements ActionListener, KeyListener{
         this.reg.getBtnCancelar().addActionListener(this);
         this.regPea.getBtn_save().addActionListener(this);
         this.regPea.getBtnCancelar().addActionListener(this);
-        
-        
-        
-      
-        
     }
     
     public void Inicio(){
@@ -129,7 +124,7 @@ public class button_control implements ActionListener, KeyListener{
         
         
         contador = 0;
-          Temporizador timerTask = new Temporizador(this.vista);
+        Temporizador timerTask = new Temporizador(this.vista);
         Timer timer = new Timer(); 
         timer.scheduleAtFixedRate(timerTask, 0, 3000);
     }
