@@ -214,8 +214,8 @@ public class button_control implements ActionListener, KeyListener{
         
         if (e.getSource() == vista.getBtnRegistroPeaton()){
             regPea = new RegistroPeaton(vista, true);
-            control = new button_control(vista,reg,regPea, regT);
-            control.InicioRegPea();
+            CRPeaton controlador = new CRPeaton(vista,regPea);
+            controlador.InicioRegPea();
             regPea.setVisible(true);
         }
       //  if (contador == 0){

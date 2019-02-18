@@ -44,6 +44,7 @@ public class Temporizador extends TimerTask{
                    if (c.salidas().equals(tarjeta)) {
                         d.salida(puesto);
                         Vista.desocupado(puesto);
+                        c.newsalida();
                     }
                 }
                 d.desconectar();

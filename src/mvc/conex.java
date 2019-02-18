@@ -310,4 +310,10 @@ public class conex {
         }
       //  return tabla;
     }
+    public void newsalida() {
+        try {
+            pstmt=conn.prepareStatement("insert into  acc_monitor_log (card_no) values ('0')");
+            pstmt.execute();
+        } catch (SQLException e) {  e.printStackTrace();}
+    }
 }
