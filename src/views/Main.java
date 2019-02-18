@@ -151,7 +151,7 @@ public class Main extends javax.swing.JFrame {
         lblPuesto14 = new javax.swing.JLabel();
         lblPuesto13 = new javax.swing.JLabel();
         btnPuesto14 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        BtnTarjetas = new javax.swing.JButton();
         pnlMoto = new plugins.CustomPanelMoto();
         btnPuesto51 = new javax.swing.JButton();
         lblPuesto51 = new javax.swing.JLabel();
@@ -1159,14 +1159,14 @@ public class Main extends javax.swing.JFrame {
         btnPuesto14.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
         pnlAuto.add(btnPuesto14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 184, -1, 60));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/039-key-1.png"))); // NOI18N
-        jButton1.setActionCommand("Configs");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnTarjetas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/039-key-1.png"))); // NOI18N
+        BtnTarjetas.setActionCommand("Configs");
+        BtnTarjetas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnTarjetasActionPerformed(evt);
             }
         });
-        pnlAuto.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 10, 40, -1));
+        pnlAuto.add(BtnTarjetas, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 10, 40, -1));
 
         tbdPaneVehicles.addTab("Automóviles", new javax.swing.ImageIcon(getClass().getResource("/images/042-parking-area-tab.png")), pnlAuto); // NOI18N
 
@@ -2361,9 +2361,9 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFiltradoFechaInicialVehiculoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnTarjetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTarjetasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnTarjetasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2371,11 +2371,12 @@ public class Main extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnTarjetas;
     private org.matrix.BlackTabbedPane blackTabbedPane1;
     private javax.swing.ButtonGroup btgFiltrado;
     private javax.swing.ButtonGroup btgFiltradoVehiculo;
     private javax.swing.JButton btnBuscarDatos;
-    private javax.swing.JButton btnPuesto1;
+    public javax.swing.JButton btnPuesto1;
     private javax.swing.JButton btnPuesto10;
     private javax.swing.JButton btnPuesto100;
     private javax.swing.JButton btnPuesto11;
@@ -2422,7 +2423,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnPuesto49;
     private javax.swing.JButton btnPuesto5;
     private javax.swing.JButton btnPuesto50;
-    private javax.swing.JButton btnPuesto51;
+    public javax.swing.JButton btnPuesto51;
     private javax.swing.JButton btnPuesto52;
     private javax.swing.JButton btnPuesto53;
     private javax.swing.JButton btnPuesto54;
@@ -2478,7 +2479,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnRegistroPeaton;
     private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox<String> cmbFiltradoDiaVehiculo;
-    private javax.swing.JButton jButton1;
     private com.toedter.calendar.JCalendarBeanInfo jCalendarBeanInfo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3538,7 +3538,13 @@ public class Main extends javax.swing.JFrame {
     public void setTxtFiltradoFechaInicialVehiculo(JFormattedTextField txtFiltradoFechaInicialVehiculo) {
         this.txtFiltradoFechaInicialVehiculo = txtFiltradoFechaInicialVehiculo;
     }
+    public JButton getBtnTarjetas() {
+        return BtnTarjetas;
+    }
 
+    public void setBtnTarjetas(JButton BtnTarjetas) {
+        this.BtnTarjetas = BtnTarjetas;
+    }
     public JButton getBtnBuscarDatos() {
         return btnBuscarDatos;
     }

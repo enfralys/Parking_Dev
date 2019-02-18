@@ -18,7 +18,10 @@ import views.RegistroPeaton;
 import views.RegistroVehiculo;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import views.Registro_Tarjeta;
 
 
 public class button_control implements ActionListener, KeyListener{
@@ -27,16 +30,19 @@ public class button_control implements ActionListener, KeyListener{
     private registro model;
     private RegistroVehiculo reg;
     private RegistroPeaton regPea;
+    private Registro_Tarjeta regT;
     private int contador = 0;
     private String pass = "controladmin2021";
+    private String user = "admin";
     private final conex conn;
     
     @SuppressWarnings("LeakingThisInConstructor")
-    public button_control(Main vista, RegistroVehiculo reg, RegistroPeaton regPea){
+    public button_control(Main vista, RegistroVehiculo reg, RegistroPeaton regPea, Registro_Tarjeta regT){
         this.model=new registro();
         this.vista = vista;
         this.reg = reg;
         this.regPea = regPea;
+        this.regT=regT;
         this.conn= new conex();
 
         //Botones de vista Main
@@ -91,6 +97,7 @@ public class button_control implements ActionListener, KeyListener{
         this.vista.getBtnPuesto48().addActionListener(this);
         this.vista.getBtnPuesto49().addActionListener(this);
         this.vista.getBtnPuesto50().addActionListener(this);
+        this.vista.getBtnTarjetas().addActionListener(this);
         this.vista.getBtnRegistroPeaton().addActionListener(this);
         this.vista.getTxtBuscadorPersona().addKeyListener(this);
         this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
@@ -137,6 +144,11 @@ public class button_control implements ActionListener, KeyListener{
     
     public void InicioRegPea(){
         regPea.setLocationRelativeTo(vista);
+        contador++;
+    }
+    
+    public void InicioRegT(){
+        regT.setLocationRelativeTo(vista);
         contador++;
     }
     
@@ -196,11 +208,12 @@ public class button_control implements ActionListener, KeyListener{
             if (e.getSource() == vista.getBtnPuesto48()) { this.actPuesto(48);}
             if (e.getSource() == vista.getBtnPuesto49()) { this.actPuesto(49);}
             if (e.getSource() == vista.getBtnPuesto50()) { this.actPuesto(50);}
+            if (e.getSource() == vista.getBtnTarjetas()) { this.registro();}
         }    
         
         if (e.getSource() == vista.getBtnRegistroPeaton()){
             regPea = new RegistroPeaton(vista, true);
-            button_control control = new button_control(vista,reg,regPea);
+            button_control control = new button_control(vista,reg,regPea, regT);
             control.InicioRegPea();
             regPea.setVisible(true);
         }
@@ -265,7 +278,7 @@ public class button_control implements ActionListener, KeyListener{
     // Meotdo creado para registrar los datos de los visitabtes de todos los puestos
     public void actPuesto(int p){
         reg = new RegistroVehiculo(vista, true);
-        button_control control = new button_control(vista,reg,regPea);
+        button_control control = new button_control(vista,reg,regPea, regT);
         reg.puesto=p;
         control.InicioReg();
         conn.conectarSQLITE();
@@ -308,4 +321,27 @@ public class button_control implements ActionListener, KeyListener{
            conn.desconectar(); //
        }
     }
+
+    private void registro() {
+        JLabel jUserName = new JLabel("Usuario");
+        JTextField userName = new JTextField();
+        JLabel jPassword = new JLabel("Clave");
+        JTextField password = new JPasswordField();
+        Object[] ob = {jUserName, userName, jPassword, password};
+        int result = JOptionPane.showConfirmDialog(null, ob, "Por Favor ingrese su clabe JOptionPane showConfirmDialog", JOptionPane.OK_CANCEL_OPTION);
+
+        if (result == JOptionPane.OK_OPTION) {
+            String userNameValue = userName.getText();
+            String passwordValue = password.getText();
+            if ((userNameValue.equals(this.user)) && (passwordValue.equals(this.pass))){
+              regT = new Registro_Tarjeta(vista, true);
+              button_control control = new button_control(vista,reg,regPea, regT);
+              control.InicioRegT();
+              regT.setVisible(true);  
+            }
+            //Here is some validation code
+        }
+    }
+
+    
 }
