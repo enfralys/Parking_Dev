@@ -144,7 +144,7 @@ public class button_control implements ActionListener, KeyListener{
     
     public void InicioRegPea(){
         regPea.setLocationRelativeTo(vista);
-        contador++;
+        //contador++;
     }
     
     public void InicioRegT(){
@@ -154,6 +154,7 @@ public class button_control implements ActionListener, KeyListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        button_control control = null;
         String sql;
         if (e.getSource() == vista.getBtnSalir()) { System.exit(0); }   
         
@@ -213,7 +214,7 @@ public class button_control implements ActionListener, KeyListener{
         
         if (e.getSource() == vista.getBtnRegistroPeaton()){
             regPea = new RegistroPeaton(vista, true);
-            button_control control = new button_control(vista,reg,regPea, regT);
+            control = new button_control(vista,reg,regPea, regT);
             control.InicioRegPea();
             regPea.setVisible(true);
         }
@@ -241,16 +242,12 @@ public class button_control implements ActionListener, KeyListener{
                 } 
             }
        // }
-        if (e.getSource() == reg.getBtnCancelar()){
-            if (contador != 0){ reg.dispose(); } 
+        if (e.getSource() == reg.getBtnCancelar()){ if (contador != 0){ reg.dispose(); } }
+        //if (e.getSource() == regPea.getBtnCancelar()){ if (contador != 0){ regPea.dispose(); } }
+        if (e.getSource() == regPea.getBtnCancelar()){ 
+            regPea.dispose();  
         }
-        if (e.getSource() == regPea.getBtnCancelar()){
-            if (contador != 0){ regPea.dispose(); } 
-        }
-        
-        if (e.getSource() == regPea.getBtnCancelar()){
-            if (contador != 0){ regPea.dispose(); } 
-        }
+        //if (e.getSource() == regT.getBtnCancelar()){ if (contador != 0){ regPea.dispose(); } }
         if (e.getSource() == vista.getCmbFiltradoDiaVehiculo()){
         
         // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
