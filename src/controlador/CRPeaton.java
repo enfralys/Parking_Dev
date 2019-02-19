@@ -38,8 +38,7 @@ public class CRPeaton implements ActionListener{
     
     public void InicioRegPea(){
         regPea.setLocationRelativeTo(vista);
-        //contador++;
-    }
+   }
     
     public void actionPerformed(ActionEvent e) {
         CRPeaton control = null;
