@@ -311,8 +311,15 @@ public class button_control implements ActionListener, KeyListener{
 
     @Override
     public void keyReleased(KeyEvent ke) {
-        String sql="select * from parking";
-        if ((ke.getSource().equals(this.vista.getTxtFechaInicial())) || (ke.getSource().equals(this.vista.getTxtFechaFinal()))){
+       String sql="select * from peatones";
+       if (ke.getSource().equals(this.vista.getTxtBuscadorPersona())){
+           JTextField txt= (JTextField) ke.getSource();
+           sql="select * from peatones where apart LIKE '"+txt.getText()+"%' ";
+           conn.conectarSQLITE(); 
+           vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),sql));
+           conn.desconectar(); //
+       }
+       if ((ke.getSource().equals(this.vista.getTxtFechaInicial())) || (ke.getSource().equals(this.vista.getTxtFechaFinal()))){
             int indice=0;
             indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
             if (indice==0){ sql="select * from  parking where "; }
@@ -329,8 +336,8 @@ public class button_control implements ActionListener, KeyListener{
             conn.conectarSQLITE();
             conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
             conn.desconectar();
-        }
-        
+
+       }
     }
 
     private void registro() {
