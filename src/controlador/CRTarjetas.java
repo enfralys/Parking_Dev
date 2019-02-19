@@ -124,7 +124,7 @@ public class CRTarjetas implements ActionListener, KeyListener{
         conn.desconectar();
         
         conn.conectarSQLITE();
-        vista.setTlbHistorialDatos(conn.CargarTablaConsulta(vista.getTlbHistorialDatos()));
+//        vista.setTlbHistorialDatos(conn.CargarTablaConsulta(vista.getTlbHistorialDatos()));
         conn.desconectar();
         
         // Actualiza tabla peatones
