@@ -106,8 +106,8 @@ public class button_control implements ActionListener, KeyListener{
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
-        this.regPea.getBtn_save().addActionListener(this);
-        this.regPea.getBtnCancelar().addActionListener(this);
+        //this.regPea.getBtn_save().addActionListener(this);
+        //this.regPea.getBtnCancelar().addActionListener(this);
     }
     
     public void Inicio(){
