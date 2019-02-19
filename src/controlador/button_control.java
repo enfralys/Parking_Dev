@@ -214,7 +214,13 @@ public class button_control implements ActionListener, KeyListener{
             if (e.getSource() == vista.getBtnTarjetas()) { this.registro();}
         }    
         
-              
+        if (e.getSource() == vista.getBtnRegistroPeaton()){
+            regPea = new RegistroPeaton(vista, true);
+            CRPeaton controlador = new CRPeaton(vista,regPea);
+            controlador.InicioRegPea();
+            regPea.setVisible(true);
+        }
+      //  if (contador == 0){
             if (e.getSource() == reg.getBtn_save()) {
                 int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
                 if (a==0){ // Si se presiona si se guardan los datos
@@ -225,6 +231,8 @@ public class button_control implements ActionListener, KeyListener{
                     reg.dispose(); // cierra la ventana
                 } 
             }
+       // }
+       // if (contador == 0){
             if (e.getSource() == regPea.getBtn_save()) {
                 int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
                 if (a==0){ // Si se presiona si se guardan los datos
@@ -235,7 +243,7 @@ public class button_control implements ActionListener, KeyListener{
                     regPea.dispose(); // cierra la ventana
                 } 
             }
-
+       // }
         if (e.getSource() == reg.getBtnCancelar()){ if (contador != 0){ reg.dispose(); } }
         //if (e.getSource() == regPea.getBtnCancelar()){ if (contador != 0){ regPea.dispose(); } }
         if (e.getSource() == regPea.getBtnCancelar()){ 
@@ -243,6 +251,8 @@ public class button_control implements ActionListener, KeyListener{
         }
         //if (e.getSource() == regT.getBtnCancelar()){ if (contador != 0){ regPea.dispose(); } }
         if (e.getSource() == vista.getCmbFiltradoDiaVehiculo()){
+        
+        // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
             int indice=0;
             indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
             if (indice==0){ sql="select * from  parking where "; }
@@ -291,6 +301,16 @@ public class button_control implements ActionListener, KeyListener{
 
     @Override
     public void keyTyped(KeyEvent ke) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent ke) {
+        
+    }
+
+    @Override
+    public void keyReleased(KeyEvent ke) {
         String sql="select * from parking";
         if ((ke.getSource().equals(this.vista.getTxtFechaInicial())) || (ke.getSource().equals(this.vista.getTxtFechaFinal()))){
             int indice=0;
@@ -309,15 +329,9 @@ public class button_control implements ActionListener, KeyListener{
             conn.conectarSQLITE();
             conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
             conn.desconectar();
-
-       }
+        }
+        
     }
-
-    @Override
-    public void keyPressed(KeyEvent ke) {  }
-
-    @Override
-    public void keyReleased(KeyEvent ke) {  }
 
     private void registro() {
         JLabel jUserName = new JLabel("Usuario");
