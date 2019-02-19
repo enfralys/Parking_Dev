@@ -123,9 +123,7 @@ public class button_control implements ActionListener, KeyListener{
         vista.setTlbHistorial(conn.CargarTablaHistorias(vista.getTlbHistorial()));
         conn.desconectar();
         
-        conn.conectarSQLITE();
-        vista.setTlbHistorialDatos(conn.CargarTablaConsulta(vista.getTlbHistorialDatos()));
-        conn.desconectar();
+      
         
         // Actualiza tabla peatones
         conn.conectarSQLITE(); 
