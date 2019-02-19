@@ -285,7 +285,7 @@ public class conex {
     public void ActTabla(int i, JTable tlbHistorialVehiculos,String sql) {
         DefaultTableModel model;
         try {
-            String [] Titulos={"Visitante","Tipo","Placa","Apartamento","Estado","Fecha","Nro ParqueaderoFecha"};
+            String [] Titulos={"Visitante","Tipo","Placa","Apartamento","Estado","Fecha","Nro Parqueadero"};
             String[] Registros= new String[7];
             pstmt=conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery(); 	

@@ -100,6 +100,8 @@ public class button_control implements ActionListener, KeyListener{
         this.vista.getBtnTarjetas().addActionListener(this);
         this.vista.getBtnRegistroPeaton().addActionListener(this);
         this.vista.getTxtBuscadorPersona().addKeyListener(this);
+        this.vista.getTxtFechaInicial().addKeyListener(this);
+        this.vista.getTxtFechaFinal().addKeyListener(this);
         this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
@@ -212,13 +214,7 @@ public class button_control implements ActionListener, KeyListener{
             if (e.getSource() == vista.getBtnTarjetas()) { this.registro();}
         }    
         
-        if (e.getSource() == vista.getBtnRegistroPeaton()){
-            regPea = new RegistroPeaton(vista, true);
-            CRPeaton controlador = new CRPeaton(vista,regPea);
-            controlador.InicioRegPea();
-            regPea.setVisible(true);
-        }
-      //  if (contador == 0){
+              
             if (e.getSource() == reg.getBtn_save()) {
                 int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
                 if (a==0){ // Si se presiona si se guardan los datos
@@ -229,8 +225,6 @@ public class button_control implements ActionListener, KeyListener{
                     reg.dispose(); // cierra la ventana
                 } 
             }
-       // }
-       // if (contador == 0){
             if (e.getSource() == regPea.getBtn_save()) {
                 int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
                 if (a==0){ // Si se presiona si se guardan los datos
@@ -241,7 +235,7 @@ public class button_control implements ActionListener, KeyListener{
                     regPea.dispose(); // cierra la ventana
                 } 
             }
-       // }
+
         if (e.getSource() == reg.getBtnCancelar()){ if (contador != 0){ reg.dispose(); } }
         //if (e.getSource() == regPea.getBtnCancelar()){ if (contador != 0){ regPea.dispose(); } }
         if (e.getSource() == regPea.getBtnCancelar()){ 
@@ -249,8 +243,6 @@ public class button_control implements ActionListener, KeyListener{
         }
         //if (e.getSource() == regT.getBtnCancelar()){ if (contador != 0){ regPea.dispose(); } }
         if (e.getSource() == vista.getCmbFiltradoDiaVehiculo()){
-        
-        // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
             int indice=0;
             indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
             if (indice==0){ sql="select * from  parking where "; }
@@ -299,25 +291,33 @@ public class button_control implements ActionListener, KeyListener{
 
     @Override
     public void keyTyped(KeyEvent ke) {
+        String sql="select * from parking";
+        if ((ke.getSource().equals(this.vista.getTxtFechaInicial())) || (ke.getSource().equals(this.vista.getTxtFechaFinal()))){
+            int indice=0;
+            indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
+            if (indice==0){ sql="select * from  parking where "; }
+            else if (indice==1){ sql="select * from  parking where estado like 'entrada' and  ";  }
+            else if (indice==2){ sql="select * from  parking where estado like 'salida' and  ";  }
+            else if (indice==3){ sql="select * from  parking where estado like 'infractor' and  ";  }
+            else { sql="select * from  parking where ";}
+            String fechaI[]=vista.getTxtFechaInicial().getText().split("/");
+            String fechaF[]=vista.getTxtFechaFinal().getText().split("/");
+            //sql=sql+" fechareg> '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+"'";
+           // sql=sql+" fechareg> {ts '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00.000000000' }";
+             sql=sql+" fechareg >= '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00' ";
+             sql=sql+" and fechareg <= '"+fechaF[2]+"-"+fechaF[1]+"-"+fechaF[0]+" 00:00:00' ";
+            conn.conectarSQLITE();
+            conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
+            conn.desconectar();
 
-    }
-
-    @Override
-    public void keyPressed(KeyEvent ke) {
-        
-    }
-
-    @Override
-    public void keyReleased(KeyEvent ke) {
-       String sql="select * from peatones";
-       if (ke.getSource().equals(this.vista.getTxtBuscadorPersona())){
-           JTextField txt= (JTextField) ke.getSource();
-           sql="select * from peatones where apart LIKE '"+txt.getText()+"%' ";
-           conn.conectarSQLITE(); 
-           vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),sql));
-           conn.desconectar(); //
        }
     }
+
+    @Override
+    public void keyPressed(KeyEvent ke) {  }
+
+    @Override
+    public void keyReleased(KeyEvent ke) {  }
 
     private void registro() {
         JLabel jUserName = new JLabel("Usuario");
