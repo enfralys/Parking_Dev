@@ -105,6 +105,8 @@ public class button_control implements ActionListener, KeyListener{
         this.vista.getTxtFechaInicial().addKeyListener(this);
         this.vista.getTxtFechaFinal().addKeyListener(this);
         this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
+        
+        this.vT.getTxtBuscaT().addKeyListener(this);
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
@@ -304,6 +306,13 @@ public class button_control implements ActionListener, KeyListener{
            sql="select * from peatones where apart LIKE '"+txt.getText()+"%' ";
            conn.conectarSQLITE(); 
            vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),sql));
+           conn.desconectar(); //
+       }
+       if (ke.getSource().equals(this.vT.getTxtBuscaT())){
+           JTextField txt= (JTextField) ke.getSource();
+           sql="select * from tarjetas LIKE '"+txt.getText()+"%' ";
+           conn.conectarSQLITE(); 
+           vT.setTlbHistorialTarjeta(conn.actTablaTarjeTa(vT.getTlbHistorialTarjeta()));
            conn.desconectar(); //
        }
        if ((ke.getSource().equals(this.vista.getTxtFechaInicial())) || (ke.getSource().equals(this.vista.getTxtFechaFinal()))){

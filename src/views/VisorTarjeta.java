@@ -92,8 +92,10 @@ public class VisorTarjeta extends javax.swing.JDialog {
         jPanel11.add(txtNombrePeaton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
 
         jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel12.setText("Buscador");
-        jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+        jLabel12.setText("Buscador Codigo Interno");
+        jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 170, -1));
+
+        txtBuscaT.setToolTipText("Ingrese el  codigo de la tarjeta");
         jPanel11.add(txtBuscaT, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 310, 30));
 
         pnlPeatones.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 880, 130));
