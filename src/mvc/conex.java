@@ -114,18 +114,53 @@ public class conex {
     }
     public void salida(RegistroVehiculo reg, int puesto) {
         try {
-            pstmt=conn.prepareStatement("update parking set estado='salida' , set fechareg=datetime('now','localtime') where puesto=? and estado like 'entrada'");
+            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg, activo) values (?,?,?,?,?,'salida', datetime('now','localtime'),0)");
             pstmt.setString(1, reg.getTxtPlaca().getText());
             pstmt.setString(2, reg.getTxtNombreVisitante().getText());
             pstmt.setInt(3, puesto);
             pstmt.setString(4, reg.getTxtApartamento().getText());
-            pstmt.setString(5, String.valueOf(puesto));
+            pstmt.setString(5, reg.getTxtTarjeta().getText());
+            pstmt.execute();
+        } catch (SQLException e) {  e.printStackTrace();}
+
+        try {
+            pstmt=conn.prepareStatement("update parking set activo=0 where activo=1 and puesto=? and estado like 'entrada'");
+            pstmt.setInt(1, puesto);
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
      public void salida(int puesto) {
+        registro est=new registro();
+        ResultSet rs=null;
         try {
-            pstmt=conn.prepareStatement("update parking set estado='salida' where puesto=? and estado like 'entrada'");
+            pstmt=conn.prepareStatement("select * from  parking where puesto=? and estado like 'entrada' and activo=1");
+            pstmt.setInt(1, puesto);
+            rs=pstmt.executeQuery();
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+            System.out.println("Error numero: "+e.getErrorCode());
+        }    
+        try {
+            if (rs.next()){
+                est.setApto(rs.getString("apart"));
+                est.setNombre_invitado(rs.getString("visitante"));
+                est.setPlaca(rs.getString("placa"));
+                est.setPuesto(rs.getInt("puesto"));
+                est.setTarjeta(rs.getString("tarjeta"));
+            }
+        } catch (SQLException e) {  e.printStackTrace();}
+        try {
+            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg, activo) values (?,?,?,?,?,'salida', datetime('now','localtime'),0)");
+            pstmt.setString(1, est.getPlaca());
+            pstmt.setString(2, est.getNombre_invitado());
+            pstmt.setInt(3, puesto);
+            pstmt.setString(4, est.getApto());
+            pstmt.setString(5, est.getTarjeta());
+            pstmt.execute();
+        } catch (SQLException e) {  e.printStackTrace();}
+        try {
+            pstmt=conn.prepareStatement("update parking set activo=0 where puesto=? and estado like 'entrada' and activo=1");
             pstmt.setInt(1, puesto);
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
@@ -134,7 +169,7 @@ public class conex {
         registro est=new registro();
         ResultSet rs=null;
         try {
-            pstmt=conn.prepareStatement("select * from  parking where puesto=? and estado like 'entrada'");
+            pstmt=conn.prepareStatement("select * from  parking where puesto=? and estado like 'entrada' and activo=1");
             pstmt.setInt(1, puesto);
             rs=pstmt.executeQuery();
         } catch (SQLException e) {  e.printStackTrace();
@@ -157,7 +192,7 @@ public class conex {
         registro est=new registro();
         ResultSet rs=null;
         try {
-            pstmt=conn.prepareStatement("select * from  parking where puesto=? and estado like 'entrada'");
+            pstmt=conn.prepareStatement("select * from  parking where puesto=? and estado like 'entrada' and activo=1");
             pstmt.setInt(1, puesto);
             rs=pstmt.executeQuery();
         } catch (SQLException e) {  e.printStackTrace();
@@ -179,7 +214,7 @@ public class conex {
     public ResultSet consultarEntradas() {
         ResultSet rs=null;
         try {
-            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada'");
+            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
             rs=pstmt.executeQuery();
         } catch (SQLException e) {  e.printStackTrace();
            if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
@@ -320,7 +355,7 @@ public class conex {
     }
     public void newsalida() {
         try {
-            pstmt=conn.prepareStatement("insert into  acc_monitor_log (card_no) values ('0')");
+            pstmt=conn.prepareStatement("insert into  acc_monitor_log (card_no,status,device_sn) values ('0',0,'-')");
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
