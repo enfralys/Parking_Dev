@@ -21,7 +21,8 @@ import java.util.TimerTask;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import views.Registro_Tarjeta;
+import views.RegistroTarjeta;
+import views.VisorTarjeta;
 
 
 public class button_control implements ActionListener, KeyListener{
@@ -30,19 +31,20 @@ public class button_control implements ActionListener, KeyListener{
     private registro model;
     private RegistroVehiculo reg;
     private RegistroPeaton regPea;
-    private Registro_Tarjeta regT;
+    private RegistroTarjeta regT;
+    private VisorTarjeta vT;
     private int contador = 0;
     private String pass = "controladmin2021";
     private String user = "admin";
     private final conex conn;
     
     @SuppressWarnings("LeakingThisInConstructor")
-    public button_control(Main vista, RegistroVehiculo reg, RegistroPeaton regPea, Registro_Tarjeta regT){
+    public button_control(Main vista, RegistroVehiculo reg, RegistroPeaton regPea, VisorTarjeta vT){
         this.model=new registro();
         this.vista = vista;
         this.reg = reg;
         this.regPea = regPea;
-        this.regT=regT;
+        this.vT=vT;
         this.conn= new conex();
 
         //Botones de vista Main
@@ -147,8 +149,9 @@ public class button_control implements ActionListener, KeyListener{
         //contador++;
     }
     
-    public void InicioRegT(){
-        regT.setLocationRelativeTo(vista);
+    public void InicioVisorT(){
+        vT.getBtnRegistroTarjeta().addActionListener(this);
+        vT.setLocationRelativeTo(vista);
         contador++;
     }
     
@@ -212,14 +215,19 @@ public class button_control implements ActionListener, KeyListener{
             if (e.getSource() == vista.getBtnTarjetas()) { this.registro();}
         }    
         
+        if (e.getSource() == vT.getBtnRegistroTarjeta()){
+            regT = new RegistroTarjeta(vista, true);
+            CRTarjetas controlador = new CRTarjetas(vista,regT,vT);
+            controlador.InicioRegT();
+            regT.setVisible(true);
+        }
         if (e.getSource() == vista.getBtnRegistroPeaton()){
             regPea = new RegistroPeaton(vista, true);
             CRPeaton controlador = new CRPeaton(vista,regPea);
             controlador.InicioRegPea();
             regPea.setVisible(true);
         }
-      //  if (contador == 0){
-            if (e.getSource() == reg.getBtn_save()) {
+        if (e.getSource() == reg.getBtn_save()) {
                 int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
                 if (a==0){ // Si se presiona si se guardan los datos
                     conn.conectarSQLITE(); // conexta a BD sqlite
@@ -229,9 +237,7 @@ public class button_control implements ActionListener, KeyListener{
                     reg.dispose(); // cierra la ventana
                 } 
             }
-       // }
-       // if (contador == 0){
-            if (e.getSource() == regPea.getBtn_save()) {
+        if (e.getSource() == regPea.getBtn_save()) {
                 int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
                 if (a==0){ // Si se presiona si se guardan los datos
                     conn.conectarSQLITE(); // conexta a BD sqlite
@@ -240,17 +246,12 @@ public class button_control implements ActionListener, KeyListener{
                     conn.desconectar(); // desconexta a BD sqlite
                     regPea.dispose(); // cierra la ventana
                 } 
-            }
-       // }
+        }
         if (e.getSource() == reg.getBtnCancelar()){ if (contador != 0){ reg.dispose(); } }
-        //if (e.getSource() == regPea.getBtnCancelar()){ if (contador != 0){ regPea.dispose(); } }
         if (e.getSource() == regPea.getBtnCancelar()){ 
             regPea.dispose();  
         }
-        //if (e.getSource() == regT.getBtnCancelar()){ if (contador != 0){ regPea.dispose(); } }
         if (e.getSource() == vista.getCmbFiltradoDiaVehiculo()){
-        
-        // SELECT * FROM ordenes WHERE fecha_registro BETWEEN '10/06/2006' AND '16/06/2006'
             int indice=0;
             indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
             if (indice==0){ sql="select * from  parking where "; }
@@ -260,22 +261,18 @@ public class button_control implements ActionListener, KeyListener{
             else { sql="select * from  parking where ";}
             String fechaI[]=vista.getTxtFechaInicial().getText().split("/");
             String fechaF[]=vista.getTxtFechaFinal().getText().split("/");
-            //sql=sql+" fechareg> '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+"'";
-           // sql=sql+" fechareg> {ts '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00.000000000' }";
              sql=sql+" fechareg >= '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00' ";
              sql=sql+" and fechareg <= '"+fechaF[2]+"-"+fechaF[1]+"-"+fechaF[0]+" 00:00:00' ";
             conn.conectarSQLITE();
             conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
             conn.desconectar();
         }
-        
-
     }  
     
     // Meotdo creado para registrar los datos de los visitabtes de todos los puestos
     public void actPuesto(int p){
         reg = new RegistroVehiculo(vista, true);
-        button_control control = new button_control(vista,reg,regPea, regT);
+        button_control control = new button_control(vista,reg,regPea, vT);
         reg.puesto=p;
         control.InicioReg();
         conn.conectarSQLITE();
@@ -291,23 +288,15 @@ public class button_control implements ActionListener, KeyListener{
             reg.getTxtTarjeta().setText(model.getTarjeta());
             reg.getTxtTarjeta().setEditable(false);
             reg.getBtn_save().setVisible(false);
-            
         }
        reg.setVisible(true);
     
     }
 
-    @Override
-    public void keyTyped(KeyEvent ke) {
+    public void keyTyped(KeyEvent ke) {  }
 
-    }
+    public void keyPressed(KeyEvent ke) {  }
 
-    @Override
-    public void keyPressed(KeyEvent ke) {
-        
-    }
-
-    @Override
     public void keyReleased(KeyEvent ke) {
        String sql="select * from peatones";
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona())){
@@ -347,12 +336,12 @@ public class button_control implements ActionListener, KeyListener{
         if (result == JOptionPane.OK_OPTION) {
             String userNameValue = userName.getText();
             String passwordValue = password.getText();
-            if ((userNameValue.equals(this.user)) && (passwordValue.equals(this.pass))){
-              regT = new Registro_Tarjeta(vista, true);
-              button_control control = new button_control(vista,reg,regPea, regT);
-              control.InicioRegT();
-              regT.setVisible(true);  
-            }
+            //if ((userNameValue.equals(this.user)) && (passwordValue.equals(this.pass))){
+              vT = new VisorTarjeta(vista, true);
+              button_control control = new button_control(vista,reg,regPea, vT);
+              control.InicioVisorT();
+              vT.setVisible(true);  
+           // }
             //Here is some validation code
         }
     }

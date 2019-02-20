@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 import views.Main;
 import views.RegistroPeaton;
 import views.RegistroVehiculo;
-import views.Registro_Tarjeta;
+import views.VisorTarjeta;
 
 // Clase Principal
 public class home {
@@ -22,8 +22,8 @@ public class home {
        Main view = new Main();
         RegistroVehiculo reg = new RegistroVehiculo(null, false);
         RegistroPeaton regPea = new RegistroPeaton(null,false);
-        Registro_Tarjeta regT = new Registro_Tarjeta(null,false);
-        button_control control = new button_control(view, reg, regPea, regT);
+        VisorTarjeta vT = new VisorTarjeta(null,false);
+        button_control control = new button_control(view, reg, regPea, vT);
       control.Inicio();
         view.setVisible(true);
     }

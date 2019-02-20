@@ -118,6 +118,15 @@ public class conex {
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
+    public void guardarT(RegistroTarjeta regT) {
+            try {
+            pstmt=conn.prepareStatement("insert into tarjetas (ref, tarjeta)values (?,?)");
+            pstmt.setString(1, regT.gettxtRef().getText());
+            pstmt.setString(2, regT.getTxtTarjeta().getText());
+            pstmt.execute();
+        } catch (SQLException e) {  e.printStackTrace();}
+    }
+    
     public void salida(RegistroVehiculo reg, int puesto) {
         try {
             pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg, activo) values (?,?,?,?,?,'salida', datetime('now','localtime'),0)");
@@ -299,6 +308,32 @@ public class conex {
         }
         return tabla;
     }
+    public JTable actTablaTarjeTa(JTable tabla) {
+        DefaultTableModel model;
+        try {
+            String [] Titulos={"Codigo Externo","Codigo Interno"};
+            String[] Registros= new String[2];
+            pstmt=conn.prepareStatement("select * from  tarjetas");
+            ResultSet rs = pstmt.executeQuery(); 	
+            model = new DefaultTableModel(null,Titulos);
+            try{
+                while(rs.next()){
+                    Registros[0]=rs.getString("ref");
+                    Registros[1]=rs.getString("tarjeta");
+                    model.addRow(Registros);
+                }
+            }catch(SQLException e){ 
+                System.out.print("Error:"+e.getMessage());
+                e.printStackTrace();
+            }
+            tabla.setModel(model);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return tabla;
+
+    }
+
     public JTable actTablaPea(JTable tabla, String sql){
         DefaultTableModel model;
         try {
@@ -365,4 +400,7 @@ public class conex {
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
+
+
+    
 }

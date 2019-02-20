@@ -20,7 +20,7 @@ import java.util.TimerTask;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import views.Registro_Tarjeta;
+import views.RegistroTarjeta;
 
 
 public class CRPeaton implements ActionListener{
