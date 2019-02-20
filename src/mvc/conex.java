@@ -64,14 +64,21 @@ public class conex {
     public void CrearTabla() {
         String sql;
         try {
-            sql="CREATE TABLE parking ( placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+            sql="CREATE TABLE parking ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP, activo int default 1)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
         }
         try {
-            sql="CREATE TABLE peatones ( tipo int, cedula int, nombres varchar(25) NOT NULL, apellidos varchar(25) NOT NULL, apart varchar(12) NOT NULL,  fechareg DATETIME DEFAULT CURRENT_TIMESTAMP)";
+            sql="CREATE TABLE peatones (id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, tipo int, cedula int, nombres varchar(25) NOT NULL, apellidos varchar(25) NOT NULL, apart varchar(12) NOT NULL,  fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+            pstmt= conn.prepareStatement(sql);
+            pstmt.execute();
+       } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
+        }
+        try {
+            sql="CREATE TABLE tarjetas (id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, ref varchar(20) NOT NULL, tarjeta varchar(20) NOT NULL )";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
