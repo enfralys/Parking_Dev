@@ -41,6 +41,7 @@ public class Temporizador extends TimerTask{
                 while (rs.next()){
                     puesto=rs.getInt("puesto");
                     tarjeta=rs.getString("tarjeta");
+                    tarjeta=d.buscaTarjeta(tarjeta);
                    if (c.salidas().equals(tarjeta)) {
                         d.salida(puesto);
                         Vista.desocupado(puesto);

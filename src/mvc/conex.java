@@ -95,9 +95,6 @@ public class conex {
             pstmt.setInt(3, puesto);
             pstmt.setString(4, reg.getTxtApartamento().getText());
             pstmt.setString(5, reg.getTxtTarjeta().getText());
- //           pstmt.setTimestamp(6, date);
-           // Timestamp ts= new Timestamp();
-           // pstmt.setTimestamp(6, ));
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
@@ -225,6 +222,25 @@ public class conex {
             }
         } catch (SQLException e) {  e.printStackTrace();}
         return est;
+    }
+    public String buscaTarjeta(String tarj) {
+        ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  tarjetas where ref like ?");
+            pstmt.setString(1, tarj);
+            rs=pstmt.executeQuery();
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+            System.out.println("Error numero: "+e.getErrorCode());
+        }    
+        try {
+            if (rs.next()){
+                return rs.getString("tarjeta");
+            }
+        } catch (SQLException e) {  e.printStackTrace();}
+        return "";
+
     }
     public ResultSet consultarEntradas() {
         ResultSet rs=null;
@@ -400,6 +416,8 @@ public class conex {
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
+
+    
 
 
     
