@@ -25,6 +25,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.xml.bind.annotation.XmlElement;
+import plugins.comun;
 import views.*;
 
 public class conex {
@@ -104,8 +105,13 @@ public class conex {
         try {
             pstmt=conn.prepareStatement("insert into peatones (tipo, cedula, nombres , apellidos , apart )values (?,?,?,?,?)");
             pstmt.setInt(1, reg.getCmbTipoPeaton().getSelectedIndex());
-            System.out.println("Tipo: "+reg.getCmbTipoPeaton().getSelectedIndex());
-            pstmt.setInt(2, Integer.parseInt(reg.getTxtCedulaPeaton().getText()));
+            //System.out.println("Tipo: "+reg.getCmbTipoPeaton().getSelectedIndex());
+            if (comun.isNumeric(reg.getTxtCedulaPeaton().getText())==true){
+                pstmt.setInt(2, Integer.parseInt(reg.getTxtCedulaPeaton().getText()));
+            }
+            else {
+                pstmt.setInt(2, 0);
+            }
             pstmt.setString(3, reg.getTxtNombrePeaton().getText());
             pstmt.setString(4, reg.getjTextArea1().getText());
             pstmt.setString(5, reg.getTxtAptoAVisitar().getText());
