@@ -65,7 +65,7 @@ public class conex {
     public void CrearTabla() {
         String sql;
         try {
-            sql="CREATE TABLE parking ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP, activo int default 1)";
+            sql="CREATE TABLE parking ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP, activo int default 1, tipov int default 1)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
@@ -242,6 +242,25 @@ public class conex {
         return "";
 
     }
+     public String buscaRef(String tarj) {
+        ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  tarjetas where tarjeta like ?");
+            pstmt.setString(1, tarj);
+            rs=pstmt.executeQuery();
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+            System.out.println("Error numero: "+e.getErrorCode());
+        }    
+        try {
+            if (rs.next()){
+                return rs.getString("ref");
+            }
+        } catch (SQLException e) {  e.printStackTrace();}
+        return "";
+
+    }
     public ResultSet consultarEntradas() {
         ResultSet rs=null;
         try {
@@ -384,7 +403,7 @@ public class conex {
     public void ActTabla(int i, JTable tlbHistorialVehiculos,String sql) {
         DefaultTableModel model;
         try {
-            String [] Titulos={"Visitante","Tipo","Placa","Apartamento","Estado","Fecha","Nro Parqueadero"};
+            String [] Titulos={"Visitante","Tipo","Placa","Apartamento","Estado","Fecha","Nro Referencia"};
             String[] Registros= new String[7];
             pstmt=conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery(); 	
@@ -392,12 +411,13 @@ public class conex {
             try{
                 while(rs.next()){
                     Registros[0]=rs.getString("visitante");
-                    Registros[1]="Vehiculo";
+                    if (rs.getInt("tipov")==1){ Registros[1]="Carro"; }
+                    else { Registros[1]="Moto"; }
                     Registros[2]=rs.getString("placa");
                     Registros[3]=rs.getString("apart");
                     Registros[4]=rs.getString("estado");
                     Registros[5]=rs.getString("fechareg");
-                    Registros[6]=rs.getString("puesto");
+                    Registros[6]=rs.getString("tarjeta");
                     model.addRow(Registros);
                 }
             }catch(SQLException e){ 
