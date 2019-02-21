@@ -437,6 +437,33 @@ public class conex {
         } catch (SQLException e) {  e.printStackTrace();}
     }
 
+    void infractores() {
+        ResultSet rs=null;
+        PreparedStatement pstmt2;
+        try {
+            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1 and fechareg<datetime('now','-1 day')");
+            rs=pstmt.executeQuery();
+            while (rs.next()){
+                pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg, activo) values (?,?,?,?,?,'infractor', ?,1)");
+                pstmt.setString(1, rs.getString("placa"));
+                pstmt.setString(2, rs.getString("visitante"));
+                pstmt.setInt(3, rs.getInt("puesto"));
+                pstmt.setString(4, rs.getString("apart"));
+                pstmt.setString(5, rs.getString("tarjeta"));
+                pstmt.setString(5, rs.getString("fechareg"));
+            pstmt.execute();
+                pstmt2=conn.prepareStatement("update parking set activo=0 where id=?");
+                pstmt2.setInt(1, rs.getInt("id"));
+                pstmt2.execute();
+            }
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           
+        }    
+        
+    }
+
     
 
 
