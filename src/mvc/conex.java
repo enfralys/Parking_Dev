@@ -89,12 +89,19 @@ public class conex {
     public void guardar(RegistroVehiculo reg, int puesto) {
         Date date = new Date();
         try {
-            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg) values (?,?,?,?,?,'entrada', datetime('now','localtime'))");
+            pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg, tipov) values (?,?,?,?,?,'entrada', datetime('now','localtime'),?)");
             pstmt.setString(1, reg.getTxtPlaca().getText());
             pstmt.setString(2, reg.getTxtNombreVisitante().getText());
             pstmt.setInt(3, puesto);
             pstmt.setString(4, reg.getTxtApartamento().getText());
             pstmt.setString(5, reg.getTxtTarjeta().getText());
+            if (puesto<51){
+                pstmt.setInt(6, 1);
+            }else {
+                pstmt.setInt(6, 2);
+                
+            }
+            
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }

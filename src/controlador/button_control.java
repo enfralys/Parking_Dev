@@ -99,6 +99,58 @@ public class button_control implements ActionListener, KeyListener{
         this.vista.getBtnPuesto48().addActionListener(this);
         this.vista.getBtnPuesto49().addActionListener(this);
         this.vista.getBtnPuesto50().addActionListener(this);
+        // Motos
+        this.vista.getBtnPuesto51().addActionListener(this);
+        this.vista.getBtnPuesto52().addActionListener(this);
+        this.vista.getBtnPuesto53().addActionListener(this);
+        this.vista.getBtnPuesto54().addActionListener(this);
+        this.vista.getBtnPuesto55().addActionListener(this);
+        this.vista.getBtnPuesto56().addActionListener(this);
+        this.vista.getBtnPuesto57().addActionListener(this);
+        this.vista.getBtnPuesto58().addActionListener(this);
+        this.vista.getBtnPuesto59().addActionListener(this);
+        this.vista.getBtnPuesto60().addActionListener(this);
+        this.vista.getBtnPuesto61().addActionListener(this);
+        this.vista.getBtnPuesto62().addActionListener(this);
+        this.vista.getBtnPuesto63().addActionListener(this);
+        this.vista.getBtnPuesto64().addActionListener(this);
+        this.vista.getBtnPuesto65().addActionListener(this);
+        this.vista.getBtnPuesto66().addActionListener(this);
+        this.vista.getBtnPuesto67().addActionListener(this);
+        this.vista.getBtnPuesto68().addActionListener(this);
+        this.vista.getBtnPuesto69().addActionListener(this);
+        this.vista.getBtnPuesto71().addActionListener(this);
+        this.vista.getBtnPuesto71().addActionListener(this);
+        this.vista.getBtnPuesto72().addActionListener(this);
+        this.vista.getBtnPuesto73().addActionListener(this);
+        this.vista.getBtnPuesto74().addActionListener(this);
+        this.vista.getBtnPuesto75().addActionListener(this);
+        this.vista.getBtnPuesto76().addActionListener(this);
+        this.vista.getBtnPuesto77().addActionListener(this);
+        this.vista.getBtnPuesto78().addActionListener(this);
+        this.vista.getBtnPuesto79().addActionListener(this);
+        this.vista.getBtnPuesto80().addActionListener(this);
+        this.vista.getBtnPuesto81().addActionListener(this);
+        this.vista.getBtnPuesto82().addActionListener(this);
+        this.vista.getBtnPuesto83().addActionListener(this);
+        this.vista.getBtnPuesto84().addActionListener(this);
+        this.vista.getBtnPuesto85().addActionListener(this);
+        this.vista.getBtnPuesto86().addActionListener(this);
+        this.vista.getBtnPuesto87().addActionListener(this);
+        this.vista.getBtnPuesto88().addActionListener(this);
+        this.vista.getBtnPuesto89().addActionListener(this);
+        this.vista.getBtnPuesto90().addActionListener(this);
+        this.vista.getBtnPuesto91().addActionListener(this);
+        this.vista.getBtnPuesto92().addActionListener(this);
+        this.vista.getBtnPuesto93().addActionListener(this);
+        this.vista.getBtnPuesto94().addActionListener(this);
+        this.vista.getBtnPuesto95().addActionListener(this);
+        this.vista.getBtnPuesto96().addActionListener(this);
+        this.vista.getBtnPuesto97().addActionListener(this);
+        this.vista.getBtnPuesto98().addActionListener(this);
+        this.vista.getBtnPuesto99().addActionListener(this);
+        this.vista.getBtnPuesto100().addActionListener(this);
+        
         this.vista.getBtnTarjetas().addActionListener(this);
         this.vista.getBtnRegistroPeaton().addActionListener(this);
         this.vista.getTxtBuscadorPersona().addKeyListener(this);
@@ -118,9 +170,13 @@ public class button_control implements ActionListener, KeyListener{
       
         vista.setLocationRelativeTo(null);
         conn.conectarSQLITE();
-            for (int i=1; i<51;i++){
+            for (int i=1; i<101;i++){
                 model=conn.consultar(i);
-                if (model.getPuesto()==i){vista.ocupado(i);  }
+                if (model.getPuesto()==i){
+                    if (i<51){vista.ocupado(i); }
+                    else {vista.ocupadoM(i);  }
+                    
+                }
             }
         conn.desconectar();
         conn.conectarSQLITE();
@@ -217,6 +273,59 @@ public class button_control implements ActionListener, KeyListener{
             if (e.getSource() == vista.getBtnPuesto48()) { this.actPuesto(48);}
             if (e.getSource() == vista.getBtnPuesto49()) { this.actPuesto(49);}
             if (e.getSource() == vista.getBtnPuesto50()) { this.actPuesto(50);}
+            
+            //Motos
+            if (e.getSource() == vista.getBtnPuesto51()) { this.actPuesto(51);}
+            if (e.getSource() == vista.getBtnPuesto52()) { this.actPuesto(52);}
+            if (e.getSource() == vista.getBtnPuesto53()) { this.actPuesto(53);}
+            if (e.getSource() == vista.getBtnPuesto54()) { this.actPuesto(54);}
+            if (e.getSource() == vista.getBtnPuesto55()) { this.actPuesto(55);}
+            if (e.getSource() == vista.getBtnPuesto56()) { this.actPuesto(56);}
+            if (e.getSource() == vista.getBtnPuesto57()) { this.actPuesto(57);}
+            if (e.getSource() == vista.getBtnPuesto58()) { this.actPuesto(58);}
+            if (e.getSource() == vista.getBtnPuesto59()) { this.actPuesto(59);}
+            if (e.getSource() == vista.getBtnPuesto60()) { this.actPuesto(60);}
+            if (e.getSource() == vista.getBtnPuesto61()) { this.actPuesto(61);}
+            if (e.getSource() == vista.getBtnPuesto62()) { this.actPuesto(62);}
+            if (e.getSource() == vista.getBtnPuesto63()) { this.actPuesto(63);}
+            if (e.getSource() == vista.getBtnPuesto64()) { this.actPuesto(64);}
+            if (e.getSource() == vista.getBtnPuesto65()) { this.actPuesto(65);}
+            if (e.getSource() == vista.getBtnPuesto66()) { this.actPuesto(66);}
+            if (e.getSource() == vista.getBtnPuesto67()) { this.actPuesto(67);}
+            if (e.getSource() == vista.getBtnPuesto68()) { this.actPuesto(68);}
+            if (e.getSource() == vista.getBtnPuesto69()) { this.actPuesto(69);}
+            if (e.getSource() == vista.getBtnPuesto70()) { this.actPuesto(70);}
+            if (e.getSource() == vista.getBtnPuesto71()) { this.actPuesto(71);}
+            if (e.getSource() == vista.getBtnPuesto72()) { this.actPuesto(72);}
+            if (e.getSource() == vista.getBtnPuesto73()) { this.actPuesto(73);}
+            if (e.getSource() == vista.getBtnPuesto74()) { this.actPuesto(74);}
+            if (e.getSource() == vista.getBtnPuesto75()) { this.actPuesto(75);}
+            if (e.getSource() == vista.getBtnPuesto76()) { this.actPuesto(76);}
+            if (e.getSource() == vista.getBtnPuesto77()) { this.actPuesto(77);}
+            if (e.getSource() == vista.getBtnPuesto78()) { this.actPuesto(78);}
+            if (e.getSource() == vista.getBtnPuesto79()) { this.actPuesto(79);}
+            if (e.getSource() == vista.getBtnPuesto80()) { this.actPuesto(80);}
+            if (e.getSource() == vista.getBtnPuesto81()) { this.actPuesto(81);}
+            if (e.getSource() == vista.getBtnPuesto82()) { this.actPuesto(82);}
+            if (e.getSource() == vista.getBtnPuesto83()) { this.actPuesto(83);}
+            if (e.getSource() == vista.getBtnPuesto84()) { this.actPuesto(84);}
+            if (e.getSource() == vista.getBtnPuesto85()) { this.actPuesto(85);}
+            if (e.getSource() == vista.getBtnPuesto86()) { this.actPuesto(86);}
+            if (e.getSource() == vista.getBtnPuesto87()) { this.actPuesto(87);}
+            if (e.getSource() == vista.getBtnPuesto88()) { this.actPuesto(88);}
+            if (e.getSource() == vista.getBtnPuesto89()) { this.actPuesto(89);}
+            if (e.getSource() == vista.getBtnPuesto90()) { this.actPuesto(90);}
+            if (e.getSource() == vista.getBtnPuesto91()) { this.actPuesto(91);}
+            if (e.getSource() == vista.getBtnPuesto92()) { this.actPuesto(92);}
+            if (e.getSource() == vista.getBtnPuesto93()) { this.actPuesto(93);}
+            if (e.getSource() == vista.getBtnPuesto94()) { this.actPuesto(94);}
+            if (e.getSource() == vista.getBtnPuesto95()) { this.actPuesto(95);}
+            if (e.getSource() == vista.getBtnPuesto96()) { this.actPuesto(96);}
+            if (e.getSource() == vista.getBtnPuesto97()) { this.actPuesto(97);}
+            if (e.getSource() == vista.getBtnPuesto98()) { this.actPuesto(98);}
+            if (e.getSource() == vista.getBtnPuesto99()) { this.actPuesto(99);}
+            if (e.getSource() == vista.getBtnPuesto100()) { this.actPuesto(100);} 
+            
             if (e.getSource() == vista.getBtnTarjetas()) { this.registro();}
         }    
         
@@ -238,7 +347,9 @@ public class button_control implements ActionListener, KeyListener{
                     conn.conectarSQLITE(); // conexta a BD sqlite
                     conn.guardar(reg,reg.puesto); // Llama al metodo guardar en la BD
                     conn.desconectar(); // desconexta a BD sqlite
-                    vista.ocupado(reg.puesto); // cambia icono del puesto
+                    if (reg.puesto<51) {vista.ocupado(reg.puesto);}
+                    else {vista.ocupadoM(reg.puesto);}
+                    
                     reg.dispose(); // cierra la ventana
                 } 
             }
