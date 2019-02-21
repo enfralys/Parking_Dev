@@ -155,6 +155,9 @@ public class button_control implements ActionListener, KeyListener{
         vT.getBtnRegistroTarjeta().addActionListener(this);
         vT.setLocationRelativeTo(vista);
         contador++;
+        conn.conectarSQLITE(); 
+        this.vT.setTlbHistorialTarjeta(conn.actTablaTarjeTa(vT.getTlbHistorialTarjeta()));
+        conn.desconectar(); 
     }
     
     @Override
