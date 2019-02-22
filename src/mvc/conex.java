@@ -148,7 +148,7 @@ public class conex {
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
-     public void salida(int puesto) {
+    public void salida(int puesto) {
         registro est=new registro();
         ResultSet rs=null;
         try {
@@ -249,7 +249,7 @@ public class conex {
         return "";
 
     }
-     public String buscaRef(String tarj) {
+    public String buscaRef(String tarj) {
         ResultSet rs=null;
         try {
             pstmt=conn.prepareStatement("select * from  tarjetas where tarjeta like ?");
@@ -271,7 +271,8 @@ public class conex {
     public ResultSet consultarEntradas() {
         ResultSet rs=null;
         try {
-            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
+            //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
+            pstmt=conn.prepareStatement("select * from  parking where activo=1");
             rs=pstmt.executeQuery();
         } catch (SQLException e) {  e.printStackTrace();
            if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
@@ -375,7 +376,6 @@ public class conex {
         return tabla;
 
     }
-
     public JTable actTablaPea(JTable tabla, String sql){
         DefaultTableModel model;
         try {
@@ -443,7 +443,6 @@ public class conex {
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
-
     void infractores() {
         ResultSet rs=null;
         PreparedStatement pstmt2;
@@ -457,11 +456,11 @@ public class conex {
                 pstmt.setInt(3, rs.getInt("puesto"));
                 pstmt.setString(4, rs.getString("apart"));
                 pstmt.setString(5, rs.getString("tarjeta"));
-                pstmt.setString(5, rs.getString("fechareg"));
+                pstmt.setString(6, rs.getString("fechareg"));
             pstmt.execute();
-                pstmt2=conn.prepareStatement("update parking set activo=0 where id=?");
+                /*pstmt2=conn.prepareStatement("update parking set activo=0 where id=?");
                 pstmt2.setInt(1, rs.getInt("id"));
-                pstmt2.execute();
+                pstmt2.execute();*/
             }
         } catch (SQLException e) {  e.printStackTrace();
            if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
