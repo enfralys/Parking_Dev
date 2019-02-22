@@ -288,8 +288,9 @@ public class Main extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(153, 153, 0));
-        jLabel1.setText("Control Vehicular | @Empresa@");
-        pnlTitle.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 14, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
+        jLabel1.setToolTipText("");
+        pnlTitle.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, -1));
 
         btnSalir.setFont(new java.awt.Font("Earth", 1, 12)); // NOI18N
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Multiply_32px.png"))); // NOI18N
@@ -300,7 +301,7 @@ public class Main extends javax.swing.JFrame {
         btnSalir.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Multiply._32px.png"))); // NOI18N
         pnlTitle.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 10, 30, 30));
 
-        getContentPane().add(pnlTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 50));
+        getContentPane().add(pnlTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 70));
 
         pnlMain.setBackground(new java.awt.Color(255, 255, 255));
         pnlMain.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -2116,7 +2117,7 @@ public class Main extends javax.swing.JFrame {
 
         tbpMain.addTab("   Peatones          ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones); // NOI18N
 
-        pnlMain.add(tbpMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1140, 670));
+        pnlMain.add(tbpMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 1140, 670));
 
         getContentPane().add(pnlMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1140, 684));
 
