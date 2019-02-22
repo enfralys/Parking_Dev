@@ -122,7 +122,7 @@ public class RegistroTarjeta extends javax.swing.JDialog {
 
         lblNombreVisitante1.setBackground(new java.awt.Color(0, 0, 0));
         lblNombreVisitante1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lblNombreVisitante1.setText("Codigo Referencial");
+        lblNombreVisitante1.setText("Codigo Parqueadero");
         jPanel1.add(lblNombreVisitante1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
         lblNombreVisitanteIcono1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/026-parking-card-1.png"))); // NOI18N
