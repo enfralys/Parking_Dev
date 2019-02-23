@@ -46,6 +46,8 @@ public class Main extends javax.swing.JFrame {
         pnlTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         pnlMain = new javax.swing.JPanel();
         tbpMain = new org.matrix.BlackTabbedPane();
         pnlIngreso = new javax.swing.JPanel();
@@ -300,6 +302,10 @@ public class Main extends javax.swing.JFrame {
         btnSalir.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Multiply._32px.png"))); // NOI18N
         btnSalir.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Multiply._32px.png"))); // NOI18N
         pnlTitle.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 10, 30, 30));
+        pnlTitle.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo2.jpg"))); // NOI18N
+        pnlTitle.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 70));
 
         getContentPane().add(pnlTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 70));
 
@@ -2268,6 +2274,8 @@ public class Main extends javax.swing.JFrame {
     private com.toedter.calendar.JCalendarBeanInfo jCalendarBeanInfo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
@@ -4887,5 +4895,13 @@ public class Main extends javax.swing.JFrame {
                 break;                
         } 
      
+    }
+
+    public void desocupadoM(int puesto) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void desocupadoMs(int puesto) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
