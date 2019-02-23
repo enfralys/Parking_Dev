@@ -44,7 +44,7 @@ public class VisorTarjeta extends javax.swing.JDialog {
         jLabel12 = new javax.swing.JLabel();
         txtBuscaT = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtconfig = new javax.swing.JTextField();
         btnconfig = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -107,8 +107,8 @@ public class VisorTarjeta extends javax.swing.JDialog {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel11.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 30, 40));
 
-        jTextField1.setText("                 ");
-        jPanel11.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, -1, 20));
+        txtconfig.setText("                 ");
+        jPanel11.add(txtconfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, -1, 20));
 
         btnconfig.setText("jButton1");
         btnconfig.addActionListener(new java.awt.event.ActionListener() {
@@ -244,6 +244,14 @@ public class VisorTarjeta extends javax.swing.JDialog {
     public void setbtnconfig(JButton btnconfig) {
         this.btnconfig = btnconfig;
     }
+    
+    public JTextField getTxtConfig() {
+        return txtconfig;
+    }
+
+    public void setTxtConfig(JTextField txtconfig) {
+        this.txtconfig = txtconfig;
+    }
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegistroTarjeta;
@@ -258,10 +266,10 @@ public class VisorTarjeta extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel pnlPeatones;
     private javax.swing.JTable tlbHistorialTarjeta;
     private javax.swing.JTextField txtBuscaT;
     private javax.swing.JTextField txtNombrePeaton5;
+    private javax.swing.JTextField txtconfig;
     // End of variables declaration//GEN-END:variables
 }

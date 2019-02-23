@@ -490,6 +490,31 @@ public class conex {
     }
 
     
+    public int timepo() {
+        ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  config");
+            rs=pstmt.executeQuery();
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+            System.out.println("Error numero: "+e.getErrorCode());
+        }    
+        try {
+            if (rs.next()){
+                return rs.getInt("tiempo");
+            }
+        } catch (SQLException e) {  e.printStackTrace();}
+        return 0;
+    }
+    public void actConfig(int horas) {
+        try {
+            pstmt=conn.prepareStatement("update config set tiempo=?");
+            pstmt.setInt(1, horas);
+            pstmt.execute();
+        } catch (SQLException e) {  e.printStackTrace();}
+    }
+    
 
 
     

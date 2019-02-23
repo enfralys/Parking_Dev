@@ -330,6 +330,15 @@ public class button_control implements ActionListener, KeyListener{
             if (e.getSource() == vista.getBtnTarjetas()) { this.registro();}
         }    
         
+        if (e.getSource() == vT.getbtnconfig()) {
+                int a=JOptionPane.showConfirmDialog(vista, "Confirmar");                
+                if (a==0){ // Si se presiona si se guardan los datos
+                    conn.conectarSQLITE(); // conexta a BD sqlite
+                    conn.actConfig(Integer.parseInt(vT.getTxtConfig().getText().trim()));
+                    conn.desconectar(); // desconexta a BD sqlite
+                } 
+            }
+        
         if (e.getSource() == vT.getBtnRegistroTarjeta()){
             regT = new RegistroTarjeta(vista, true);
             CRTarjetas controlador = new CRTarjetas(vista,regT,vT);
