@@ -209,6 +209,7 @@ public class button_control implements ActionListener, KeyListener{
     
     public void InicioVisorT(){
         vT.getBtnRegistroTarjeta().addActionListener(this);
+        vT.getbtnconfig().addActionListener(this);
         vT.setLocationRelativeTo(vista);
         contador++;
         conn.conectarSQLITE(); 

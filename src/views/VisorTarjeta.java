@@ -45,7 +45,7 @@ public class VisorTarjeta extends javax.swing.JDialog {
         txtBuscaT = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnconfig = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         btnRegistroTarjeta = new javax.swing.JButton();
@@ -107,16 +107,16 @@ public class VisorTarjeta extends javax.swing.JDialog {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel11.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 30, 40));
 
-        jTextField1.setText("jTextField1");
-        jPanel11.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, 20));
+        jTextField1.setText("                 ");
+        jPanel11.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, -1, 20));
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnconfig.setText("jButton1");
+        btnconfig.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnconfigActionPerformed(evt);
             }
         });
-        jPanel11.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 40, -1));
+        jPanel11.add(btnconfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 40, -1));
 
         jLabel2.setText("Insfractores");
         jPanel11.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, -1, -1));
@@ -167,9 +167,9 @@ public class VisorTarjeta extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistroTarjetaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnconfigActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnconfigActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,10 +237,17 @@ public class VisorTarjeta extends javax.swing.JDialog {
     public void setTlbHistorialTarjeta(JTable tlbHistorialTarjeta) {
         this.tlbHistorialTarjeta = tlbHistorialTarjeta;
     }
+    public JButton getbtnconfig() {
+        return btnconfig;
+    }
+
+    public void setbtnconfig(JButton btnconfig) {
+        this.btnconfig = btnconfig;
+    }
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegistroTarjeta;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnconfig;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
