@@ -58,7 +58,7 @@ public class comun {
             diferencia=diferencia-(minutos*60);
         }
 //        System.out.println("Hay "+dias+" dias, "+horas+" horas, "+minutos+" minutos y "+diferencia+" segundos de diferencia");
-        return minutos;
-        //return horas;
+     //   return minutos;
+        return horas;
     }
 }

@@ -222,7 +222,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="lbltiempo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="2 H"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>

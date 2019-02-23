@@ -6,6 +6,7 @@
 package views;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -43,7 +44,7 @@ public class VisorTarjeta extends javax.swing.JDialog {
         txtNombrePeaton5 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         txtBuscaT = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        lbltiempo = new javax.swing.JLabel();
         txtconfig = new javax.swing.JTextField();
         btnconfig = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -103,9 +104,9 @@ public class VisorTarjeta extends javax.swing.JDialog {
         txtBuscaT.setToolTipText("Ingrese el  codigo de la tarjeta");
         jPanel11.add(txtBuscaT, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 310, 30));
 
-        jLabel1.setText("2 H");
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel11.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 30, 40));
+        lbltiempo.setText("2 H");
+        lbltiempo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel11.add(lbltiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 30, 40));
 
         txtconfig.setText("                 ");
         jPanel11.add(txtconfig, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, -1, 20));
@@ -252,11 +253,18 @@ public class VisorTarjeta extends javax.swing.JDialog {
     public void setTxtConfig(JTextField txtconfig) {
         this.txtconfig = txtconfig;
     }
+    public JLabel getlbltiempo() {
+        return lbltiempo;
+    }
+
+    public void setlbltiempo(JLabel lbltiempo) {
+        this.lbltiempo = lbltiempo;
+    }
+    
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegistroTarjeta;
     private javax.swing.JButton btnconfig;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
@@ -266,6 +274,7 @@ public class VisorTarjeta extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel lbltiempo;
     private javax.swing.JPanel pnlPeatones;
     private javax.swing.JTable tlbHistorialTarjeta;
     private javax.swing.JTextField txtBuscaT;

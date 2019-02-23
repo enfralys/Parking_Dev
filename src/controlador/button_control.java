@@ -214,6 +214,7 @@ public class button_control implements ActionListener, KeyListener{
         contador++;
         conn.conectarSQLITE(); 
         this.vT.setTlbHistorialTarjeta(conn.actTablaTarjeTa(vT.getTlbHistorialTarjeta()));
+        vT.getlbltiempo().setText(conn.tiempo()+" H");
         conn.desconectar(); 
     }
     
@@ -335,6 +336,7 @@ public class button_control implements ActionListener, KeyListener{
                 if (a==0){ // Si se presiona si se guardan los datos
                     conn.conectarSQLITE(); // conexta a BD sqlite
                     conn.actConfig(Integer.parseInt(vT.getTxtConfig().getText().trim()));
+                    vT.getlbltiempo().setText(conn.tiempo()+" H");
                     conn.desconectar(); // desconexta a BD sqlite
                 } 
             }
@@ -389,6 +391,7 @@ public class button_control implements ActionListener, KeyListener{
             String fechaF[]=vista.getTxtFechaFinal().getText().split("/");
              sql=sql+" fechareg >= '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00' ";
              sql=sql+" and fechareg <= '"+fechaF[2]+"-"+fechaF[1]+"-"+fechaF[0]+" 00:00:00' ";
+             sql=sql+" order by id desc";
             conn.conectarSQLITE();
             conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
             conn.desconectar();
@@ -451,6 +454,7 @@ public class button_control implements ActionListener, KeyListener{
             String fechaF[]=vista.getTxtFechaFinal().getText().split("/");
              sql=sql+" fechareg >= '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00' ";
              sql=sql+" and fechareg <= '"+fechaF[2]+"-"+fechaF[1]+"-"+fechaF[0]+" 00:00:00' ";
+             sql=sql+" order by id desc";
             conn.conectarSQLITE();
             conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
             conn.desconectar();
@@ -469,12 +473,12 @@ public class button_control implements ActionListener, KeyListener{
         if (result == JOptionPane.OK_OPTION) {
             String userNameValue = userName.getText();
             String passwordValue = password.getText();
-            //if ((userNameValue.equals(this.user)) && (passwordValue.equals(this.pass))){
+            if ((userNameValue.equals(this.user)) && (passwordValue.equals(this.pass))){
               vT = new VisorTarjeta(vista, true);
               button_control control = new button_control(vista,reg,regPea, vT);
               control.InicioVisorT();
               vT.setVisible(true);  
-           // }
+            }
             //Here is some validation code
         }
     }

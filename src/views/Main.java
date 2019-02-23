@@ -1243,6 +1243,11 @@ public class Main extends javax.swing.JFrame {
         btnPuesto56.setPreferredSize(new java.awt.Dimension(58, 65));
         btnPuesto56.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         btnPuesto56.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto56.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPuesto56ActionPerformed(evt);
+            }
+        });
         pnlMoto.add(btnPuesto56, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
 
         btnPuesto57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
@@ -2157,6 +2162,10 @@ public class Main extends javax.swing.JFrame {
     private void btnPuesto51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuesto51ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPuesto51ActionPerformed
+
+    private void btnPuesto56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuesto56ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPuesto56ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -4641,6 +4650,7 @@ public class Main extends javax.swing.JFrame {
     }
     public void desocupado(int puesto) {
         ImageIcon icon = new ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"));
+        ImageIcon icon2 = new ImageIcon(getClass().getResource("/images/image.png"));
         //ocupado.getImage().flush();
         switch (puesto){
             case 1: 
@@ -4893,255 +4903,255 @@ public class Main extends javax.swing.JFrame {
                 this.btnPuesto50.setRolloverIcon(icon);
                 this.btnPuesto50.setRolloverSelectedIcon(icon);
                 break;     
-                case 51: 
-                this.btnPuesto51.setIcon(icon);
-                this.btnPuesto51.setRolloverIcon(icon);
-                this.btnPuesto51.setRolloverSelectedIcon(icon);
+            case 51: 
+                this.btnPuesto51.setIcon(icon2);
+                this.btnPuesto51.setRolloverIcon(icon2);
+                this.btnPuesto51.setRolloverSelectedIcon(icon2);
                 break;
             case 52: 
-                this.btnPuesto52.setIcon(icon);
-                this.btnPuesto52.setRolloverIcon(icon);
-                this.btnPuesto52.setRolloverSelectedIcon(icon);
+                this.btnPuesto52.setIcon(icon2);
+                this.btnPuesto52.setRolloverIcon(icon2);
+                this.btnPuesto52.setRolloverSelectedIcon(icon2);
                 break;
             case 53: 
-                this.btnPuesto53.setIcon(icon);
-                this.btnPuesto53.setRolloverIcon(icon);
-                this.btnPuesto53.setRolloverSelectedIcon(icon);
+                this.btnPuesto53.setIcon(icon2);
+                this.btnPuesto53.setRolloverIcon(icon2);
+                this.btnPuesto53.setRolloverSelectedIcon(icon2);
                 break;
             case 54: 
-                this.btnPuesto54.setIcon(icon);
-                this.btnPuesto54.setRolloverIcon(icon);
-                this.btnPuesto54.setRolloverSelectedIcon(icon);
+                this.btnPuesto54.setIcon(icon2);
+                this.btnPuesto54.setRolloverIcon(icon2);
+                this.btnPuesto54.setRolloverSelectedIcon(icon2);
                 break;
             case 55: 
-                this.btnPuesto55.setIcon(icon);
-                this.btnPuesto55.setRolloverIcon(icon);
-                this.btnPuesto55.setRolloverSelectedIcon(icon);
+                this.btnPuesto55.setIcon(icon2);
+                this.btnPuesto55.setRolloverIcon(icon2);
+                this.btnPuesto55.setRolloverSelectedIcon(icon2);
                 break;
             case 56: 
-                this.btnPuesto56.setIcon(icon);
-                this.btnPuesto56.setRolloverIcon(icon);
-                this.btnPuesto56.setRolloverSelectedIcon(icon);
+                this.btnPuesto56.setIcon(icon2);
+                this.btnPuesto56.setRolloverIcon(icon2);
+                this.btnPuesto56.setRolloverSelectedIcon(icon2);
                 break;
             case 57: 
-                this.btnPuesto57.setIcon(icon);
-                this.btnPuesto57.setRolloverIcon(icon);
-                this.btnPuesto57.setRolloverSelectedIcon(icon);
+                this.btnPuesto57.setIcon(icon2);
+                this.btnPuesto57.setRolloverIcon(icon2);
+                this.btnPuesto57.setRolloverSelectedIcon(icon2);
                 break;
             case 58: 
-                this.btnPuesto58.setIcon(icon);
-                this.btnPuesto58.setRolloverIcon(icon);
-                this.btnPuesto58.setRolloverSelectedIcon(icon);
+                this.btnPuesto58.setIcon(icon2);
+                this.btnPuesto58.setRolloverIcon(icon2);
+                this.btnPuesto58.setRolloverSelectedIcon(icon2);
                 break;
             case 59: 
-                this.btnPuesto59.setIcon(icon);
-                this.btnPuesto59.setRolloverIcon(icon);
-                this.btnPuesto59.setRolloverSelectedIcon(icon);
+                this.btnPuesto59.setIcon(icon2);
+                this.btnPuesto59.setRolloverIcon(icon2);
+                this.btnPuesto59.setRolloverSelectedIcon(icon2);
                 break;
             case 60: 
-                this.btnPuesto60.setIcon(icon);
-                this.btnPuesto60.setRolloverIcon(icon);
-                this.btnPuesto60.setRolloverSelectedIcon(icon);
+                this.btnPuesto60.setIcon(icon2);
+                this.btnPuesto60.setRolloverIcon(icon2);
+                this.btnPuesto60.setRolloverSelectedIcon(icon2);
                 break;
             case 61: 
-                this.btnPuesto61.setIcon(icon);
-                this.btnPuesto61.setRolloverIcon(icon);
-                this.btnPuesto61.setRolloverSelectedIcon(icon);
+                this.btnPuesto61.setIcon(icon2);
+                this.btnPuesto61.setRolloverIcon(icon2);
+                this.btnPuesto61.setRolloverSelectedIcon(icon2);
                 break;
             case 62: 
-                this.btnPuesto62.setIcon(icon);
-                this.btnPuesto62.setRolloverIcon(icon);
-                this.btnPuesto62.setRolloverSelectedIcon(icon);
+                this.btnPuesto62.setIcon(icon2);
+                this.btnPuesto62.setRolloverIcon(icon2);
+                this.btnPuesto62.setRolloverSelectedIcon(icon2);
                 break;
             case 63: 
-                this.btnPuesto63.setIcon(icon);
-                this.btnPuesto63.setRolloverIcon(icon);
-                this.btnPuesto63.setRolloverSelectedIcon(icon);
+                this.btnPuesto63.setIcon(icon2);
+                this.btnPuesto63.setRolloverIcon(icon2);
+                this.btnPuesto63.setRolloverSelectedIcon(icon2);
                 break;
             case 64: 
-                this.btnPuesto64.setIcon(icon);
-                this.btnPuesto64.setRolloverIcon(icon);
-                this.btnPuesto64.setRolloverSelectedIcon(icon);
+                this.btnPuesto64.setIcon(icon2);
+                this.btnPuesto64.setRolloverIcon(icon2);
+                this.btnPuesto64.setRolloverSelectedIcon(icon2);
                 break;
             case 65: 
-                this.btnPuesto65.setIcon(icon);
-                this.btnPuesto65.setRolloverIcon(icon);
-                this.btnPuesto65.setRolloverSelectedIcon(icon);
+                this.btnPuesto65.setIcon(icon2);
+                this.btnPuesto65.setRolloverIcon(icon2);
+                this.btnPuesto65.setRolloverSelectedIcon(icon2);
                 break;
             case 66: 
-                this.btnPuesto66.setIcon(icon);
-                this.btnPuesto66.setRolloverIcon(icon);
-                this.btnPuesto66.setRolloverSelectedIcon(icon);
+                this.btnPuesto66.setIcon(icon2);
+                this.btnPuesto66.setRolloverIcon(icon2);
+                this.btnPuesto66.setRolloverSelectedIcon(icon2);
                 break;
             case 67: 
-                this.btnPuesto67.setIcon(icon);
-                this.btnPuesto67.setRolloverIcon(icon);
-                this.btnPuesto67.setRolloverSelectedIcon(icon);
+                this.btnPuesto67.setIcon(icon2);
+                this.btnPuesto67.setRolloverIcon(icon2);
+                this.btnPuesto67.setRolloverSelectedIcon(icon2);
                 break;
             case 68: 
-                this.btnPuesto68.setIcon(icon);
-                this.btnPuesto68.setRolloverIcon(icon);
-                this.btnPuesto68.setRolloverSelectedIcon(icon);
+                this.btnPuesto68.setIcon(icon2);
+                this.btnPuesto68.setRolloverIcon(icon2);
+                this.btnPuesto68.setRolloverSelectedIcon(icon2);
                 break;
             case 69: 
-                this.btnPuesto69.setIcon(icon);
-                this.btnPuesto69.setRolloverIcon(icon);
-                this.btnPuesto69.setRolloverSelectedIcon(icon);
+                this.btnPuesto69.setIcon(icon2);
+                this.btnPuesto69.setRolloverIcon(icon2);
+                this.btnPuesto69.setRolloverSelectedIcon(icon2);
                 break;
             case 70: 
-                this.btnPuesto70.setIcon(icon);
-                this.btnPuesto70.setRolloverIcon(icon);
-                this.btnPuesto70.setRolloverSelectedIcon(icon);
+                this.btnPuesto70.setIcon(icon2);
+                this.btnPuesto70.setRolloverIcon(icon2);
+                this.btnPuesto70.setRolloverSelectedIcon(icon2);
                 break;
             case 71: 
-                this.btnPuesto71.setIcon(icon);
-                this.btnPuesto71.setRolloverIcon(icon);
-                this.btnPuesto71.setRolloverSelectedIcon(icon);
+                this.btnPuesto71.setIcon(icon2);
+                this.btnPuesto71.setRolloverIcon(icon2);
+                this.btnPuesto71.setRolloverSelectedIcon(icon2);
                 break;
             case 72: 
-                this.btnPuesto72.setIcon(icon);
-                this.btnPuesto72.setRolloverIcon(icon);
-                this.btnPuesto72.setRolloverSelectedIcon(icon);
+                this.btnPuesto72.setIcon(icon2);
+                this.btnPuesto72.setRolloverIcon(icon2);
+                this.btnPuesto72.setRolloverSelectedIcon(icon2);
                 break;
             case 73: 
-                this.btnPuesto73.setIcon(icon);
-                this.btnPuesto73.setRolloverIcon(icon);
-                this.btnPuesto73.setRolloverSelectedIcon(icon);
+                this.btnPuesto73.setIcon(icon2);
+                this.btnPuesto73.setRolloverIcon(icon2);
+                this.btnPuesto73.setRolloverSelectedIcon(icon2);
                 break;
             case 74: 
-                this.btnPuesto74.setIcon(icon);
-                this.btnPuesto74.setRolloverIcon(icon);
-                this.btnPuesto74.setRolloverSelectedIcon(icon);
+                this.btnPuesto74.setIcon(icon2);
+                this.btnPuesto74.setRolloverIcon(icon2);
+                this.btnPuesto74.setRolloverSelectedIcon(icon2);
                 break;
             case 75: 
-                this.btnPuesto75.setIcon(icon);
-                this.btnPuesto75.setRolloverIcon(icon);
-                this.btnPuesto75.setRolloverSelectedIcon(icon);
+                this.btnPuesto75.setIcon(icon2);
+                this.btnPuesto75.setRolloverIcon(icon2);
+                this.btnPuesto75.setRolloverSelectedIcon(icon2);
                 break;
             case 76: 
-                this.btnPuesto76.setIcon(icon);
-                this.btnPuesto76.setRolloverIcon(icon);
-                this.btnPuesto76.setRolloverSelectedIcon(icon);
+                this.btnPuesto76.setIcon(icon2);
+                this.btnPuesto76.setRolloverIcon(icon2);
+                this.btnPuesto76.setRolloverSelectedIcon(icon2);
                 break;
             case 77: 
-                this.btnPuesto77.setIcon(icon);
-                this.btnPuesto77.setRolloverIcon(icon);
-                this.btnPuesto77.setRolloverSelectedIcon(icon);
+                this.btnPuesto77.setIcon(icon2);
+                this.btnPuesto77.setRolloverIcon(icon2);
+                this.btnPuesto77.setRolloverSelectedIcon(icon2);
                 break;
             case 78: 
-                this.btnPuesto78.setIcon(icon);
-                this.btnPuesto78.setRolloverIcon(icon);
-                this.btnPuesto78.setRolloverSelectedIcon(icon);
+                this.btnPuesto78.setIcon(icon2);
+                this.btnPuesto78.setRolloverIcon(icon2);
+                this.btnPuesto78.setRolloverSelectedIcon(icon2);
                 break;
             case 79: 
-                this.btnPuesto79.setIcon(icon);
-                this.btnPuesto79.setRolloverIcon(icon);
-                this.btnPuesto79.setRolloverSelectedIcon(icon);
+                this.btnPuesto79.setIcon(icon2);
+                this.btnPuesto79.setRolloverIcon(icon2);
+                this.btnPuesto79.setRolloverSelectedIcon(icon2);
                 break;
             case 80: 
-                this.btnPuesto80.setIcon(icon);
-                this.btnPuesto80.setRolloverIcon(icon);
-                this.btnPuesto80.setRolloverSelectedIcon(icon);
+                this.btnPuesto80.setIcon(icon2);
+                this.btnPuesto80.setRolloverIcon(icon2);
+                this.btnPuesto80.setRolloverSelectedIcon(icon2);
                 break;
             case 81: 
-                this.btnPuesto81.setIcon(icon);
-                this.btnPuesto81.setRolloverIcon(icon);
-                this.btnPuesto81.setRolloverSelectedIcon(icon);
+                this.btnPuesto81.setIcon(icon2);
+                this.btnPuesto81.setRolloverIcon(icon2);
+                this.btnPuesto81.setRolloverSelectedIcon(icon2);
                 break;
             case 82: 
-                this.btnPuesto82.setIcon(icon);
-                this.btnPuesto82.setRolloverIcon(icon);
-                this.btnPuesto82.setRolloverSelectedIcon(icon);
+                this.btnPuesto82.setIcon(icon2);
+                this.btnPuesto82.setRolloverIcon(icon2);
+                this.btnPuesto82.setRolloverSelectedIcon(icon2);
                 break;
             case 83: 
-                this.btnPuesto83.setIcon(icon);
-                this.btnPuesto83.setRolloverIcon(icon);
-                this.btnPuesto83.setRolloverSelectedIcon(icon);
+                this.btnPuesto83.setIcon(icon2);
+                this.btnPuesto83.setRolloverIcon(icon2);
+                this.btnPuesto83.setRolloverSelectedIcon(icon2);
                 break;
             case 84: 
-                this.btnPuesto84.setIcon(icon);
-                this.btnPuesto84.setRolloverIcon(icon);
-                this.btnPuesto84.setRolloverSelectedIcon(icon);
+                this.btnPuesto84.setIcon(icon2);
+                this.btnPuesto84.setRolloverIcon(icon2);
+                this.btnPuesto84.setRolloverSelectedIcon(icon2);
                 break;
             case 85: 
-                this.btnPuesto85.setIcon(icon);
-                this.btnPuesto85.setRolloverIcon(icon);
-                this.btnPuesto85.setRolloverSelectedIcon(icon);
+                this.btnPuesto85.setIcon(icon2);
+                this.btnPuesto85.setRolloverIcon(icon2);
+                this.btnPuesto85.setRolloverSelectedIcon(icon2);
                 break;
             case 86: 
-                this.btnPuesto86.setIcon(icon);
-                this.btnPuesto86.setRolloverIcon(icon);
-                this.btnPuesto86.setRolloverSelectedIcon(icon);
+                this.btnPuesto86.setIcon(icon2);
+                this.btnPuesto86.setRolloverIcon(icon2);
+                this.btnPuesto86.setRolloverSelectedIcon(icon2);
                 break;
             case 87: 
-                this.btnPuesto87.setIcon(icon);
-                this.btnPuesto87.setRolloverIcon(icon);
-                this.btnPuesto87.setRolloverSelectedIcon(icon);
+                this.btnPuesto87.setIcon(icon2);
+                this.btnPuesto87.setRolloverIcon(icon2);
+                this.btnPuesto87.setRolloverSelectedIcon(icon2);
                 break;
             case 88: 
-                this.btnPuesto88.setIcon(icon);
-                this.btnPuesto88.setRolloverIcon(icon);
-                this.btnPuesto88.setRolloverSelectedIcon(icon);
+                this.btnPuesto88.setIcon(icon2);
+                this.btnPuesto88.setRolloverIcon(icon2);
+                this.btnPuesto88.setRolloverSelectedIcon(icon2);
                 break;
             case 89: 
-                this.btnPuesto89.setIcon(icon);
-                this.btnPuesto89.setRolloverIcon(icon);
-                this.btnPuesto89.setRolloverSelectedIcon(icon);
+                this.btnPuesto89.setIcon(icon2);
+                this.btnPuesto89.setRolloverIcon(icon2);
+                this.btnPuesto89.setRolloverSelectedIcon(icon2);
                 break;
             case 90: 
-                this.btnPuesto90.setIcon(icon);
-                this.btnPuesto90.setRolloverIcon(icon);
-                this.btnPuesto90.setRolloverSelectedIcon(icon);
+                this.btnPuesto90.setIcon(icon2);
+                this.btnPuesto90.setRolloverIcon(icon2);
+                this.btnPuesto90.setRolloverSelectedIcon(icon2);
                 break;                
             case 91: 
-                this.btnPuesto91.setIcon(icon);
-                this.btnPuesto91.setRolloverIcon(icon);
-                this.btnPuesto91.setRolloverSelectedIcon(icon);
+                this.btnPuesto91.setIcon(icon2);
+                this.btnPuesto91.setRolloverIcon(icon2);
+                this.btnPuesto91.setRolloverSelectedIcon(icon2);
                 break;
             case 92: 
-                this.btnPuesto92.setIcon(icon);
-                this.btnPuesto92.setRolloverIcon(icon);
-                this.btnPuesto92.setRolloverSelectedIcon(icon);
+                this.btnPuesto92.setIcon(icon2);
+                this.btnPuesto92.setRolloverIcon(icon2);
+                this.btnPuesto92.setRolloverSelectedIcon(icon2);
                 break;
             case 93: 
-                this.btnPuesto93.setIcon(icon);
-                this.btnPuesto93.setRolloverIcon(icon);
-                this.btnPuesto93.setRolloverSelectedIcon(icon);
+                this.btnPuesto93.setIcon(icon2);
+                this.btnPuesto93.setRolloverIcon(icon2);
+                this.btnPuesto93.setRolloverSelectedIcon(icon2);
                 break;
             case 94: 
-                this.btnPuesto94.setIcon(icon);
-                this.btnPuesto94.setRolloverIcon(icon);
-                this.btnPuesto94.setRolloverSelectedIcon(icon);
+                this.btnPuesto94.setIcon(icon2);
+                this.btnPuesto94.setRolloverIcon(icon2);
+                this.btnPuesto94.setRolloverSelectedIcon(icon2);
                 break;
             case 95: 
-                this.btnPuesto95.setIcon(icon);
-                this.btnPuesto95.setRolloverIcon(icon);
-                this.btnPuesto95.setRolloverSelectedIcon(icon);
+                this.btnPuesto95.setIcon(icon2);
+                this.btnPuesto95.setRolloverIcon(icon2);
+                this.btnPuesto95.setRolloverSelectedIcon(icon2);
                 break;
             case 96: 
-                this.btnPuesto96.setIcon(icon);
-                this.btnPuesto96.setRolloverIcon(icon);
-                this.btnPuesto96.setRolloverSelectedIcon(icon);
+                this.btnPuesto96.setIcon(icon2);
+                this.btnPuesto96.setRolloverIcon(icon2);
+                this.btnPuesto96.setRolloverSelectedIcon(icon2);
                 break;
             case 97: 
-                this.btnPuesto97.setIcon(icon);
-                this.btnPuesto97.setRolloverIcon(icon);
-                this.btnPuesto97.setRolloverSelectedIcon(icon);
+                this.btnPuesto97.setIcon(icon2);
+                this.btnPuesto97.setRolloverIcon(icon2);
+                this.btnPuesto97.setRolloverSelectedIcon(icon2);
                 break;
             case 98: 
-                this.btnPuesto98.setIcon(icon);
-                this.btnPuesto98.setRolloverIcon(icon);
-                this.btnPuesto98.setRolloverSelectedIcon(icon);
+                this.btnPuesto98.setIcon(icon2);
+                this.btnPuesto98.setRolloverIcon(icon2);
+                this.btnPuesto98.setRolloverSelectedIcon(icon2);
                 break;
             case 99: 
-                this.btnPuesto99.setIcon(icon);
-                this.btnPuesto99.setRolloverIcon(icon);
-                this.btnPuesto99.setRolloverSelectedIcon(icon);
+                this.btnPuesto99.setIcon(icon2);
+                this.btnPuesto99.setRolloverIcon(icon2);
+                this.btnPuesto99.setRolloverSelectedIcon(icon2);
                 break;
             case 100: 
-                this.btnPuesto100.setIcon(icon);
-                this.btnPuesto100.setRolloverIcon(icon);
-                this.btnPuesto100.setRolloverSelectedIcon(icon);
+                this.btnPuesto100.setIcon(icon2);
+                this.btnPuesto100.setRolloverIcon(icon2);
+                this.btnPuesto100.setRolloverSelectedIcon(icon2);
                 break;                
         } 
      
