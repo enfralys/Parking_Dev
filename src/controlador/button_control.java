@@ -21,6 +21,7 @@ import java.util.TimerTask;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import plugins.comun;
 import views.RegistroTarjeta;
 import views.VisorTarjeta;
 
@@ -332,14 +333,20 @@ public class button_control implements ActionListener, KeyListener{
         }    
         
         if (e.getSource() == vT.getbtnconfig()) {
-                int a=JOptionPane.showConfirmDialog(vista, "Confirmar");                
+            int a;
+             if (comun.isNumeric(vT.getTxtConfig().getText().trim())){
+                a=JOptionPane.showConfirmDialog(vista, "Confirmar");                
                 if (a==0){ // Si se presiona si se guardan los datos
                     conn.conectarSQLITE(); // conexta a BD sqlite
                     conn.actConfig(Integer.parseInt(vT.getTxtConfig().getText().trim()));
+                    //matches("[0-9]*")
                     vT.getlbltiempo().setText(conn.tiempo()+" H");
                     conn.desconectar(); // desconexta a BD sqlite
                 } 
             }
+            else{JOptionPane.showMessageDialog(null, "Ingrese un dato valido");}
+
+        }
         
         if (e.getSource() == vT.getBtnRegistroTarjeta()){
             regT = new RegistroTarjeta(vista, true);
@@ -473,12 +480,12 @@ public class button_control implements ActionListener, KeyListener{
         if (result == JOptionPane.OK_OPTION) {
             String userNameValue = userName.getText();
             String passwordValue = password.getText();
-            if ((userNameValue.equals(this.user)) && (passwordValue.equals(this.pass))){
+           if ((userNameValue.equals(this.user)) && (passwordValue.equals(this.pass))){
               vT = new VisorTarjeta(vista, true);
               button_control control = new button_control(vista,reg,regPea, vT);
               control.InicioVisorT();
               vT.setVisible(true);  
-            }
+            }else { JOptionPane.showMessageDialog(null, "Clave incorrecta"); }
             //Here is some validation code
         }
     }
