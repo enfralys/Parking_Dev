@@ -464,7 +464,7 @@ public class conex {
             //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1 and fechareg<datetime('now','-1 day')");
             pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1 ");
             rs=pstmt.executeQuery();
-            int controlH=120;
+            int controlH=this.timepo();
             while (rs.next()){
                 if (comun.restaFechas(rs.getString("fechareg"))>controlH){
                     pstmt2=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg, activo) values (?,?,?,?,?,'infractor', ?,1)");
@@ -488,8 +488,7 @@ public class conex {
         }    
         
     }
-
-    
+   
     public int timepo() {
         ResultSet rs=null;
         try {

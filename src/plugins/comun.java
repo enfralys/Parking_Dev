@@ -35,11 +35,11 @@ public class comun {
         fechaInicial = date;
         Date fechaFinal = null;
         //System.out.println(fechainim);
-        System.out.println("fechaInicial: "+fechaInicial);
+   //     System.out.println("fechaInicial: "+fechaInicial);
         try {
             //fechaFinal = dateFormat.parse("2019-02-22 22:59:00");
             fechaFinal = dateFormat.parse(fechacomp);
-            System.out.println("fechaFinal: "+fechaFinal);
+          //  System.out.println("fechaFinal: "+fechaFinal);
         } catch (ParseException ex) {
             Logger.getLogger(comun.class.getName()).log(Level.SEVERE, null, ex);
         }
