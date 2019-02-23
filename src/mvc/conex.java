@@ -85,6 +85,20 @@ public class conex {
        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
         }
+        try {
+            sql="CREATE TABLE config (id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, tiempo int default 2)";
+            pstmt= conn.prepareStatement(sql);
+            pstmt.execute();
+       } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
+        }
+        try {
+            sql="insert into config (tiempo) values (2)";
+            pstmt= conn.prepareStatement(sql);
+            pstmt.execute();
+       } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
+        }
     }
     public void guardar(RegistroVehiculo reg, int puesto) {
         Date date = new Date();
@@ -447,20 +461,25 @@ public class conex {
         ResultSet rs=null;
         PreparedStatement pstmt2;
         try {
-            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1 and fechareg<datetime('now','-1 day')");
+            //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1 and fechareg<datetime('now','-1 day')");
+            pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1 ");
             rs=pstmt.executeQuery();
+            int controlH=120;
             while (rs.next()){
-                pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg, activo) values (?,?,?,?,?,'infractor', ?,1)");
-                pstmt.setString(1, rs.getString("placa"));
-                pstmt.setString(2, rs.getString("visitante"));
-                pstmt.setInt(3, rs.getInt("puesto"));
-                pstmt.setString(4, rs.getString("apart"));
-                pstmt.setString(5, rs.getString("tarjeta"));
-                pstmt.setString(6, rs.getString("fechareg"));
-            pstmt.execute();
-                /*pstmt2=conn.prepareStatement("update parking set activo=0 where id=?");
-                pstmt2.setInt(1, rs.getInt("id"));
-                pstmt2.execute();*/
+                if (comun.restaFechas(rs.getString("fechareg"))>controlH){
+                    pstmt2=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg, activo) values (?,?,?,?,?,'infractor', ?,1)");
+                    pstmt2.setString(1, rs.getString("placa"));
+                    pstmt2.setString(2, rs.getString("visitante"));
+                    pstmt2.setInt(3, rs.getInt("puesto"));
+                    pstmt2.setString(4, rs.getString("apart"));
+                    pstmt2.setString(5, rs.getString("tarjeta"));
+                    pstmt2.setString(6, rs.getString("fechareg"));
+                    pstmt2.execute();
+                
+                    pstmt2=conn.prepareStatement("update parking set activo=0 where id=?");
+                    pstmt2.setInt(1, rs.getInt("id"));
+                    pstmt2.execute();
+                }
             }
         } catch (SQLException e) {  e.printStackTrace();
            if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}

@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import plugins.comun;
 import views.Main;
 import views.RegistroPeaton;
 import views.RegistroVehiculo;
@@ -26,6 +27,7 @@ public class home {
         button_control control = new button_control(view, reg, regPea, vT);
       control.Inicio();
         view.setVisible(true);
+   // comun.restaFechas("","");
     }
     
 }
