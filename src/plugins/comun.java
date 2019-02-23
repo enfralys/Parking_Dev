@@ -31,35 +31,13 @@ public class comun {
         Date fechaFinal = null;
         Date fechaInicial = null;
         Date date = new Date();
-//        Date dateF = new Date(fechacomp);
-      //  Date date2 = new Date(fechacomp);
-        //Timestamp date2=new Timestamp();
-        //fechaInicial = dateFormat.parse("2016-02-14 10:00:00");
-        //fechaInicial = dateFormat.parse("2019-02-22 22:59:00");
-        //fechaInicial = dateFormat.parse(date);
-        //fechaInicial = date;
         String fechai=dateFormat.format(date);
-  //      String fechaf=dateFormat.format(dateF);
-        //String fechai=date.getYear()+"-"+date.getMonth()+"-"+date.getDay()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-        
+       
         try {
-            //fechaFinal = dateFormat.parse("2019-02-22 22:59:00");
-        //    fechacomp=dateFormat.format(date2);;
-            
-            /*fechaInicial = dateFormat.parse(fechai);
-            fechaFinal = dateFormat.parse(fechacomp);*/
-            
             fechaInicial = dateFormat.parse(fechacomp);
             fechaFinal = dateFormat.parse(fechai);
-            
-   //     System.out.println(fechainim);
-            System.out.println("fechaInicial: "+fechaInicial);
-            
-            //
-    //        fechaFinal = dateFormat.parse(fechaf);
-            //fechaInicial = dateFormat.parse(fechai);
-            
-            System.out.println("fechaFinal: "+fechaFinal);
+//            System.out.println("fechaInicial: "+fechaInicial);
+//            System.out.println("fechaFinal: "+fechaFinal);
         } catch (ParseException ex) {
             Logger.getLogger(comun.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -79,8 +57,7 @@ public class comun {
             minutos=(int)Math.floor(diferencia/60);
             diferencia=diferencia-(minutos*60);
         }
-        //System.out.println("Hay "+dias+" dias, "+horas+" horas, "+minutos+" minutos y "+diferencia+" segundos de diferencia");
-        System.out.println("Hay "+dias+" dias, "+horas+" horas, "+minutos+" minutos y "+diferencia+" segundos de diferencia");
+//        System.out.println("Hay "+dias+" dias, "+horas+" horas, "+minutos+" minutos y "+diferencia+" segundos de diferencia");
         return minutos;
         //return horas;
     }
