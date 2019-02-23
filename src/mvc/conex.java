@@ -202,7 +202,8 @@ public class conex {
         registro est=new registro();
         ResultSet rs=null;
         try {
-            pstmt=conn.prepareStatement("select * from  parking where puesto=? and estado like 'entrada' and activo=1");
+            pstmt=conn.prepareStatement("select * from  parking where puesto=? and activo=1");
+            //pstmt=conn.prepareStatement("select * from  parking where puesto=? and estado like 'entrada' and activo=1");
             pstmt.setInt(1, puesto);
             rs=pstmt.executeQuery();
         } catch (SQLException e) {  e.printStackTrace();
