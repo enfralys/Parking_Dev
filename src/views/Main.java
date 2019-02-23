@@ -334,7 +334,7 @@ public class Main extends javax.swing.JFrame {
         btnPuesto8.setBorderPainted(false);
         btnPuesto8.setContentAreaFilled(false);
         btnPuesto8.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         btnPuesto8.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
         pnlAuto.add(btnPuesto8, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 50, -1, -1));
 
@@ -1250,13 +1250,13 @@ public class Main extends javax.swing.JFrame {
         });
         pnlMoto.add(btnPuesto56, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
 
-        btnPuesto57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto57.setBorder(null);
         btnPuesto57.setBorderPainted(false);
         btnPuesto57.setContentAreaFilled(false);
         btnPuesto57.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto57.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto57.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto57.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto57.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto57, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 50, -1, -1));
 
         lblPuesto57.setBackground(new java.awt.Color(255, 255, 255));
@@ -1273,22 +1273,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto58.setText("08");
         pnlMoto.add(lblPuesto58, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 20, -1, -1));
 
-        btnPuesto58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto58.setBorder(null);
         btnPuesto58.setBorderPainted(false);
         btnPuesto58.setContentAreaFilled(false);
         btnPuesto58.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto58.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto58.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto58.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto58.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto58, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 50, -1, -1));
 
-        btnPuesto59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto59.setBorder(null);
         btnPuesto59.setBorderPainted(false);
         btnPuesto59.setContentAreaFilled(false);
         btnPuesto59.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto59.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto59.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto59.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto59.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto59, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 50, -1, -1));
 
         lblPuesto59.setBackground(new java.awt.Color(255, 255, 255));
@@ -1305,22 +1305,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto60.setText("10");
         pnlMoto.add(lblPuesto60, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 20, -1, -1));
 
-        btnPuesto60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto60.setBorder(null);
         btnPuesto60.setBorderPainted(false);
         btnPuesto60.setContentAreaFilled(false);
         btnPuesto60.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto60.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto60.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto60.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto60.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto60, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
 
-        btnPuesto61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto61.setBorder(null);
         btnPuesto61.setBorderPainted(false);
         btnPuesto61.setContentAreaFilled(false);
         btnPuesto61.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto61.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto61.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto61.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto61.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto61, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 50, -1, -1));
 
         lblPuesto61.setBackground(new java.awt.Color(255, 255, 255));
@@ -1337,22 +1337,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto62.setText("12");
         pnlMoto.add(lblPuesto62, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 20, -1, -1));
 
-        btnPuesto62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto62.setBorder(null);
         btnPuesto62.setBorderPainted(false);
         btnPuesto62.setContentAreaFilled(false);
         btnPuesto62.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto62.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto62.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto62.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto62.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto62, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 50, -1, -1));
 
-        btnPuesto63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto63.setBorder(null);
         btnPuesto63.setBorderPainted(false);
         btnPuesto63.setContentAreaFilled(false);
         btnPuesto63.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto63.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto63.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto63.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto63.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto63, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 122, -1, 60));
 
         lblPuesto63.setBackground(new java.awt.Color(255, 255, 255));
@@ -1369,13 +1369,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto64.setText("14");
         pnlMoto.add(lblPuesto64, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 202, -1, -1));
 
-        btnPuesto64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto64.setBorder(null);
         btnPuesto64.setBorderPainted(false);
         btnPuesto64.setContentAreaFilled(false);
         btnPuesto64.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto64.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto64.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto64.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto64.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto64, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 184, -1, 60));
 
         lblPuesto65.setBackground(new java.awt.Color(255, 255, 255));
@@ -1385,13 +1385,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto65.setText("15");
         pnlMoto.add(lblPuesto65, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 266, -1, -1));
 
-        btnPuesto65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto65.setBorder(null);
         btnPuesto65.setBorderPainted(false);
         btnPuesto65.setContentAreaFilled(false);
         btnPuesto65.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto65.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto65.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto65.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto65.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto65, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 246, -1, 60));
 
         lblPuesto66.setBackground(new java.awt.Color(255, 255, 255));
@@ -1401,13 +1401,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto66.setText("16");
         pnlMoto.add(lblPuesto66, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 326, -1, -1));
 
-        btnPuesto66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto66.setBorder(null);
         btnPuesto66.setBorderPainted(false);
         btnPuesto66.setContentAreaFilled(false);
         btnPuesto66.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto66.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto66.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto66.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto66.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto66, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, 60));
 
         lblPuesto67.setBackground(new java.awt.Color(255, 255, 255));
@@ -1417,13 +1417,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto67.setText("17");
         pnlMoto.add(lblPuesto67, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 390, -1, -1));
 
-        btnPuesto67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto67.setBorder(null);
         btnPuesto67.setBorderPainted(false);
         btnPuesto67.setContentAreaFilled(false);
         btnPuesto67.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto67.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto67.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto67.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto67.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto67, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 372, -1, 60));
 
         lblPuesto68.setBackground(new java.awt.Color(255, 255, 255));
@@ -1433,22 +1433,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto68.setText("18");
         pnlMoto.add(lblPuesto68, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 450, -1, -1));
 
-        btnPuesto68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto68.setBorder(null);
         btnPuesto68.setBorderPainted(false);
         btnPuesto68.setContentAreaFilled(false);
         btnPuesto68.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto68.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto68.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto68.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto68.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto68, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 435, -1, 60));
 
-        btnPuesto69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto69.setBorder(null);
         btnPuesto69.setBorderPainted(false);
         btnPuesto69.setContentAreaFilled(false);
         btnPuesto69.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto69.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto69.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto69.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto69.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto69, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 500, -1, -1));
 
         lblPuesto69.setBackground(new java.awt.Color(255, 255, 255));
@@ -1458,13 +1458,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto69.setText("19");
         pnlMoto.add(lblPuesto69, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 570, -1, -1));
 
-        btnPuesto70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto70.setBorder(null);
         btnPuesto70.setBorderPainted(false);
         btnPuesto70.setContentAreaFilled(false);
         btnPuesto70.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto70.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto70.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto70.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto70.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto70, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 500, 60, -1));
 
         lblPuesto70.setBackground(new java.awt.Color(255, 255, 255));
@@ -1474,13 +1474,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto70.setText("20");
         pnlMoto.add(lblPuesto70, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 570, -1, -1));
 
-        btnPuesto71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto71.setBorder(null);
         btnPuesto71.setBorderPainted(false);
         btnPuesto71.setContentAreaFilled(false);
         btnPuesto71.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto71.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto71.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto71.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto71.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto71, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 500, -1, -1));
 
         lblPuesto71.setBackground(new java.awt.Color(255, 255, 255));
@@ -1497,22 +1497,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto72.setText("22");
         pnlMoto.add(lblPuesto72, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 570, -1, -1));
 
-        btnPuesto72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto72.setBorder(null);
         btnPuesto72.setBorderPainted(false);
         btnPuesto72.setContentAreaFilled(false);
         btnPuesto72.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto72.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto72.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto72.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto72.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto72, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 500, -1, -1));
 
-        btnPuesto73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto73.setBorder(null);
         btnPuesto73.setBorderPainted(false);
         btnPuesto73.setContentAreaFilled(false);
         btnPuesto73.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto73.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto73.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto73.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto73.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto73, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 500, -1, -1));
 
         lblPuesto73.setBackground(new java.awt.Color(255, 255, 255));
@@ -1529,22 +1529,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto74.setText("24");
         pnlMoto.add(lblPuesto74, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 570, -1, -1));
 
-        btnPuesto74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto74.setBorder(null);
         btnPuesto74.setBorderPainted(false);
         btnPuesto74.setContentAreaFilled(false);
         btnPuesto74.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto74.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto74.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto74.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto74.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto74, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 500, -1, -1));
 
-        btnPuesto75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto75.setBorder(null);
         btnPuesto75.setBorderPainted(false);
         btnPuesto75.setContentAreaFilled(false);
         btnPuesto75.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto75.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto75.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto75.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto75.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto75, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, -1, -1));
 
         lblPuesto75.setBackground(new java.awt.Color(255, 255, 255));
@@ -1561,22 +1561,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto76.setText("26");
         pnlMoto.add(lblPuesto76, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 570, -1, -1));
 
-        btnPuesto76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto76.setBorder(null);
         btnPuesto76.setBorderPainted(false);
         btnPuesto76.setContentAreaFilled(false);
         btnPuesto76.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto76.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto76.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto76.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto76.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto76, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, -1, -1));
 
-        btnPuesto77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto77.setBorder(null);
         btnPuesto77.setBorderPainted(false);
         btnPuesto77.setContentAreaFilled(false);
         btnPuesto77.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto77.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto77.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto77.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto77.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto77, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 500, -1, -1));
 
         lblPuesto77.setBackground(new java.awt.Color(255, 255, 255));
@@ -1593,22 +1593,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto78.setText("28");
         pnlMoto.add(lblPuesto78, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 570, -1, -1));
 
-        btnPuesto78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto78.setBorder(null);
         btnPuesto78.setBorderPainted(false);
         btnPuesto78.setContentAreaFilled(false);
         btnPuesto78.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto78.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto78.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto78.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto78.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto78, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 500, -1, -1));
 
-        btnPuesto79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto79.setBorder(null);
         btnPuesto79.setBorderPainted(false);
         btnPuesto79.setContentAreaFilled(false);
         btnPuesto79.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto79.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto79.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto79.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto79.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto79, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 500, -1, -1));
 
         lblPuesto79.setBackground(new java.awt.Color(255, 255, 255));
@@ -1625,22 +1625,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto80.setText("30");
         pnlMoto.add(lblPuesto80, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 570, -1, -1));
 
-        btnPuesto80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto80.setBorder(null);
         btnPuesto80.setBorderPainted(false);
         btnPuesto80.setContentAreaFilled(false);
         btnPuesto80.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto80.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto80.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto80.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto80.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto80, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 500, -1, -1));
 
-        btnPuesto81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto81.setBorder(null);
         btnPuesto81.setBorderPainted(false);
         btnPuesto81.setContentAreaFilled(false);
         btnPuesto81.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto81.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto81.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto81.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto81.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto81, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, -1, -1));
 
         lblPuesto81.setBackground(new java.awt.Color(255, 255, 255));
@@ -1657,22 +1657,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto82.setText("42");
         pnlMoto.add(lblPuesto82, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 328, -1, -1));
 
-        btnPuesto82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto82.setBorder(null);
         btnPuesto82.setBorderPainted(false);
         btnPuesto82.setContentAreaFilled(false);
         btnPuesto82.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto82.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto82.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto82.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto82.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto82, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 360, -1, -1));
 
-        btnPuesto83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto83.setBorder(null);
         btnPuesto83.setBorderPainted(false);
         btnPuesto83.setContentAreaFilled(false);
         btnPuesto83.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto83.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto83.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto83.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto83.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto83, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 360, -1, -1));
 
         lblPuesto83.setBackground(new java.awt.Color(255, 255, 255));
@@ -1682,13 +1682,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto83.setText("43");
         pnlMoto.add(lblPuesto83, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 328, -1, -1));
 
-        btnPuesto84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto84.setBorder(null);
         btnPuesto84.setBorderPainted(false);
         btnPuesto84.setContentAreaFilled(false);
         btnPuesto84.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto84.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto84.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto84.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto84.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto84, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 360, -1, -1));
 
         lblPuesto84.setBackground(new java.awt.Color(255, 255, 255));
@@ -1698,13 +1698,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto84.setText("44");
         pnlMoto.add(lblPuesto84, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 328, -1, -1));
 
-        btnPuesto85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto85.setBorder(null);
         btnPuesto85.setBorderPainted(false);
         btnPuesto85.setContentAreaFilled(false);
         btnPuesto85.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto85.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto85.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto85.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto85.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto85, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, -1));
 
         lblPuesto85.setBackground(new java.awt.Color(255, 255, 255));
@@ -1721,22 +1721,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto86.setText("46");
         pnlMoto.add(lblPuesto86, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 328, -1, -1));
 
-        btnPuesto86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto86.setBorder(null);
         btnPuesto86.setBorderPainted(false);
         btnPuesto86.setContentAreaFilled(false);
         btnPuesto86.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto86.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto86.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto86.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto86.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto86, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 360, -1, -1));
 
-        btnPuesto87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto87.setBorder(null);
         btnPuesto87.setBorderPainted(false);
         btnPuesto87.setContentAreaFilled(false);
         btnPuesto87.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto87.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto87.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto87.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto87.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto87, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 360, -1, -1));
 
         lblPuesto87.setBackground(new java.awt.Color(255, 255, 255));
@@ -1753,22 +1753,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto88.setText("48");
         pnlMoto.add(lblPuesto88, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 328, -1, -1));
 
-        btnPuesto88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto88.setBorder(null);
         btnPuesto88.setBorderPainted(false);
         btnPuesto88.setContentAreaFilled(false);
         btnPuesto88.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto88.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto88.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto88.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto88.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto88, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 360, -1, -1));
 
-        btnPuesto89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto89.setBorder(null);
         btnPuesto89.setBorderPainted(false);
         btnPuesto89.setContentAreaFilled(false);
         btnPuesto89.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto89.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto89.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto89.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto89.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto89, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 360, -1, -1));
 
         lblPuesto89.setBackground(new java.awt.Color(255, 255, 255));
@@ -1785,13 +1785,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto90.setText("50");
         pnlMoto.add(lblPuesto90, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 328, -1, -1));
 
-        btnPuesto90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto90.setBorder(null);
         btnPuesto90.setBorderPainted(false);
         btnPuesto90.setContentAreaFilled(false);
         btnPuesto90.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto90.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto90.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto90.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto90.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto90, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 360, -1, -1));
 
         lblPuesto91.setBackground(new java.awt.Color(255, 255, 255));
@@ -1801,22 +1801,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto91.setText("31");
         pnlMoto.add(lblPuesto91, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 250, -1, -1));
 
-        btnPuesto91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto91.setBorder(null);
         btnPuesto91.setBorderPainted(false);
         btnPuesto91.setContentAreaFilled(false);
         btnPuesto91.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto91.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto91.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto91.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto91.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto91, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 180, -1, -1));
 
-        btnPuesto92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto92.setBorder(null);
         btnPuesto92.setBorderPainted(false);
         btnPuesto92.setContentAreaFilled(false);
         btnPuesto92.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto92.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto92.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto92.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto92.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto92, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 180, -1, -1));
 
         lblPuesto92.setBackground(new java.awt.Color(255, 255, 255));
@@ -1826,13 +1826,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto92.setText("32");
         pnlMoto.add(lblPuesto92, new org.netbeans.lib.awtextra.AbsoluteConstraints(758, 250, -1, -1));
 
-        btnPuesto93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto93.setBorder(null);
         btnPuesto93.setBorderPainted(false);
         btnPuesto93.setContentAreaFilled(false);
         btnPuesto93.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto93.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto93.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto93.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto93.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto93, new org.netbeans.lib.awtextra.AbsoluteConstraints(676, 180, -1, -1));
 
         lblPuesto93.setBackground(new java.awt.Color(255, 255, 255));
@@ -1842,13 +1842,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto93.setText("33");
         pnlMoto.add(lblPuesto93, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 250, -1, -1));
 
-        btnPuesto94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto94.setBorder(null);
         btnPuesto94.setBorderPainted(false);
         btnPuesto94.setContentAreaFilled(false);
         btnPuesto94.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto94.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto94.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto94.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto94.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto94, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 180, -1, -1));
 
         lblPuesto94.setBackground(new java.awt.Color(255, 255, 255));
@@ -1858,13 +1858,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto94.setText("34");
         pnlMoto.add(lblPuesto94, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 250, -1, -1));
 
-        btnPuesto95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto95.setBorder(null);
         btnPuesto95.setBorderPainted(false);
         btnPuesto95.setContentAreaFilled(false);
         btnPuesto95.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto95.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto95.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto95.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto95.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto95, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 180, -1, -1));
 
         lblPuesto95.setBackground(new java.awt.Color(255, 255, 255));
@@ -1881,22 +1881,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto96.setText("36");
         pnlMoto.add(lblPuesto96, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, -1, -1));
 
-        btnPuesto96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto96.setBorder(null);
         btnPuesto96.setBorderPainted(false);
         btnPuesto96.setContentAreaFilled(false);
         btnPuesto96.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto96.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto96.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto96.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto96.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto96, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, -1));
 
-        btnPuesto97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto97.setBorder(null);
         btnPuesto97.setBorderPainted(false);
         btnPuesto97.setContentAreaFilled(false);
         btnPuesto97.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto97.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto97.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto97.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto97.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto97, new org.netbeans.lib.awtextra.AbsoluteConstraints(428, 180, -1, -1));
 
         lblPuesto97.setBackground(new java.awt.Color(255, 255, 255));
@@ -1913,22 +1913,22 @@ public class Main extends javax.swing.JFrame {
         lblPuesto98.setText("38");
         pnlMoto.add(lblPuesto98, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 250, -1, -1));
 
-        btnPuesto98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto98.setBorder(null);
         btnPuesto98.setBorderPainted(false);
         btnPuesto98.setContentAreaFilled(false);
         btnPuesto98.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto98.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto98.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto98.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto98.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto98, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 180, -1, -1));
 
-        btnPuesto99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto99.setBorder(null);
         btnPuesto99.setBorderPainted(false);
         btnPuesto99.setContentAreaFilled(false);
         btnPuesto99.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto99.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto99.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto99.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto99.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto99, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 180, -1, -1));
 
         lblPuesto99.setBackground(new java.awt.Color(255, 255, 255));
@@ -1945,13 +1945,13 @@ public class Main extends javax.swing.JFrame {
         lblPuesto100.setText("40");
         pnlMoto.add(lblPuesto100, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 250, -1, -1));
 
-        btnPuesto100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-1.png"))); // NOI18N
+        btnPuesto100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image.png"))); // NOI18N
         btnPuesto100.setBorder(null);
         btnPuesto100.setBorderPainted(false);
         btnPuesto100.setContentAreaFilled(false);
         btnPuesto100.setPreferredSize(new java.awt.Dimension(58, 65));
-        btnPuesto100.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
-        btnPuesto100.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/011-parking-sign-2.png"))); // NOI18N
+        btnPuesto100.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
+        btnPuesto100.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image (1).png"))); // NOI18N
         pnlMoto.add(btnPuesto100, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, -1, -1));
 
         tbdPaneVehicles.addTab("Motocicletas", new javax.swing.ImageIcon(getClass().getResource("/images/001-motorcycle-tab.png")), pnlMoto); // NOI18N
