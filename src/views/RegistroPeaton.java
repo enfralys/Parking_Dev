@@ -109,8 +109,7 @@ public class RegistroPeaton extends javax.swing.JDialog {
         lblPlacaIcono1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/id-card-3.png"))); // NOI18N
         jPanel1.add(lblPlacaIcono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, -1));
 
-        txtCedulaPeaton.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtCedulaPeaton.setForeground(new java.awt.Color(153, 153, 153));
+        txtCedulaPeaton.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtCedulaPeaton.setBorder(null);
         jPanel1.add(txtCedulaPeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 180, 30));
 
@@ -118,7 +117,6 @@ public class RegistroPeaton extends javax.swing.JDialog {
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 230, 10));
 
         txtNombrePeaton.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton.setForeground(new java.awt.Color(153, 153, 153));
         txtNombrePeaton.setBorder(null);
         jPanel1.add(txtNombrePeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 180, 30));
 
@@ -147,8 +145,7 @@ public class RegistroPeaton extends javax.swing.JDialog {
         jSeparator6.setOpaque(true);
         jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 230, 10));
 
-        txtAptoAVisitar.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtAptoAVisitar.setForeground(new java.awt.Color(153, 153, 153));
+        txtAptoAVisitar.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtAptoAVisitar.setBorder(null);
         jPanel1.add(txtAptoAVisitar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 180, 30));
 

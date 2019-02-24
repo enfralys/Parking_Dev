@@ -347,13 +347,13 @@ public class button_control implements ActionListener, KeyListener{
             else{JOptionPane.showMessageDialog(null, "Ingrese un dato valido");}
 
         }
-        
+          if (contador == 0){
         if (e.getSource() == vT.getBtnRegistroTarjeta()){
             regT = new RegistroTarjeta(vista, true);
             CRTarjetas controlador = new CRTarjetas(vista,regT,vT);
             controlador.InicioRegT();
             regT.setVisible(true);
-        }
+        }}
         if (e.getSource() == vista.getBtnRegistroPeaton()){
             regPea = new RegistroPeaton(vista, true);
             CRPeaton controlador = new CRPeaton(vista,regPea);

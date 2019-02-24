@@ -81,8 +81,7 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         lblPuestoNumero.setText("PUESTO DE ESTACIONAMIENTO Nº");
         jPanel1.add(lblPuestoNumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
-        txtPlaca.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtPlaca.setForeground(new java.awt.Color(153, 153, 153));
+        txtPlaca.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtPlaca.setBorder(null);
         jPanel1.add(txtPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 180, 30));
 
@@ -99,8 +98,7 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         lblNumeroApto.setText("Número de Apartamento:");
         jPanel1.add(lblNumeroApto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, 20));
 
-        txtApartamento.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtApartamento.setForeground(new java.awt.Color(153, 153, 153));
+        txtApartamento.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtApartamento.setBorder(null);
         jPanel1.add(txtApartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 180, 30));
 
@@ -109,11 +107,10 @@ public class RegistroVehiculo extends javax.swing.JDialog {
 
         lblNombreVisitante.setBackground(new java.awt.Color(0, 0, 0));
         lblNombreVisitante.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lblNombreVisitante.setText("Numero de tarjeta");
+        lblNombreVisitante.setText("Numero de Parqueadero");
         jPanel1.add(lblNombreVisitante, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, -1, -1));
 
-        txtNombreVisitante.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombreVisitante.setForeground(new java.awt.Color(153, 153, 153));
+        txtNombreVisitante.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtNombreVisitante.setBorder(null);
         txtNombreVisitante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,8 +168,7 @@ public class RegistroVehiculo extends javax.swing.JDialog {
         jSeparator5.setOpaque(true);
         jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 230, 10));
 
-        txtTarjeta.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtTarjeta.setForeground(new java.awt.Color(153, 153, 153));
+        txtTarjeta.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtTarjeta.setBorder(null);
         jPanel1.add(txtTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 180, 30));
 
