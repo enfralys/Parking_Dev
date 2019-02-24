@@ -40,11 +40,11 @@ public class button_control implements ActionListener, KeyListener{
     private final conex conn;
     
     @SuppressWarnings("LeakingThisInConstructor")
-    public button_control(Main vista, RegistroVehiculo reg, RegistroPeaton regPea, VisorTarjeta vT){
+    public button_control(Main vista, RegistroVehiculo reg,  VisorTarjeta vT){
         this.model=new registro();
         this.vista = vista;
         this.reg = reg;
-        this.regPea = regPea;
+    //    this.regPea = regPea;
         this.vT=vT;
         this.conn= new conex();
 
@@ -159,7 +159,6 @@ public class button_control implements ActionListener, KeyListener{
         this.vista.getTxtFechaFinal().addKeyListener(this);
         this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
         
-        this.vT.getTxtBuscaT().addKeyListener(this);
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
@@ -204,17 +203,19 @@ public class button_control implements ActionListener, KeyListener{
     }
     
     public void InicioRegPea(){
-        regPea.setLocationRelativeTo(vista);
+   //     regPea.setLocationRelativeTo(vista);
         //contador++;
     }
     
     public void InicioVisorT(){
         vT.getBtnRegistroTarjeta().addActionListener(this);
+        vT.getTxtBuscaT().addKeyListener(this);
         vT.getbtnconfig().addActionListener(this);
         vT.setLocationRelativeTo(vista);
         contador++;
         conn.conectarSQLITE(); 
-        this.vT.setTlbHistorialTarjeta(conn.actTablaTarjeTa(vT.getTlbHistorialTarjeta()));
+        String sql="select * from tarjetas";
+        this.vT.setTlbHistorialTarjeta(conn.actTablaTarjeTa(vT.getTlbHistorialTarjeta(),sql));
         vT.getlbltiempo().setText(conn.tiempo()+" H");
         conn.desconectar(); 
     }
@@ -372,7 +373,7 @@ public class button_control implements ActionListener, KeyListener{
                     reg.dispose(); // cierra la ventana
                 } 
             }
-        if (e.getSource() == regPea.getBtn_save()) {
+/*        if (e.getSource() == regPea.getBtn_save()) {
                 int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
                 if (a==0){ // Si se presiona si se guardan los datos
                     conn.conectarSQLITE(); // conexta a BD sqlite
@@ -381,11 +382,11 @@ public class button_control implements ActionListener, KeyListener{
                     conn.desconectar(); // desconexta a BD sqlite
                     regPea.dispose(); // cierra la ventana
                 } 
-        }
+        }*/
         if (e.getSource() == reg.getBtnCancelar()){ if (contador != 0){ reg.dispose(); } }
-        if (e.getSource() == regPea.getBtnCancelar()){ 
+/*        if (e.getSource() == regPea.getBtnCancelar()){ 
             regPea.dispose();  
-        }
+        }*/
         if (e.getSource() == vista.getCmbFiltradoDiaVehiculo()){
             int indice=0;
             indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
@@ -408,7 +409,7 @@ public class button_control implements ActionListener, KeyListener{
     // Meotdo creado para registrar los datos de los visitabtes de todos los puestos
     public void actPuesto(int p){
         reg = new RegistroVehiculo(vista, true);
-        button_control control = new button_control(vista,reg,regPea, vT);
+        button_control control = new button_control(vista,reg, vT);
         reg.puesto=p;
         control.InicioReg();
         conn.conectarSQLITE();
@@ -444,9 +445,9 @@ public class button_control implements ActionListener, KeyListener{
        }
        if (ke.getSource().equals(this.vT.getTxtBuscaT())){
            JTextField txt= (JTextField) ke.getSource();
-           sql="select * from tarjetas LIKE '"+txt.getText()+"%' ";
+           sql="select * from tarjetas where tarjeta LIKE '"+txt.getText()+"%' ";
            conn.conectarSQLITE(); 
-           vT.setTlbHistorialTarjeta(conn.actTablaTarjeTa(vT.getTlbHistorialTarjeta()));
+           vT.setTlbHistorialTarjeta(conn.actTablaTarjeTa(vT.getTlbHistorialTarjeta(),sql));
            conn.desconectar(); //
        }
        if ((ke.getSource().equals(this.vista.getTxtFechaInicial())) || (ke.getSource().equals(this.vista.getTxtFechaFinal()))){
@@ -482,7 +483,7 @@ public class button_control implements ActionListener, KeyListener{
             String passwordValue = password.getText();
            if ((userNameValue.equals(this.user)) && (passwordValue.equals(this.pass))){
               vT = new VisorTarjeta(vista, true);
-              button_control control = new button_control(vista,reg,regPea, vT);
+              button_control control = new button_control(vista,reg, vT);
               control.InicioVisorT();
               vT.setVisible(true);  
             }else { JOptionPane.showMessageDialog(null, "Clave incorrecta"); }

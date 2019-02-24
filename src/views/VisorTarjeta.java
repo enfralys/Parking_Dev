@@ -285,4 +285,6 @@ public class VisorTarjeta extends javax.swing.JDialog {
     private javax.swing.JTextField txtNombrePeaton5;
     private javax.swing.JTextField txtconfig;
     // End of variables declaration//GEN-END:variables
+
+    
 }
