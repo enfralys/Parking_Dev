@@ -366,12 +366,12 @@ public class conex {
         }
         return tabla;
     }
-    public JTable actTablaTarjeTa(JTable tabla) {
+    public JTable actTablaTarjeTa(JTable tabla, String sql) {
         DefaultTableModel model;
         try {
             String [] Titulos={"Codigo Externo","Codigo Interno"};
             String[] Registros= new String[2];
-            pstmt=conn.prepareStatement("select * from  tarjetas");
+            pstmt=conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery(); 	
             model = new DefaultTableModel(null,Titulos);
             try{
