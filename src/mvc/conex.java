@@ -365,6 +365,35 @@ public class conex {
         }
         return tabla;
     }
+    public JTable actTablaPropietarios(JTable tabla, String sql) {
+        DefaultTableModel model;
+        try {
+            String [] Titulos={"Visitante","Tipo","Placa","Apartamento","Estado","Fecha"};
+            String[] Registros= new String[6];
+            pstmt=conn.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery(); 	
+            model = new DefaultTableModel(null,Titulos);
+            try{
+                while(rs.next()){
+                    Registros[0]=rs.getString("visitante");
+                    Registros[1]=rs.getString("puesto");
+                    Registros[2]=rs.getString("placa");
+                    Registros[3]=rs.getString("apart");
+                    Registros[4]=rs.getString("puesto");
+                    Registros[5]=rs.getString("visitante");
+                    model.addRow(Registros);
+                }
+            }catch(SQLException e){ 
+                System.out.print("Error:"+e.getMessage());
+                e.printStackTrace();
+            }
+            tabla.setModel(model);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return tabla;
+
+    }
     public JTable actTablaTarjeTa(JTable tabla, String sql) {
         DefaultTableModel model;
         try {
@@ -513,6 +542,26 @@ public class conex {
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
+
+    String ultimaplana() {
+        ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  parking order by id desc");
+            rs=pstmt.executeQuery();
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+            System.out.println("Error numero: "+e.getErrorCode());
+        }    
+        try {
+            if (rs.next()){
+                return rs.getString("placa");
+            }
+        } catch (SQLException e) {  e.printStackTrace();}
+        return "";
+    }
+
+    
     
 
 

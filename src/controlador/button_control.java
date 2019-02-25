@@ -164,6 +164,7 @@ public class button_control implements ActionListener, KeyListener{
         this.reg.getBtnCancelar().addActionListener(this);
         //this.regPea.getBtn_save().addActionListener(this);
         //this.regPea.getBtnCancelar().addActionListener(this);
+        
     }
     
     public void Inicio(){
@@ -190,6 +191,10 @@ public class button_control implements ActionListener, KeyListener{
         vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones"));
         conn.desconectar(); 
         
+        conn.conectarSQLITE(); 
+        vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),"select * from parking"));
+        conn.desconectar(); 
+        
         
         contador = 0;
         Temporizador timerTask = new Temporizador(this.vista);
@@ -200,11 +205,6 @@ public class button_control implements ActionListener, KeyListener{
     public void InicioReg(){
         reg.setLocationRelativeTo(vista);
         contador++;
-    }
-    
-    public void InicioRegPea(){
-   //     regPea.setLocationRelativeTo(vista);
-        //contador++;
     }
     
     public void InicioVisorT(){
@@ -348,13 +348,13 @@ public class button_control implements ActionListener, KeyListener{
             else{JOptionPane.showMessageDialog(null, "Ingrese un dato valido");}
 
         }
-          if (contador == 0){
+
         if (e.getSource() == vT.getBtnRegistroTarjeta()){
             regT = new RegistroTarjeta(vista, true);
             CRTarjetas controlador = new CRTarjetas(vista,regT,vT);
             controlador.InicioRegT();
             regT.setVisible(true);
-        }}
+        }
         if (e.getSource() == vista.getBtnRegistroPeaton()){
             regPea = new RegistroPeaton(vista, true);
             CRPeaton controlador = new CRPeaton(vista,regPea);
