@@ -2463,7 +2463,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -2596,6 +2595,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lblPuesto97;
     private javax.swing.JLabel lblPuesto98;
     private javax.swing.JLabel lblPuesto99;
+    private javax.swing.JLabel lblplaca;
     private plugins.CustomPanelAuto pnlAuto;
     private javax.swing.JPanel pnlFiltrado;
     private javax.swing.JPanel pnlHistorialdeIngreso;
@@ -4337,7 +4337,18 @@ public class Main extends javax.swing.JFrame {
     public void setTlbHistorialDatos1(JTable tlbHistorialDatos1) {
         this.tlbHistorialDatos1 = tlbHistorialDatos1;
     }
-    
+    public JTable getTlbHistorialDatos2() {
+        return tlbHistorialDatos2;
+    }
+    public void setTlbHistorialDatos2(JTable tlbHistorialDatos2) {
+        this.tlbHistorialDatos2 = tlbHistorialDatos2;
+    }
+    public void setlblplaca(JLabel lblplaca) {
+        this.lblplaca = lblplaca;
+    }
+    public JLabel getlblplaca() {
+        return lblplaca;
+    }
     
     // Metodo creado para cambiar imagen de jbutton cuando un vehiculo esta estacionado en el puesto
     public void ocupado(int puesto) {

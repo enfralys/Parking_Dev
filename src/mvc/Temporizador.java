@@ -48,6 +48,8 @@ public class Temporizador extends TimerTask{
                     c.newsalida();
                 }
             }
+            Vista.getlblplaca().setText(d.ultimaplana());
+            Vista.setTlbHistorialDatos2(d.actTablaPropietarios(Vista.getTlbHistorialDatos2(),"select * from parking"));
             d.desconectar();
             c.desconectar();
         } catch (SQLException ex) { ex.printStackTrace(); }

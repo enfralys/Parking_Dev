@@ -57,11 +57,11 @@ public class CRTarjetas implements ActionListener{
         if (e.getSource() == regT.getBtn_save()) {
                 if ((comun.isNumeric(regT.gettxtRef().getText().trim())) && (comun.isNumeric(regT.getTxtTarjeta().getText().trim()))){
                     conn.conectarSQLITE();
-                    valor=conn.buscaRef(regT.gettxtRef().getText());
+                    valor=conn.buscaRef(regT.getTxtTarjeta().getText());
                     conn.desconectar(); 
                     if (valor.equalsIgnoreCase("")){
                         conn.conectarSQLITE();
-                        valor=conn.buscaTarjeta(regT.getTxtTarjeta().getText());
+                        valor=conn.buscaTarjeta(regT.gettxtRef().getText());
                         conn.desconectar(); 
                         if (valor.equalsIgnoreCase("")){
                             int a=JOptionPane.showConfirmDialog(vista, "Confirmar");

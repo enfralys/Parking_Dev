@@ -131,11 +131,6 @@ public class VisorTarjeta extends javax.swing.JDialog {
         btnRegistroTarjeta.setContentAreaFilled(false);
         btnRegistroTarjeta.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-30.png"))); // NOI18N
         btnRegistroTarjeta.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-30.png"))); // NOI18N
-        btnRegistroTarjeta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistroTarjetaActionPerformed(evt);
-            }
-        });
         pnlPeatones.add(btnRegistroTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -161,10 +156,6 @@ public class VisorTarjeta extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnRegistroTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroTarjetaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistroTarjetaActionPerformed
 
     private void btnconfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnconfigActionPerformed
         // TODO add your handling code here:
