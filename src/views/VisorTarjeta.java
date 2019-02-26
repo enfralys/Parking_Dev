@@ -41,7 +41,6 @@ public class VisorTarjeta extends javax.swing.JDialog {
         jScrollPane4 = new javax.swing.JScrollPane();
         tlbHistorialTarjeta = new javax.swing.JTable();
         jPanel11 = new javax.swing.JPanel();
-        txtNombrePeaton5 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         txtBuscaT = new javax.swing.JTextField();
         lbltiempo = new javax.swing.JLabel();
@@ -91,11 +90,6 @@ public class VisorTarjeta extends javax.swing.JDialog {
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtNombrePeaton5.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton5.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombrePeaton5.setBorder(null);
-        jPanel11.add(txtNombrePeaton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
 
         jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel12.setText("Buscar Nro Parqueadero");
@@ -282,7 +276,6 @@ public class VisorTarjeta extends javax.swing.JDialog {
     private javax.swing.JPanel pnlPeatones;
     private javax.swing.JTable tlbHistorialTarjeta;
     private javax.swing.JTextField txtBuscaT;
-    private javax.swing.JTextField txtNombrePeaton5;
     private javax.swing.JTextField txtconfig;
     // End of variables declaration//GEN-END:variables
 

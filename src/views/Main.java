@@ -50,6 +50,35 @@ public class Main extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         pnlMain = new javax.swing.JPanel();
         tbpMain = new org.matrix.BlackTabbedPane();
+        pnlPeatones1 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        txtNombrePeaton7 = new javax.swing.JTextField();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tlbHistorialDatos2 = new javax.swing.JTable();
+        jPanel17 = new javax.swing.JPanel();
+        txtNombrePeaton8 = new javax.swing.JTextField();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        txtNombrePeaton9 = new javax.swing.JTextField();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        txtBuscadorPersonas1 = new JTextFieldHint(new JTextField(),"icons8_Search_32px","Buscar peatón...");
+        jPanel21 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         pnlIngreso = new javax.swing.JPanel();
         tbdPaneVehicles = new org.matrix.BlackTabbedPane();
         pnlAuto = new plugins.CustomPanelAuto();
@@ -279,35 +308,6 @@ public class Main extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         txtBuscadorPersonas = new JTextFieldHint(new JTextField(),"icons8_Search_32px","Buscar peatón...");
         btnRegistroPeaton = new javax.swing.JButton();
-        pnlPeatones1 = new javax.swing.JPanel();
-        jPanel15 = new javax.swing.JPanel();
-        txtNombrePeaton7 = new javax.swing.JTextField();
-        jPanel16 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        tlbHistorialDatos2 = new javax.swing.JTable();
-        jPanel17 = new javax.swing.JPanel();
-        txtNombrePeaton8 = new javax.swing.JTextField();
-        jPanel18 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jPanel19 = new javax.swing.JPanel();
-        txtNombrePeaton9 = new javax.swing.JTextField();
-        jPanel20 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        txtBuscadorPersonas1 = new JTextFieldHint(new JTextField(),"icons8_Search_32px","Buscar peatón...");
-        jPanel21 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -316,12 +316,6 @@ public class Main extends javax.swing.JFrame {
         pnlTitle.setBackground(new java.awt.Color(255, 255, 255));
         pnlTitle.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlTitle.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 153, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.jpg"))); // NOI18N
-        jLabel1.setToolTipText("");
-        pnlTitle.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, -1));
 
         btnSalir.setFont(new java.awt.Font("Earth", 1, 12)); // NOI18N
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Multiply_32px.png"))); // NOI18N
@@ -334,9 +328,9 @@ public class Main extends javax.swing.JFrame {
         pnlTitle.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo2.jpg"))); // NOI18N
-        pnlTitle.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 70));
+        pnlTitle.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 80));
 
-        getContentPane().add(pnlTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 70));
+        getContentPane().add(pnlTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 80));
 
         pnlMain.setBackground(new java.awt.Color(255, 255, 255));
         pnlMain.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -350,6 +344,156 @@ public class Main extends javax.swing.JFrame {
                 tbpMainMouseClicked(evt);
             }
         });
+
+        pnlPeatones1.setBackground(new java.awt.Color(255, 255, 255));
+        pnlPeatones1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        pnlPeatones1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtNombrePeaton7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        txtNombrePeaton7.setForeground(new java.awt.Color(153, 153, 153));
+        txtNombrePeaton7.setBorder(null);
+        jPanel15.add(txtNombrePeaton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
+
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel10.setText("Historial");
+        jPanel16.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
+
+        jPanel15.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 760, 40));
+
+        tlbHistorialDatos2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(tlbHistorialDatos2);
+
+        jPanel15.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 840, 230));
+
+        pnlPeatones1.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 860, 300));
+
+        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtNombrePeaton8.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        txtNombrePeaton8.setForeground(new java.awt.Color(153, 153, 153));
+        txtNombrePeaton8.setBorder(null);
+        jPanel17.add(txtNombrePeaton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
+
+        jPanel18.setForeground(new java.awt.Color(255, 0, 0));
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel8.setText("Historial");
+        jPanel18.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 5, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel7.setText("Datos");
+        jPanel18.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, -1, 30));
+
+        jPanel17.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 280, 30));
+
+        jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(51, 255, 0));
+        jLabel17.setText("ENTRADA");
+        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 204)));
+        jPanel17.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 180, 60));
+
+        jLabel19.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel19.setText("APTO");
+        jPanel17.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, -1));
+
+        jLabel20.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel20.setText("Apellido:");
+        jPanel17.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
+        jLabel21.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel21.setText("Nombre:");
+        jPanel17.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+
+        jLabel22.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel22.setText("Tarjeta:");
+        jPanel17.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel23.setText("TORRE");
+        jPanel17.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
+
+        pnlPeatones1.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 410, 290));
+
+        jPanel19.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtNombrePeaton9.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        txtNombrePeaton9.setForeground(new java.awt.Color(153, 153, 153));
+        txtNombrePeaton9.setBorder(null);
+        jPanel19.add(txtNombrePeaton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
+
+        jPanel20.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel9.setText("Historial");
+        jPanel20.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 5, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel16.setText("Buscador");
+        jPanel20.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+
+        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("WTUR-31");
+        jPanel20.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 10, 210, 70));
+
+        jPanel19.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 280, 90));
+
+        txtBuscadorPersonas1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        txtBuscadorPersonas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBuscadorPersonas1ActionPerformed(evt);
+            }
+        });
+        jPanel19.add(txtBuscadorPersonas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 260, -1));
+
+        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel13.setText("Historial");
+        jPanel21.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 5, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel11.setText("Placa");
+        jPanel21.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, -1, 30));
+
+        jPanel19.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 280, 30));
+
+        jLabel18.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel18.setText("Buscador");
+        jPanel19.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+
+        pnlPeatones1.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 410, 290));
+
+        tbpMain.addTab("Residentes       ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones1); // NOI18N
 
         pnlIngreso.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -2157,157 +2301,7 @@ public class Main extends javax.swing.JFrame {
 
         tbpMain.addTab("   Peatones          ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones); // NOI18N
 
-        pnlPeatones1.setBackground(new java.awt.Color(255, 255, 255));
-        pnlPeatones1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        pnlPeatones1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtNombrePeaton7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton7.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombrePeaton7.setBorder(null);
-        jPanel15.add(txtNombrePeaton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
-
-        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel10.setText("Historial");
-        jPanel16.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
-
-        jPanel15.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 760, 40));
-
-        tlbHistorialDatos2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane5.setViewportView(tlbHistorialDatos2);
-
-        jPanel15.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 840, 230));
-
-        pnlPeatones1.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 860, 300));
-
-        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtNombrePeaton8.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton8.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombrePeaton8.setBorder(null);
-        jPanel17.add(txtNombrePeaton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
-
-        jPanel18.setForeground(new java.awt.Color(255, 0, 0));
-        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel8.setText("Historial");
-        jPanel18.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 5, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel7.setText("Datos");
-        jPanel18.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, -1, 30));
-
-        jPanel17.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 280, 30));
-
-        jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(51, 255, 0));
-        jLabel17.setText("ENTRADA");
-        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 204)));
-        jPanel17.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 180, 60));
-
-        jLabel19.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel19.setText("APTO");
-        jPanel17.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, -1));
-
-        jLabel20.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel20.setText("Apellido:");
-        jPanel17.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
-
-        jLabel21.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel21.setText("Nombre:");
-        jPanel17.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
-
-        jLabel22.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel22.setText("Tarjeta:");
-        jPanel17.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
-
-        jLabel23.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel23.setText("TORRE");
-        jPanel17.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
-
-        pnlPeatones1.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 410, 290));
-
-        jPanel19.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtNombrePeaton9.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton9.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombrePeaton9.setBorder(null);
-        jPanel19.add(txtNombrePeaton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
-
-        jPanel20.setBackground(new java.awt.Color(255, 255, 0));
-        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel9.setText("Historial");
-        jPanel20.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 5, -1, -1));
-
-        jLabel16.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel16.setText("Buscador");
-        jPanel20.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
-
-        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("WTUR-31");
-        jPanel20.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 10, 210, 70));
-
-        jPanel19.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 280, 90));
-
-        txtBuscadorPersonas1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        txtBuscadorPersonas1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBuscadorPersonas1ActionPerformed(evt);
-            }
-        });
-        jPanel19.add(txtBuscadorPersonas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 260, -1));
-
-        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel13.setText("Historial");
-        jPanel21.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 5, -1, -1));
-
-        jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel11.setText("Placa");
-        jPanel21.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, -1, 30));
-
-        jPanel19.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 280, 30));
-
-        jLabel18.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel18.setText("Buscador");
-        jPanel19.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
-
-        pnlPeatones1.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 410, 290));
-
-        tbpMain.addTab("Propietarios      ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones1); // NOI18N
-
-        pnlMain.add(tbpMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 1140, 670));
+        pnlMain.add(tbpMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1140, 670));
 
         getContentPane().add(pnlMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1140, 684));
 

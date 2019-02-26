@@ -348,29 +348,33 @@ public class button_control implements ActionListener, KeyListener{
             else{JOptionPane.showMessageDialog(null, "Ingrese un dato valido");}
 
         }
-          if (contador == 0){
+         
         if (e.getSource() == vT.getBtnRegistroTarjeta()){
             regT = new RegistroTarjeta(vista, true);
             CRTarjetas controlador = new CRTarjetas(vista,regT,vT);
             controlador.InicioRegT();
             regT.setVisible(true);
-        }}
+        }
+         if (contador == 0){
         if (e.getSource() == vista.getBtnRegistroPeaton()){
             regPea = new RegistroPeaton(vista, true);
             CRPeaton controlador = new CRPeaton(vista,regPea);
             controlador.InicioRegPea();
             regPea.setVisible(true);
-        }
+        } 
+         }
         if (e.getSource() == reg.getBtn_save()) {
                 int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
                 if (a==0){ // Si se presiona si se guardan los datos
+                   
                     conn.conectarSQLITE(); // conexta a BD sqlite
                     conn.guardar(reg,reg.puesto); // Llama al metodo guardar en la BD
                     conn.desconectar(); // desconexta a BD sqlite
                     if (reg.puesto<51) {vista.ocupado(reg.puesto);}
                     else {vista.ocupadoM(reg.puesto);}
                     
-                    reg.dispose(); // cierra la ventana
+                    reg.dispose(); 
+                    // cierra la ventana
                 } 
             }
 /*        if (e.getSource() == regPea.getBtn_save()) {

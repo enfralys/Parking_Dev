@@ -116,7 +116,7 @@ public class RegistroPeaton extends javax.swing.JDialog {
         jSeparator3.setOpaque(true);
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 230, 10));
 
-        txtNombrePeaton.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        txtNombrePeaton.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtNombrePeaton.setBorder(null);
         jPanel1.add(txtNombrePeaton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 180, 30));
 
@@ -184,6 +184,7 @@ public class RegistroPeaton extends javax.swing.JDialog {
         jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, -1, 40));
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("MS Gothic", 1, 18)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
