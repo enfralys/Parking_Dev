@@ -155,6 +155,7 @@ public class button_control implements ActionListener, KeyListener{
         this.vista.getBtnTarjetas().addActionListener(this);
         this.vista.getBtnRegistroPeaton().addActionListener(this);
         this.vista.getTxtBuscadorPersona().addKeyListener(this);
+        this.vista.getTxtBuscadorPersona1().addKeyListener(this);
         this.vista.getTxtFechaInicial().addKeyListener(this);
         this.vista.getTxtFechaFinal().addKeyListener(this);
         this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
@@ -431,6 +432,13 @@ public class button_control implements ActionListener, KeyListener{
 
     public void keyReleased(KeyEvent ke) {
        String sql="select * from peatones";
+       if (ke.getSource().equals(this.vista.getTxtBuscadorPersona1())){
+           JTextField txt= (JTextField) ke.getSource();
+           sql="select * from parking where placa LIKE '"+txt.getText()+"%' ";
+           conn.conectarSQLITE(); 
+            vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),sql));           
+           conn.desconectar(); //
+       }
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona())){
            JTextField txt= (JTextField) ke.getSource();
            sql="select * from peatones where apart LIKE '"+txt.getText()+"%' ";

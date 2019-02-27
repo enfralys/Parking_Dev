@@ -3534,6 +3534,14 @@ public class Main extends javax.swing.JFrame {
     public void setTxtBuscadorPersonas(JTextField txtBuscadorPersonas) {
         this.txtBuscadorPersonas = txtBuscadorPersonas;
     }
+
+    public JTextField getTxtBuscadorPersona1() {
+        return txtBuscadorPersonas1;
+    }
+
+    public void setTxtBuscadorPersonas1(JTextField txtBuscadorPersonas1) {
+        this.txtBuscadorPersonas1 = txtBuscadorPersonas1;
+    }
     
 
     public JButton getBtnPuesto100() {
