@@ -159,9 +159,11 @@ public class button_control implements ActionListener, KeyListener{
         this.vista.getTxtFechaFinal().addKeyListener(this);
         this.vista.getCmbFiltradoDiaVehiculo().addActionListener(this);
         
+        this.vista.getBtnrefresh().addActionListener(this);
         //Botones de vista Registro
         this.reg.getBtn_save().addActionListener(this);
         this.reg.getBtnCancelar().addActionListener(this);
+        
         //this.regPea.getBtn_save().addActionListener(this);
         //this.regPea.getBtnCancelar().addActionListener(this);
         
@@ -188,11 +190,11 @@ public class button_control implements ActionListener, KeyListener{
         
         // Actualiza tabla peatones
         conn.conectarSQLITE(); 
-        vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones"));
+        vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones order by id desc"));
         conn.desconectar(); 
         
         conn.conectarSQLITE(); 
-        vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),"select * from parking"));
+        vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),"select * from parking "));
         conn.desconectar(); 
         
         
@@ -331,8 +333,9 @@ public class button_control implements ActionListener, KeyListener{
             if (e.getSource() == vista.getBtnPuesto100()) { this.actPuesto(100);} 
             
             if (e.getSource() == vista.getBtnTarjetas()) { this.registro();}
+            
         }    
-        
+        if (e.getSource() == vista.getBtnrefresh()) { this.actHistorial();}
         if (e.getSource() == vT.getbtnconfig()) {
             int a;
              if (comun.isNumeric(vT.getTxtConfig().getText().trim())){
@@ -507,6 +510,12 @@ public class button_control implements ActionListener, KeyListener{
         }else {conn.desconectar();}
         
         return mensaje;
+    }
+
+    private void actHistorial() {
+        conn.conectarSQLITE();
+        vista.setTlbHistorial(conn.CargarTablaHistorias(vista.getTlbHistorial()));
+        conn.desconectar();
     }
 
     

@@ -295,6 +295,7 @@ public class Main extends javax.swing.JFrame {
         jLabel54 = new javax.swing.JLabel();
         cmbFiltradoDiaVehiculo = new javax.swing.JComboBox<>();
         lblHistorialVehiculos = new javax.swing.JLabel();
+        btnrefresh = new javax.swing.JButton();
         pnlPeatones = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jPanel9 = new javax.swing.JPanel();
@@ -2225,6 +2226,10 @@ public class Main extends javax.swing.JFrame {
         lblHistorialVehiculos.setText("Historial General de Vehículos");
         jPanel7.add(lblHistorialVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 958, -1));
 
+        btnrefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/actualiza.jpg"))); // NOI18N
+        btnrefresh.setToolTipText("Presione aqui para actualizar tabla");
+        jPanel7.add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 60));
+
         blackTabbedPane1.addTab("Vehículos", new javax.swing.ImageIcon(getClass().getResource("/images/042-parking-area-tab.png")), jPanel7); // NOI18N
 
         pnlHistorialdeIngreso.add(blackTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 670));
@@ -2455,6 +2460,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnPuesto99;
     private javax.swing.JButton btnRegistroPeaton;
     private javax.swing.JButton btnSalir;
+    private javax.swing.JButton btnrefresh;
     private javax.swing.JComboBox<String> cmbFiltradoDiaVehiculo;
     private com.toedter.calendar.JCalendarBeanInfo jCalendarBeanInfo1;
     private javax.swing.JLabel jLabel10;
@@ -4328,6 +4334,12 @@ public class Main extends javax.swing.JFrame {
     }
     public void setBtnRegistroPeaton(JButton btnRegistroPeaton) {
         this.btnRegistroPeaton = btnRegistroPeaton;
+    }
+    public JButton getBtnrefresh() {
+        return btnrefresh;
+    }
+    public void setBtnrefreshtn(JButton btnrefresh) {
+        this.btnrefresh = btnrefresh;
     }
      public JTable getTlbHistorialDatos1() {
         return tlbHistorialDatos1;

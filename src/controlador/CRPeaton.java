@@ -49,7 +49,7 @@ public class CRPeaton implements ActionListener{
            if (a==0){ // Si se presiona si se guardan los datos
                 conn.conectarSQLITE(); // conexta a BD sqlite
                 conn.guardarp(regPea); // Llama al metodo guardar en la BD
-                vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones"));
+                vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones order by id desc"));
                 conn.desconectar(); // desconexta a BD sqlite
                 regPea.dispose(); // cierra la ventana
             } 
