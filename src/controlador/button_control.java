@@ -364,33 +364,21 @@ public class button_control implements ActionListener, KeyListener{
         } 
          }
         if (e.getSource() == reg.getBtn_save()) {
-                int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
-                if (a==0){ // Si se presiona si se guardan los datos
-                   
-                    conn.conectarSQLITE(); // conexta a BD sqlite
-                    conn.guardar(reg,reg.puesto); // Llama al metodo guardar en la BD
-                    conn.desconectar(); // desconexta a BD sqlite
-                    if (reg.puesto<51) {vista.ocupado(reg.puesto);}
-                    else {vista.ocupadoM(reg.puesto);}
-                    
-                    reg.dispose(); 
-                    // cierra la ventana
-                } 
-            }
-/*        if (e.getSource() == regPea.getBtn_save()) {
-                int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
-                if (a==0){ // Si se presiona si se guardan los datos
-                    conn.conectarSQLITE(); // conexta a BD sqlite
-                    conn.guardarp(regPea); // Llama al metodo guardar en la BD
-                    vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones"));
-                    conn.desconectar(); // desconexta a BD sqlite
-                    regPea.dispose(); // cierra la ventana
-                } 
-        }*/
+                String msg=validar();
+                if (msg.equalsIgnoreCase("")){
+                    int a=JOptionPane.showConfirmDialog(vista, "Confirmar");
+                    if (a==0){ // Si se presiona si se guardan los datos
+                        conn.conectarSQLITE(); // conexta a BD sqlite
+                        conn.guardar(reg,reg.puesto); // Llama al metodo guardar en la BD
+                        conn.desconectar(); // desconexta a BD sqlite
+                        if (reg.puesto<51) {vista.ocupado(reg.puesto);}
+                        else {vista.ocupadoM(reg.puesto);}
+                        reg.dispose(); 
+                    }
+                }else {JOptionPane.showMessageDialog(vista, msg);} 
+        }
         if (e.getSource() == reg.getBtnCancelar()){ if (contador != 0){ reg.dispose(); } }
-/*        if (e.getSource() == regPea.getBtnCancelar()){ 
-            regPea.dispose();  
-        }*/
+
         if (e.getSource() == vista.getCmbFiltradoDiaVehiculo()){
             int indice=0;
             indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
@@ -493,6 +481,32 @@ public class button_control implements ActionListener, KeyListener{
             }else { JOptionPane.showMessageDialog(null, "Clave incorrecta"); }
             //Here is some validation code
         }
+    }
+    public String validar(){
+    String mensaje="";
+        if (reg.getTxtApartamento().getText().equalsIgnoreCase("")){
+            return "Debe ingresar un Apartamento";
+        }
+        if (reg.getTxtNombreVisitante().getText().equalsIgnoreCase("")){
+            return "Debe ingresar datos del Visitante";
+        }
+        if (reg.getTxtPlaca().getText().equalsIgnoreCase("")){
+            return "Debe ingresar una Placa";
+        }
+        if (reg.getTxtTarjeta().getText().equalsIgnoreCase("")){
+            return "Debe ingresar una tarjeta";
+        }
+        conn.conectarSQLITE(); 
+        if (conn.consultarPlaca(reg.getTxtPlaca().getText())){
+            conn.desconectar();
+            return "Placa registrada verifique la informacion";
+        }
+        if (conn.consultarTarj(reg.getTxtTarjeta().getText())){
+            conn.desconectar();
+            return "TARJETA registrada verifique la informacion";
+        }else {conn.desconectar();}
+        
+        return mensaje;
     }
 
     

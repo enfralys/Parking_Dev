@@ -44,7 +44,6 @@ public class Main extends javax.swing.JFrame {
         btgFiltradoVehiculo = new javax.swing.ButtonGroup();
         jCalendarBeanInfo1 = new com.toedter.calendar.JCalendarBeanInfo();
         pnlTitle = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -73,7 +72,7 @@ public class Main extends javax.swing.JFrame {
         jPanel20 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        lblplaca = new javax.swing.JLabel();
         txtBuscadorPersonas1 = new JTextFieldHint(new JTextField(),"icons8_Search_32px","Buscar peatón...");
         jPanel21 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
@@ -459,11 +458,11 @@ public class Main extends javax.swing.JFrame {
         jLabel16.setText("Buscador");
         jPanel20.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
-        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("WTUR-31");
-        jPanel20.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 10, 210, 70));
+        lblplaca.setBackground(new java.awt.Color(255, 255, 255));
+        lblplaca.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblplaca.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblplaca.setText("WTUR-31");
+        jPanel20.add(lblplaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 10, 210, 70));
 
         jPanel19.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 280, 90));
 
@@ -2458,7 +2457,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox<String> cmbFiltradoDiaVehiculo;
     private com.toedter.calendar.JCalendarBeanInfo jCalendarBeanInfo1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

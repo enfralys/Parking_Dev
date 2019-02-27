@@ -295,6 +295,38 @@ public class conex {
         }    
         return rs;
     }
+    public boolean consultarPlaca(String Placa) {
+        ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  parking where activo=1 and placa=?");
+            pstmt.setString(1, Placa);
+            rs=pstmt.executeQuery();
+            if (rs.next()){
+                return true;
+            }
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           
+        }    
+        return false;
+    }
+    public boolean consultarTarj(String Tarjeta) {
+        ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  parking where activo=1 and tarjeta=?");
+            pstmt.setString(1, Tarjeta);
+            rs=pstmt.executeQuery();
+            if (rs.next()){
+                return true;
+            }
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           
+        }    
+        return false;
+    }
     public String salidas(){
         registro est=new registro();
         String a = "";
