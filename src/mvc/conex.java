@@ -295,6 +295,20 @@ public class conex {
         }    
         return rs;
     }
+    public ResultSet consultaUSerInfo(int userid) {
+        ResultSet rs=null;
+        try {
+            //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
+            pstmt=conn.prepareStatement("select * from  userinfo where userid=?");
+            pstmt.setInt(1, userid);
+            rs=pstmt.executeQuery();
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           
+        }    
+        return rs;
+    }
     public boolean consultarPlaca(String Placa) {
         ResultSet rs=null;
         try {
@@ -400,19 +414,17 @@ public class conex {
     public JTable actTablaPropietarios(JTable tabla, String sql) {
         DefaultTableModel model;
         try {
-            String [] Titulos={"Visitante","Tipo","Placa","Apartamento","Estado","Fecha"};
-            String[] Registros= new String[6];
+            String [] Titulos={"Propietario","Apartamento","Torre","Placa"};
+            String[] Registros= new String[4];
             pstmt=conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery(); 	
             model = new DefaultTableModel(null,Titulos);
             try{
                 while(rs.next()){
-                    Registros[0]=rs.getString("visitante");
-                    Registros[1]=rs.getString("puesto");
-                    Registros[2]=rs.getString("placa");
-                    Registros[3]=rs.getString("apart");
-                    Registros[4]=rs.getString("puesto");
-                    Registros[5]=rs.getString("visitante");
+                    Registros[0]=rs.getString("name")+" . "+rs.getString("lastname");
+                    Registros[1]=rs.getString("title");
+                    Registros[2]=gettorre(getdepid(rs.getInt("userid")));
+                    Registros[3]=rs.getString("city");
                     model.addRow(Registros);
                 }
             }catch(SQLException e){ 
@@ -592,6 +604,45 @@ public class conex {
         } catch (SQLException e) {  e.printStackTrace();}
         return "";
     }
+    public int getdepid(int userid){
+             ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  deptadmin where user_id=?");
+            pstmt.setInt(1, userid);
+            rs=pstmt.executeQuery();
+            
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+            System.out.println("Error numero: "+e.getErrorCode());
+        }    
+        try {
+            if (rs.next()){
+                return rs.getInt("dept_id");
+            }
+        } catch (SQLException e) {  e.printStackTrace();}
+        return 0;
+    }
+    public String gettorre(int deptd){
+             ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  departments where DeptID=?");
+            pstmt.setInt(1, deptd);
+            rs=pstmt.executeQuery();
+            
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+            System.out.println("Error numero: "+e.getErrorCode());
+        }    
+        try {
+            if (rs.next()){
+                return rs.getString("DeptName");
+            }
+        } catch (SQLException e) {  e.printStackTrace();}
+        return "";
+    }
+    
 
     
     

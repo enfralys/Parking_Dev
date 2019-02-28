@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import mvc.*;
 import views.Main;
@@ -432,11 +433,13 @@ public class button_control implements ActionListener, KeyListener{
 
     public void keyReleased(KeyEvent ke) {
        String sql="select * from peatones";
+        ResultSet rs=null;
+       //departments
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona1())){
            JTextField txt= (JTextField) ke.getSource();
-           sql="select * from parking where placa LIKE '"+txt.getText()+"%' ";
+           sql="select * from userinfo where city LIKE '"+txt.getText()+"%' ";
            conn.conectarSQLITE(); 
-            vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),sql));           
+           vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),sql));           
            conn.desconectar(); //
        }
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona())){
