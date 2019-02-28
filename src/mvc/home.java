@@ -25,7 +25,7 @@ public class home {
         RegistroPeaton regPea = new RegistroPeaton(null,false);
         VisorTarjeta vT = new VisorTarjeta(null,false);
         button_control control = new button_control(view, reg,  vT);
-      control.Inicio();
+        control.Inicio();
         view.setVisible(true);
    // comun.restaFechas("","");
     }

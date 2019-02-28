@@ -176,6 +176,7 @@ public class button_control implements ActionListener, KeyListener{
         vista.setLocationRelativeTo(null);
         conn.conectarSQLITE();
             for (int i=1; i<101;i++){
+                vista.desocupado(i);
                 model=conn.consultar(i);
                 if (model.getPuesto()==i){
                     if (i<51){vista.ocupado(i); }
@@ -195,8 +196,8 @@ public class button_control implements ActionListener, KeyListener{
         vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones order by id desc"));
         conn.desconectar(); 
         
-        conn.conectarSQLITE(); 
-        vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),"select * from parking "));
+        conn.conectarMSQL();
+        vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),"select * from userinfo"));
         conn.desconectar(); 
         
         
@@ -438,7 +439,7 @@ public class button_control implements ActionListener, KeyListener{
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona1())){
            JTextField txt= (JTextField) ke.getSource();
            sql="select * from userinfo where city LIKE '"+txt.getText()+"%' ";
-           conn.conectarSQLITE(); 
+           conn.conectarMSQL();
            vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),sql));           
            conn.desconectar(); //
        }
