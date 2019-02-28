@@ -62,11 +62,11 @@ public class Main extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        lblapto = new javax.swing.JLabel();
+        lblapellido = new javax.swing.JLabel();
+        lblnombre = new javax.swing.JLabel();
+        lbltarjeta = new javax.swing.JLabel();
+        lbltorre = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         txtNombrePeaton9 = new javax.swing.JTextField();
         jPanel20 = new javax.swing.JPanel();
@@ -417,25 +417,25 @@ public class Main extends javax.swing.JFrame {
         jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 204)));
         jPanel17.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 180, 60));
 
-        jLabel19.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel19.setText("APTO");
-        jPanel17.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, -1));
+        lblapto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lblapto.setText("APTO");
+        jPanel17.add(lblapto, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, -1));
 
-        jLabel20.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel20.setText("Apellido:");
-        jPanel17.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+        lblapellido.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lblapellido.setText("Apellido:");
+        jPanel17.add(lblapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
-        jLabel21.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel21.setText("Nombre:");
-        jPanel17.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+        lblnombre.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lblnombre.setText("Nombre:");
+        jPanel17.add(lblnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
-        jLabel22.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel22.setText("Tarjeta:");
-        jPanel17.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        lbltarjeta.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lbltarjeta.setText("Tarjeta:");
+        jPanel17.add(lbltarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
-        jLabel23.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel23.setText("TORRE");
-        jPanel17.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
+        lbltorre.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lbltorre.setText("TORRE");
+        jPanel17.add(lbltorre, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
 
         pnlPeatones1.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 410, 290));
 
@@ -2470,12 +2470,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel53;
@@ -2599,7 +2594,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lblPuesto97;
     private javax.swing.JLabel lblPuesto98;
     private javax.swing.JLabel lblPuesto99;
+    private javax.swing.JLabel lblapellido;
+    private javax.swing.JLabel lblapto;
+    private javax.swing.JLabel lblnombre;
     private javax.swing.JLabel lblplaca;
+    private javax.swing.JLabel lbltarjeta;
+    private javax.swing.JLabel lbltorre;
     private plugins.CustomPanelAuto pnlAuto;
     private javax.swing.JPanel pnlFiltrado;
     private javax.swing.JPanel pnlHistorialdeIngreso;
@@ -4367,7 +4367,20 @@ public class Main extends javax.swing.JFrame {
     public JLabel getlblplaca() {
         return lblplaca;
     }
+    public JLabel getlblnombre() { return lblnombre; }
+    public void setlblnombre(JLabel lblnombre) {  this.lblnombre = lblnombre; }
     
+    public JLabel getlblapellido() { return lblapellido; }
+    public void setlblapellido(JLabel lblapellido) {  this.lblapellido = lblapellido; }
+    
+    public JLabel getlbltarjeta() { return lbltarjeta; }
+    public void setlbltarjeta(JLabel lbltarjeta) {  this.lbltarjeta = lbltarjeta; }
+    
+    public JLabel getlblapto() { return lblapto; }
+    public void setlblapto(JLabel lblapto) {  this.lblapto = lblapto; }
+    
+    public JLabel getlbltorre() { return lbltorre; }
+    public void setlbltorre(JLabel lbltorre) {  this.lbltorre = lbltorre; }
     // Metodo creado para cambiar imagen de jbutton cuando un vehiculo esta estacionado en el puesto
     public void ocupado(int puesto) {
         ImageIcon icon = new ImageIcon(getClass().getResource("/images/042-parking-area.png"));

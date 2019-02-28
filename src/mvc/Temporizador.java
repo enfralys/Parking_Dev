@@ -49,7 +49,7 @@ public class Temporizador extends TimerTask{
                 }
             }
             Vista.getlblplaca().setText(d.ultimaplana());
-            Vista.setTlbHistorialDatos2(d.actTablaPropietarios(Vista.getTlbHistorialDatos2(),"select * from parking"));
+       ///     Vista.setTlbHistorialDatos2(d.actTablaPropietarios(Vista.getTlbHistorialDatos2(),"select * from parking"));
          //   Vista.setTlbHistorial(d.CargarTablaHistorias(Vista.getTlbHistorial()));
             d.desconectar();
             c.desconectar();
