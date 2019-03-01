@@ -75,7 +75,7 @@ public class conex {
             JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
         }
         try {
-            sql="CREATE TABLE propietarios ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, propietario varchar(15) NOT NULL, puesto varchar(12) NOT NULL, apart varchar(12) NOT NULL, torre varchar(12) NOT NULL, tarjeta varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+            sql="CREATE TABLE propietarios ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, propietario varchar(15) NOT NULL, puesto varchar(12) NOT NULL, apart varchar(12) NOT NULL, torre varchar(12) NOT NULL, tarjeta varchar(12) NOT NULL, id_monitor_log int not null, estado varchar(12) , fechae varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
@@ -364,6 +364,19 @@ public class conex {
 	} catch (SQLException e) {  e.printStackTrace();}
 	return a;
     }
+    public int  getid_monitor_log(){
+        registro est=new registro();
+        int a = 0;
+	ResultSet rs=null;
+	try {
+	    pstmt=conn.prepareStatement("select * from  acc_monitor_log ");	          
+	    rs=pstmt.executeQuery(); 	
+        } catch (SQLException e) {  e.printStackTrace(); }    
+	try {
+            if (rs.last()){ a= rs.getInt("id");}
+	} catch (SQLException e) {  e.printStackTrace();}
+	return a;
+    }
     public JTable CargarTablaHistorias(JTable tabla){
         DefaultTableModel model;
         try {
@@ -614,6 +627,61 @@ public class conex {
         } catch (SQLException e) {  e.printStackTrace();}
         return "";
     }
+        //Metodos Usados con BD en Mysql
+    boolean userinfo(String salidas, propietario Propietario,  Connection d) {
+        ResultSet rs=null;
+        PreparedStatement pstmt2=null;
+        try {
+            //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
+            pstmt2=d.prepareStatement("insert into propietarios (placa, propietario, puesto, apart, torre , tarjeta, fechareg) values (?,?,?,?,?,?,datetime('now','localtime'))");
+            pstmt=conn.prepareStatement("select * from  userinfo where Card=?");
+            pstmt.setString(1, salidas);
+            rs=pstmt.executeQuery();
+            if (rs.next()){
+                pstmt2.setString(1, rs.getString("city"));
+                pstmt2.setString(2, rs.getString("lastname")+" , "+rs.getString("name"));
+                pstmt2.setString(3, rs.getString("ophone"));
+                pstmt2.setString(4, rs.getString("identitycard"));
+                pstmt2.setString(5, this.gettorre(this.getdepid(rs.getInt("userid"))));
+                pstmt2.setString(6, rs.getString("Card"));
+                pstmt2.execute();
+                newsalida();
+                Propietario.setPlaca(rs.getString("city"));
+                Propietario.setPropietario(rs.getString("lastname")+" , "+rs.getString("name"));
+                Propietario.setPuesto(rs.getString("ophone"));
+                Propietario.setApart(rs.getString("identitycard"));
+                Propietario.setTorre(this.gettorre(this.getdepid(rs.getInt("userid"))));
+                Propietario.setTarjeta(rs.getString("Card"));
+                return true;
+            }
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           
+        }    
+        return false;
+        
+    }
+    public String gettorre(int deptd){
+             ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  departments where DeptID=?");
+            pstmt.setInt(1, deptd);
+            rs=pstmt.executeQuery();
+            
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+            System.out.println("Error numero: "+e.getErrorCode());
+        }    
+        try {
+            if (rs.next()){
+                //return rs.getString("DeptName");
+                return rs.getString("code");
+            }
+        } catch (SQLException e) {  e.printStackTrace();}
+        return "";
+    }
     public int getdepid(int userid){
              ResultSet rs=null;
         try {
@@ -633,58 +701,6 @@ public class conex {
         } catch (SQLException e) {  e.printStackTrace();}
         return 0;
     }
-    public String gettorre(int deptd){
-             ResultSet rs=null;
-        try {
-            pstmt=conn.prepareStatement("select * from  departments where DeptID=?");
-            pstmt.setInt(1, deptd);
-            rs=pstmt.executeQuery();
-            
-        } catch (SQLException e) {  e.printStackTrace();
-           if (e.getErrorCode()==0){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
-           if (e.getErrorCode()==1146){this.CrearTabla(); ; JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
-            System.out.println("Error numero: "+e.getErrorCode());
-        }    
-        try {
-            if (rs.next()){
-                return rs.getString("DeptName");
-            }
-        } catch (SQLException e) {  e.printStackTrace();}
-        return "";
-    }
-     boolean userinfo(String salidas, propietario Propietario,  Connection d) {
-        ResultSet rs=null;
-        PreparedStatement pstmt2=null;
-        try {
-            //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
-            pstmt2=d.prepareStatement("insert into propietarios (placa, propietario, puesto, apart, torre , tarjeta, fechareg) values (?,?,?,?,?,?,datetime('now','localtime'))");
-            pstmt=conn.prepareStatement("select * from  userinfo where card_number=?");
-            pstmt.setString(1, salidas);
-            rs=pstmt.executeQuery();
-            if (rs.next()){
-                pstmt2.setString(1, rs.getString("city"));
-                pstmt2.setString(2, rs.getString("lastname")+" , "+rs.getString("name"));
-                pstmt2.setString(3, rs.getString("SSN"));
-                pstmt2.setString(4, rs.getString("identitycard"));
-                pstmt2.setString(5, this.gettorre(this.getdepid(rs.getInt("userid"))));
-                pstmt2.setString(6, rs.getString("card_number"));
-                pstmt2.execute();
-                newsalida();
-                Propietario.setPlaca(rs.getString("city"));
-                Propietario.setPropietario(rs.getString("lastname")+" , "+rs.getString("name"));
-                Propietario.setPuesto(rs.getString("SSN"));
-                Propietario.setApart(rs.getString("identitycard"));
-                Propietario.setTorre(this.gettorre(this.getdepid(rs.getInt("userid"))));
-                Propietario.setTarjeta(rs.getString("card_number"));
-                return true;
-            }
-        } catch (SQLException e) {  e.printStackTrace();
-           if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
-           if (e.getErrorCode()==1146){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
-           
-        }    
-        return false;
-        
-    }
     
+
 }
