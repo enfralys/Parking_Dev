@@ -424,8 +424,9 @@ public class button_control implements ActionListener, KeyListener{
        //departments
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona1())){
            JTextField txt= (JTextField) ke.getSource();
-           sql="select * from propietario where placa LIKE '"+txt.getText()+"%' order by id desc ";
-           conn.conectarMSQL();
+           sql="select * from propietarios where placa LIKE '"+txt.getText()+"%' order by id desc ";
+//           conn.conectarMSQL();
+            conn.conectarSQLITE();
            vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),sql));           
            conn.desconectar(); //
        }

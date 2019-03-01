@@ -669,6 +669,7 @@ public class conex {
                 pstmt2.setString(5, this.gettorre(this.getdepid(rs.getInt("userid"))));
                 pstmt2.setString(6, rs.getString("card_number"));
                 pstmt2.execute();
+                newsalida();
                 Propietario.setPlaca(rs.getString("city"));
                 Propietario.setPropietario(rs.getString("lastname")+" , "+rs.getString("name"));
                 Propietario.setPuesto(rs.getString("SSN"));

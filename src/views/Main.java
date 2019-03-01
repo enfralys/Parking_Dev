@@ -5408,7 +5408,7 @@ public class Main extends javax.swing.JFrame {
 
     public void actPropietario(propietario p) {
         String nombrec[]= p.getPropietario().split(",");
-        this.lblnombre.setText("Nombre: "+nombrec[0]);
+        this.lblnombre.setText("Nombre: "+nombrec[1]);
         this.lblapellido.setText("Apellido: "+nombrec[0]);
         this.lbltarjeta.setText("Tarjeta: "+p.getTarjeta());
         this.lblapto.setText("Apto: "+p.getApart());
