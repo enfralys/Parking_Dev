@@ -68,14 +68,14 @@ public class conex {
     public void CrearTabla() {
         String sql;
         try {
-            sql="CREATE TABLE parking ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) NOT NULL,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP, activo int default 1, tipov int default 1)";
+            sql="CREATE TABLE parking ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, visitante varchar(45) NOT NULL, puesto int(10) ,  apart varchar(12) NOT NULL,  tarjeta varchar(12) NOT NULL,  estado varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP, activo int default 1, tipov int default 1)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
             JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
         }
         try {
-            sql="CREATE TABLE propietarios ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, propietario varchar(15) NOT NULL, puesto varchar(12) NOT NULL, apart varchar(12) NOT NULL, torre varchar(12) NOT NULL, tarjeta varchar(12) NOT NULL, id_monitor_log int not null, estado varchar(12) , fechae varchar(12) NOT NULL, fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+            sql="CREATE TABLE propietarios ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, propietario varchar(15) NOT NULL, puesto varchar(12) , apart varchar(12) NOT NULL, torre varchar(12) NOT NULL, tarjeta varchar(12) NOT NULL, id_monitor_log int not null, estado varchar(12) , fechae varchar(12) , fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
@@ -153,7 +153,6 @@ public class conex {
             pstmt.execute();
         } catch (SQLException e) {  e.printStackTrace();}
     }
-    
     public void salida(RegistroVehiculo reg, int puesto) {
         try {
             pstmt=conn.prepareStatement("insert into parking (placa, visitante, puesto, apart,tarjeta,estado, fechareg, activo) values (?,?,?,?,?,'salida', datetime('now','localtime'),0)");
@@ -351,32 +350,8 @@ public class conex {
         }    
         return false;
     }
-    public String salidas(){
-        registro est=new registro();
-        String a = "";
-	ResultSet rs=null;
-	try {
-	    pstmt=conn.prepareStatement("select * from  acc_monitor_log ");	          
-	    rs=pstmt.executeQuery(); 	
-        } catch (SQLException e) {  e.printStackTrace(); }    
-	try {
-            if (rs.last()){ a= rs.getString("card_no");}
-	} catch (SQLException e) {  e.printStackTrace();}
-	return a;
-    }
-    public int  getid_monitor_log(){
-        registro est=new registro();
-        int a = 0;
-	ResultSet rs=null;
-	try {
-	    pstmt=conn.prepareStatement("select * from  acc_monitor_log ");	          
-	    rs=pstmt.executeQuery(); 	
-        } catch (SQLException e) {  e.printStackTrace(); }    
-	try {
-            if (rs.last()){ a= rs.getInt("id");}
-	} catch (SQLException e) {  e.printStackTrace();}
-	return a;
-    }
+    
+   
     public JTable CargarTablaHistorias(JTable tabla){
         DefaultTableModel model;
         try {
@@ -437,8 +412,8 @@ public class conex {
     public JTable actTablaPropietarios(JTable tabla, String sql) {
         DefaultTableModel model;
         try {
-            String [] Titulos={"Propietario","Apartamento","Torre","Placa"};
-            String[] Registros= new String[4];
+            String [] Titulos={"Propietario","Apartamento","Torre","Placa","Fecha"};
+            String[] Registros= new String[5];
             pstmt=conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery(); 	
             model = new DefaultTableModel(null,Titulos);
@@ -448,6 +423,7 @@ public class conex {
                     Registros[1]=rs.getString("apart");
                     Registros[2]=rs.getString("torre");
                     Registros[3]=rs.getString("placa");
+                    Registros[4]=rs.getString("fechareg");
                     model.addRow(Registros);
                 }
             }catch(SQLException e){ 
@@ -547,12 +523,7 @@ public class conex {
         }
       //  return tabla;
     }
-    public void newsalida() {
-        try {
-            pstmt=conn.prepareStatement("insert into  acc_monitor_log (card_no,status,device_sn) values ('0',0,'-')");
-            pstmt.execute();
-        } catch (SQLException e) {  e.printStackTrace();}
-    }
+   
     void infractores() {
         ResultSet rs=null;
         PreparedStatement pstmt2;
@@ -628,31 +599,42 @@ public class conex {
         return "";
     }
         //Metodos Usados con BD en Mysql
-    boolean userinfo(String salidas, propietario Propietario,  Connection d) {
+    boolean userinfo(String salidas, propietario Propietario,  Connection d, int id) {
         ResultSet rs=null;
+        ResultSet rs3=null;
         PreparedStatement pstmt2=null;
+        PreparedStatement pstmt3=null;
         try {
             //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
-            pstmt2=d.prepareStatement("insert into propietarios (placa, propietario, puesto, apart, torre , tarjeta, fechareg) values (?,?,?,?,?,?,datetime('now','localtime'))");
+            pstmt2=d.prepareStatement("insert into propietarios (placa, propietario, puesto, apart, torre , tarjeta, id_monitor_log, fechae,estado,fechareg) values (?,?,?,?,?,?,?,?,?,datetime('now','localtime'))");
+            pstmt3=d.prepareStatement("select * from  propietarios where id_monitor_log=?");
+            pstmt3.setInt(1, id);
+            rs3=pstmt3.executeQuery();
             pstmt=conn.prepareStatement("select * from  userinfo where Card=?");
             pstmt.setString(1, salidas);
             rs=pstmt.executeQuery();
-            if (rs.next()){
-                pstmt2.setString(1, rs.getString("city"));
-                pstmt2.setString(2, rs.getString("lastname")+" , "+rs.getString("name"));
-                pstmt2.setString(3, rs.getString("ophone"));
-                pstmt2.setString(4, rs.getString("identitycard"));
-                pstmt2.setString(5, this.gettorre(this.getdepid(rs.getInt("userid"))));
-                pstmt2.setString(6, rs.getString("Card"));
-                pstmt2.execute();
-                newsalida();
-                Propietario.setPlaca(rs.getString("city"));
-                Propietario.setPropietario(rs.getString("lastname")+" , "+rs.getString("name"));
-                Propietario.setPuesto(rs.getString("ophone"));
-                Propietario.setApart(rs.getString("identitycard"));
-                Propietario.setTorre(this.gettorre(this.getdepid(rs.getInt("userid"))));
-                Propietario.setTarjeta(rs.getString("Card"));
-                return true;
+            if (rs3.next()){}
+            else{
+                if (rs.next()){
+                    pstmt2.setString(1, rs.getString("city"));
+                    pstmt2.setString(2, rs.getString("lastname")+" , "+rs.getString("name"));
+                    pstmt2.setString(3, rs.getString("ophone"));
+                    pstmt2.setString(4, rs.getString("identitycard"));
+                    pstmt2.setString(5, this.gettorre(this.getdepid(rs.getInt("userid"))));
+                    pstmt2.setString(6, rs.getString("Card"));
+                    pstmt2.setInt(7, id);
+                    pstmt2.setString(8, this.getFechaEvento(id));
+                    pstmt2.setString(9, this.getEstado(id));
+                    pstmt2.execute();
+                    //newsalida();
+                    Propietario.setPlaca(rs.getString("city"));
+                    Propietario.setPropietario(rs.getString("lastname")+" , "+rs.getString("name"));
+                    Propietario.setPuesto(rs.getString("ophone"));
+                    Propietario.setApart(rs.getString("identitycard"));
+                    Propietario.setTorre(this.gettorre(this.getdepid(rs.getInt("userid"))));
+                    Propietario.setTarjeta(rs.getString("Card"));
+                    return true;
+                }
             }
         } catch (SQLException e) {  e.printStackTrace();
            if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
@@ -701,6 +683,68 @@ public class conex {
         } catch (SQLException e) {  e.printStackTrace();}
         return 0;
     }
-    
+     public void newsalida() {
+        try {
+            pstmt=conn.prepareStatement("insert into  acc_monitor_log (card_no,status,device_sn) values ('0',0,'-')");
+            pstmt.execute();
+        } catch (SQLException e) {  e.printStackTrace();}
+    }
+    public int  getid_monitor_log(){
+        registro est=new registro();
+        int a = 0;
+	ResultSet rs=null;
+	try {
+	    pstmt=conn.prepareStatement("select * from  acc_monitor_log ");	          
+	    rs=pstmt.executeQuery(); 	
+        } catch (SQLException e) {  e.printStackTrace(); }    
+	try {
+            if (rs.last()){ a= rs.getInt("id");}
+	} catch (SQLException e) {  e.printStackTrace();}
+	return a;
+    }
+    public String salidas(){
+        registro est=new registro();
+        String a = "";
+	ResultSet rs=null;
+	try {
+	    pstmt=conn.prepareStatement("select * from  acc_monitor_log ");	          
+	    rs=pstmt.executeQuery(); 	
+        } catch (SQLException e) {  e.printStackTrace(); }    
+	try {
+            if (rs.last()){ a= rs.getString("card_no");}
+	} catch (SQLException e) {  e.printStackTrace();}
+	return a;
+    }
 
+    private String getFechaEvento(int id) {
+        registro est=new registro();
+        String a = "";
+	ResultSet rs=null;
+	try {
+	    pstmt=conn.prepareStatement("select * from  acc_monitor_log where id=?");	          
+	    pstmt.setInt(1, id);
+            rs=pstmt.executeQuery(); 	
+        } catch (SQLException e) {  e.printStackTrace(); }    
+	try {
+            if (rs.last()){ a= rs.getString("create_time");}
+	} catch (SQLException e) {  e.printStackTrace();}
+	return a;
+    }
+
+    public String getEstado(int id) {
+        registro est=new registro();
+        String a = "";
+	ResultSet rs=null;
+	try {
+	    pstmt=conn.prepareStatement("select * from  acc_monitor_log where id=?");	          
+	    pstmt.setInt(1, id);
+            rs=pstmt.executeQuery(); 	
+        } catch (SQLException e) {  e.printStackTrace(); }    
+	try {
+            if (rs.last()){ a= rs.getString("event_point_name");}
+	} catch (SQLException e) {  e.printStackTrace();}
+	return a;
+    }
+
+    
 }

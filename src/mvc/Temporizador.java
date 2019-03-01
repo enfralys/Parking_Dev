@@ -41,7 +41,7 @@ public class Temporizador extends TimerTask{
             ResultSet rs= d.consultarEntradas();
             int puesto=0;
             String tarjeta;
-            if (c.userinfo(c.salidas(),p,d.getconn())){
+            if (c.userinfo(c.salidas(),p,d.getconn(),c.getid_monitor_log())){
                 Vista.actPropietario(p);
             }
             while (rs.next()){
