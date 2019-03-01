@@ -15,6 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import modelo.propietario;
 import org.matrix.BlackTabbedPane;
 import plugins.JTextFieldHint;
 
@@ -294,8 +295,8 @@ public class Main extends javax.swing.JFrame {
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
         cmbFiltradoDiaVehiculo = new javax.swing.JComboBox<>();
-        lblHistorialVehiculos = new javax.swing.JLabel();
         btnrefresh = new javax.swing.JButton();
+        lblHistorialVehiculos = new javax.swing.JLabel();
         pnlPeatones = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jPanel9 = new javax.swing.JPanel();
@@ -2218,17 +2219,17 @@ public class Main extends javax.swing.JFrame {
         });
         pnlFiltrado.add(cmbFiltradoDiaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 240, -1));
 
+        btnrefresh.setText("Buscar");
+        btnrefresh.setToolTipText("Presione aqui para actualizar tabla");
+        pnlFiltrado.add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 70, 90, 30));
+
         jPanel7.add(pnlFiltrado, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 800, 120));
 
         lblHistorialVehiculos.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblHistorialVehiculos.setForeground(new java.awt.Color(153, 153, 0));
         lblHistorialVehiculos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHistorialVehiculos.setText("Historial General de Vehículos");
-        jPanel7.add(lblHistorialVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 958, -1));
-
-        btnrefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/actualiza.jpg"))); // NOI18N
-        btnrefresh.setToolTipText("Presione aqui para actualizar tabla");
-        jPanel7.add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 60));
+        jPanel7.add(lblHistorialVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 958, -1));
 
         blackTabbedPane1.addTab("Vehículos", new javax.swing.ImageIcon(getClass().getResource("/images/042-parking-area-tab.png")), jPanel7); // NOI18N
 
@@ -5403,6 +5404,16 @@ public class Main extends javax.swing.JFrame {
                 break;                
         } 
      
+    }
+
+    public void actPropietario(propietario p) {
+        String nombrec[]= p.getPropietario().split(",");
+        this.lblnombre.setText("Nombre: "+nombrec[0]);
+        this.lblapellido.setText("Apellido: "+nombrec[0]);
+        this.lbltarjeta.setText("Tarjeta: "+p.getTarjeta());
+        this.lblapto.setText("Apto: "+p.getApart());
+        this.lbltorre.setText("Torre: "+p.getTorre());
+        this.lblplaca.setText(p.getPlaca());
     }
 
     

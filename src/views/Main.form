@@ -5778,6 +5778,17 @@
                                 </Constraint>
                               </Constraints>
                             </Component>
+                            <Component class="javax.swing.JButton" name="btnrefresh">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Buscar"/>
+                                <Property name="toolTipText" type="java.lang.String" value="Presione aqui para actualizar tabla"/>
+                              </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="640" y="70" width="90" height="30"/>
+                                </Constraint>
+                              </Constraints>
+                            </Component>
                           </SubComponents>
                         </Container>
                         <Component class="javax.swing.JLabel" name="lblHistorialVehiculos">
@@ -5793,20 +5804,7 @@
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="0" y="30" width="958" height="-1"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
-                        <Component class="javax.swing.JButton" name="btnrefresh">
-                          <Properties>
-                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/images/actualiza.jpg"/>
-                            </Property>
-                            <Property name="toolTipText" type="java.lang.String" value="Presione aqui para actualizar tabla"/>
-                          </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="10" y="10" width="70" height="60"/>
+                              <AbsoluteConstraints x="10" y="30" width="958" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>

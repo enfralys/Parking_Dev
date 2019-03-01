@@ -196,8 +196,8 @@ public class button_control implements ActionListener, KeyListener{
         vista.setTlbHistorialDatos1(conn.actTablaPea(vista.getTlbHistorialDatos1(),"select * from peatones order by id desc"));
         conn.desconectar(); 
         
-        conn.conectarMSQL();
-        vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),"select * from userinfo"));
+        conn.conectarSQLITE(); 
+        vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),"select * from propietarios"));
         conn.desconectar(); 
         
         
@@ -386,21 +386,7 @@ public class button_control implements ActionListener, KeyListener{
         if (e.getSource() == reg.getBtnCancelar()){ if (contador != 0){ reg.dispose(); } }
 
         if (e.getSource() == vista.getCmbFiltradoDiaVehiculo()){
-            int indice=0;
-            indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
-            if (indice==0){ sql="select * from  parking where "; }
-            else if (indice==1){ sql="select * from  parking where estado like 'entrada' and  ";  }
-            else if (indice==2){ sql="select * from  parking where estado like 'salida' and  ";  }
-            else if (indice==3){ sql="select * from  parking where estado like 'infractor' and  ";  }
-            else { sql="select * from  parking where ";}
-            String fechaI[]=vista.getTxtFechaInicial().getText().split("/");
-            String fechaF[]=vista.getTxtFechaFinal().getText().split("/");
-             sql=sql+" fechareg >= '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00' ";
-             sql=sql+" and fechareg <= '"+fechaF[2]+"-"+fechaF[1]+"-"+fechaF[0]+" 00:00:00' ";
-             sql=sql+" order by id desc";
-            conn.conectarSQLITE();
-            conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
-            conn.desconectar();
+            this.actHistorial();
         }
     }  
     
@@ -438,7 +424,7 @@ public class button_control implements ActionListener, KeyListener{
        //departments
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona1())){
            JTextField txt= (JTextField) ke.getSource();
-           sql="select * from userinfo where city LIKE '"+txt.getText()+"%' ";
+           sql="select * from propietario where placa LIKE '"+txt.getText()+"%' order by id desc ";
            conn.conectarMSQL();
            vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),sql));           
            conn.desconectar(); //
@@ -458,21 +444,7 @@ public class button_control implements ActionListener, KeyListener{
            conn.desconectar(); //
        }
        if ((ke.getSource().equals(this.vista.getTxtFechaInicial())) || (ke.getSource().equals(this.vista.getTxtFechaFinal()))){
-            int indice=0;
-            indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
-            if (indice==0){ sql="select * from  parking where "; }
-            else if (indice==1){ sql="select * from  parking where estado like 'entrada' and  ";  }
-            else if (indice==2){ sql="select * from  parking where estado like 'salida' and  ";  }
-            else if (indice==3){ sql="select * from  parking where estado like 'infractor' and  ";  }
-            else { sql="select * from  parking where ";}
-            String fechaI[]=vista.getTxtFechaInicial().getText().split("/");
-            String fechaF[]=vista.getTxtFechaFinal().getText().split("/");
-             sql=sql+" fechareg >= '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00' ";
-             sql=sql+" and fechareg <= '"+fechaF[2]+"-"+fechaF[1]+"-"+fechaF[0]+" 00:00:00' ";
-             sql=sql+" order by id desc";
-            conn.conectarSQLITE();
-            conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
-            conn.desconectar();
+            this.actHistorial();
 
        }
     }
@@ -498,15 +470,15 @@ public class button_control implements ActionListener, KeyListener{
         }
     }
     public String validar(){
-    String mensaje="";
+        String mensaje="";
+        if (reg.getTxtPlaca().getText().equalsIgnoreCase("")){
+            return "Debe ingresar una Placa";
+        }    
         if (reg.getTxtApartamento().getText().equalsIgnoreCase("")){
             return "Debe ingresar un Apartamento";
         }
         if (reg.getTxtNombreVisitante().getText().equalsIgnoreCase("")){
             return "Debe ingresar datos del Visitante";
-        }
-        if (reg.getTxtPlaca().getText().equalsIgnoreCase("")){
-            return "Debe ingresar una Placa";
         }
         if (reg.getTxtTarjeta().getText().equalsIgnoreCase("")){
             return "Debe ingresar una tarjeta";
@@ -525,9 +497,22 @@ public class button_control implements ActionListener, KeyListener{
     }
 
     private void actHistorial() {
-        conn.conectarSQLITE();
-        vista.setTlbHistorial(conn.CargarTablaHistorias(vista.getTlbHistorial()));
-        conn.desconectar();
+        String sql;
+         int indice=0;
+         indice = vista.getCmbFiltradoDiaVehiculo().getSelectedIndex();
+         if (indice==0){ sql="select * from  parking where "; }
+         else if (indice==1){ sql="select * from  parking where estado like 'entrada' and  ";  }
+         else if (indice==2){ sql="select * from  parking where estado like 'salida' and  ";  }
+         else if (indice==3){ sql="select * from  parking where estado like 'infractor' and  ";  }
+         else { sql="select * from  parking where ";}
+         String fechaI[]=vista.getTxtFechaInicial().getText().split("/");
+         String fechaF[]=vista.getTxtFechaFinal().getText().split("/");
+         sql=sql+" fechareg >= '"+fechaI[2]+"-"+fechaI[1]+"-"+fechaI[0]+" 00:00:00' ";
+         sql=sql+" and fechareg <= '"+fechaF[2]+"-"+fechaF[1]+"-"+fechaF[0]+" 00:00:00' ";
+         sql=sql+" order by id desc";
+         conn.conectarSQLITE();
+         conn.ActTabla(1, vista.getTlbHistorialVehiculos(),sql);
+         conn.desconectar();
     }
 
     

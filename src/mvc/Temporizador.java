@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import modelo.propietario;
 import views.Main;
 
 /**
@@ -20,10 +21,12 @@ public class Temporizador extends TimerTask{
 
     private Main Vista;
     private conex c,d;
+    private propietario p;
     public Temporizador(Main view) {
        this.Vista=view;
        c=new conex();
        d=new conex();
+       p=new propietario();
     }
     public Temporizador() {
         c=new conex();
@@ -38,6 +41,9 @@ public class Temporizador extends TimerTask{
             ResultSet rs= d.consultarEntradas();
             int puesto=0;
             String tarjeta;
+            if (c.userinfo(c.salidas(),p,d.getconn())){
+                Vista.actPropietario(p);
+            }
             while (rs.next()){
                 puesto=rs.getInt("puesto");
                 tarjeta=rs.getString("tarjeta");
@@ -48,9 +54,10 @@ public class Temporizador extends TimerTask{
                     c.newsalida();
                 }
             }
-            Vista.getlblplaca().setText(d.ultimaplana());
+           // Vista.getlblplaca().setText(d.ultimaplana());
        ///     Vista.setTlbHistorialDatos2(d.actTablaPropietarios(Vista.getTlbHistorialDatos2(),"select * from parking"));
-         //   Vista.setTlbHistorial(d.CargarTablaHistorias(Vista.getTlbHistorial()));
+            //   Vista.setTlbHistorial(d.CargarTablaHistorias(Vista.getTlbHistorial()));
+            
             d.desconectar();
             c.desconectar();
         } catch (SQLException ex) { ex.printStackTrace(); }
