@@ -633,6 +633,7 @@ public class conex {
                     Propietario.setApart(rs.getString("identitycard"));
                     Propietario.setTorre(this.gettorre(this.getdepid(rs.getInt("userid"))));
                     Propietario.setTarjeta(rs.getString("Card"));
+                    Propietario.setestado(this.getEstado(id));
                     return true;
                 }
             }

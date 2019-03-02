@@ -62,7 +62,7 @@ public class Main extends javax.swing.JFrame {
         jPanel18 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        lblentrada = new javax.swing.JLabel();
         lblapto = new javax.swing.JLabel();
         lblapellido = new javax.swing.JLabel();
         lblnombre = new javax.swing.JLabel();
@@ -412,11 +412,11 @@ public class Main extends javax.swing.JFrame {
 
         jPanel17.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 280, 30));
 
-        jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(51, 255, 0));
-        jLabel17.setText("ENTRADA");
-        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 204)));
-        jPanel17.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 180, 60));
+        lblentrada.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblentrada.setForeground(new java.awt.Color(51, 255, 0));
+        lblentrada.setText("ENTRADA");
+        lblentrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 204)));
+        jPanel17.add(lblentrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 180, 60));
 
         lblapto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         lblapto.setText("APTO");
@@ -2469,7 +2469,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -2597,6 +2596,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lblPuesto99;
     private javax.swing.JLabel lblapellido;
     private javax.swing.JLabel lblapto;
+    private javax.swing.JLabel lblentrada;
     private javax.swing.JLabel lblnombre;
     private javax.swing.JLabel lblplaca;
     private javax.swing.JLabel lbltarjeta;
@@ -4382,6 +4382,9 @@ public class Main extends javax.swing.JFrame {
     
     public JLabel getlbltorre() { return lbltorre; }
     public void setlbltorre(JLabel lbltorre) {  this.lbltorre = lbltorre; }
+    
+    public JLabel getlblentrada() { return lblentrada; }
+    public void setlblentrada(JLabel lblentrada) {  this.lblentrada = lblentrada; }
     // Metodo creado para cambiar imagen de jbutton cuando un vehiculo esta estacionado en el puesto
     public void ocupado(int puesto) {
         ImageIcon icon = new ImageIcon(getClass().getResource("/images/042-parking-area.png"));
@@ -5414,6 +5417,7 @@ public class Main extends javax.swing.JFrame {
         this.lblapto.setText("Apto: "+p.getApart());
         this.lbltorre.setText("Torre: "+p.getTorre());
         this.lblplaca.setText(p.getPlaca());
+        this.lblentrada.setText(p.getestado());
     }
 
     

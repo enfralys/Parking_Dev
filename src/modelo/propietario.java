@@ -16,6 +16,7 @@ public class propietario {
     private String apart;
     private String torre;
     private String tarjeta;
+    private String estado;
 
     /**
      * @return the placa
@@ -101,5 +102,14 @@ public class propietario {
         this.tarjeta = tarjeta;
     }
     
-    
+    public String getestado() {
+        return estado;
+    }
+
+    /**
+     * @param tarjeta the tarjeta to set
+     */
+    public void setestado(String estado) {
+        this.estado = estado;
+    }
 }
