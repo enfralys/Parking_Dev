@@ -607,8 +607,11 @@ public class conex {
         try {
             //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
             pstmt2=d.prepareStatement("insert into propietarios (placa, propietario, puesto, apart, torre , tarjeta, id_monitor_log, fechae,estado,fechareg) values (?,?,?,?,?,?,?,?,?,datetime('now','localtime'))");
-            pstmt3=d.prepareStatement("select * from  propietarios where id_monitor_log=?");
-            pstmt3.setInt(1, id);
+            //pstmt3=d.prepareStatement("select * from  propietarios where id_monitor_log=?");
+            pstmt3=d.prepareStatement("select * from  propietarios where estado=? and tarjeta=?");
+            
+            pstmt3.setString(1, this.estado());
+            pstmt3.setString(2, this.salidas());
             rs3=pstmt3.executeQuery();
             pstmt=conn.prepareStatement("select * from  userinfo where Card=?");
             pstmt.setString(1, salidas);
@@ -620,7 +623,8 @@ public class conex {
                     pstmt2.setString(2, rs.getString("lastname")+" , "+rs.getString("name"));
                     pstmt2.setString(3, rs.getString("ophone"));
                     pstmt2.setString(4, rs.getString("identitycard"));
-                    pstmt2.setString(5, this.gettorre(this.getdepid(rs.getInt("userid"))));
+                    //pstmt2.setString(5, this.gettorre(this.getdepid(rs.getInt("userid"))));
+                    pstmt2.setString(5, this.gettorre(rs.getInt("defaultdeptid")));
                     pstmt2.setString(6, rs.getString("Card"));
                     pstmt2.setInt(7, id);
                     pstmt2.setString(8, this.getFechaEvento(id));
@@ -644,6 +648,28 @@ public class conex {
         }    
         return false;
         
+    }
+    void getUltPropietario(propietario Propietario) {
+        
+        ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  propietarios order by id desc");
+            rs=pstmt.executeQuery();
+            if (rs.next()){
+                    Propietario.setPlaca(rs.getString("placa"));
+                    Propietario.setPropietario(rs.getString("propietario"));
+                    Propietario.setPuesto(rs.getString("puesto"));
+                    Propietario.setApart(rs.getString("apart"));
+                    Propietario.setTorre(rs.getString("torre"));
+                    Propietario.setTarjeta(rs.getString("tarjeta"));
+                    Propietario.setestado(rs.getString("estado"));
+                }
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           if (e.getErrorCode()==1146){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           
+        }    
+
     }
     public String gettorre(int deptd){
              ResultSet rs=null;
@@ -713,6 +739,19 @@ public class conex {
         } catch (SQLException e) {  e.printStackTrace(); }    
 	try {
             if (rs.last()){ a= rs.getString("card_no");}
+	} catch (SQLException e) {  e.printStackTrace();}
+	return a;
+    }
+    public String estado(){
+        registro est=new registro();
+        String a = "";
+	ResultSet rs=null;
+	try {
+	    pstmt=conn.prepareStatement("select * from  acc_monitor_log ");	          
+	    rs=pstmt.executeQuery(); 	
+        } catch (SQLException e) {  e.printStackTrace(); }    
+	try {
+            if (rs.last()){ a= rs.getString("event_point_name");}
 	} catch (SQLException e) {  e.printStackTrace();}
 	return a;
     }

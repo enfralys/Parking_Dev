@@ -22,11 +22,13 @@ public class Temporizador extends TimerTask{
     private Main Vista;
     private conex c,d;
     private propietario p;
+    
     public Temporizador(Main view) {
        this.Vista=view;
        c=new conex();
        d=new conex();
        p=new propietario();
+      
     }
     public Temporizador() {
         c=new conex();
@@ -42,6 +44,11 @@ public class Temporizador extends TimerTask{
             int puesto=0;
             String tarjeta;
             if (c.userinfo(c.salidas(),p,d.getconn(),c.getid_monitor_log())){
+                Vista.actPropietario(p);
+            }
+            if (Vista.bandera==false){
+                Vista.setTlbHistorialDatos2(d.actTablaPropietarios(Vista.getTlbHistorialDatos2(),"select * from propietarios order by id desc"));           
+                d.getUltPropietario(p);
                 Vista.actPropietario(p);
             }
             while (rs.next()){

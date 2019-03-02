@@ -28,6 +28,7 @@ public class Main extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
+    public boolean bandera;
     public Main() {
         initComponents();
     }
@@ -52,7 +53,6 @@ public class Main extends javax.swing.JFrame {
         tbpMain = new org.matrix.BlackTabbedPane();
         pnlPeatones1 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
-        txtNombrePeaton7 = new javax.swing.JTextField();
         jPanel16 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -353,11 +353,6 @@ public class Main extends javax.swing.JFrame {
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
         jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtNombrePeaton7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txtNombrePeaton7.setForeground(new java.awt.Color(153, 153, 153));
-        txtNombrePeaton7.setBorder(null);
-        jPanel15.add(txtNombrePeaton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
 
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -2620,7 +2615,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField txtFiltradoFechaFinalVehiculo;
     private javax.swing.JFormattedTextField txtFiltradoFechaInicialVehiculo;
     private javax.swing.JTextField txtNombrePeaton5;
-    private javax.swing.JTextField txtNombrePeaton7;
     private javax.swing.JTextField txtNombrePeaton8;
     private javax.swing.JTextField txtNombrePeaton9;
     // End of variables declaration//GEN-END:variables

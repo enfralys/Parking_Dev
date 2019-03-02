@@ -21,6 +21,7 @@ import views.VisorTarjeta;
 public class home {
     public static void main(String[] args) throws IOException {
        Main view = new Main();
+       view.bandera=false;
         RegistroVehiculo reg = new RegistroVehiculo(null, false);
         RegistroPeaton regPea = new RegistroPeaton(null,false);
         VisorTarjeta vT = new VisorTarjeta(null,false);

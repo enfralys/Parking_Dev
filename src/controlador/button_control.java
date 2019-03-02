@@ -228,6 +228,7 @@ public class button_control implements ActionListener, KeyListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         button_control control = null;
+        vista.bandera=false;
         String sql;
         if (e.getSource() == vista.getBtnSalir()) { System.exit(0); }   
         
@@ -419,12 +420,14 @@ public class button_control implements ActionListener, KeyListener{
     public void keyPressed(KeyEvent ke) {  }
 
     public void keyReleased(KeyEvent ke) {
+       vista.bandera=false;
        String sql="select * from peatones";
         ResultSet rs=null;
        //departments
        if (ke.getSource().equals(this.vista.getTxtBuscadorPersona1())){
            JTextField txt= (JTextField) ke.getSource();
            sql="select * from propietarios where placa LIKE '"+txt.getText()+"%' order by id desc ";
+           vista.bandera=true;
 //           conn.conectarMSQL();
             conn.conectarSQLITE();
            vista.setTlbHistorialDatos2(conn.actTablaPropietarios(vista.getTlbHistorialDatos2(),sql));           
