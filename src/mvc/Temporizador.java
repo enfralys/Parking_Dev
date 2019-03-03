@@ -43,13 +43,17 @@ public class Temporizador extends TimerTask{
             ResultSet rs= d.consultarEntradas();
             int puesto=0;
             String tarjeta;
-            if (c.userinfo(c.salidas(),p,d.getconn(),c.getid_monitor_log())){
-                Vista.actPropietario(p);
+            if (d.existeRegistro(c.salidas(), c.getid_monitor_log())){
+                if (c.userinfo(c.salidas(),p,d.getconn(),c.getid_monitor_log())){
+                    Vista.actPropietario(p);
+                }
             }
             if (Vista.bandera==false){
                 Vista.setTlbHistorialDatos2(d.actTablaPropietarios(Vista.getTlbHistorialDatos2(),"select * from propietarios order by id desc"));           
                 d.getUltPropietario(p);
-                Vista.actPropietario(p);
+                if (p!=null){
+                    Vista.actPropietario(p);
+                }
             }
             while (rs.next()){
                 puesto=rs.getInt("puesto");

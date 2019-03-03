@@ -18,6 +18,16 @@ public class propietario {
     private String tarjeta;
     private String estado;
 
+   public propietario() {
+    placa="";
+    propietario=" , ";
+    puesto="";
+    apart="";
+    torre="";
+    tarjeta="";
+    estado="SIN INFORMACION";
+
+   }
     /**
      * @return the placa
      */

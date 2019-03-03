@@ -42,7 +42,9 @@ public class conex {
             conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:17770/zkeco_db","root","");
 	} catch (Exception e) {
         	//System.out.println("Error de conexion con la BD");
-		e.printStackTrace();
+		//e.printStackTrace();
+                JOptionPane.showMessageDialog(null,"Error al comunicacion con Base de Datos de tracking, verifique la conectividad. El sistema puede generar fallas",null,0);
+                //System.exit(0);
 	}
     }
     //Metodo para cerrar conexion a BD
@@ -602,50 +604,56 @@ public class conex {
         //Metodos Usados con BD en Mysql
     boolean userinfo(String salidas, propietario Propietario,  Connection d, int id) {
         ResultSet rs=null;
-        ResultSet rs3=null;
         PreparedStatement pstmt2=null;
-        PreparedStatement pstmt3=null;
         try {
-            //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
             pstmt2=d.prepareStatement("insert into propietarios (placa, propietario, puesto, apart, torre , tarjeta, id_monitor_log, fechae,estado,fechareg) values (?,?,?,?,?,?,?,?,?,datetime('now','localtime'))");
-            //pstmt3=d.prepareStatement("select * from  propietarios where id_monitor_log=?");
-            //pstmt3=d.prepareStatement("select * from  propietarios where estado=? and tarjeta=?");
-            pstmt3=d.prepareStatement("select * from  propietarios");
-            
-            pstmt3.setString(1, this.estado());
-            pstmt3.setString(2, this.salidas());
-            rs3=pstmt3.executeQuery();
             pstmt=conn.prepareStatement("select * from  userinfo where Card=?");
             pstmt.setString(1, salidas);
             rs=pstmt.executeQuery();
-            if (rs3.last()){
-                if ((rs3.getString("estado").equals(this.estado())) && (rs3.getString("tarjeta").equals(this.salidas()))){}
-                else if (rs.next()){
-                    pstmt2.setString(1, rs.getString("city"));
-                    pstmt2.setString(2, rs.getString("lastname")+" , "+rs.getString("name"));
-                    pstmt2.setString(3, rs.getString("ophone"));
-                    pstmt2.setString(4, rs.getString("identitycard"));
-                    //pstmt2.setString(5, this.gettorre(this.getdepid(rs.getInt("userid"))));
-                    pstmt2.setString(5, this.gettorre(rs.getInt("defaultdeptid")));
-                    pstmt2.setString(6, rs.getString("Card"));
-                    pstmt2.setInt(7, id);
-                    pstmt2.setString(8, this.getFechaEvento(id));
-                    pstmt2.setString(9, this.getEstado(id));
-                    pstmt2.execute();
-                    //newsalida();
-                    Propietario.setPlaca(rs.getString("city"));
-                    Propietario.setPropietario(rs.getString("lastname")+" , "+rs.getString("name"));
-                    Propietario.setPuesto(rs.getString("ophone"));
-                    Propietario.setApart(rs.getString("identitycard"));
-                    Propietario.setTorre(this.gettorre(this.getdepid(rs.getInt("userid"))));
-                    Propietario.setTarjeta(rs.getString("Card"));
-                    Propietario.setestado(this.getEstado(id));
-                    return true;
-                }
+            if (rs.next()){
+                pstmt2.setString(1, rs.getString("city"));
+                pstmt2.setString(2, rs.getString("lastname")+" , "+rs.getString("name"));
+                pstmt2.setString(3, rs.getString("ophone"));
+                pstmt2.setString(4, rs.getString("identitycard"));
+                pstmt2.setString(5, this.gettorre(rs.getInt("defaultdeptid")));
+                pstmt2.setString(6, rs.getString("Card"));
+                pstmt2.setInt(7, id);
+                pstmt2.setString(8, this.getFechaEvento(id));
+                pstmt2.setString(9, this.getEstado(id));
+                pstmt2.execute();
+
+                Propietario.setPlaca(rs.getString("city"));
+                Propietario.setPropietario(rs.getString("lastname")+" , "+rs.getString("name"));
+                Propietario.setPuesto(rs.getString("ophone"));
+                Propietario.setApart(rs.getString("identitycard"));
+                Propietario.setTorre(this.gettorre(this.getdepid(rs.getInt("userid"))));
+                Propietario.setTarjeta(rs.getString("Card"));
+                Propietario.setestado(this.getEstado(id));
+                
+                return true;
             }
         } catch (SQLException e) {  e.printStackTrace();
            if (e.getErrorCode()==0){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
            if (e.getErrorCode()==1146){this.CrearTabla(); JOptionPane.showMessageDialog(null, "Error con Bd. Inicie nuevamente el programa para solventar error"); System.exit(0);}
+           
+        }    
+        return false;
+        
+    }
+    public boolean existeRegistro(String salidas, int id) {
+        ResultSet rs=null;
+        try {
+            pstmt=conn.prepareStatement("select * from  propietarios order by id desc");
+            rs=pstmt.executeQuery();
+            if (rs.next()){
+                if ((rs.getString("estado").equals(this.estado())) && (rs.getString("tarjeta").equals(this.salidas()))){
+                    return true;
+                }
+                else { return false;}
+            }
+        } catch (SQLException e) {  e.printStackTrace();
+           if (e.getErrorCode()==0){JOptionPane.showMessageDialog(null, "Error con Bd. ");}
+           if (e.getErrorCode()==1146){JOptionPane.showMessageDialog(null, "Error con Bd."); }
            
         }    
         return false;
