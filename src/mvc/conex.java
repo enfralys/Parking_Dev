@@ -412,8 +412,8 @@ public class conex {
     public JTable actTablaPropietarios(JTable tabla, String sql) {
         DefaultTableModel model;
         try {
-            String [] Titulos={"Propietario","Apartamento","Torre","Placa","Fecha"};
-            String[] Registros= new String[5];
+            String [] Titulos={"Propietario","Apartamento","Torre","Placa","Estado","Fecha"};
+            String[] Registros= new String[6];
             pstmt=conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery(); 	
             model = new DefaultTableModel(null,Titulos);
@@ -423,7 +423,8 @@ public class conex {
                     Registros[1]=rs.getString("apart");
                     Registros[2]=rs.getString("torre");
                     Registros[3]=rs.getString("placa");
-                    Registros[4]=rs.getString("fechareg");
+                    Registros[4]=rs.getString("estsdo");
+                    Registros[5]=rs.getString("fechareg");
                     model.addRow(Registros);
                 }
             }catch(SQLException e){ 
@@ -608,7 +609,8 @@ public class conex {
             //pstmt=conn.prepareStatement("select * from  parking where estado like 'entrada' and activo=1");
             pstmt2=d.prepareStatement("insert into propietarios (placa, propietario, puesto, apart, torre , tarjeta, id_monitor_log, fechae,estado,fechareg) values (?,?,?,?,?,?,?,?,?,datetime('now','localtime'))");
             //pstmt3=d.prepareStatement("select * from  propietarios where id_monitor_log=?");
-            pstmt3=d.prepareStatement("select * from  propietarios where estado=? and tarjeta=?");
+            //pstmt3=d.prepareStatement("select * from  propietarios where estado=? and tarjeta=?");
+            pstmt3=d.prepareStatement("select * from  propietarios");
             
             pstmt3.setString(1, this.estado());
             pstmt3.setString(2, this.salidas());
@@ -616,9 +618,9 @@ public class conex {
             pstmt=conn.prepareStatement("select * from  userinfo where Card=?");
             pstmt.setString(1, salidas);
             rs=pstmt.executeQuery();
-            if (rs3.next()){}
-            else{
-                if (rs.next()){
+            if (rs3.last()){
+                if ((rs3.getString("estado").equals(this.estado())) && (rs3.getString("tarjeta").equals(this.salidas()))){}
+                else if (rs.next()){
                     pstmt2.setString(1, rs.getString("city"));
                     pstmt2.setString(2, rs.getString("lastname")+" , "+rs.getString("name"));
                     pstmt2.setString(3, rs.getString("ophone"));
