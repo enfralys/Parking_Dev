@@ -651,11 +651,11 @@ public class conex {
             if (rs.next()){
                 
                 if ((rs.getString("estado").equals(c.estado())) && (rs.getString("tarjeta").equals(c.salidas()))){
-                    
+               /*     
                     System.out.println("Estado en propitearios "+rs.getString("estado"));
                     System.out.println("Estado en Monior_log "+c.estado());
                     System.out.println("Tarjeta en propitearios "+rs.getString("tarjeta"));
-                    System.out.println("Tarjeta en Monior_log "+c.salidas());
+                    System.out.println("Tarjeta en Monior_log "+c.salidas());*/
                     return true;
                 }
                 else { return false;}
