@@ -641,10 +641,11 @@ public class conex {
         
     }
     public boolean existeRegistro(String salidas, int id,conex c) {
-        System.out.println("Entro3");
+        
         ResultSet rs=null;
         try {
-            pstmt=conn.prepareStatement("select * from  propietarios ");
+            //pstmt=conn.prepareStatement("select * from  propietarios");
+            pstmt=conn.prepareStatement("select * from  propietarios order by id desc ");
             rs=pstmt.executeQuery();
             if (rs.next()){
                 if ((rs.getString("estado").equals(c.estado())) && (rs.getString("tarjeta").equals(c.salidas()))){
@@ -788,7 +789,7 @@ public class conex {
         String a = "";
 	ResultSet rs=null;
 	try {
-	    pstmt=conn.prepareStatement("select * from  acc_monitor_log where id=?");	          
+	    pstmt=conn.prepareStatement("select * from  acc_monitor_log");	          
 	    pstmt.setInt(1, id);
             rs=pstmt.executeQuery(); 	
         } catch (SQLException e) {  e.printStackTrace(); }    
