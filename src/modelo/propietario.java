@@ -24,7 +24,7 @@ public class propietario {
     puesto="";
     apart="";
     torre="";
-    tarjeta="";
+    tarjeta="  ";
     estado="SIN INFORMACION";
 
    }

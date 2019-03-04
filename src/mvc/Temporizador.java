@@ -43,8 +43,10 @@ public class Temporizador extends TimerTask{
             ResultSet rs= d.consultarEntradas();
             int puesto=0;
             String tarjeta;
-            if (d.existeRegistro(c.salidas(), c.getid_monitor_log())){
+            if (d.existeRegistro(c.salidas(), c.getid_monitor_log(),c)==false){
+                System.out.println("Entro");
                 if (c.userinfo(c.salidas(),p,d.getconn(),c.getid_monitor_log())){
+                    System.out.println("Entro2");
                     Vista.actPropietario(p);
                 }
             }

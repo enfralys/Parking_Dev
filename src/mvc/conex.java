@@ -77,7 +77,7 @@ public class conex {
             JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
         }
         try {
-            sql="CREATE TABLE propietarios ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, propietario varchar(15) NOT NULL, puesto varchar(12) , apart varchar(12) NOT NULL, torre varchar(12) NOT NULL, tarjeta varchar(12) NOT NULL, id_monitor_log int not null, estado varchar(12) , fechae varchar(12) , fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+            sql="CREATE TABLE propietarios ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, propietario varchar(15) NOT NULL, puesto varchar(12) , apart varchar(12) NOT NULL, torre varchar(12) NOT NULL, tarjeta varchar(12) NOT NULL, id_monitor_log int not null, estado varchar(12) not null , fechae varchar(12) , fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
@@ -425,7 +425,7 @@ public class conex {
                     Registros[1]=rs.getString("apart");
                     Registros[2]=rs.getString("torre");
                     Registros[3]=rs.getString("placa");
-                    Registros[4]=rs.getString("estsdo");
+                    Registros[4]=rs.getString("estado");
                     Registros[5]=rs.getString("fechareg");
                     model.addRow(Registros);
                 }
@@ -640,13 +640,15 @@ public class conex {
         return false;
         
     }
-    public boolean existeRegistro(String salidas, int id) {
+    public boolean existeRegistro(String salidas, int id,conex c) {
+        System.out.println("Entro3");
         ResultSet rs=null;
         try {
-            pstmt=conn.prepareStatement("select * from  propietarios order by id desc");
+            pstmt=conn.prepareStatement("select * from  propietarios ");
             rs=pstmt.executeQuery();
             if (rs.next()){
-                if ((rs.getString("estado").equals(this.estado())) && (rs.getString("tarjeta").equals(this.salidas()))){
+                if ((rs.getString("estado").equals(c.estado())) && (rs.getString("tarjeta").equals(c.salidas()))){
+                    
                     return true;
                 }
                 else { return false;}
