@@ -77,7 +77,7 @@ public class conex {
             JOptionPane.showMessageDialog(null,"Error al crear tabla en Base de Datos",null,0);
         }
         try {
-            sql="CREATE TABLE propietarios ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, propietario varchar(15) NOT NULL, puesto varchar(12) , apart varchar(12) NOT NULL, torre varchar(12) NOT NULL, tarjeta varchar(12) NOT NULL, id_monitor_log int not null, estado varchar(12) not null , fechae varchar(12) , fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
+            sql="CREATE TABLE propietarios ( id INTEGER NOT NULL DEFAULT 1 PRIMARY KEY AUTOINCREMENT UNIQUE, placa varchar(45) NOT NULL, propietario varchar(15) NOT NULL, puesto varchar(12) , apart varchar(12) NOT NULL, torre varchar(12) NOT NULL, tarjeta varchar(12) NOT NULL, id_monitor_log int not null, estado varchar(12) , fechae varchar(12) , fechareg TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
             pstmt= conn.prepareStatement(sql);
             pstmt.execute();
        } catch (SQLException e) {
@@ -647,9 +647,15 @@ public class conex {
             //pstmt=conn.prepareStatement("select * from  propietarios");
             pstmt=conn.prepareStatement("select * from  propietarios order by id desc ");
             rs=pstmt.executeQuery();
+            
             if (rs.next()){
+                
                 if ((rs.getString("estado").equals(c.estado())) && (rs.getString("tarjeta").equals(c.salidas()))){
                     
+                    System.out.println("Estado en propitearios "+rs.getString("estado"));
+                    System.out.println("Estado en Monior_log "+c.estado());
+                    System.out.println("Tarjeta en propitearios "+rs.getString("tarjeta"));
+                    System.out.println("Tarjeta en Monior_log "+c.salidas());
                     return true;
                 }
                 else { return false;}
@@ -790,7 +796,7 @@ public class conex {
 	ResultSet rs=null;
 	try {
 	    pstmt=conn.prepareStatement("select * from  acc_monitor_log");	          
-	    pstmt.setInt(1, id);
+	 //   pstmt.setInt(1, id);
             rs=pstmt.executeQuery(); 	
         } catch (SQLException e) {  e.printStackTrace(); }    
 	try {
