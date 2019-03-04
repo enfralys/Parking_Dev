@@ -645,7 +645,8 @@ public class conex {
         ResultSet rs=null;
         try {
             //pstmt=conn.prepareStatement("select * from  propietarios");
-            pstmt=conn.prepareStatement("select * from  propietarios order by id desc ");
+            pstmt=conn.prepareStatement("select * from  propietarios where tarjeta=? order by id desc ");
+            pstmt.setString(1, c.salidas());
             rs=pstmt.executeQuery();
             
             if (rs.next()){
