@@ -68,6 +68,10 @@ public class Main extends javax.swing.JFrame {
         lblnombre = new javax.swing.JLabel();
         lbltarjeta = new javax.swing.JLabel();
         lbltorre = new javax.swing.JLabel();
+        lblnombre1 = new javax.swing.JLabel();
+        lblapellido1 = new javax.swing.JLabel();
+        lblapto1 = new javax.swing.JLabel();
+        lbltorre1 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         txtNombrePeaton9 = new javax.swing.JTextField();
         jPanel20 = new javax.swing.JPanel();
@@ -431,16 +435,19 @@ public class Main extends javax.swing.JFrame {
         jPanel17.add(lblentrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 240, 60));
 
         lblapto.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblapto.setForeground(new java.awt.Color(255, 255, 255));
         lblapto.setText("APTO");
-        jPanel17.add(lblapto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
+        jPanel17.add(lblapto, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, -1, -1));
 
         lblapellido.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblapellido.setForeground(new java.awt.Color(255, 255, 255));
         lblapellido.setText("Apellido:");
-        jPanel17.add(lblapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+        jPanel17.add(lblapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
         lblnombre.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblnombre.setForeground(new java.awt.Color(255, 255, 255));
         lblnombre.setText("Nombre:");
-        jPanel17.add(lblnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        jPanel17.add(lblnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, -1, -1));
 
         lbltarjeta.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
         lbltarjeta.setText(" ");
@@ -448,8 +455,25 @@ public class Main extends javax.swing.JFrame {
         jPanel17.add(lbltarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         lbltorre.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lbltorre.setForeground(new java.awt.Color(255, 255, 255));
         lbltorre.setText("TORRE");
-        jPanel17.add(lbltorre, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, -1, -1));
+        jPanel17.add(lbltorre, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, -1, -1));
+
+        lblnombre1.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblnombre1.setText("Nombre:");
+        jPanel17.add(lblnombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        lblapellido1.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblapellido1.setText("Apellido:");
+        jPanel17.add(lblapellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+
+        lblapto1.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lblapto1.setText("APTO");
+        jPanel17.add(lblapto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
+
+        lbltorre1.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lbltorre1.setText("TORRE");
+        jPanel17.add(lbltorre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, -1, -1));
 
         pnlPeatones1.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 410, 290));
 
@@ -2642,12 +2666,16 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lblPuesto98;
     private javax.swing.JLabel lblPuesto99;
     private javax.swing.JLabel lblapellido;
+    private javax.swing.JLabel lblapellido1;
     private javax.swing.JLabel lblapto;
+    private javax.swing.JLabel lblapto1;
     private javax.swing.JLabel lblentrada;
     private javax.swing.JLabel lblnombre;
+    private javax.swing.JLabel lblnombre1;
     private javax.swing.JLabel lblplaca;
     private javax.swing.JLabel lbltarjeta;
     private javax.swing.JLabel lbltorre;
+    private javax.swing.JLabel lbltorre1;
     private plugins.CustomPanelAuto pnlAuto;
     private javax.swing.JPanel pnlFiltrado;
     private javax.swing.JPanel pnlHistorialdeIngreso;
@@ -5457,11 +5485,11 @@ public class Main extends javax.swing.JFrame {
 
     public void actPropietario(propietario p) {
         String nombrec[]= p.getPropietario().split(",");
-        this.lblnombre.setText("Nombre: "+nombrec[1]);
-        this.lblapellido.setText("Apellido: "+nombrec[0]);
-        this.lbltarjeta.setText("Tarjeta: "+p.getTarjeta());
-        this.lblapto.setText("Apto: "+p.getApart());
-        this.lbltorre.setText("Torre: "+p.getTorre());
+        this.lblnombre.setText(nombrec[1]);
+        this.lblapellido.setText(nombrec[0]);
+        //this.lbltarjeta.setText("Tarjeta: "+p.getTarjeta());
+        this.lblapto.setText(p.getApart());
+        this.lbltorre.setText(p.getTorre());
         this.lblplaca.setText(p.getPlaca());
         this.lblentrada.setText(p.getestado());
     }
