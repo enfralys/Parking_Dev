@@ -74,6 +74,12 @@ public class Main extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         lblplaca = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
         txtBuscadorPersonas1 = new JTextFieldHint(new JTextField(),"icons8_Search_32px","Buscar peatón...");
         jPanel21 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
@@ -350,18 +356,24 @@ public class Main extends javax.swing.JFrame {
         pnlPeatones1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         pnlPeatones1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel15.setBackground(new java.awt.Color(153, 153, 153));
         jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel16.setBackground(new java.awt.Color(0, 46, 0));
+        jPanel16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel16.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Historial");
         jPanel16.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
 
         jPanel15.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 760, 40));
 
+        tlbHistorialDatos2.setBackground(new java.awt.Color(204, 204, 204));
+        tlbHistorialDatos2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         tlbHistorialDatos2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -379,13 +391,14 @@ public class Main extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tlbHistorialDatos2.setSelectionForeground(new java.awt.Color(153, 153, 153));
         jScrollPane5.setViewportView(tlbHistorialDatos2);
 
         jPanel15.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 840, 230));
 
         pnlPeatones1.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 860, 300));
 
-        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.setBackground(new java.awt.Color(153, 153, 153));
         jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -394,6 +407,8 @@ public class Main extends javax.swing.JFrame {
         txtNombrePeaton8.setBorder(null);
         jPanel17.add(txtNombrePeaton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
 
+        jPanel18.setBackground(new java.awt.Color(0, 46, 0));
+        jPanel18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel18.setForeground(new java.awt.Color(255, 0, 0));
         jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -401,41 +416,44 @@ public class Main extends javax.swing.JFrame {
         jLabel8.setText("Historial");
         jPanel18.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 5, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Datos");
-        jPanel18.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, -1, 30));
+        jPanel18.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, 30));
 
-        jPanel17.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 280, 30));
+        jPanel17.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 340, 30));
 
         lblentrada.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
-        lblentrada.setForeground(new java.awt.Color(51, 255, 0));
+        lblentrada.setForeground(new java.awt.Color(0, 0, 204));
+        lblentrada.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblentrada.setText("ENTRADA");
-        lblentrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 204)));
-        jPanel17.add(lblentrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 180, 60));
+        lblentrada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204)));
+        jPanel17.add(lblentrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 240, 60));
 
-        lblapto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lblapto.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
         lblapto.setText("APTO");
-        jPanel17.add(lblapto, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, -1));
+        jPanel17.add(lblapto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
 
-        lblapellido.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lblapellido.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
         lblapellido.setText("Apellido:");
-        jPanel17.add(lblapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+        jPanel17.add(lblapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
 
-        lblnombre.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lblnombre.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
         lblnombre.setText("Nombre:");
-        jPanel17.add(lblnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+        jPanel17.add(lblnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
-        lbltarjeta.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        lbltarjeta.setText("Tarjeta:");
-        jPanel17.add(lbltarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        lbltarjeta.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        lbltarjeta.setText(" ");
+        lbltarjeta.setToolTipText("");
+        jPanel17.add(lbltarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
-        lbltorre.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lbltorre.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
         lbltorre.setText("TORRE");
-        jPanel17.add(lbltorre, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
+        jPanel17.add(lbltorre, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, -1, -1));
 
         pnlPeatones1.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 410, 290));
 
-        jPanel19.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel19.setBackground(new java.awt.Color(153, 153, 153));
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -445,6 +463,7 @@ public class Main extends javax.swing.JFrame {
         jPanel19.add(txtNombrePeaton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 180, 30));
 
         jPanel20.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -456,12 +475,36 @@ public class Main extends javax.swing.JFrame {
         jPanel20.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         lblplaca.setBackground(new java.awt.Color(255, 255, 255));
-        lblplaca.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        lblplaca.setFont(new java.awt.Font("DFKai-SB", 1, 48)); // NOI18N
         lblplaca.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblplaca.setText("WTUR-31");
-        jPanel20.add(lblplaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 10, 210, 70));
+        jPanel20.add(lblplaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 220, 90));
 
-        jPanel19.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 280, 90));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel20.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 10));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel20.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 70, 10));
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel20.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 70, 10));
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel20.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 70, 10));
+
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel20.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, 10));
+
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel20.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 10));
+
+        jPanel19.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 280, 120));
 
         txtBuscadorPersonas1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         txtBuscadorPersonas1.addActionListener(new java.awt.event.ActionListener() {
@@ -469,27 +512,30 @@ public class Main extends javax.swing.JFrame {
                 txtBuscadorPersonas1ActionPerformed(evt);
             }
         });
-        jPanel19.add(txtBuscadorPersonas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 260, -1));
+        jPanel19.add(txtBuscadorPersonas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 260, -1));
 
+        jPanel21.setBackground(new java.awt.Color(0, 46, 0));
+        jPanel21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel13.setText("Historial");
         jPanel21.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 5, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Placa");
-        jPanel21.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, -1, 30));
+        jPanel21.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, -1, 30));
 
-        jPanel19.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 280, 30));
+        jPanel19.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 340, 30));
 
         jLabel18.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel18.setText("Buscador");
-        jPanel19.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+        jPanel19.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
         pnlPeatones1.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 410, 290));
 
-        tbpMain.addTab("Residentes       ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones1); // NOI18N
+        tbpMain.addTab("Residentes           ", new javax.swing.ImageIcon(getClass().getResource("/images/man-11.png")), pnlPeatones1); // NOI18N
 
         pnlIngreso.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -2127,7 +2173,7 @@ public class Main extends javax.swing.JFrame {
 
         pnlIngreso.add(tbdPaneVehicles, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 664));
 
-        tbpMain.addTab("Panel de Ingreso", new javax.swing.ImageIcon(getClass().getResource("/images/005-parking-sign.png")), pnlIngreso); // NOI18N
+        tbpMain.addTab("Visitantes             ", new javax.swing.ImageIcon(getClass().getResource("/images/005-parking-sign.png")), pnlIngreso); // NOI18N
 
         pnlHistorialdeIngreso.setBackground(new java.awt.Color(255, 255, 255));
         pnlHistorialdeIngreso.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -2473,6 +2519,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel15;
@@ -2480,8 +2527,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
